@@ -17,6 +17,9 @@ All governed Markdown documents begin with YAML frontmatter.
 | `capture_mode` | string | `direct`, `copy_paste`, `transcript`, `import`, `assisted` |
 | `imported_by` | string | Identifier or `none` |
 | `review_status` | string | `unreviewed`, `reviewed`, `corrected` |
+| `sanitization_status` | string | `not_reviewed`, `not_needed`, `sanitized` |
+| `sanitization_checked_at` | string | ISO 8601 timestamp with timezone or `none` |
+| `sanitization_checked_by` | string | Agent identifier or `none` |
 | `tags` | YAML list | Zero or more stable, lowercase tags |
 
 `content_origin` describes who or what originated the actual wording:
@@ -28,6 +31,11 @@ All governed Markdown documents begin with YAML frontmatter.
 `created_by` and `imported_by` are identifiers, not claims of approval.
 `review_status: reviewed` means a human reviewed transcription/provenance; it
 does not mean the note's claims are true.
+
+`sanitization_status` records only a publication-safety check. It does not
+establish that the note's claims are true. If sanitization changes authored
+wording, set `content_origin: mixed`. Never store removed sensitive values in
+sanitization metadata.
 
 ## Derived node required fields
 

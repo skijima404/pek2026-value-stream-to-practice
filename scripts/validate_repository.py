@@ -42,6 +42,9 @@ RAW_REQUIRED = {
     "capture_mode",
     "imported_by",
     "review_status",
+    "sanitization_status",
+    "sanitization_checked_at",
+    "sanitization_checked_by",
     "tags",
 }
 DERIVED_REQUIRED = {
@@ -61,6 +64,7 @@ ENUMS = {
     "source_platform": {"local", "chatgpt", "codex", "other"},
     "capture_mode": {"direct", "copy_paste", "transcript", "import", "assisted"},
     "review_status": {"unreviewed", "reviewed", "corrected"},
+    "sanitization_status": {"not_reviewed", "not_needed", "sanitized"},
     "status": {"proposed", "reviewed", "accepted", "rejected", "superseded"},
     "confidence": {"low", "medium", "high", "not_assessed"},
 }
@@ -187,6 +191,22 @@ def validate_node(
         value = fields.get(field)
         if value is not None and value not in allowed:
             errors.append(f"{field} has non-canonical value: {value}")
+    if expected_type == "raw_note":
+        sanitization_status = fields.get("sanitization_status")
+        checked_at = fields.get("sanitization_checked_at")
+        checked_by = fields.get("sanitization_checked_by")
+        if sanitization_status == "not_reviewed":
+            if checked_at != "none" or checked_by != "none":
+                errors.append(
+                    "not_reviewed sanitization must have no checker or timestamp"
+                )
+        elif sanitization_status in {"not_needed", "sanitized"}:
+            if not checked_at or not TIMESTAMP.fullmatch(checked_at):
+                errors.append(
+                    "completed sanitization check requires an ISO 8601 timestamp"
+                )
+            if not checked_by or checked_by == "none":
+                errors.append("completed sanitization check requires a checker")
     if expected_type != "raw_note":
         relations = parse_relations(path)
         if not relations:

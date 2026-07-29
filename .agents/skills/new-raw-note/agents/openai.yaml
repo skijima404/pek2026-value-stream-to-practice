@@ -1,0 +1,4 @@
+interface:
+  display_name: "空のRaw Noteを作成"
+  short_description: "frontmatter入力済みのRaw Noteをすぐ作成します"
+  default_prompt: "$new-raw-note を使って、空のRaw Noteを1件作成してください。"

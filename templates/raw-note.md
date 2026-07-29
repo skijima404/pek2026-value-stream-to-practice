@@ -10,6 +10,9 @@ source_platform: local
 capture_mode: direct
 imported_by: none
 review_status: unreviewed
+sanitization_status: not_reviewed
+sanitization_checked_at: none
+sanitization_checked_by: none
 tags: []
 ---
 
