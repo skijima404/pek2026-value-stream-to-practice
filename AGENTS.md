@@ -36,9 +36,14 @@ the session.
 ## Non-negotiable behavior
 
 - Treat `01_working/raw-notes/` as immutable source material.
+- Apply the draft-finalization and confidentiality exceptions defined in
+  `00_meta/repository-contract.md` before applying Raw Note immutability.
 - Never move or delete a Raw Note because a derived node was created.
 - Preserve incorrect source statements and append a correction instead of
   silently rewriting history.
+- Never preserve customer, project, personal, commercial, internal-system, or
+  credential information merely for provenance. Sanitize it before commit and
+  never repeat removed values in corrections, filenames, logs, or summaries.
 - Do not turn a short note into a confident claim without recording the
   interpretation and its uncertainty.
 - Every derived claim must cite one or more repository node IDs through typed

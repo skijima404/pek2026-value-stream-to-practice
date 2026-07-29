@@ -14,7 +14,11 @@ sortable local timestamps in IDs.
 | External Input | `EXT-YYYYMMDD-HHMMSS-short-slug` |
 
 The filename is `<id>.md`. Use lowercase ASCII kebab-case for `short-slug`.
-IDs are immutable even when titles change.
+IDs are immutable even when titles change, except for the one-time,
+pre-reference draft finalization defined in `repository-contract.md`.
+
+Use a safe topic-based slug. Never include a customer, engagement, project,
+person, account, hostname, internal system, or other identifying value.
 
 ## Tags
 

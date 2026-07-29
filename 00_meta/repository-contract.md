@@ -51,6 +51,36 @@ When statements conflict:
 4. Record unresolved conflict as unresolved.
 5. Never use file recency alone as evidence of correctness.
 
+## Draft finalization exception
+
+A Raw Note created as a blank scaffold may be finalized once after a human
+writes its initial content:
+
+- update provisional frontmatter;
+- replace an `untitled` slug with a safe topic-based slug;
+- update the node ID to match that filename while preserving its timestamp.
+
+This exception is allowed only before another node references the Raw Note.
+Once referenced, its ID and filename are immutable. Filename slugs must never
+contain customer, project, person, internal-system, or other identifying data.
+
+## Confidentiality exception
+
+Confidentiality takes precedence over source immutability. Before commit or
+promotion, sanitize in place any customer, project, personal, commercial,
+internal-system, credential, or re-identification information that should not
+be published.
+
+- Do not retain the removed value elsewhere in the repository.
+- Do not quote it in a correction, commit message, filename, log, or summary.
+- Use a category placeholder or safe generalization that retains only the
+  analytical meaning needed by this repository.
+- General context such as "a Red Hat Consulting Platform Engineering
+  engagement" may remain when it does not identify a customer or engagement.
+- If sensitive content exists in any Git commit, stop normal publication work.
+  A working-tree edit does not remove Git history; report that repository
+  history remediation is required without repeating the sensitive value.
+
 ## Placeholder rule
 
 A file containing `status: placeholder` is navigation scaffolding only. Its
@@ -64,6 +94,7 @@ Before saving generated content, an agent must verify:
 - interpretation is marked as interpretation;
 - uncertainty and unavailable evidence are explicit;
 - canonical enum values and relation types are used;
-- no Raw Note was rewritten, moved, or removed;
+- no Raw Note was rewritten, moved, or removed outside the documented draft
+  finalization or confidentiality exceptions;
 - artifact adoption is supported by an explicit decision;
 - repository validation passes.

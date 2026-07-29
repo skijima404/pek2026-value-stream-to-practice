@@ -9,10 +9,19 @@ Service設計：価値仮説と効果測定ってどうやるの？」
 
 ## Raw Noteを追加する
 
+Codexで「ファイルくださいな」「Raw Noteをください」と依頼すると、ID・時刻・
+provenanceを入力済みの空ファイルを作成します。
+
+手動で追加する場合:
+
 1. `templates/raw-note.md` を
    `01_working/raw-notes/RN-YYYYMMDD-HHMMSS-short-slug.md` としてコピーします。
 2. frontmatterを埋めます。本文は箇条書きや短文のままで構いません。
 3. `python3 scripts/validate_repository.py` を実行します。
+
+人間が本文を追記した後に「このRaw Noteを仕上げて」と依頼すると、frontmatter
+と安全なファイル名を内容に合わせ、顧客・案件・個人・内部システムなどの
+公開できない情報を除去します。
 
 Raw Noteに最初から仮説や検証計画を書く必要はありません。後日、GenAIまたは
 人間がRaw Noteを根拠として `02_analysis/` に派生ノードを作成します。元の

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Raw Noteを仕上げる"
+  short_description: "追記済みRaw Noteを整理し機密情報を除去します"
+  default_prompt: "$finalize-raw-note を使って、追記済みのRaw Noteを仕上げてください。"
