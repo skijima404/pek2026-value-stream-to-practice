@@ -34,6 +34,22 @@ Analysis nodes do not use `status: accepted`. A human may finish intent review
 by setting an analysis node to `reviewed`, but only an explicitly adopted file
 in `03_artifacts/` establishes current truth within its stated scope.
 
+## Analysis index
+
+`02_analysis/README.md` is a regenerable navigation view over existing
+repository nodes. It is not a governed node, evidence source, derived claim,
+adoption decision, or current truth.
+
+The index may summarize node titles, declared status, confidence, validation
+result, hypothesis level, typed relations, and explicit limitations. Every
+summary must link to the source node. Do not introduce a new interpretation,
+infer a missing relation, or convert absence from the index into rejection.
+
+Regenerate the index when an analysis node is added or materially changes,
+when an Artifact is adopted or superseded, or when a human requests a current
+synthesis. Source nodes and Artifacts remain authoritative when the index is
+stale or disagrees with them.
+
 ## Epistemic separation
 
 Agents must label and keep separate:
