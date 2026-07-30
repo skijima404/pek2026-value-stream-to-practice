@@ -7,6 +7,8 @@ created_at: YYYY-MM-DDTHH:MM:SS+09:00
 created_by: agent:codex
 hypothesis_level: not_assessed
 status: proposed
+# `status: reviewed` の場合は reviewed_at、reviewed_by、
+# review_scope: intent_alignment を追加する。
 confidence: not_assessed
 relations:
   - type: derived_from

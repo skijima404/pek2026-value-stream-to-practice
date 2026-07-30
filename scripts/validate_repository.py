@@ -58,6 +58,11 @@ DERIVED_REQUIRED = {
     "confidence",
     "relations",
 }
+DERIVED_REVIEW_REQUIRED = {
+    "reviewed_at",
+    "reviewed_by",
+    "review_scope",
+}
 ENUMS = {
     "content_language": {"ja"},
     "content_origin": {"human_direct", "assist_a_generated", "mixed"},
@@ -65,9 +70,10 @@ ENUMS = {
     "capture_mode": {"direct", "copy_paste", "transcript", "import", "assisted"},
     "review_status": {"unreviewed", "reviewed", "corrected"},
     "sanitization_status": {"not_reviewed", "not_needed", "sanitized"},
-    "status": {"proposed", "reviewed", "accepted", "rejected", "superseded"},
+    "status": {"proposed", "reviewed", "rejected", "superseded"},
     "confidence": {"low", "medium", "high", "not_assessed"},
     "hypothesis_level": {"value", "solution", "feature", "not_assessed"},
+    "review_scope": {"intent_alignment"},
 }
 RELATION_TYPES = {
     "derived_from",
@@ -221,6 +227,21 @@ def validate_node(
     if expected_type == "hypothesis_episode" and "hypothesis_level" not in fields:
         errors.append("hypothesis episode requires hypothesis_level")
     if expected_type != "raw_note":
+        if fields.get("status") == "reviewed":
+            missing_review = sorted(DERIVED_REVIEW_REQUIRED - fields.keys())
+            if missing_review:
+                errors.append(
+                    "reviewed derived node missing review fields: "
+                    + ", ".join(missing_review)
+                )
+            reviewed_at = fields.get("reviewed_at")
+            if reviewed_at and not TIMESTAMP.fullmatch(reviewed_at):
+                errors.append("reviewed_at must be ISO 8601 with timezone")
+            reviewed_by = fields.get("reviewed_by", "")
+            if reviewed_by and not re.fullmatch(
+                r"human:[a-z0-9][a-z0-9._-]*", reviewed_by
+            ):
+                errors.append("reviewed_by must use a human:* identifier")
         relations = parse_relations(path)
         if not relations:
             errors.append("derived node must contain at least one relation")

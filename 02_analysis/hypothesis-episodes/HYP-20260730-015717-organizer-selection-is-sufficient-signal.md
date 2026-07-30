@@ -7,6 +7,9 @@ created_at: 2026-07-30T01:57:17+09:00
 created_by: agent:codex
 hypothesis_level: not_assessed
 status: reviewed
+reviewed_at: 2026-07-31T01:11:21+09:00
+reviewed_by: human:kijima
+review_scope: intent_alignment
 confidence: medium
 relations:
   - type: derived_from

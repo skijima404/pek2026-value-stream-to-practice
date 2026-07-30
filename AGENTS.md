@@ -39,6 +39,9 @@ the session.
 - Treat `01_working/raw-notes/` as immutable source material.
 - Apply the draft-finalization and confidentiality exceptions defined in
   `00_meta/repository-contract.md` before applying Raw Note immutability.
+- Interpret `Raw` as an epistemic position, not as a requirement for rough,
+  short, unstructured, or human-written prose. Do not promote a Raw Note solely
+  because GenAI organized it or because it is highly polished.
 - Never move or delete a Raw Note because a derived node was created.
 - Preserve incorrect source statements and append a correction instead of
   silently rewriting history.
@@ -55,6 +58,13 @@ the session.
   artifact is an adopted conclusion.
 - Do not invent missing provenance, validation results, participant behavior,
   metrics, or evidence. Use `unknown`, `unverified`, or an explicit limitation.
+- Never set a derived node to `status: reviewed` without explicit human
+  confirmation that the node represents the human's intended meaning. Do not
+  treat agent self-review, validation, or publication-safety review as that
+  confirmation. Record the human reviewer, confirmation timestamp, and
+  `review_scope: intent_alignment`.
+- Never set an analysis node to `status: accepted`. Record human adoption only
+  in `03_artifacts/` with an explicit, traceable adoption decision.
 - Do not promote content into `03_artifacts/` unless an adoption decision is
   explicit and traceable.
 - Use Mobius only to explain the hypothesis levels considered in a
