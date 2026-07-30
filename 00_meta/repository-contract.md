@@ -57,6 +57,9 @@ A Raw Note created as a blank scaffold may be finalized once after a human
 writes its initial content:
 
 - update provisional frontmatter;
+- change `review_status` from `unreviewed` to `reviewed` when the completed
+  content was directly authored by its human author and no correction history
+  exists;
 - replace an `untitled` slug with a safe topic-based slug;
 - update the node ID to match that filename while preserving its timestamp.
 

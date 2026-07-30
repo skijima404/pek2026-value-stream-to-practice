@@ -9,7 +9,7 @@ created_by: human:kijima
 source_platform: codex
 capture_mode: assisted
 imported_by: none
-review_status: unreviewed
+review_status: reviewed
 sanitization_status: not_needed
 sanitization_checked_at: 2026-07-29T20:47:06+09:00
 sanitization_checked_by: agent:codex

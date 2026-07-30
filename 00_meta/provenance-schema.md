@@ -32,6 +32,20 @@ All governed Markdown documents begin with YAML frontmatter.
 `review_status: reviewed` means a human reviewed transcription/provenance; it
 does not mean the note's claims are true.
 
+For a completed Raw Note, use the following review-status defaults:
+
+- A note directly authored in the repository by its human author uses
+  `reviewed`. This applies to `content_origin: human_direct` with
+  `capture_mode: direct` or `assisted` and `imported_by: none`.
+- A blank scaffold remains `unreviewed` until the human author fills and
+  finalizes it.
+- Imported, copied, or transcribed content remains `unreviewed` until a human
+  confirms that the repository record matches their intent.
+- `mixed` or `assist_a_generated` content remains `unreviewed` until explicit
+  human review.
+- A note with a correction history uses `corrected`, including after subsequent
+  human review.
+
 `sanitization_status` records only a publication-safety check. It does not
 establish that the note's claims are true. If sanitization changes authored
 wording, set `content_origin: mixed`. Never store removed sensitive values in

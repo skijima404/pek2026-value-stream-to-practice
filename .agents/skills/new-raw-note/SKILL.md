@@ -19,6 +19,11 @@ assisted with capture:
 - `capture_mode: assisted`
 - `imported_by: none`
 
+The blank scaffold starts with `review_status: unreviewed`. After the human
+author fills and finalizes it, the finalization workflow changes it to
+`reviewed`. Imported, copied, transcribed, mixed, or GenAI-authored content
+does not receive this automatic review status.
+
 When the user provides a title or slug, pass `--title` or `--slug`. Use only
 lowercase ASCII kebab-case for a slug. Override provenance flags only when the
 user's actual capture context differs from the defaults.

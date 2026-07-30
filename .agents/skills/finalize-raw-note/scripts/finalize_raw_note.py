@@ -52,6 +52,41 @@ def replace_field(lines: list[str], key: str, value: str) -> list[str]:
     return lines[:start] + [f"{key}: {value}"] + lines[end:]
 
 
+def read_field(lines: list[str], key: str) -> str:
+    prefix = f"{key}:"
+    matches = [line[len(prefix) :].strip() for line in lines if line.startswith(prefix)]
+    if len(matches) != 1:
+        raise RuntimeError(f"required frontmatter field is missing or duplicated: {key}")
+    return matches[0].strip("\"'")
+
+
+def resolve_review_status(
+    requested: str,
+    current: str,
+    sanitization_status: str,
+    content_origin: str,
+    created_by: str,
+    capture_mode: str,
+    imported_by: str,
+) -> str:
+    if requested == "preserve":
+        return current
+    if requested in ("reviewed", "unreviewed"):
+        return requested
+    if current == "corrected":
+        return "corrected"
+    if sanitization_status == "sanitized":
+        return "unreviewed"
+    if (
+        content_origin == "human_direct"
+        and created_by.startswith("human:")
+        and capture_mode in ("direct", "assisted")
+        and imported_by == "none"
+    ):
+        return "reviewed"
+    return current
+
+
 def referenced_paths(root: Path, node_id: str, source: Path) -> list[Path]:
     needle = re.compile(rf"^\s*target:\s*{re.escape(node_id)}\s*$")
     matches: list[Path] = []
@@ -75,6 +110,15 @@ def parse_args() -> argparse.Namespace:
         choices=("not_needed", "sanitized"),
     )
     parser.add_argument("--checked-by", default="agent:codex")
+    parser.add_argument(
+        "--review-status",
+        default="auto",
+        choices=("auto", "preserve", "reviewed", "unreviewed"),
+        help=(
+            "auto reviews completed direct human-authored notes, preserves corrected "
+            "notes, and otherwise preserves the current value"
+        ),
+    )
     parser.add_argument("--dry-run", action="store_true")
     args = parser.parse_args()
     if not SLUG.fullmatch(args.slug):
@@ -111,9 +155,25 @@ def main() -> int:
 
     frontmatter, body = split_document(path.read_text(encoding="utf-8"))
     checked_at = datetime.now(ZoneInfo("Asia/Tokyo")).isoformat(timespec="seconds")
+    current_review_status = read_field(frontmatter, "review_status")
+    content_origin = read_field(frontmatter, "content_origin")
+    created_by = read_field(frontmatter, "created_by")
+    capture_mode = read_field(frontmatter, "capture_mode")
+    imported_by = read_field(frontmatter, "imported_by")
+    next_review_status = resolve_review_status(
+        args.review_status,
+        current_review_status,
+        args.sanitization_status,
+        content_origin,
+        created_by,
+        capture_mode,
+        imported_by,
+    )
+
     updates = {
         "id": next_id,
         "title": json.dumps(args.title, ensure_ascii=False),
+        "review_status": next_review_status,
         "sanitization_status": args.sanitization_status,
         "sanitization_checked_at": checked_at,
         "sanitization_checked_by": args.checked_by,
