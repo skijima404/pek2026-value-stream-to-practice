@@ -30,6 +30,10 @@ artifacts without converting interpretation into false certainty.
 Directory position alone does not prove validity. Frontmatter status, typed
 relations, and content must agree.
 
+Analysis nodes do not use `status: accepted`. A human may finish intent review
+by setting an analysis node to `reviewed`, but only an explicitly adopted file
+in `03_artifacts/` establishes current truth within its stated scope.
+
 ## Epistemic separation
 
 Agents must label and keep separate:
@@ -40,6 +44,29 @@ Agents must label and keep separate:
 - **validation result**: what was actually checked;
 - **decision**: what was adopted and why;
 - **limitation**: what remains unknown or cannot be checked.
+
+## Meaning of Raw Note
+
+`Raw` describes a node's epistemic position, not its writing quality,
+structure, length, or authorship.
+
+A Raw Note may be:
+
+- a short note written directly by a human;
+- a conversation transcript or imported chat;
+- a structured record written by GenAI at a human's request; or
+- a record of thinking developed through human-GenAI dialogue.
+
+It remains a Raw Note when its purpose is to preserve a source conversation or
+developing thought without promoting that material into a new derived claim.
+The provenance fields must make the origin, capture method, importer, and human
+review state visible.
+
+Do not promote a note merely because its prose is polished or highly
+structured. Conversely, when GenAI retrospectively combines existing source
+nodes to introduce a new observation, interpretation, or claim, store that
+output in `02_analysis/` with typed relations instead of presenting it as a new
+Raw Note.
 
 ## Source precedence
 

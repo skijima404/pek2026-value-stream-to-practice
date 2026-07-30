@@ -26,8 +26,8 @@ not make a newly composed node safe by inheritance.
 - Inspect the complete promoted node, including the combination of excerpts,
   derived prose, metadata, and relations.
 - Check whether individually ordinary details become identifying when combined.
-- Sanitize before changing a node to `reviewed` or `accepted`, or before
-  committing a newly promoted node.
+- Sanitize before changing an analysis node to `reviewed`, adopting content
+  into an accepted Artifact, or committing a newly promoted node.
 - Record the check result, timestamp, checker, scope, and whether content was
   changed in the promoted node or in schema-supported sanitization metadata.
 - Repeat the check at each later promotion boundary. Do not rely solely on a

@@ -6,6 +6,9 @@ content_language: ja
 created_at: 2026-07-30T01:57:14+09:00
 created_by: agent:codex
 status: reviewed
+reviewed_at: 2026-07-31T01:11:21+09:00
+reviewed_by: human:kijima
+review_scope: intent_alignment
 confidence: high
 relations:
   - type: derived_from
