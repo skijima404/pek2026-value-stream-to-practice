@@ -28,6 +28,13 @@ Read the required `00_meta/` contracts before editing.
      --tag <tag>
    ```
 
+   The script uses `--review-status auto` by default. It sets `reviewed` only
+   for completed notes directly authored by their human author
+   (`human_direct`, `direct` or `assisted`, and `imported_by: none`). It
+   preserves `corrected`, and it does not automatically review imported,
+   copied, transcribed, mixed, or GenAI-authored wording. Newly sanitized
+   wording returns to `unreviewed` until a human confirms it.
+
 8. Run `python3 scripts/validate_repository.py`.
 9. Summarize changed metadata and removed information by category only. Return
    a clickable absolute file link. Never quote removed values.
@@ -57,5 +64,6 @@ reversible hashes or realistic pseudonyms.
 
 Do not add removed values to correction history. When sanitization changes the
 wording, use `sanitization_status: sanitized`; the script will set
-`content_origin: mixed`. A publication-safety review is not a human factual
-review, so do not set `review_status: reviewed`.
+`content_origin: mixed`. A publication-safety review is not a human intent
+review. Do not explicitly override `review_status` to `reviewed` unless the
+human confirmed that the record matches their intent.

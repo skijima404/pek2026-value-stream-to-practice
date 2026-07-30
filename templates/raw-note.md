@@ -9,6 +9,7 @@ created_by: human:kijima
 source_platform: local
 capture_mode: direct
 imported_by: none
+# Blank scaffolds remain unreviewed until their human author fills and finalizes them.
 review_status: unreviewed
 sanitization_status: not_reviewed
 sanitization_checked_at: none
