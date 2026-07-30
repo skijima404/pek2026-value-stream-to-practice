@@ -17,6 +17,28 @@ nodes and explains why the intermediate layer adds no value.
 
 ## Promotion requirements
 
+### Confidentiality at every promotion boundary
+
+Run a fresh publication-safety review whenever content is promoted or its
+epistemic status is advanced. A source node that was previously sanitized does
+not make a newly composed node safe by inheritance.
+
+- Inspect the complete promoted node, including the combination of excerpts,
+  derived prose, metadata, and relations.
+- Check whether individually ordinary details become identifying when combined.
+- Sanitize before changing a node to `reviewed` or `accepted`, or before
+  committing a newly promoted node.
+- Record the check result, timestamp, checker, scope, and whether content was
+  changed in the promoted node or in schema-supported sanitization metadata.
+- Repeat the check at each later promotion boundary. Do not rely solely on a
+  check performed on an earlier source or layer.
+- If sensitive content is found in a committed revision, stop normal
+  publication work and report that Git history remediation is required without
+  repeating the sensitive value.
+
+A publication-safety review does not validate a claim, increase confidence, or
+adopt an artifact. Keep epistemic status and sanitization status separate.
+
 ### Raw Note to Observation
 
 - Quote or precisely locate the source statement.
