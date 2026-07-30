@@ -1,0 +1,21 @@
+knowledge:
+  - canonical_name: TOGAF
+    aliases:
+      - The Open Group Architecture Framework
+
+  - canonical_name: Scaled Agile Framework
+    aliases:
+      - SAFe
+      - Scaled Agile
+
+  - canonical_name: Domain-Driven Design
+    aliases:
+      - DDD
+
+  - canonical_name: Lean
+    aliases:
+      - LEAN
+
+  - canonical_name: Mobius Outcome Delivery
+    aliases:
+      - Mobius
