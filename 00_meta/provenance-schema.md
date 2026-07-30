@@ -63,6 +63,14 @@ All derived nodes require:
 
 Confidence is not probability and must not replace a description of evidence.
 
+Hypothesis Episodes additionally require:
+
+- `hypothesis_level`: `value`, `solution`, `feature`, or `not_assessed`.
+
+The level identifies the hypothesis hierarchy used for retrospective
+explanation. It is not a task state or delivery-progress field. Use
+`not_assessed` when the sources do not support a reliable classification.
+
 ## Corrections
 
 Do not erase an incorrect historical statement. Append:

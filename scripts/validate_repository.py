@@ -67,6 +67,7 @@ ENUMS = {
     "sanitization_status": {"not_reviewed", "not_needed", "sanitized"},
     "status": {"proposed", "reviewed", "accepted", "rejected", "superseded"},
     "confidence": {"low", "medium", "high", "not_assessed"},
+    "hypothesis_level": {"value", "solution", "feature", "not_assessed"},
 }
 RELATION_TYPES = {
     "derived_from",
@@ -146,13 +147,23 @@ def contains_japanese_content(path: Path) -> bool:
 def discover_node_ids() -> tuple[set[str], list[tuple[Path, str]]]:
     node_ids: set[str] = set()
     failures: list[tuple[Path, str]] = []
-    search_roots = [
-        ROOT / relative_dir for relative_dir in NODE_DIRS
-    ] + [ROOT / "10_external-inputs"]
+    search_roots = [ROOT / relative_dir for relative_dir in NODE_DIRS]
     for directory in search_roots:
         if not directory.is_dir():
             continue
         for path in sorted(directory.glob("*.md")):
+            if path.name == "README.md":
+                continue
+            fields, _ = parse_frontmatter(path)
+            node_id = fields.get("id")
+            if not node_id:
+                continue
+            if node_id in node_ids:
+                failures.append((path, f"duplicate node id: {node_id}"))
+            node_ids.add(node_id)
+    external_inputs = ROOT / "10_external-inputs"
+    if external_inputs.is_dir():
+        for path in sorted(external_inputs.rglob("*.md")):
             if path.name == "README.md":
                 continue
             fields, _ = parse_frontmatter(path)
@@ -207,6 +218,8 @@ def validate_node(
                 )
             if not checked_by or checked_by == "none":
                 errors.append("completed sanitization check requires a checker")
+    if expected_type == "hypothesis_episode" and "hypothesis_level" not in fields:
+        errors.append("hypothesis episode requires hypothesis_level")
     if expected_type != "raw_note":
         relations = parse_relations(path)
         if not relations:
@@ -239,6 +252,11 @@ def main() -> int:
             )
         if fields.get("type") != expected_type:
             failures.append((path, f"template type must be {expected_type}"))
+        if (
+            expected_type == "hypothesis_episode"
+            and "hypothesis_level" not in fields
+        ):
+            failures.append((path, "hypothesis template requires hypothesis_level"))
         if not contains_japanese_content(path):
             failures.append((path, "template body must contain Japanese text"))
         templates_checked += 1

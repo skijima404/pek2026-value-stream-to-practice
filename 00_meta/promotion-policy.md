@@ -27,9 +27,14 @@ nodes and explains why the intermediate layer adds no value.
 ### Observation to Hypothesis Episode
 
 - State the hypothesis and expected signal.
+- Classify `hypothesis_level` as `value`, `solution`, or `feature` only when the
+  source supports that classification; otherwise use `not_assessed`.
 - Distinguish planned validation from completed validation.
 - Record the actual method, result, and limitations.
 - Use `not_tested` when no validation occurred.
+- A Solution Hypothesis may test a Value Hypothesis, and a Feature Hypothesis
+  may test a Solution Hypothesis. Record those parent relations explicitly.
+- Do not treat a child result as transitive validation of its parent.
 
 ### Proportional and lightweight validation
 
@@ -108,3 +113,5 @@ Do not delete rejected or superseded analysis. Change its status and add:
 - Treating participant access, attendance, or positive feedback as field
   application without direct evidence.
 - Adding precise KPIs solely because a template contains a metric field.
+- Using Mobius `To Do`, `Doing`, or `Done` as repository task states.
+- Filling every Mobius retrospective section without supporting source nodes.

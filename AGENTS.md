@@ -27,8 +27,9 @@ Before creating, interpreting, promoting, or editing repository content, read:
 1. `00_meta/repository-contract.md`
 2. `00_meta/provenance-schema.md`
 3. `00_meta/promotion-policy.md`
-4. `00_meta/relation-schema.md`
-5. `00_meta/naming-conventions.md`
+4. `00_meta/analysis-lenses.md`
+5. `00_meta/relation-schema.md`
+6. `00_meta/naming-conventions.md`
 
 The files above define how truth is handled. They do not define the truth about
 the session.
@@ -56,6 +57,8 @@ the session.
   metrics, or evidence. Use `unknown`, `unverified`, or an explicit limitation.
 - Do not promote content into `03_artifacts/` unless an adoption decision is
   explicit and traceable.
+- Use Mobius only to explain the hypothesis levels considered in a
+  retrospective. Never use its board columns to track task execution.
 - Run `python3 scripts/validate_repository.py` after changing governed Markdown.
 
 ## Scope rules
@@ -64,6 +67,8 @@ the session.
   capture-time notes.
 - GenAI may propose derived nodes in `02_analysis/` when asked, but must retain
   traceability and epistemic status.
+- When asked to explain or retrospect on a body of work, follow
+  `00_meta/analysis-lenses.md` and cite the nodes supporting each explanation.
 - `03_artifacts/` contains current adopted outputs, not every explored idea.
 - `10_external-inputs/` contains immutable constraints and references. External
   input is not automatically evidence that a hypothesis is true.

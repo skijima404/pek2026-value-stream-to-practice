@@ -5,6 +5,7 @@ title: "開催側の採択を方向性継続の十分なシグナルとして扱
 content_language: ja
 created_at: 2026-07-30T01:57:17+09:00
 created_by: agent:codex
+hypothesis_level: not_assessed
 status: proposed
 confidence: medium
 relations:

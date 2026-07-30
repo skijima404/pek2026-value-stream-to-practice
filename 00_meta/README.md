@@ -8,8 +8,9 @@ Canonical documents:
 1. `repository-contract.md`
 2. `provenance-schema.md`
 3. `promotion-policy.md`
-4. `relation-schema.md`
-5. `naming-conventions.md`
+4. `analysis-lenses.md`
+5. `relation-schema.md`
+6. `naming-conventions.md`
 
 Changing these files changes how future agents interpret the repository.
 Changes therefore require an explicit rationale and validation.

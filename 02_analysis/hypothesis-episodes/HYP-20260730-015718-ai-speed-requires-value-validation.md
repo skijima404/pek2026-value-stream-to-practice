@@ -5,6 +5,7 @@ title: "AIによる作成速度向上は価値選択と検証の必要性を高�
 content_language: ja
 created_at: 2026-07-30T01:57:18+09:00
 created_by: agent:codex
+hypothesis_level: value
 status: proposed
 confidence: low
 relations:
