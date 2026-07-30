@@ -35,6 +35,7 @@ Audienceと価値課題の見立て
   -> 未検証
 
 AIの局所高速化、ハンドオーバー、リレー、早期中止判断
+  -> 構成要素と表現選択をObservationとして整理
   -> リレー中心のSession StoryというSolution Hypothesis
   -> 人間の意図Review済み、未検証、未採用
 
@@ -64,6 +65,7 @@ BCGの10–20–70関連資料
 | [採択済み方向性とDeliveryの検討範囲](./observations/OBS-20260730-015715-accepted-direction-and-delivery-scope.md) | `reviewed` | `high` | 採択シグナルHypothesis、Value Hypothesis、採用済みJourney |
 | [Audienceと価値課題について記録された見立て](./observations/OBS-20260730-015716-audience-and-value-problem-statements.md) | `reviewed` | `high` | 採択シグナルHypothesis、Value Hypothesis |
 | [BCG資料内で10–20–70の説明対象が変化している](./observations/OBS-20260730-210822-bcg-10-20-70-claim-variation.md) | `reviewed` | `high` | 現時点ではHypothesis／Artifactへのrelationなし |
+| [リレー中心の構成候補を形成した要素と表現選択](./observations/OBS-20260731-021631-relay-story-source-elements.md) | `reviewed` | `high` | リレー中心のSession Story Hypothesis |
 
 `confidence` は確率ではなく、Evidenceや限界の記述を置き換えるものでも
 ありません。根拠と詳細な限界はリンク先を確認します。
