@@ -13,15 +13,7 @@ review_scope: intent_alignment
 confidence: not_assessed
 relations:
   - type: derived_from
-    target: RN-20260730-212352-discard-hypotheses-before-production-commitment
-  - type: derived_from
-    target: RN-20260730-224731-ai-acceleration-to-contract-first
-  - type: derived_from
-    target: RN-20260730-225227-relay-baton-handover-metaphor
-  - type: derived_from
-    target: RN-20260730-230242-communicating-invisible-handover
-  - type: derived_from
-    target: RN-20260731-003419-drop-api-contract-framing
+    target: OBS-20260731-021631-relay-story-source-elements
   - type: references
     target: RN-20260730-140133-ai-outcomes-and-mbpm
   - type: references
@@ -152,7 +144,8 @@ AIに期待するOutcomeの5分類
   - 接続の飛躍、概念数、時間超過、タイトルからのDriftをレビューする
   - 代替構成との比較表を作る
 - 実際に確認した資料・記録:
-  - relationで示したRaw Notes
+  - `OBS-20260731-021631-relay-story-source-elements`と、このObservationが
+    `derived_from`で示したRaw Notes
   - `HYP-20260730-015718-ai-speed-requires-value-validation`
 
 ## 比較基準
