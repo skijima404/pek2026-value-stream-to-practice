@@ -1,0 +1,4 @@
+interface:
+  display_name: "分析候補を抽出する"
+  short_description: "蓄積Sourceから有力な分析候補を追跡可能に整理します"
+  default_prompt: "$synthesize-analysis-candidates を使って、蓄積情報からObservationやHypothesisへの昇格候補を整理してください。"
