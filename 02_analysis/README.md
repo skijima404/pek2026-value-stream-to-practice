@@ -39,6 +39,11 @@ AIの局所高速化、ハンドオーバー、リレー、早期中止判断
   -> リレー中心のSession StoryというSolution Hypothesis
   -> 人間の意図Review済み、未検証、未採用
 
+AI SlopによるCost外部化
+  + Release前のValue Hypothesis検証と早期廃棄
+  -> Lean Startupの選別をAdmission Controlとして使うSolution Hypothesis
+  -> 人間の意図Review済み、未検証、未採用
+
 BCGの10–20–70関連資料
   -> 説明対象の違いをObservationとして整理
   -> 登壇上の主張やArtifactには未採用
@@ -50,6 +55,7 @@ BCGの10–20–70関連資料
 | --- | --- | --- | --- | --- |
 | Discovery | `value` | [AIによる作成速度向上は価値選択と検証の必要性を高める](./hypothesis-episodes/HYP-20260730-015718-ai-speed-requires-value-validation.md) | `proposed` | `not_tested` |
 | Decision | `solution` | [リレーを中心にしたセッション構成ならAI SlopからVSMまでを一本道で伝えられる](./hypothesis-episodes/HYP-20260731-004119-relay-centered-session-story.md) | `reviewed` | `not_tested` |
+| Decision | `solution` | [Lean Startupの選別と早期廃棄は未検証案のコスト外部化を抑える](./hypothesis-episodes/HYP-20260731-193520-lean-startup-as-admission-control.md) | `reviewed` | `not_tested` |
 | Delivery | `feature` | 該当するEpisodeなし | — | — |
 | 未分類 | `not_assessed` | [開催側の採択を方向性継続の十分なシグナルとして扱う](./hypothesis-episodes/HYP-20260730-015717-organizer-selection-is-sufficient-signal.md) | `reviewed` | `supports` |
 
@@ -98,13 +104,15 @@ BCGの10–20–70関連資料
 
 現在、Patternは0件です。
 
-3件のHypothesis Episodeは異なる範囲を扱っており、複数Episodeを横断して
+4件のHypothesis Episodeは異なる範囲を扱っており、複数Episodeを横断して
 繰り返し検証された関係はまだ記録されていません。Indexを埋める目的でPatternを
 作らず、複数の検証結果と反例確認が揃ったときに提案します。
 
 ## 未解決事項
 
 - AI速度と価値選択・検証のValue Hypothesisは `not_tested` のままです。
+- Lean Startupの選別と早期廃棄をAdmission Controlとして使うSolution
+  Hypothesisは `not_tested` のままです。
 - リレー中心のSession Storyは、25分Walkthrough、代替案比較、第三者Reviewが
   未実施です。
 - MobiusのFeature Hypothesisに該当するEpisodeはまだありません。
