@@ -1,0 +1,4 @@
+interface:
+  display_name: "分析ノードを仕上げる"
+  short_description: "人間Review済みの分析ノードを安全にFinalizeします"
+  default_prompt: "$finalize-analysis-node を使って、Review済みの分析ノードをFinalizeしてください。"
