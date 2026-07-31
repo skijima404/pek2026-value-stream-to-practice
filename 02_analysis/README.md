@@ -66,6 +66,7 @@ BCGの10–20–70関連資料
 | [Audienceと価値課題について記録された見立て](./observations/OBS-20260730-015716-audience-and-value-problem-statements.md) | `reviewed` | `high` | 採択シグナルHypothesis、Value Hypothesis |
 | [BCG資料内で10–20–70の説明対象が変化している](./observations/OBS-20260730-210822-bcg-10-20-70-claim-variation.md) | `reviewed` | `high` | 現時点ではHypothesis／Artifactへのrelationなし |
 | [リレー中心の構成候補を形成した要素と表現選択](./observations/OBS-20260731-021631-relay-story-source-elements.md) | `reviewed` | `high` | リレー中心のSession Story Hypothesis |
+| [価値判断と受け手のSlop経験を分ける判断Flowが記録された](./observations/OBS-20260731-120412-value-and-slop-experience-decision-flow.md) | `reviewed` | `high` | 作成者の現場実践として確認済み、Slide構成には未採用 |
 
 `confidence` は確率ではなく、Evidenceや限界の記述を置き換えるものでも
 ありません。根拠と詳細な限界はリンク先を確認します。
