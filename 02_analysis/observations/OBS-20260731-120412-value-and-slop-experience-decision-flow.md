@@ -10,6 +10,8 @@ reviewed_at: 2026-07-31T12:07:49+09:00
 reviewed_by: human:kijima
 review_scope: intent_alignment
 confidence: high
+knowledge_basis:
+  - practitioner_experience
 relations:
   - type: derived_from
     target: RN-20260731-115056-managed-ai-slop-transformation

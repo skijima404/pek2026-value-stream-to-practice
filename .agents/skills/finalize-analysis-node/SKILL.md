@@ -24,8 +24,10 @@ editing. This skill does not finalize Raw Notes; use `$finalize-raw-note` for th
 1. Inspect Git status and history without printing sensitive values.
 2. Read each target and every source node needed to assess its composed meaning.
 3. Confirm that relations use canonical types and point to existing node IDs.
-4. Preserve `confidence`, `hypothesis_level`, validation method, and result.
-   Human intent review does not change `not_tested` or establish factual validity.
+4. Preserve `knowledge_basis`, `confidence`, `hypothesis_level`, validation
+   method, and result. Human intent review does not change `not_tested` or
+   establish factual validity. Confirm that `knowledge_basis` reflects the cited
+   sources without inferring experience scope, case counts, or validation.
 5. Review the complete node for customer, project, personal, commercial,
    internal-system, credential, and combined re-identification information.
 6. If sensitive content exists in a committed revision, stop and report that Git
@@ -41,7 +43,7 @@ editing. This skill does not finalize Raw Notes; use `$finalize-raw-note` for th
    ```
 
    The script is idempotent. A complete, already-reviewed node remains unchanged.
-9. Synchronize status, confidence, result, title, and relations in
+9. Synchronize status, knowledge basis, confidence, result, title, and relations in
    `02_analysis/README.md`. Do not add new interpretation to the index.
 10. Run `python3 scripts/validate_repository.py` and `git diff --check`.
 
@@ -52,6 +54,8 @@ editing. This skill does not finalize Raw Notes; use `$finalize-raw-note` for th
 - Never adopt content into `03_artifacts/` during this workflow.
 - Never convert planned validation into a completed result.
 - Never raise confidence merely because a human reviewed the wording.
+- Never remove `practitioner_experience` merely because independent validation is
+  unavailable, and never convert it into `explicit_validation` during finalization.
 - Do not rename node IDs or filenames.
 - Summarize removed material by category only and never repeat removed values.
 

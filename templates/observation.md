@@ -9,12 +9,19 @@ status: proposed
 # `status: reviewed` の場合は reviewed_at、reviewed_by、
 # review_scope: intent_alignment を追加する。
 confidence: not_assessed
+knowledge_basis:
+  - recorded_statement
 relations:
   - type: derived_from
     target: RN-YYYYMMDD-HHMMSS-source-slug
 ---
 
 # 観察
+
+## 知識の成立根拠
+
+`knowledge_basis`の各値が、どのSourceまたは記録に対応するかを書く。
+経験知は検証結果に置き換えず、適用範囲と再現できない点を明示する。
 
 ## 根拠箇所
 

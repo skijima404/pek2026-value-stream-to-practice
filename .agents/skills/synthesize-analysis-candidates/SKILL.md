@@ -24,21 +24,27 @@ interpreting or creating repository content.
      and challenging signals, planned validation, actual result, and limitations.
    - Pattern: require at least two distinct Episodes by default and record the
      counterexample search. Do not create a Pattern merely to fill the index.
-6. Rank candidates by source support, distinctness from existing nodes, potential
+6. Assign every applicable `knowledge_basis` value from the cited sources and
+   completed activities. Preserve practitioner experience as a real basis without
+   converting it into independent validation. Use `case_recollection` for a
+   specific remembered episode without an inspectable primary record, and never
+   infer experience scope or case counts.
+7. Rank candidates by source support, distinctness from existing nodes, potential
    reuse, and ability to be tested. Do not rank by rhetorical appeal alone.
-7. Before writing, review the complete composition for publication safety,
+8. Before writing, review the complete composition for publication safety,
    including re-identification risk created by combining otherwise ordinary facts.
    If sensitive content exists in Git history, stop and report that history
    remediation is required without repeating the value.
-8. When authorized, create the smallest useful set of nodes from the repository
+9. When authorized, create the smallest useful set of nodes from the repository
    templates. Use `status: proposed`; never infer human intent review.
-9. Set confidence from the available evidence, not prose quality or agent effort.
+10. Set confidence from the available evidence, not prose quality or agent effort.
    Preserve `not_tested` unless identifiable evidence was actually checked.
-10. Add only canonical typed relations. A derived claim must cite its source node
+    Do not summarize `practitioner_experience` plus `not_tested` as unsupported.
+11. Add only canonical typed relations. A derived claim must cite its source node
     IDs, and a child result must not transitively validate a parent.
-11. Update `02_analysis/README.md` as a navigation view without introducing claims
+12. Update `02_analysis/README.md` as a navigation view without introducing claims
     that do not exist in source nodes.
-12. Run `python3 scripts/validate_repository.py` and `git diff --check`, including
+13. Run `python3 scripts/validate_repository.py` and `git diff --check`, including
     for assessment-only work. These checks are read-only and reveal whether the
     inspected repository was already inconsistent.
 
@@ -51,6 +57,9 @@ interpreting or creating repository content.
 - Never create or update an Artifact without an explicit adoption decision.
 - Do not treat GenAI synthesis, source polish, repeated wording, or plausibility as
   validation evidence.
+- Do not fabricate Episodes or external support for an experienced practice.
+  Practitioner guidance may remain independently untested and still be proposed
+  for explicit human adoption with its basis and limitations intact.
 - Do not force every promising idea into a node. Leave overlapping, highly
   speculative, or scope-drifting material in Raw Notes and state why it was
   deferred.

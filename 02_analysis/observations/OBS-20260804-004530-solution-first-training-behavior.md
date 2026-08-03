@@ -10,6 +10,9 @@ reviewed_at: 2026-08-04T00:53:33+09:00
 reviewed_by: human:kijima
 review_scope: intent_alignment
 confidence: medium
+knowledge_basis:
+  - case_recollection
+  - direct_observation
 relations:
   - type: derived_from
     target: RN-20260802-232517-solution-first-training-observations

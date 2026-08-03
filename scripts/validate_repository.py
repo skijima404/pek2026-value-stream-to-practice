@@ -56,6 +56,7 @@ DERIVED_REQUIRED = {
     "created_by",
     "status",
     "confidence",
+    "knowledge_basis",
     "relations",
 }
 DERIVED_REVIEW_REQUIRED = {
@@ -86,6 +87,15 @@ RELATION_TYPES = {
     "rejected_by",
     "superseded_by",
     "references",
+}
+KNOWLEDGE_BASES = {
+    "recorded_statement",
+    "practitioner_experience",
+    "case_recollection",
+    "external_research",
+    "direct_observation",
+    "explicit_validation",
+    "reasoned_synthesis",
 }
 TIMESTAMP = re.compile(
     r"^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:Z|[+-]\d{2}:\d{2})$"
@@ -138,6 +148,37 @@ def parse_relations(path: Path) -> list[tuple[str, str]]:
             relations.append((relation_type, target_match.group(1)))
             relation_type = ""
     return relations
+
+
+def parse_list_field(path: Path, field_name: str) -> list[str]:
+    lines = path.read_text(encoding="utf-8").splitlines()
+    try:
+        end = lines.index("---", 1)
+    except (ValueError, IndexError):
+        return []
+
+    values: list[str] = []
+    in_field = False
+    for line in lines[1:end]:
+        if line == f"{field_name}:":
+            in_field = True
+            continue
+        if in_field and line and not line.startswith((" ", "\t")):
+            break
+        value_match = re.match(r"^\s+-\s+([a-z_]+)\s*$", line)
+        if in_field and value_match:
+            values.append(value_match.group(1))
+    return values
+
+
+def parse_hypothesis_result(path: Path) -> str:
+    document = path.read_text(encoding="utf-8")
+    match = re.search(
+        r"^## 結果\s*$\n+\s*`(not_tested|supports|challenges|inconclusive)`\s*$",
+        document,
+        re.MULTILINE,
+    )
+    return match.group(1) if match else ""
 
 
 def contains_japanese_content(path: Path) -> bool:
@@ -227,6 +268,28 @@ def validate_node(
     if expected_type == "hypothesis_episode" and "hypothesis_level" not in fields:
         errors.append("hypothesis episode requires hypothesis_level")
     if expected_type != "raw_note":
+        knowledge_bases = parse_list_field(path, "knowledge_basis")
+        if not knowledge_bases:
+            errors.append("knowledge_basis must contain at least one value")
+        for basis in knowledge_bases:
+            if basis not in KNOWLEDGE_BASES:
+                errors.append(f"knowledge_basis has non-canonical value: {basis}")
+        if len(knowledge_bases) != len(set(knowledge_bases)):
+            errors.append("knowledge_basis must not contain duplicate values")
+        if expected_type == "hypothesis_episode":
+            result = parse_hypothesis_result(path)
+            if not result:
+                errors.append("hypothesis episode requires a canonical result")
+            elif result == "not_tested" and "explicit_validation" in knowledge_bases:
+                errors.append(
+                    "not_tested hypothesis must not declare explicit_validation"
+                )
+            elif result in {"supports", "challenges", "inconclusive"} and (
+                "explicit_validation" not in knowledge_bases
+            ):
+                errors.append(
+                    "completed hypothesis result requires explicit_validation"
+                )
         if fields.get("status") == "reviewed":
             missing_review = sorted(DERIVED_REVIEW_REQUIRED - fields.keys())
             if missing_review:
@@ -278,6 +341,17 @@ def main() -> int:
             and "hypothesis_level" not in fields
         ):
             failures.append((path, "hypothesis template requires hypothesis_level"))
+        if expected_type != "raw_note":
+            knowledge_bases = parse_list_field(path, "knowledge_basis")
+            if not knowledge_bases:
+                failures.append(
+                    (path, "template knowledge_basis must contain at least one value")
+                )
+            for basis in knowledge_bases:
+                if basis not in KNOWLEDGE_BASES:
+                    failures.append(
+                        (path, f"template knowledge_basis has non-canonical value: {basis}")
+                    )
         if not contains_japanese_content(path):
             failures.append((path, "template body must contain Japanese text"))
         templates_checked += 1

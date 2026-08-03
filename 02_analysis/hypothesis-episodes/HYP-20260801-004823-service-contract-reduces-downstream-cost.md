@@ -11,6 +11,9 @@ reviewed_at: 2026-08-01T00:53:44+09:00
 reviewed_by: human:kijima
 review_scope: intent_alignment
 confidence: low
+knowledge_basis:
+  - practitioner_experience
+  - reasoned_synthesis
 relations:
   - type: derived_from
     target: OBS-20260801-004821-contract-accountability-cost-transfer

@@ -10,6 +10,9 @@ reviewed_at: 2026-07-31T01:11:21+09:00
 reviewed_by: human:kijima
 review_scope: intent_alignment
 confidence: high
+knowledge_basis:
+  - external_research
+  - recorded_statement
 relations:
   - type: derived_from
     target: EXT-20260730-015112-accepted-session-proposal

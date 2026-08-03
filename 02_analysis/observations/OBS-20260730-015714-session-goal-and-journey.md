@@ -10,6 +10,8 @@ reviewed_at: 2026-07-31T01:11:21+09:00
 reviewed_by: human:kijima
 review_scope: intent_alignment
 confidence: high
+knowledge_basis:
+  - recorded_statement
 relations:
   - type: derived_from
     target: RN-20260729-205144-session-goal-and-value-stream

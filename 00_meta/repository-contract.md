@@ -40,8 +40,9 @@ in `03_artifacts/` establishes current truth within its stated scope.
 repository nodes. It is not a governed node, evidence source, derived claim,
 adoption decision, or current truth.
 
-The index may summarize node titles, declared status, confidence, validation
-result, hypothesis level, typed relations, and explicit limitations. Every
+The index may summarize node titles, declared status, knowledge basis,
+confidence, validation result, hypothesis level, typed relations, and explicit
+limitations. Every
 summary must link to the source node. Do not introduce a new interpretation,
 infer a missing relation, or convert absence from the index into rejection.
 
@@ -55,11 +56,19 @@ stale or disagrees with them.
 Agents must label and keep separate:
 
 - **source statement**: what the source says;
+- **knowledge basis**: what kind of source, experience, observation, research,
+  validation, or synthesis the claim rests on;
 - **observation**: a bounded extraction with minimal interpretation;
 - **hypothesis**: a falsifiable or assessable interpretation;
 - **validation result**: what was actually checked;
 - **decision**: what was adopted and why;
 - **limitation**: what remains unknown or cannot be checked.
+
+`knowledge_basis` and validation result are independent axes. In particular,
+`practitioner_experience` together with `not_tested` means that the claim is
+grounded in professional practice but has not been independently tested in
+this repository. Do not rewrite that combination as "unsupported," and do not
+rewrite it as independently validated or universally true.
 
 ## Meaning of Raw Note
 

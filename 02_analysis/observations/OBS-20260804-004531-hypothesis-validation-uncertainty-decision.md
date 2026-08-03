@@ -10,6 +10,8 @@ reviewed_at: 2026-08-04T00:53:33+09:00
 reviewed_by: human:kijima
 review_scope: intent_alignment
 confidence: high
+knowledge_basis:
+  - reasoned_synthesis
 relations:
   - type: derived_from
     target: RN-20260804-002446-hypothesis-validation-as-uncertainty-reduction

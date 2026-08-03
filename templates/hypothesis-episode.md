@@ -10,12 +10,19 @@ status: proposed
 # `status: reviewed` の場合は reviewed_at、reviewed_by、
 # review_scope: intent_alignment を追加する。
 confidence: not_assessed
+knowledge_basis:
+  - reasoned_synthesis
 relations:
   - type: derived_from
     target: OBS-YYYYMMDD-HHMMSS-source-slug
 ---
 
 # 仮説
+
+## 知識の成立根拠
+
+この仮説が、経験知、外部Research、直接観察、明示的検証、または推論の
+どれに基づくかを書く。`practitioner_experience`と`not_tested`は両立する。
 
 ## Mobiusでの位置づけ
 

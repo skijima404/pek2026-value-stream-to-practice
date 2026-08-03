@@ -11,6 +11,9 @@ reviewed_at: 2026-07-31T00:55:25+09:00
 reviewed_by: human:kijima
 review_scope: intent_alignment
 confidence: not_assessed
+knowledge_basis:
+  - practitioner_experience
+  - reasoned_synthesis
 relations:
   - type: derived_from
     target: OBS-20260731-021631-relay-story-source-elements

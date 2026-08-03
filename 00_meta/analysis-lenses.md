@@ -45,6 +45,8 @@ sections:
 For each section:
 
 - cite the repository node IDs that support the explanation;
+- preserve each node's declared `knowledge_basis` and distinguish practitioner
+  experience from independently tested evidence;
 - explain only what was considered, tested, or learned in the requested scope;
 - distinguish planned validation from completed validation;
 - state that no relevant consideration was found when the sources do not
@@ -53,6 +55,10 @@ For each section:
 
 Use `Measure & Learn` only to describe explicitly recorded evidence and
 learning.
+
+Do not summarize `practitioner_experience` with a `not_tested` result as
+"unsupported." Describe it as experience-grounded and not independently tested
+in this repository. Conversely, do not describe it as a validation result.
 
 ### Prohibited uses
 
