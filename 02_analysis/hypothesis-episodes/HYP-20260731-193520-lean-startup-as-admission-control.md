@@ -11,6 +11,10 @@ reviewed_at: 2026-07-31T19:39:23+09:00
 reviewed_by: human:kijima
 review_scope: intent_alignment
 confidence: low
+knowledge_basis:
+  - external_research
+  - practitioner_experience
+  - reasoned_synthesis
 relations:
   - type: derived_from
     target: RN-20260731-190846-endless-stream-ai-slop-reading-notes

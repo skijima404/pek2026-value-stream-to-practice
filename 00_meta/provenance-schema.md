@@ -64,6 +64,7 @@ All derived nodes require:
 - `id`, `type`, `title`, `created_at`, `created_by`;
 - `content_language`: `ja`;
 - `status`: `proposed`, `reviewed`, `rejected`, or `superseded`;
+- `knowledge_basis`: a non-empty YAML list using the canonical values below;
 - `confidence`: `low`, `medium`, `high`, or `not_assessed`;
 - `relations`: a YAML list of typed relations.
 
@@ -71,6 +72,43 @@ Confidence is not probability and must not replace a description of evidence.
 Derived analysis does not use `status: accepted`. Human intent review ends at
 `reviewed`; adoption as current repository truth is recorded only in
 `03_artifacts/`.
+
+### Knowledge basis
+
+`knowledge_basis` records how the knowledge or claim represented by a derived
+node was formed. It does not record whether a human reviewed the wording,
+whether a claim was validated, or whether it was adopted.
+
+Allowed values are:
+
+| Value | Meaning |
+| --- | --- |
+| `recorded_statement` | A repository source explicitly recorded the statement, plan, preference, or interpretation |
+| `practitioner_experience` | A practitioner identifies accumulated professional experience or practice judgment as a basis |
+| `case_recollection` | A bounded remembered episode is available without an inspectable primary record |
+| `external_research` | An identifiable external source was actually inspected |
+| `direct_observation` | Actual behavior, an event, or a condition was captured in a bounded record |
+| `explicit_validation` | A purposeful test, interview, review, or other evidence-gathering activity was completed |
+| `reasoned_synthesis` | The node combines or interprets sources to form a new inference |
+
+Use every applicable value and no inferred value. Do not infer accumulated
+experience from seniority, a framework vocabulary entry, polished prose, or a
+single anecdote. Use `case_recollection` rather than `practitioner_experience`
+when the only basis is one remembered episode without an inspectable record.
+Use `explicit_validation` only when a validation activity actually occurred;
+a planned method, human intent review, or GenAI review is not validation.
+
+The following combination is valid and important:
+
+```yaml
+knowledge_basis:
+  - practitioner_experience
+```
+
+with a Hypothesis Episode result of `not_tested`. It means that professional
+practice grounds the claim while this repository contains no independent test
+of it. It does not mean the claim has no basis, and it does not establish a
+general law.
 
 ### Meaning of `reviewed`
 

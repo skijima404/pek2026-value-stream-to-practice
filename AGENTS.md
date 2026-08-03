@@ -58,6 +58,12 @@ the session.
   artifact is an adopted conclusion.
 - Do not invent missing provenance, validation results, participant behavior,
   metrics, or evidence. Use `unknown`, `unverified`, or an explicit limitation.
+- Preserve `knowledge_basis` as an axis separate from human review, confidence,
+  validation result, and adoption. In particular, do not interpret
+  `practitioner_experience` with `not_tested` as unsupported, independently
+  validated, or universally true.
+- Do not infer practitioner experience, case counts, or expertise from
+  seniority, framework vocabulary, prose quality, or GenAI plausibility.
 - Never set a derived node to `status: reviewed` without explicit human
   confirmation that the node represents the human's intended meaning. Do not
   treat agent self-review, validation, or publication-safety review as that
@@ -80,8 +86,8 @@ the session.
 - When asked to explain or retrospect on a body of work, follow
   `00_meta/analysis-lenses.md` and cite the nodes supporting each explanation.
 - Treat `02_analysis/README.md` as a regenerable navigation view only. Keep it
-  synchronized with explicit node metadata and relations, and never use the
-  index itself as evidence or an adoption decision.
+  synchronized with explicit node metadata, knowledge basis, and relations,
+  and never use the index itself as evidence or an adoption decision.
 - `03_artifacts/` contains current adopted outputs, not every explored idea.
 - `10_external-inputs/` contains immutable constraints and references. External
   input is not automatically evidence that a hypothesis is true.

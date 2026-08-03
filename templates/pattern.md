@@ -9,6 +9,8 @@ status: proposed
 # `status: reviewed` の場合は reviewed_at、reviewed_by、
 # review_scope: intent_alignment を追加する。
 confidence: not_assessed
+knowledge_basis:
+  - reasoned_synthesis
 relations:
   - type: derived_from
     target: HYP-YYYYMMDD-HHMMSS-source-one
@@ -17,6 +19,11 @@ relations:
 ---
 
 # パターン
+
+## 知識の成立根拠
+
+参照するEpisodeのBasisと、Patternとして追加した推論を区別する。
+経験知だけを理由に、存在しないEpisodeや反例確認を補わない。
 
 ## 繰り返し確認された関係
 

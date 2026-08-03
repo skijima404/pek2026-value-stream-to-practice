@@ -39,6 +39,29 @@ not make a newly composed node safe by inheritance.
 A publication-safety review does not validate a claim, increase confidence, or
 adopt an artifact. Keep epistemic status and sanitization status separate.
 
+### Knowledge basis at every promotion boundary
+
+Assign `knowledge_basis` from what the cited sources and completed activities
+actually support. Preserve multiple bases when a node combines practitioner
+experience, external research, direct observation, or reasoned synthesis.
+
+- Do not treat `not_tested` as meaning that a node has no knowledge basis.
+- Do not treat `practitioner_experience` as independent validation, a measured
+  result, population-wide evidence, or a universal rule.
+- Do not invent engagement counts, years of experience, success rates, or case
+  details to make practitioner experience appear more rigorous.
+- Use `case_recollection` for one remembered episode that lacks an inspectable
+  primary record. Do not silently expand it into accumulated experience.
+- Use `external_research` only for identifiable material that was actually
+  checked and preserved as a repository source.
+- Use `direct_observation` only for a bounded record of actual behavior, an
+  event, or a condition. Record selection and comparability limitations.
+- Use `explicit_validation` only after an evidence-gathering activity was
+  completed and its actual result was recorded.
+- Sanitization or confidentiality-driven generalization does not erase the
+  knowledge basis, but it may limit reproducibility and generalization. State
+  that limitation without retaining identifying details.
+
 ### Raw Note to Observation
 
 - Quote or precisely locate the source statement.
@@ -112,6 +135,9 @@ GenAI output is process assistance, not evidence by itself.
 - If only one episode exists, keep `status: proposed` and state that the pattern
   is a single-case interpretation.
 - Record known counterexamples or the absence of a counterexample search.
+- Practitioner experience does not waive the Episode and counterexample rules.
+  Do not fabricate cases or Episodes to make an experienced practice look like
+  a repository-validated Pattern.
 
 ### Analysis to Artifact
 
@@ -119,6 +145,10 @@ GenAI output is process assistance, not evidence by itself.
 - Cite the supporting analysis with `adopted_from`.
 - State scope, unresolved uncertainty, and replacement/supersession behavior.
 - Never interpret a requested filename or placeholder as an adoption decision.
+- A human may explicitly adopt an independently untested practitioner practice
+  as current session guidance. Preserve `practitioner_experience`, disclose
+  that the repository did not independently test it, state its application
+  scope and limitations, and do not present it as a universal or measured fact.
 
 ## Rejection and supersession
 

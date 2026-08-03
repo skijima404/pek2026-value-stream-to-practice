@@ -11,6 +11,10 @@ reviewed_at: 2026-07-31T01:11:21+09:00
 reviewed_by: human:kijima
 review_scope: intent_alignment
 confidence: medium
+knowledge_basis:
+  - explicit_validation
+  - external_research
+  - reasoned_synthesis
 relations:
   - type: derived_from
     target: OBS-20260730-015715-accepted-direction-and-delivery-scope

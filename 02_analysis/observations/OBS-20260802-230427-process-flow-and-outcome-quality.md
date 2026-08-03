@@ -10,6 +10,8 @@ reviewed_at: 2026-08-02T23:18:14+09:00
 reviewed_by: human:kijima
 review_scope: intent_alignment
 confidence: high
+knowledge_basis:
+  - reasoned_synthesis
 relations:
   - type: derived_from
     target: RN-20260731-143326-mbpm-blind-spots-and-outcome-quality

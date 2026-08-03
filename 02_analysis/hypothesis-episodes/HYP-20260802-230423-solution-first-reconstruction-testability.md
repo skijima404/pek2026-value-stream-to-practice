@@ -11,6 +11,9 @@ reviewed_at: 2026-08-02T23:18:14+09:00
 reviewed_by: human:kijima
 review_scope: intent_alignment
 confidence: low
+knowledge_basis:
+  - case_recollection
+  - reasoned_synthesis
 relations:
   - type: derived_from
     target: OBS-20260802-230422-solution-first-hypothesis-reconstruction

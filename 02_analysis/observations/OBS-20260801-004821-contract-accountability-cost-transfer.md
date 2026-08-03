@@ -10,6 +10,9 @@ reviewed_at: 2026-08-01T00:53:44+09:00
 reviewed_by: human:kijima
 review_scope: intent_alignment
 confidence: high
+knowledge_basis:
+  - external_research
+  - reasoned_synthesis
 relations:
   - type: derived_from
     target: RN-20260731-190847-ai-slop-paper-to-platform-service

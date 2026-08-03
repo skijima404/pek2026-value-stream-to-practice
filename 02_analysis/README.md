@@ -18,9 +18,27 @@ Raw Noteや外部入力から作った派生ノードを置きます。
 正本ではありません。
 
 - 内容の正本は、リンク先のNodeとArtifactです。
-- status、confidence、result、relationを、リンク先を越えて解釈しません。
+- status、knowledge_basis、confidence、result、relationを、リンク先を越えて
+  解釈しません。
 - このIndexに載っていないことを、却下や不存在の証拠として扱いません。
 - NodeやArtifactと矛盾する場合は、リンク先を優先してIndexを再生成します。
+
+## Knowledge Basisの読み方
+
+`knowledge_basis`は、内容がどの種類の知識に基づいて成立したかを示します。
+正しさ、意図Review、検証結果、登壇への採用とは別の軸です。
+
+- `recorded_statement`: Sourceに記録された発言、計画、選好、見立て
+- `practitioner_experience`: 実務経験の蓄積から形成された判断または方法論
+- `case_recollection`: 再確認できる一次記録がない、特定事例についての記憶
+- `external_research`: 実際に確認し、Sourceとして保存した外部資料
+- `direct_observation`: 範囲を限定して記録された実際の行動、出来事、状態
+- `explicit_validation`: 実施済みのTest、Interview、Reviewなどの検証活動
+- `reasoned_synthesis`: 複数Sourceの接続または解釈によって作った推論
+
+複数のBasisを併記できます。`practitioner_experience`と`not_tested`の併記は、
+実務経験に根拠を持つが、このRepositoryでは独立検証していない状態です。
+経験知の価値を消さず、普遍的事実または検証済みEvidenceにも変換しません。
 
 ## 現在のReasoning Chain
 
@@ -95,44 +113,49 @@ BCGの10–20–70関連資料
 
 ## MobiusによるHypothesis一覧
 
-| Map | Level | Hypothesis Episode | Intent Review | Result |
-| --- | --- | --- | --- | --- |
-| Discovery | `value` | [AIによる作成速度向上は価値選択と検証の必要性を高める](./hypothesis-episodes/HYP-20260730-015718-ai-speed-requires-value-validation.md) | `proposed` | `not_tested` |
-| Discovery | `value` | [Platform利用者の一部は選択肢より安全な標準Pathによる選択負荷軽減を重視する](./hypothesis-episodes/HYP-20260802-230425-platform-choice-burden-value.md) | `reviewed` | `not_tested` |
-| Decision | `solution` | [リレーを中心にしたセッション構成ならAI SlopからVSMまでを一本道で伝えられる](./hypothesis-episodes/HYP-20260731-004119-relay-centered-session-story.md) | `reviewed` | `not_tested` |
-| Decision | `solution` | [Lean Startupの選別と早期廃棄は未検証案のコスト外部化を抑える](./hypothesis-episodes/HYP-20260731-193520-lean-startup-as-admission-control.md) | `reviewed` | `not_tested` |
-| Decision | `solution` | [PEのDVSと利用者側OVSを接続するとAI高速化のCost Transferを検知できる](./hypothesis-episodes/HYP-20260801-004822-coupled-observability-detects-cost-transfer.md) | `reviewed` | `not_tested` |
-| Decision | `solution` | [共有前のService Contract明確化は下流への理解と判断Costの転移を抑える](./hypothesis-episodes/HYP-20260801-004823-service-contract-reduces-downstream-cost.md) | `reviewed` | `not_tested` |
-| Decision | `solution` | [Solution-firstでもReasoning Chainを再構成すれば検証可能な仮説を作りやすい](./hypothesis-episodes/HYP-20260802-230423-solution-first-reconstruction-testability.md) | `reviewed` | `not_tested` |
-| Delivery | `feature` | 該当するEpisodeなし | — | — |
-| 未分類 | `not_assessed` | [開催側の採択を方向性継続の十分なシグナルとして扱う](./hypothesis-episodes/HYP-20260730-015717-organizer-selection-is-sufficient-signal.md) | `reviewed` | `supports` |
+| Map | Level | Hypothesis Episode | Knowledge Basis | Intent Review | Result |
+| --- | --- | --- | --- | --- | --- |
+| Discovery | `value` | [AIによる作成速度向上は価値選択と検証の必要性を高める](./hypothesis-episodes/HYP-20260730-015718-ai-speed-requires-value-validation.md) | `reasoned_synthesis` | `proposed` | `not_tested` |
+| Discovery | `value` | [Platform利用者の一部は選択肢より安全な標準Pathによる選択負荷軽減を重視する](./hypothesis-episodes/HYP-20260802-230425-platform-choice-burden-value.md) | `practitioner_experience`, `reasoned_synthesis` | `reviewed` | `not_tested` |
+| Decision | `solution` | [リレーを中心にしたセッション構成ならAI SlopからVSMまでを一本道で伝えられる](./hypothesis-episodes/HYP-20260731-004119-relay-centered-session-story.md) | `practitioner_experience`, `reasoned_synthesis` | `reviewed` | `not_tested` |
+| Decision | `solution` | [Lean Startupの選別と早期廃棄は未検証案のコスト外部化を抑える](./hypothesis-episodes/HYP-20260731-193520-lean-startup-as-admission-control.md) | `external_research`, `practitioner_experience`, `reasoned_synthesis` | `reviewed` | `not_tested` |
+| Decision | `solution` | [PEのDVSと利用者側OVSを接続するとAI高速化のCost Transferを検知できる](./hypothesis-episodes/HYP-20260801-004822-coupled-observability-detects-cost-transfer.md) | `practitioner_experience`, `reasoned_synthesis` | `reviewed` | `not_tested` |
+| Decision | `solution` | [共有前のService Contract明確化は下流への理解と判断Costの転移を抑える](./hypothesis-episodes/HYP-20260801-004823-service-contract-reduces-downstream-cost.md) | `practitioner_experience`, `reasoned_synthesis` | `reviewed` | `not_tested` |
+| Decision | `solution` | [Solution-firstでもReasoning Chainを再構成すれば検証可能な仮説を作りやすい](./hypothesis-episodes/HYP-20260802-230423-solution-first-reconstruction-testability.md) | `case_recollection`, `reasoned_synthesis` | `reviewed` | `not_tested` |
+| Delivery | `feature` | 該当するEpisodeなし | — | — | — |
+| 未分類 | `not_assessed` | [開催側の採択を方向性継続の十分なシグナルとして扱う](./hypothesis-episodes/HYP-20260730-015717-organizer-selection-is-sufficient-signal.md) | `explicit_validation`, `external_research`, `reasoned_synthesis` | `reviewed` | `supports` |
 
 `supports` となっている採択シグナルは、Proposalの大方向を維持して制作を
 進める判断に限定されます。Audience課題やValue Hypothesisの正しさを支持する
 結果ではありません。
 
+`practitioner_experience`と`not_tested`は両立します。この組み合わせは、実務経験を
+成立根拠に持つ一方、このRepositoryでは独立検証していないことを示します。
+「根拠なし」または「検証済み」と読み替えません。
+
 ## Observation一覧
 
-| Observation | Status | Confidence | 現在の接続先 |
-| --- | --- | --- | --- |
-| [セッション成功条件と参加者Journeyの原案](./observations/OBS-20260730-015714-session-goal-and-journey.md) | `reviewed` | `high` | 採用済みJourney／Value Stream |
-| [採択済み方向性とDeliveryの検討範囲](./observations/OBS-20260730-015715-accepted-direction-and-delivery-scope.md) | `reviewed` | `high` | 採択シグナルHypothesis、Value Hypothesis、採用済みJourney |
-| [Audienceと価値課題について記録された見立て](./observations/OBS-20260730-015716-audience-and-value-problem-statements.md) | `reviewed` | `high` | 採択シグナルHypothesis、Value Hypothesis |
-| [BCG資料内で10–20–70の説明対象が変化している](./observations/OBS-20260730-210822-bcg-10-20-70-claim-variation.md) | `reviewed` | `high` | 現時点ではHypothesis／Artifactへのrelationなし |
-| [リレー中心の構成候補を形成した要素と表現選択](./observations/OBS-20260731-021631-relay-story-source-elements.md) | `reviewed` | `high` | リレー中心のSession Story Hypothesis |
-| [価値判断と受け手のSlop経験を分ける判断Flowが記録された](./observations/OBS-20260731-120412-value-and-slop-experience-decision-flow.md) | `reviewed` | `high` | 作成者の現場実践として確認済み、Slide構成には未採用 |
-| [Platform Serviceの提供側と利用側を接続して観測する考えが記録された](./observations/OBS-20260801-004820-coupled-platform-value-streams.md) | `reviewed` | `high` | DVSとOVSを接続したObservability Hypothesis |
-| [ハンドオーバーとContractとCost Transferを分ける考えが記録された](./observations/OBS-20260801-004821-contract-accountability-cost-transfer.md) | `reviewed` | `high` | Service Contract Hypothesis |
-| [Solution候補からChallengeとValue Hypothesisを再構成する技法が記録された](./observations/OBS-20260802-230422-solution-first-hypothesis-reconstruction.md) | `reviewed` | `high` | Solution-first再構成Hypothesis |
-| [Platform Advisorには利用者がPlatformを選びたいという隠れた前提が記録された](./observations/OBS-20260802-230424-platform-choice-hidden-assumption.md) | `reviewed` | `high` | Platform選択負荷のValue Hypothesis |
-| [プロジェクトと変革の失敗率は対象と成功定義が異なり統合できない](./observations/OBS-20260802-230426-failure-rate-definition-mismatch.md) | `reviewed` | `high` | 登壇での利用判断とは分離 |
-| [Process上のFlowと最終成果物のOutcome Qualityは別の観測対象として記録された](./observations/OBS-20260802-230427-process-flow-and-outcome-quality.md) | `reviewed` | `high` | 測定方法と接続先は未決定 |
-| [Solution-first再構成の有無でTraining中の記述とIdea数に異なる様子が記録された](./observations/OBS-20260804-004530-solution-first-training-behavior.md) | `reviewed` | `medium` | 既存Solution HypothesisのContext、Validation Resultには不使用 |
-| [仮説検証を不確実性の分解と意思決定更新として扱う説明が記録された](./observations/OBS-20260804-004531-hypothesis-validation-uncertainty-decision.md) | `reviewed` | `high` | Lean Startup HypothesisのContext |
-| [前回登壇で対象Journeyを特定し今回VSM・MBPMへ展開する前後関係が記録された](./observations/OBS-20260804-004532-journey-before-vsm-mbpm.md) | `reviewed` | `high` | 前回登壇と今回の検討範囲の接続 |
+| Observation | Knowledge Basis | Status | Confidence | 現在の接続先 |
+| --- | --- | --- | --- | --- |
+| [セッション成功条件と参加者Journeyの原案](./observations/OBS-20260730-015714-session-goal-and-journey.md) | `recorded_statement` | `reviewed` | `high` | 採用済みJourney／Value Stream |
+| [採択済み方向性とDeliveryの検討範囲](./observations/OBS-20260730-015715-accepted-direction-and-delivery-scope.md) | `external_research`, `recorded_statement` | `reviewed` | `high` | 採択シグナルHypothesis、Value Hypothesis、採用済みJourney |
+| [Audienceと価値課題について記録された見立て](./observations/OBS-20260730-015716-audience-and-value-problem-statements.md) | `recorded_statement` | `reviewed` | `high` | 採択シグナルHypothesis、Value Hypothesis |
+| [BCG資料内で10–20–70の説明対象が変化している](./observations/OBS-20260730-210822-bcg-10-20-70-claim-variation.md) | `external_research` | `reviewed` | `high` | 現時点ではHypothesis／Artifactへのrelationなし |
+| [リレー中心の構成候補を形成した要素と表現選択](./observations/OBS-20260731-021631-relay-story-source-elements.md) | `practitioner_experience`, `reasoned_synthesis` | `reviewed` | `high` | リレー中心のSession Story Hypothesis |
+| [価値判断と受け手のSlop経験を分ける判断Flowが記録された](./observations/OBS-20260731-120412-value-and-slop-experience-decision-flow.md) | `practitioner_experience` | `reviewed` | `high` | 作成者の現場実践として確認済み、Slide構成には未採用 |
+| [Platform Serviceの提供側と利用側を接続して観測する考えが記録された](./observations/OBS-20260801-004820-coupled-platform-value-streams.md) | `reasoned_synthesis` | `reviewed` | `high` | DVSとOVSを接続したObservability Hypothesis |
+| [ハンドオーバーとContractとCost Transferを分ける考えが記録された](./observations/OBS-20260801-004821-contract-accountability-cost-transfer.md) | `external_research`, `reasoned_synthesis` | `reviewed` | `high` | Service Contract Hypothesis |
+| [Solution候補からChallengeとValue Hypothesisを再構成する技法が記録された](./observations/OBS-20260802-230422-solution-first-hypothesis-reconstruction.md) | `case_recollection` | `reviewed` | `high` | Solution-first再構成Hypothesis |
+| [Platform Advisorには利用者がPlatformを選びたいという隠れた前提が記録された](./observations/OBS-20260802-230424-platform-choice-hidden-assumption.md) | `practitioner_experience` | `reviewed` | `high` | Platform選択負荷のValue Hypothesis |
+| [プロジェクトと変革の失敗率は対象と成功定義が異なり統合できない](./observations/OBS-20260802-230426-failure-rate-definition-mismatch.md) | `external_research` | `reviewed` | `high` | 登壇での利用判断とは分離 |
+| [Process上のFlowと最終成果物のOutcome Qualityは別の観測対象として記録された](./observations/OBS-20260802-230427-process-flow-and-outcome-quality.md) | `reasoned_synthesis` | `reviewed` | `high` | 測定方法と接続先は未決定 |
+| [Solution-first再構成の有無でTraining中の記述とIdea数に異なる様子が記録された](./observations/OBS-20260804-004530-solution-first-training-behavior.md) | `case_recollection`, `direct_observation` | `reviewed` | `medium` | 既存Solution HypothesisのContext、Validation Resultには不使用 |
+| [仮説検証を不確実性の分解と意思決定更新として扱う説明が記録された](./observations/OBS-20260804-004531-hypothesis-validation-uncertainty-decision.md) | `reasoned_synthesis` | `reviewed` | `high` | Lean Startup HypothesisのContext |
+| [前回登壇で対象Journeyを特定し今回VSM・MBPMへ展開する前後関係が記録された](./observations/OBS-20260804-004532-journey-before-vsm-mbpm.md) | `external_research`, `recorded_statement` | `reviewed` | `high` | 前回登壇と今回の検討範囲の接続 |
 
-`confidence` は確率ではなく、Evidenceや限界の記述を置き換えるものでも
-ありません。根拠と詳細な限界はリンク先を確認します。
+`knowledge_basis`は成立根拠の種類、`confidence`は確率ではなく確信度、
+`result`は実施した検証の結果です。互いに置き換えず、根拠と詳細な限界は
+リンク先を確認します。
 
 ## 採用済みArtifact
 
@@ -200,6 +223,6 @@ BCGの10–20–70関連資料
 次の場合に、NodeとArtifactを再読してこのIndexを再生成します。
 
 - Observation、Hypothesis Episode、Patternを追加または実質変更したとき
-- status、confidence、result、relationが変わったとき
+- status、knowledge_basis、confidence、result、relationが変わったとき
 - Artifactを採用、更新、置換したとき
 - 人間が現在の全体像やReasoning Chainの整理を依頼したとき

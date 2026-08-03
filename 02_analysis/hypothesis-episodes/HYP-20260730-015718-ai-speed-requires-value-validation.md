@@ -8,6 +8,8 @@ created_by: agent:codex
 hypothesis_level: value
 status: proposed
 confidence: low
+knowledge_basis:
+  - reasoned_synthesis
 relations:
   - type: derived_from
     target: OBS-20260730-015716-audience-and-value-problem-statements

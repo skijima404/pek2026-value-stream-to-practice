@@ -10,6 +10,9 @@ reviewed_at: 2026-07-31T02:18:54+09:00
 reviewed_by: human:kijima
 review_scope: intent_alignment
 confidence: high
+knowledge_basis:
+  - practitioner_experience
+  - reasoned_synthesis
 relations:
   - type: derived_from
     target: RN-20260730-212352-discard-hypotheses-before-production-commitment
