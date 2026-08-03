@@ -61,6 +61,19 @@ Solution候補が先に出る実務上の思考順序
   -> Solution-firstから検証可能な仮説を再構成するSolution Hypothesis
   -> 人間の意図Review済み、未検証、未採用
 
+Solution-first再構成の有無が異なるTraining記録
+  -> Challenge表現、Idea数、所要時間、Facilitator負荷の違いをObservationとして整理
+  -> 比較条件が揃っていないため、既存Solution Hypothesisの検証結果には使わない
+
+案に含まれる複数の不確実性
+  + Riskを引き受けられる状態まで確からしさを更新する意思決定
+  -> 仮説検証を不確実性の分解と意思決定更新として扱う説明をObservationとして整理
+  -> 説明の有効性と登壇への採用は未確認
+
+前回登壇で特定したTeam Visionと対象Journey
+  -> 今回、そのJourneyをVSM・MBPMへ展開する前後関係をObservationとして整理
+  -> 今回の順序であり、VSM・MBPM一般の唯一の作成順序とはしない
+
 Platform Advisorの隠れた前提
   + Platformを選びたい利用者と、選択を負担と感じる利用者
   -> 安全な標準Pathによる選択負荷軽減というValue Hypothesis
@@ -114,6 +127,9 @@ BCGの10–20–70関連資料
 | [Platform Advisorには利用者がPlatformを選びたいという隠れた前提が記録された](./observations/OBS-20260802-230424-platform-choice-hidden-assumption.md) | `reviewed` | `high` | Platform選択負荷のValue Hypothesis |
 | [プロジェクトと変革の失敗率は対象と成功定義が異なり統合できない](./observations/OBS-20260802-230426-failure-rate-definition-mismatch.md) | `reviewed` | `high` | 登壇での利用判断とは分離 |
 | [Process上のFlowと最終成果物のOutcome Qualityは別の観測対象として記録された](./observations/OBS-20260802-230427-process-flow-and-outcome-quality.md) | `reviewed` | `high` | 測定方法と接続先は未決定 |
+| [Solution-first再構成の有無でTraining中の記述とIdea数に異なる様子が記録された](./observations/OBS-20260804-004530-solution-first-training-behavior.md) | `reviewed` | `medium` | 既存Solution HypothesisのContext、Validation Resultには不使用 |
+| [仮説検証を不確実性の分解と意思決定更新として扱う説明が記録された](./observations/OBS-20260804-004531-hypothesis-validation-uncertainty-decision.md) | `reviewed` | `high` | Lean Startup HypothesisのContext |
+| [前回登壇で対象Journeyを特定し今回VSM・MBPMへ展開する前後関係が記録された](./observations/OBS-20260804-004532-journey-before-vsm-mbpm.md) | `reviewed` | `high` | 前回登壇と今回の検討範囲の接続 |
 
 `confidence` は確率ではなく、Evidenceや限界の記述を置き換えるものでも
 ありません。根拠と詳細な限界はリンク先を確認します。
@@ -163,6 +179,12 @@ BCGの10–20–70関連資料
   `not_tested` です。
 - Solution-firstからの再構成が、教科書的順序または人間だけのReviewより検証可能な
   仮説を作りやすいかは `not_tested` です。
+- Solution-first再構成の有無が異なるTraining記録は、条件が揃っておらず、手法の
+  効果検証には使えません。
+- 仮説検証を不確実性の分解として説明することが、参加者の理解や意思決定を
+  改善するかは未確認です。
+- Journey特定後にVSM・MBPMへ展開する今回の順序が、課題抽出やPriority判断を
+  改善するかは比較されていません。
 - Platform利用者のどのSegmentが選択肢より標準Pathと選択負荷軽減を重視するかは
   `not_tested` です。
 - Outcome、Experience、Trust、Contract Qualityの具体的なMetricと、MBPMへ
