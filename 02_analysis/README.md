@@ -55,6 +55,26 @@ AI生成物またはPlatform ServiceのHandover
   -> 共有前のService Contract明確化というSolution Hypothesis
   -> 人間の意図Review済み、未検証、未採用
 
+Solution候補が先に出る実務上の思考順序
+  + Challenge、Value、Solutionの役割分離
+  + GenAIによるReasoning Chainの構造確認
+  -> Solution-firstから検証可能な仮説を再構成するSolution Hypothesis
+  -> 人間の意図Review済み、未検証、未採用
+
+Platform Advisorの隠れた前提
+  + Platformを選びたい利用者と、選択を負担と感じる利用者
+  -> 安全な標準Pathによる選択負荷軽減というValue Hypothesis
+  -> 人間の意図Review済み、未検証、未採用
+
+Project・Transformation関連資料の失敗率
+  -> 対象、成功定義、Evidenceの性質が異なることをObservationとして整理
+  -> Business Outcome未達率としては統合しない
+
+MBPMで観測するProcess上のFlow
+  + Output、Experience、Trust、Contract Quality
+  -> 別の観測対象としてObservationに分離
+  -> 測定方法と既存Observability Hypothesisへの接続は未決定
+
 BCGの10–20–70関連資料
   -> 説明対象の違いをObservationとして整理
   -> 登壇上の主張やArtifactには未採用
@@ -65,10 +85,12 @@ BCGの10–20–70関連資料
 | Map | Level | Hypothesis Episode | Intent Review | Result |
 | --- | --- | --- | --- | --- |
 | Discovery | `value` | [AIによる作成速度向上は価値選択と検証の必要性を高める](./hypothesis-episodes/HYP-20260730-015718-ai-speed-requires-value-validation.md) | `proposed` | `not_tested` |
+| Discovery | `value` | [Platform利用者の一部は選択肢より安全な標準Pathによる選択負荷軽減を重視する](./hypothesis-episodes/HYP-20260802-230425-platform-choice-burden-value.md) | `reviewed` | `not_tested` |
 | Decision | `solution` | [リレーを中心にしたセッション構成ならAI SlopからVSMまでを一本道で伝えられる](./hypothesis-episodes/HYP-20260731-004119-relay-centered-session-story.md) | `reviewed` | `not_tested` |
 | Decision | `solution` | [Lean Startupの選別と早期廃棄は未検証案のコスト外部化を抑える](./hypothesis-episodes/HYP-20260731-193520-lean-startup-as-admission-control.md) | `reviewed` | `not_tested` |
 | Decision | `solution` | [PEのDVSと利用者側OVSを接続するとAI高速化のCost Transferを検知できる](./hypothesis-episodes/HYP-20260801-004822-coupled-observability-detects-cost-transfer.md) | `reviewed` | `not_tested` |
 | Decision | `solution` | [共有前のService Contract明確化は下流への理解と判断Costの転移を抑える](./hypothesis-episodes/HYP-20260801-004823-service-contract-reduces-downstream-cost.md) | `reviewed` | `not_tested` |
+| Decision | `solution` | [Solution-firstでもReasoning Chainを再構成すれば検証可能な仮説を作りやすい](./hypothesis-episodes/HYP-20260802-230423-solution-first-reconstruction-testability.md) | `reviewed` | `not_tested` |
 | Delivery | `feature` | 該当するEpisodeなし | — | — |
 | 未分類 | `not_assessed` | [開催側の採択を方向性継続の十分なシグナルとして扱う](./hypothesis-episodes/HYP-20260730-015717-organizer-selection-is-sufficient-signal.md) | `reviewed` | `supports` |
 
@@ -88,6 +110,10 @@ BCGの10–20–70関連資料
 | [価値判断と受け手のSlop経験を分ける判断Flowが記録された](./observations/OBS-20260731-120412-value-and-slop-experience-decision-flow.md) | `reviewed` | `high` | 作成者の現場実践として確認済み、Slide構成には未採用 |
 | [Platform Serviceの提供側と利用側を接続して観測する考えが記録された](./observations/OBS-20260801-004820-coupled-platform-value-streams.md) | `reviewed` | `high` | DVSとOVSを接続したObservability Hypothesis |
 | [ハンドオーバーとContractとCost Transferを分ける考えが記録された](./observations/OBS-20260801-004821-contract-accountability-cost-transfer.md) | `reviewed` | `high` | Service Contract Hypothesis |
+| [Solution候補からChallengeとValue Hypothesisを再構成する技法が記録された](./observations/OBS-20260802-230422-solution-first-hypothesis-reconstruction.md) | `reviewed` | `high` | Solution-first再構成Hypothesis |
+| [Platform Advisorには利用者がPlatformを選びたいという隠れた前提が記録された](./observations/OBS-20260802-230424-platform-choice-hidden-assumption.md) | `reviewed` | `high` | Platform選択負荷のValue Hypothesis |
+| [プロジェクトと変革の失敗率は対象と成功定義が異なり統合できない](./observations/OBS-20260802-230426-failure-rate-definition-mismatch.md) | `reviewed` | `high` | 登壇での利用判断とは分離 |
+| [Process上のFlowと最終成果物のOutcome Qualityは別の観測対象として記録された](./observations/OBS-20260802-230427-process-flow-and-outcome-quality.md) | `reviewed` | `high` | 測定方法と接続先は未決定 |
 
 `confidence` は確率ではなく、Evidenceや限界の記述を置き換えるものでも
 ありません。根拠と詳細な限界はリンク先を確認します。
@@ -113,17 +139,16 @@ BCGの10–20–70関連資料
 - [AI活用で狙うOutcomeと人間・AI協業モデル](../01_working/raw-notes/RN-20260730-102859-ai-outcomes-and-collaboration-model.md)
 - [本編とRepositoryへの導線の役割分担](../01_working/raw-notes/RN-20260730-103954-session-repo-role.md)
 - [Value Streamの課題からAIで狙う効果を考える](../01_working/raw-notes/RN-20260730-111926-value-stream-ai-outcomes.md)
-- [70%失敗説の出典探索と不採用判断](../01_working/raw-notes/RN-20260730-224354-seventy-percent-failure-source-check.md)
-- [MBPMで観測できないAI SlopとOutcome Quality](../01_working/raw-notes/RN-20260731-143326-mbpm-blind-spots-and-outcome-quality.md)
 - [Enablementで橋を架け続けるべきでない境界](../01_working/raw-notes/RN-20260731-204459-enablement-bridge-boundaries.md)
 - [AIをValue Streamへ配置するResource Management](../01_working/raw-notes/RN-20260731-214443-ai-resource-management-in-value-stream.md)
 - [Slopと感じても残すべき摩擦](../01_working/raw-notes/RN-20260731-214443-necessary-friction-experienced-as-slop.md)
+- [リレー比喩でシステム思考を説明する設計判断](../01_working/raw-notes/RN-20260802-215509-relay-metaphor-as-systems-thinking-translation.md)
 
 ## Patternの状態
 
 現在、Patternは0件です。
 
-6件のHypothesis Episodeは異なる範囲を扱っており、複数Episodeを横断して
+8件のHypothesis Episodeは異なる範囲を扱っており、複数Episodeを横断して
 繰り返し検証された関係はまだ記録されていません。Indexを埋める目的でPatternを
 作らず、複数の検証結果と反例確認が揃ったときに提案します。
 
@@ -136,6 +161,12 @@ BCGの10–20–70関連資料
   できるかは `not_tested` です。
 - 共有前のService Contract明確化が、受け手の理解、検証、判断Costを減らすかは
   `not_tested` です。
+- Solution-firstからの再構成が、教科書的順序または人間だけのReviewより検証可能な
+  仮説を作りやすいかは `not_tested` です。
+- Platform利用者のどのSegmentが選択肢より標準Pathと選択負荷軽減を重視するかは
+  `not_tested` です。
+- Outcome、Experience、Trust、Contract Qualityの具体的なMetricと、MBPMへ
+  組み込むScopeは未定義です。
 - リレー中心のSession Storyは、25分Walkthrough、代替案比較、第三者Reviewが
   未実施です。
 - MobiusのFeature Hypothesisに該当するEpisodeはまだありません。
