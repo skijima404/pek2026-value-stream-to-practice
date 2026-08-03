@@ -57,6 +57,16 @@ AIの局所高速化、ハンドオーバー、リレー、早期中止判断
   -> リレー中心のSession StoryというSolution Hypothesis
   -> 人間の意図Review済み、未検証、未採用
 
+PresalesとProject Deliveryを通じた限定的な実務経験
+  + Customerへ毎回、目的とDiscovery結果を質問した経験
+  -> 確認時点で結果が定義されていないか、担当者が理解していないというObservation
+  -> 調査による実施率ではなくpractitioner_experienceとして保持
+
+Value Stream上の課題と期待Outcome
+  + AI、Human、PlatformのCapabilityと責任境界
+  -> OutcomeからAI Capabilityを配置するSolution Hypothesis
+  -> 記録された考えと推論に基づき、未検証、未採用
+
 AI SlopによるCost外部化
   + Release前のValue Hypothesis検証と早期廃棄
   -> Lean Startupの選別をAdmission Controlとして使うSolution Hypothesis
@@ -106,6 +116,19 @@ MBPMで観測するProcess上のFlow
   -> 別の観測対象としてObservationに分離
   -> 測定方法と既存Observability Hypothesisへの接続は未決定
 
+受け手がSlopとして経験する追加負荷
+  + 品質、学習、Accountability、安全性のために残す摩擦
+  -> 摩擦を除去するか目的を明示して残すかの境界をObservationとして整理
+  -> 実際のServiceでの判定方法と効果は未確認
+
+ITSMで約10年、約3件のProjectに再利用し、Project Portfolioにも持ち込んだ
+メトリック分析運用
+  -> Dashboardによる定期的な異常検知とBIによる原因診断をObservationとして整理
+  -> practitioner_experienceとcase_recollectionを分離
+  -> Metric過剰取得を抑えながら改善Loopの頻度と深さを両立するSolution Hypothesis
+  -> DashboardとDataだけではなく分析Techniqueの習熟を成立条件とする
+  -> 過去の一次資料は未確認、Platform Engineeringは導入初期、未採用
+
 BCGの10–20–70関連資料
   -> 説明対象の違いをObservationとして整理
   -> 登壇上の主張やArtifactには未採用
@@ -122,6 +145,8 @@ BCGの10–20–70関連資料
 | Decision | `solution` | [PEのDVSと利用者側OVSを接続するとAI高速化のCost Transferを検知できる](./hypothesis-episodes/HYP-20260801-004822-coupled-observability-detects-cost-transfer.md) | `practitioner_experience`, `reasoned_synthesis` | `reviewed` | `not_tested` |
 | Decision | `solution` | [共有前のService Contract明確化は下流への理解と判断Costの転移を抑える](./hypothesis-episodes/HYP-20260801-004823-service-contract-reduces-downstream-cost.md) | `practitioner_experience`, `reasoned_synthesis` | `reviewed` | `not_tested` |
 | Decision | `solution` | [Solution-firstでもReasoning Chainを再構成すれば検証可能な仮説を作りやすい](./hypothesis-episodes/HYP-20260802-230423-solution-first-reconstruction-testability.md) | `case_recollection`, `reasoned_synthesis` | `reviewed` | `not_tested` |
+| Decision | `solution` | [Value Streamの課題とOutcomeからAI Capabilityを配置すると局所最適を避けやすい](./hypothesis-episodes/HYP-20260804-013223-outcome-first-ai-resource-allocation.md) | `recorded_statement`, `reasoned_synthesis` | `reviewed` | `not_tested` |
+| Decision | `solution` | [異常検知と原因診断を分ける運用はMetric過剰取得を抑え改善Loopを両立する](./hypothesis-episodes/HYP-20260804-013226-two-stage-metrics-analysis.md) | `practitioner_experience`, `case_recollection`, `reasoned_synthesis` | `reviewed` | `not_tested` |
 | Delivery | `feature` | 該当するEpisodeなし | — | — | — |
 | 未分類 | `not_assessed` | [開催側の採択を方向性継続の十分なシグナルとして扱う](./hypothesis-episodes/HYP-20260730-015717-organizer-selection-is-sufficient-signal.md) | `explicit_validation`, `external_research`, `reasoned_synthesis` | `reviewed` | `supports` |
 
@@ -152,6 +177,9 @@ BCGの10–20–70関連資料
 | [Solution-first再構成の有無でTraining中の記述とIdea数に異なる様子が記録された](./observations/OBS-20260804-004530-solution-first-training-behavior.md) | `case_recollection`, `direct_observation` | `reviewed` | `medium` | 既存Solution HypothesisのContext、Validation Resultには不使用 |
 | [仮説検証を不確実性の分解と意思決定更新として扱う説明が記録された](./observations/OBS-20260804-004531-hypothesis-validation-uncertainty-decision.md) | `reasoned_synthesis` | `reviewed` | `high` | Lean Startup HypothesisのContext |
 | [前回登壇で対象Journeyを特定し今回VSM・MBPMへ展開する前後関係が記録された](./observations/OBS-20260804-004532-journey-before-vsm-mbpm.md) | `external_research`, `recorded_statement` | `reviewed` | `high` | 前回登壇と今回の検討範囲の接続 |
+| [Customerへの確認ではDiscovery結果が未定義または担当者に理解されていなかった](./observations/OBS-20260804-013221-discovery-practice-gap.md) | `practitioner_experience` | `reviewed` | `medium` | Solution-firstが起こる背景となる限定的な経験知 |
+| [Slopとして経験される摩擦にも残す目的があり得ると整理された](./observations/OBS-20260804-013222-necessary-friction-boundary.md) | `reasoned_synthesis` | `reviewed` | `medium` | 価値とSlop経験を分ける判断Flowの境界条件 |
+| [Dashboardと分析を分ける運用がITSMとProject Portfolioで用いられた](./observations/OBS-20260804-013225-itsm-metrics-analysis-practice.md) | `practitioner_experience`, `case_recollection` | `reviewed` | `medium` | 二段階メトリック分析Hypothesis |
 | [今回のProblem Spaceは2026年4月公開記事に記録され、後続準備で実践方法が追加された](./observations/OBS-20260804-014228-prior-article-session-continuity.md) | `external_research`, `recorded_statement`, `reasoned_synthesis` | `proposed` | `high` | 先行する自己資料と今回の実践方法の連続性 |
 
 `knowledge_basis`は成立根拠の種類、`confidence`は確率ではなく確信度、
@@ -175,20 +203,16 @@ BCGの10–20–70関連資料
 
 - [PEK2026プレゼンテーション候補ネタ集](../01_working/raw-notes/RN-20260730-093311-presentation-idea-inventory.md)
 - [Workモード引き継ぎからのプレゼンテーション追加候補](../01_working/raw-notes/RN-20260730-095321-work-mode-idea-supplement.md)
-- [Discoverの欠落感と前回登壇からの接続](../01_working/raw-notes/RN-20260730-101222-discovery-gap-and-talk-continuity.md)
 - [AI活用で狙うOutcomeと人間・AI協業モデル](../01_working/raw-notes/RN-20260730-102859-ai-outcomes-and-collaboration-model.md)
 - [本編とRepositoryへの導線の役割分担](../01_working/raw-notes/RN-20260730-103954-session-repo-role.md)
-- [Value Streamの課題からAIで狙う効果を考える](../01_working/raw-notes/RN-20260730-111926-value-stream-ai-outcomes.md)
 - [Enablementで橋を架け続けるべきでない境界](../01_working/raw-notes/RN-20260731-204459-enablement-bridge-boundaries.md)
-- [AIをValue Streamへ配置するResource Management](../01_working/raw-notes/RN-20260731-214443-ai-resource-management-in-value-stream.md)
-- [Slopと感じても残すべき摩擦](../01_working/raw-notes/RN-20260731-214443-necessary-friction-experienced-as-slop.md)
 - [リレー比喩でシステム思考を説明する設計判断](../01_working/raw-notes/RN-20260802-215509-relay-metaphor-as-systems-thinking-translation.md)
 
 ## Patternの状態
 
 現在、Patternは0件です。
 
-8件のHypothesis Episodeは異なる範囲を扱っており、複数Episodeを横断して
+10件のHypothesis Episodeは異なる範囲を扱っており、複数Episodeを横断して
 繰り返し検証された関係はまだ記録されていません。Indexを埋める目的でPatternを
 作らず、複数の検証結果と反例確認が揃ったときに提案します。
 
@@ -209,6 +233,16 @@ BCGの10–20–70関連資料
   改善するかは未確認です。
 - Journey特定後にVSM・MBPMへ展開する今回の順序が、課題抽出やPriority判断を
   改善するかは比較されていません。
+- Customerへ目的とDiscovery結果を質問した経験はありますが、質問件数と一次記録を
+  備えた調査ではなく、組織で未定義なのか担当者が理解していないのかは区別できません。
+- Value Streamの課題とOutcomeからAI Capabilityを配置する方法が、AI Use Caseから
+  始める方法より局所最適を避けやすいかは `not_tested` です。
+- Slopとして経験される摩擦のうち、何を残すべきかを判定する方法と効果は
+  未確認です。
+- 異常検知と原因診断を分ける運用はITSMとProject Portfolioの経験に基づきますが、
+  過去の一次資料は未確認で、Platform Engineeringでの実践は導入初期です。
+- DashboardとDataからFactを取り出すために必要な分析Technique、習熟度、Training
+  方法は未定義です。
 - Platform利用者のどのSegmentが選択肢より標準Pathと選択負荷軽減を重視するかは
   `not_tested` です。
 - Outcome、Experience、Trust、Contract Qualityの具体的なMetricと、MBPMへ
