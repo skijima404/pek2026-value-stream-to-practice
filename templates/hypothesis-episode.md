@@ -31,6 +31,21 @@ Value、Solution、Feature Hypothesisのどれとして検討したかを説明�
 
 ## 期待する兆候
 
+## 検証対象の分解
+
+| ID | Uncertainty | Decision importance | Evidence refs | Coverage state | Finding | Applicability | Residual uncertainty |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| U1 | 確認したい不確実性 | high | none | not_checked | unknown | unknown | 現時点で残っている不確実性 |
+
+`Evidence refs`には、このリポジトリで実際に確認したEvidenceを表す`OBS-*`を
+カンマ区切りで記載する。Raw NoteやExternal Inputを直接Evidenceとして使わず、
+その内容・成立根拠・限界をObservationへ昇格してから参照する。
+
+`Coverage state`は確認した範囲であり、正しさの割合ではない。
+`not_checked`の場合は`Evidence refs: none`、`Finding: unknown`、
+`Applicability: unknown`とする。Evidenceを確認したが判断できない場合は
+`Finding: inconclusive`を使う。
+
 ## 検証方法
 
 ### 方法と対象範囲
@@ -62,3 +77,4 @@ Value、Solution、Feature Hypothesisのどれとして検討したかを説明�
 - 選定上の偏り:
 - 未確認の証拠:
 - 一般化できない範囲:
+- 残存リスクと影響を受ける判断:

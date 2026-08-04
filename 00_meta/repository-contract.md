@@ -25,6 +25,7 @@ artifacts without converting interpretation into false certainty.
 | `02_analysis/hypothesis-episodes/` | A claim and its attempted validation | No |
 | `02_analysis/patterns/` | A reusable interpretation across episodes | No |
 | `03_artifacts/` | Explicitly adopted, current outputs | Yes, within stated scope |
+| `04_decisions/risk-decisions/` | Human responses to documented residual risk | Only about the scoped response, never hypothesis truth or Artifact adoption |
 | `00_meta/` | Rules for handling all layers | Never |
 
 Directory position alone does not prove validity. Frontmatter status, typed
@@ -61,8 +62,16 @@ Agents must label and keep separate:
 - **observation**: a bounded extraction with minimal interpretation;
 - **hypothesis**: a falsifiable or assessable interpretation;
 - **validation result**: what was actually checked;
-- **decision**: what was adopted and why;
+- **residual risk**: what remains uncertain after the available evidence;
+- **risk decision**: how a human chose to respond within a stated scope;
+- **adoption decision**: what was adopted and why;
 - **limitation**: what remains unknown or cannot be checked.
+
+Evidence Coverage describes how much of a declared validation component was
+checked. It is not a percentage of truth, confidence score, or adoption state.
+A Risk Decision with `risk_response: proceed_with_risk` records only that a
+human knowingly chose to continue within the stated scope and conditions. It
+does not support the hypothesis, mark Analysis as accepted, or adopt an Artifact.
 
 `knowledge_basis` and validation result are independent axes. In particular,
 `practitioner_experience` together with `not_tested` means that the claim is

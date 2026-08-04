@@ -54,6 +54,9 @@ the session.
   relations.
 - Keep observation, interpretation, hypothesis, decision, and current artifact
   distinct. Do not collapse them into one document.
+- Keep Evidence Coverage, findings, residual risk, Human Risk Decisions, and
+  Artifact adoption distinct. A decision to proceed with risk changes none of
+  the hypothesis result, evidence basis, or adoption state.
 - Do not infer that a placeholder, directory name, template, or planned
   artifact is an adopted conclusion.
 - Do not invent missing provenance, validation results, participant behavior,
@@ -73,6 +76,8 @@ the session.
   in `03_artifacts/` with an explicit, traceable adoption decision.
 - Do not promote content into `03_artifacts/` unless an adoption decision is
   explicit and traceable.
+- Create a Risk Decision only after an explicit human response to a documented
+  residual risk. Do not create an `undecided` decision node.
 - Use Mobius only to explain the hypothesis levels considered in a
   retrospective. Never use its board columns to track task execution.
 - Run `python3 scripts/validate_repository.py` after changing governed Markdown.

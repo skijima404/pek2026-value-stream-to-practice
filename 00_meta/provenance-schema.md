@@ -148,6 +148,33 @@ The level identifies the hypothesis hierarchy used for retrospective
 explanation. It is not a task state or delivery-progress field. Use
 `not_assessed` when the sources do not support a reliable classification.
 
+## Risk Decision required fields
+
+A Risk Decision records an explicit human response to one residual risk. It is
+not a derived analysis node and does not use `status`, `confidence`,
+`knowledge_basis`, or a hypothesis `result`.
+
+| Field | Type | Allowed values or rule |
+| --- | --- | --- |
+| `id` | string | `RSK-YYYYMMDD-HHMMSS-short-slug`; matches filename |
+| `type` | string | `risk_decision` |
+| `title` | string | Human-readable decision title |
+| `content_language` | string | `ja` |
+| `created_at` | string | ISO 8601 timestamp with timezone |
+| `created_by` | string | Person or agent that recorded the node |
+| `decision_status` | string | `current`, `superseded`, or `withdrawn` |
+| `target_node` | string | Existing Hypothesis Episode ID |
+| `target_component_id` | string | Stable component ID such as `U1` |
+| `risk_response` | string | `investigate_more`, `mitigate`, `proceed_with_risk`, `avoid`, or `transfer` |
+| `decision_sufficiency` | string | `insufficient`, `sufficient_for_next_step`, `sufficient_with_conditions`, or `sufficient_for_current_scope` |
+| `decided_by` | string | Explicit `human:*` identifier |
+| `decided_at` | string | ISO 8601 timestamp of the human decision |
+| `relations` | YAML list | Typed relations including one matching `evaluates` edge |
+
+There is no `undecided` Risk Decision. Absence of a node means no response has
+been recorded. A later decision creates a new node with `supersedes`; it does
+not overwrite the earlier decision history.
+
 ## Corrections
 
 Do not erase an incorrect historical statement. Append:

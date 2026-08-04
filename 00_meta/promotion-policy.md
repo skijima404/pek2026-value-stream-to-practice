@@ -81,6 +81,54 @@ experience, external research, direct observation, or reasoned synthesis.
   may test a Solution Hypothesis. Record those parent relations explicitly.
 - Do not treat a child result as transitive validation of its parent.
 
+### Validation Components and Evidence Coverage
+
+A complex Hypothesis Episode may declare a `検証対象の分解` table. Components
+are bounded uncertainties inside that Episode, not independent claims or a
+permanent dossier.
+
+- Give each component a stable local ID: `U1`, `U2`, and so on. Never renumber
+  or reuse an ID after another node references it.
+- Use `critical`, `high`, `medium`, or `low` for `Decision importance`.
+- Use `not_checked`, `partially_checked`, or `checked_for_current_scope` for
+  `Coverage state`. Coverage never measures how true the hypothesis is.
+- Use `unknown`, `supports`, `challenges`, `mixed`, or `inconclusive` for the
+  component `Finding`.
+- Use `direct`, `analogous`, `contextual`, or `unknown` for `Applicability`.
+- Evidence refs normally point to one or more Observation IDs. The Observation
+  preserves the evidence's `knowledge_basis` and source relations. Promote a
+  Raw Note or External Input to an Observation before using it as component
+  evidence; do not duplicate or silently reinterpret its knowledge basis in
+  the table.
+- `not_checked` requires `none` Evidence refs, `unknown` Finding, and `unknown`
+  Applicability. A checked component requires evidence and a non-`unknown`
+  Finding; use `inconclusive` when evidence was gathered but cannot resolve the
+  uncertainty.
+- Describe remaining uncertainty in prose. Do not convert checked-item counts
+  into a correctness percentage.
+
+The Episode-level `result` remains the overall result of the bounded learning
+attempt. Component findings do not mechanically aggregate into it. Important
+unresolved components may require an overall `inconclusive` result even when
+some component findings support the hypothesis.
+
+### Residual risk to Human Risk Decision
+
+When a human explicitly chooses how to respond to a component's documented
+residual risk, create a Risk Decision in `04_decisions/risk-decisions/`.
+
+- Do not create a decision while the response is undecided.
+- Record exactly one target Hypothesis Episode and component ID.
+- Keep decision sufficiency on the Risk Decision, never on Evidence Coverage.
+- Preserve decision scope, rationale, conditions, and review triggers in the
+  body without inventing them.
+- `proceed_with_risk` means the human knowingly continues within the stated
+  scope. It does not make the component support the hypothesis.
+- A changed response creates a new Risk Decision that `supersedes` the old one.
+  Mark the old node `superseded` and link it with `superseded_by`.
+- Risk Decision creation does not change Analysis review status, confidence,
+  knowledge basis, validation result, or Artifact adoption.
+
 ### Proportional and lightweight validation
 
 A Hypothesis Episode is one bounded learning attempt, not a requirement to

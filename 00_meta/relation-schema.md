@@ -22,6 +22,8 @@ Allowed relation types:
 | `rejected_by` | Target records the decision rejecting this node |
 | `superseded_by` | Target is the node that superseded this node |
 | `references` | Non-evidentiary contextual link |
+| `evaluates` | This Risk Decision responds to residual risk in target Hypothesis Episode; `target_component_id` provides the local scope |
+| `informed_by` | This Risk Decision actually considered target evidence when making the response |
 
 Rules:
 
@@ -31,3 +33,7 @@ Rules:
 - Relations do not inherit transitively. A Pattern citing an Episode does not
   automatically cite every Raw Note behind the Episode.
 - Circular `derived_from`, `adopted_from`, or `supersedes` chains are invalid.
+- A Risk Decision has exactly one `evaluates` relation matching `target_node`.
+  The component is identified only by the dedicated `target_component_id`
+  field because component IDs are local to a Hypothesis Episode.
+- `informed_by` does not change the evidence's finding or knowledge basis.

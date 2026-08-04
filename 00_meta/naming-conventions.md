@@ -11,7 +11,12 @@ sortable local timestamps in IDs.
 | Observation | `OBS-YYYYMMDD-HHMMSS-short-slug` |
 | Hypothesis Episode | `HYP-YYYYMMDD-HHMMSS-short-slug` |
 | Pattern | `PAT-YYYYMMDD-HHMMSS-short-slug` |
+| Risk Decision | `RSK-YYYYMMDD-HHMMSS-short-slug` |
 | External Input | `EXT-YYYYMMDD-HHMMSS-short-slug` |
+
+Validation Component IDs are local to one Hypothesis Episode and use `U1`,
+`U2`, and so on. They are immutable once referenced by a Risk Decision. A full
+component reference is the pair `(target_node, target_component_id)`.
 
 The filename is `<id>.md`. Use lowercase ASCII kebab-case for `short-slug`.
 IDs are immutable even when titles change, except for the one-time,

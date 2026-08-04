@@ -1,0 +1,4 @@
+interface:
+  display_name: "Record Risk Decision"
+  short_description: "Record scoped human responses to residual hypothesis risk"
+  default_prompt: "Use $record-risk-decision to record my scoped response to a hypothesis component residual risk."
