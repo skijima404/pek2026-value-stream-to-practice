@@ -23,12 +23,17 @@ NODE_DIRS = {
         "pattern",
         r"PAT-\d{8}-\d{6}-[a-z0-9]+(?:-[a-z0-9]+)*",
     ),
+    "04_decisions/risk-decisions": (
+        "risk_decision",
+        r"RSK-\d{8}-\d{6}-[a-z0-9]+(?:-[a-z0-9]+)*",
+    ),
 }
 TEMPLATE_SPECS = {
     "templates/raw-note.md": "raw_note",
     "templates/observation.md": "observation",
     "templates/hypothesis-episode.md": "hypothesis_episode",
     "templates/pattern.md": "pattern",
+    "templates/risk-decision.md": "risk_decision",
 }
 RAW_REQUIRED = {
     "id",
@@ -64,6 +69,22 @@ DERIVED_REVIEW_REQUIRED = {
     "reviewed_by",
     "review_scope",
 }
+RISK_DECISION_REQUIRED = {
+    "id",
+    "type",
+    "title",
+    "content_language",
+    "created_at",
+    "created_by",
+    "decision_status",
+    "target_node",
+    "target_component_id",
+    "risk_response",
+    "decision_sufficiency",
+    "decided_by",
+    "decided_at",
+    "relations",
+}
 ENUMS = {
     "content_language": {"ja"},
     "content_origin": {"human_direct", "assist_a_generated", "mixed"},
@@ -75,6 +96,20 @@ ENUMS = {
     "confidence": {"low", "medium", "high", "not_assessed"},
     "hypothesis_level": {"value", "solution", "feature", "not_assessed"},
     "review_scope": {"intent_alignment"},
+    "decision_status": {"current", "superseded", "withdrawn"},
+    "risk_response": {
+        "investigate_more",
+        "mitigate",
+        "proceed_with_risk",
+        "avoid",
+        "transfer",
+    },
+    "decision_sufficiency": {
+        "insufficient",
+        "sufficient_for_next_step",
+        "sufficient_with_conditions",
+        "sufficient_for_current_scope",
+    },
 }
 RELATION_TYPES = {
     "derived_from",
@@ -87,6 +122,8 @@ RELATION_TYPES = {
     "rejected_by",
     "superseded_by",
     "references",
+    "evaluates",
+    "informed_by",
 }
 KNOWLEDGE_BASES = {
     "recorded_statement",
@@ -101,6 +138,11 @@ TIMESTAMP = re.compile(
     r"^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:Z|[+-]\d{2}:\d{2})$"
 )
 JAPANESE_TEXT = re.compile(r"[\u3040-\u30ff\u3400-\u9fff]")
+COMPONENT_ID = re.compile(r"U[1-9][0-9]*")
+DECISION_IMPORTANCE = {"critical", "high", "medium", "low"}
+COVERAGE_STATES = {"not_checked", "partially_checked", "checked_for_current_scope"}
+COMPONENT_FINDINGS = {"unknown", "supports", "challenges", "mixed", "inconclusive"}
+APPLICABILITY = {"direct", "analogous", "contextual", "unknown"}
 
 
 def parse_frontmatter(path: Path) -> tuple[dict[str, str], list[str]]:
@@ -181,6 +223,121 @@ def parse_hypothesis_result(path: Path) -> str:
     return match.group(1) if match else ""
 
 
+def parse_validation_components(path: Path) -> tuple[dict[str, dict[str, str]], list[str]]:
+    lines = path.read_text(encoding="utf-8").splitlines()
+    components: dict[str, dict[str, str]] = {}
+    errors: list[str] = []
+    try:
+        heading = lines.index("## 検証対象の分解")
+    except ValueError:
+        return components, errors
+
+    table_lines: list[str] = []
+    for line in lines[heading + 1 :]:
+        if line.startswith("## "):
+            break
+        if line.strip().startswith("|"):
+            table_lines.append(line.strip())
+    if len(table_lines) < 3:
+        return components, ["validation component section requires a Markdown table"]
+
+    expected_header = [
+        "ID",
+        "Uncertainty",
+        "Decision importance",
+        "Evidence refs",
+        "Coverage state",
+        "Finding",
+        "Applicability",
+        "Residual uncertainty",
+    ]
+    header = [cell.strip() for cell in table_lines[0].strip("|").split("|")]
+    if header != expected_header:
+        errors.append("validation component table has non-canonical columns")
+
+    for line in table_lines[2:]:
+        cells = [cell.strip() for cell in line.strip("|").split("|")]
+        if len(cells) != len(expected_header):
+            errors.append("validation component row must contain exactly eight columns")
+            continue
+        component = dict(zip(expected_header, cells))
+        component_id = component["ID"]
+        if component_id in components:
+            errors.append(f"duplicate validation component ID: {component_id}")
+            continue
+        components[component_id] = component
+    if not components:
+        errors.append("validation component table requires at least one component")
+    return components, errors
+
+
+def validate_validation_components(
+    components: dict[str, dict[str, str]], node_ids: set[str]
+) -> list[str]:
+    errors: list[str] = []
+    for component_id, component in components.items():
+        if not COMPONENT_ID.fullmatch(component_id):
+            errors.append(f"invalid validation component ID: {component_id}")
+        importance = component["Decision importance"]
+        if importance not in DECISION_IMPORTANCE:
+            errors.append(
+                f"{component_id} has non-canonical decision importance: {importance}"
+            )
+        coverage = component["Coverage state"]
+        if coverage not in COVERAGE_STATES:
+            errors.append(f"{component_id} has non-canonical coverage state: {coverage}")
+        finding = component["Finding"]
+        if finding not in COMPONENT_FINDINGS:
+            errors.append(f"{component_id} has non-canonical finding: {finding}")
+        applicability = component["Applicability"]
+        if applicability not in APPLICABILITY:
+            errors.append(
+                f"{component_id} has non-canonical applicability: {applicability}"
+            )
+        if not component["Uncertainty"]:
+            errors.append(f"{component_id} requires an uncertainty description")
+        if not component["Residual uncertainty"]:
+            errors.append(
+                f"{component_id} requires a residual uncertainty description"
+            )
+
+        evidence_field = component["Evidence refs"]
+        evidence_refs = [] if evidence_field == "none" else [
+            value.strip() for value in evidence_field.split(",") if value.strip()
+        ]
+        if coverage == "not_checked":
+            if evidence_refs or finding != "unknown" or applicability != "unknown":
+                errors.append(
+                    f"{component_id} not_checked requires no evidence, unknown finding, "
+                    "and unknown applicability"
+                )
+        elif not evidence_refs:
+            errors.append(f"{component_id} checked coverage requires Observation evidence")
+        elif finding == "unknown":
+            errors.append(
+                f"{component_id} checked coverage requires a non-unknown finding"
+            )
+        for evidence_id in evidence_refs:
+            if not evidence_id.startswith("OBS-"):
+                errors.append(
+                    f"{component_id} evidence must reference an Observation: {evidence_id}"
+                )
+            elif evidence_id not in node_ids:
+                errors.append(
+                    f"{component_id} evidence Observation does not exist: {evidence_id}"
+                )
+    return errors
+
+
+def find_hypothesis_path(node_id: str) -> Path | None:
+    directory = ROOT / "02_analysis/hypothesis-episodes"
+    for path in directory.glob("*.md"):
+        fields, _ = parse_frontmatter(path)
+        if fields.get("id") == node_id:
+            return path
+    return None
+
+
 def contains_japanese_content(path: Path) -> bool:
     lines = path.read_text(encoding="utf-8").splitlines()
     if lines and lines[0] == "---":
@@ -229,7 +386,12 @@ def validate_node(
     fields, errors = parse_frontmatter(path)
     if errors:
         return errors
-    required = RAW_REQUIRED if expected_type == "raw_note" else DERIVED_REQUIRED
+    if expected_type == "raw_note":
+        required = RAW_REQUIRED
+    elif expected_type == "risk_decision":
+        required = RISK_DECISION_REQUIRED
+    else:
+        required = DERIVED_REQUIRED
     missing = sorted(required - fields.keys())
     if missing:
         errors.append(f"missing required fields: {', '.join(missing)}")
@@ -267,7 +429,7 @@ def validate_node(
                 errors.append("completed sanitization check requires a checker")
     if expected_type == "hypothesis_episode" and "hypothesis_level" not in fields:
         errors.append("hypothesis episode requires hypothesis_level")
-    if expected_type != "raw_note":
+    if expected_type not in {"raw_note", "risk_decision"}:
         knowledge_bases = parse_list_field(path, "knowledge_basis")
         if not knowledge_bases:
             errors.append("knowledge_basis must contain at least one value")
@@ -289,6 +451,35 @@ def validate_node(
             ):
                 errors.append(
                     "completed hypothesis result requires explicit_validation"
+                )
+            components, component_errors = parse_validation_components(path)
+            errors.extend(component_errors)
+            errors.extend(validate_validation_components(components, node_ids))
+            relation_targets = {target for _, target in parse_relations(path)}
+            for component_id, component in components.items():
+                evidence_field = component["Evidence refs"]
+                evidence_refs = (
+                    []
+                    if evidence_field == "none"
+                    else [
+                        value.strip()
+                        for value in evidence_field.split(",")
+                        if value.strip()
+                    ]
+                )
+                for evidence_id in evidence_refs:
+                    if evidence_id not in relation_targets:
+                        errors.append(
+                            f"{component_id} evidence requires a typed frontmatter "
+                            f"relation: {evidence_id}"
+                        )
+            checked_components = any(
+                component["Coverage state"] != "not_checked"
+                for component in components.values()
+            )
+            if checked_components and result == "not_tested":
+                errors.append(
+                    "checked validation components are incompatible with not_tested result"
                 )
         if fields.get("status") == "reviewed":
             missing_review = sorted(DERIVED_REVIEW_REQUIRED - fields.keys())
@@ -313,6 +504,50 @@ def validate_node(
                 errors.append(f"unknown relation type: {relation_type}")
             if target not in node_ids:
                 errors.append(f"relation target does not exist: {target}")
+    elif expected_type == "risk_decision":
+        decided_at = fields.get("decided_at", "")
+        if decided_at and not TIMESTAMP.fullmatch(decided_at):
+            errors.append("decided_at must be ISO 8601 with timezone")
+        decided_by = fields.get("decided_by", "")
+        if decided_by and not re.fullmatch(r"human:[a-z0-9][a-z0-9._-]*", decided_by):
+            errors.append("decided_by must use a human:* identifier")
+        target_node = fields.get("target_node", "")
+        if not target_node.startswith("HYP-") or target_node not in node_ids:
+            errors.append("target_node must reference an existing Hypothesis Episode")
+        target_component_id = fields.get("target_component_id", "")
+        if not COMPONENT_ID.fullmatch(target_component_id):
+            errors.append("target_component_id must use the U<number> form")
+        target_path = find_hypothesis_path(target_node)
+        if target_path:
+            components, component_errors = parse_validation_components(target_path)
+            if component_errors:
+                errors.append("target Hypothesis Episode has an invalid component table")
+            elif target_component_id not in components:
+                errors.append(
+                    f"target component does not exist in {target_node}: {target_component_id}"
+                )
+
+        relations = parse_relations(path)
+        if not relations:
+            errors.append("risk decision must contain relations")
+        evaluates_targets = [target for kind, target in relations if kind == "evaluates"]
+        if evaluates_targets != [target_node]:
+            errors.append(
+                "risk decision requires exactly one evaluates relation matching target_node"
+            )
+        for relation_type, target in relations:
+            if relation_type not in RELATION_TYPES:
+                errors.append(f"unknown relation type: {relation_type}")
+            if target not in node_ids:
+                errors.append(f"relation target does not exist: {target}")
+            if relation_type == "informed_by" and not target.startswith("OBS-"):
+                errors.append("informed_by must reference an Observation")
+        relation_kinds = {kind for kind, _ in relations}
+        decision_status = fields.get("decision_status")
+        if decision_status == "superseded" and "superseded_by" not in relation_kinds:
+            errors.append("superseded risk decision requires superseded_by")
+        if decision_status == "current" and "superseded_by" in relation_kinds:
+            errors.append("current risk decision must not declare superseded_by")
     return errors
 
 
@@ -328,7 +563,12 @@ def main() -> int:
         fields, errors = parse_frontmatter(path)
         for error in errors:
             failures.append((path, error))
-        required = RAW_REQUIRED if expected_type == "raw_note" else DERIVED_REQUIRED
+        if expected_type == "raw_note":
+            required = RAW_REQUIRED
+        elif expected_type == "risk_decision":
+            required = RISK_DECISION_REQUIRED
+        else:
+            required = DERIVED_REQUIRED
         missing = sorted(required - fields.keys())
         if missing:
             failures.append(
@@ -341,7 +581,7 @@ def main() -> int:
             and "hypothesis_level" not in fields
         ):
             failures.append((path, "hypothesis template requires hypothesis_level"))
-        if expected_type != "raw_note":
+        if expected_type not in {"raw_note", "risk_decision"}:
             knowledge_bases = parse_list_field(path, "knowledge_basis")
             if not knowledge_bases:
                 failures.append(
@@ -352,6 +592,13 @@ def main() -> int:
                     failures.append(
                         (path, f"template knowledge_basis has non-canonical value: {basis}")
                     )
+        if expected_type == "hypothesis_episode":
+            components, component_errors = parse_validation_components(path)
+            for error in component_errors:
+                failures.append((path, error))
+            for error in validate_validation_components(components, set()):
+                if "does not exist" not in error:
+                    failures.append((path, error))
         if not contains_japanese_content(path):
             failures.append((path, "template body must contain Japanese text"))
         templates_checked += 1
@@ -376,6 +623,31 @@ def main() -> int:
             checked += 1
             for error in validate_node(path, expected_type, id_pattern, node_ids):
                 failures.append((path, error))
+
+    current_risk_targets: dict[tuple[str, str], Path] = {}
+    risk_directory = ROOT / "04_decisions/risk-decisions"
+    if risk_directory.is_dir():
+        for path in sorted(risk_directory.glob("*.md")):
+            if path.name == "README.md":
+                continue
+            fields, _ = parse_frontmatter(path)
+            if fields.get("decision_status") != "current":
+                continue
+            target = (
+                fields.get("target_node", ""),
+                fields.get("target_component_id", ""),
+            )
+            previous = current_risk_targets.get(target)
+            if previous:
+                failures.append(
+                    (
+                        path,
+                        "multiple current risk decisions target the same component: "
+                        f"{previous.stem}",
+                    )
+                )
+            else:
+                current_risk_targets[target] = path
 
     if failures:
         for path, error in failures:

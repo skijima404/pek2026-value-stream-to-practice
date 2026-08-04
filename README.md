@@ -42,6 +42,7 @@ Raw Note、派生した分析、採用成果物の本文は日本語で記述し
   -> AIがAnalysisを作成（created_by: agent:codex）
   -> 人間が意図との一致を確認（status: reviewed）
   -> 仮説検証は別に記録
+  -> 残存リスクへの対応を人間が判断（Risk Decision）
   -> 人間が現在の成果物として採用（adopted_by: human:kijima）
 ```
 
@@ -49,12 +50,19 @@ Raw Note、派生した分析、採用成果物の本文は日本語で記述し
 表していると判断したことを示します。事実確認、仮説の検証、公開安全性確認、
 成果物への採用を意味しません。
 
+複合仮説はHypothesis Episode内で小さな検証対象に分解できます。各対象について、
+確認範囲、Evidenceが示す結果、対象条件への適用可能性、残存リスクを区別します。
+残存リスクに対して先へ進む、追加調査する、軽減するなどの判断は
+`04_decisions/risk-decisions/` に履歴として残します。この判断は仮説が真であることや、
+成果物へ採用されたことを意味しません。
+
 ## ディレクトリ
 
 - `00_meta/`: 情報をどう扱うかを定める契約とschema
 - `01_working/raw-notes/`: 低負荷で記録する原資料
 - `02_analysis/`: observations、hypothesis episodes、patterns
 - `03_artifacts/`: 採用された現在の成果物
+- `04_decisions/`: 残存リスクに対する人間の意思決定
 - `10_external-inputs/`: CfPや登壇枠などの外部入力
 - `templates/`: 新しいノードのテンプレート
 

@@ -22,6 +22,9 @@ interpreting or creating repository content.
      and keep ambiguity visible.
    - Hypothesis Episode: state a falsifiable or assessable causal claim, expected
      and challenging signals, planned validation, actual result, and limitations.
+     When the claim contains multiple decision-relevant uncertainties, add stable
+     Validation Components and keep Coverage, Finding, Applicability, and residual
+     uncertainty distinct.
    - Pattern: require at least two distinct Episodes by default and record the
      counterexample search. Do not create a Pattern merely to fill the index.
 6. Assign every applicable `knowledge_basis` value from the cited sources and
@@ -40,6 +43,9 @@ interpreting or creating repository content.
 10. Set confidence from the available evidence, not prose quality or agent effort.
    Preserve `not_tested` unless identifiable evidence was actually checked.
     Do not summarize `practitioner_experience` plus `not_tested` as unsupported.
+    Component Evidence refs normally cite Observation nodes so their
+    `knowledge_basis` and source relations remain traceable. Never calculate a
+    truth percentage from component Coverage.
 11. Add only canonical typed relations. A derived claim must cite its source node
     IDs, and a child result must not transitively validate a parent.
 12. Update `02_analysis/README.md` as a navigation view without introducing claims
@@ -55,6 +61,9 @@ interpreting or creating repository content.
   `$finalize-analysis-node` only after explicit human intent confirmation.
 - Never use `status: accepted` for analysis.
 - Never create or update an Artifact without an explicit adoption decision.
+- Never create a Risk Decision while synthesizing candidates. Use
+  `$record-risk-decision` only after an explicit human response to documented
+  residual risk.
 - Do not treat GenAI synthesis, source polish, repeated wording, or plausibility as
   validation evidence.
 - Do not fabricate Episodes or external support for an experienced practice.

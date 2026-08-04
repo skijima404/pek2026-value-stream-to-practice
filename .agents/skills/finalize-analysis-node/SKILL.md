@@ -25,7 +25,8 @@ editing. This skill does not finalize Raw Notes; use `$finalize-raw-note` for th
 2. Read each target and every source node needed to assess its composed meaning.
 3. Confirm that relations use canonical types and point to existing node IDs.
 4. Preserve `knowledge_basis`, `confidence`, `hypothesis_level`, validation
-   method, and result. Human intent review does not change `not_tested` or
+   method, result, Validation Component Coverage, Finding, Applicability, and
+   residual uncertainty. Human intent review does not change `not_tested` or
    establish factual validity. Confirm that `knowledge_basis` reflects the cited
    sources without inferring experience scope, case counts, or validation.
 5. Review the complete node for customer, project, personal, commercial,
@@ -54,6 +55,8 @@ editing. This skill does not finalize Raw Notes; use `$finalize-raw-note` for th
 - Never adopt content into `03_artifacts/` during this workflow.
 - Never convert planned validation into a completed result.
 - Never raise confidence merely because a human reviewed the wording.
+- Never create a Risk Decision or convert a human risk response into Evidence,
+  a component Finding, a hypothesis result, or Artifact adoption.
 - Never remove `practitioner_experience` merely because independent validation is
   unavailable, and never convert it into `explicit_validation` during finalization.
 - Do not rename node IDs or filenames.

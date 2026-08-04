@@ -49,6 +49,10 @@ For each section:
   experience from independently tested evidence;
 - explain only what was considered, tested, or learned in the requested scope;
 - distinguish planned validation from completed validation;
+- distinguish component Evidence Coverage from findings, residual risk, and
+  any later Human Risk Decision;
+- describe `proceed_with_risk` only as a scoped human decision, never as
+  Evidence or hypothesis support;
 - state that no relevant consideration was found when the sources do not
   support that section;
 - leave ambiguity visible instead of forcing a classification.

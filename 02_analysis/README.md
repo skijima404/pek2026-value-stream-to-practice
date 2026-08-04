@@ -158,6 +158,24 @@ BCGの10–20–70関連資料
 成立根拠に持つ一方、このRepositoryでは独立検証していないことを示します。
 「根拠なし」または「検証済み」と読み替えません。
 
+## 仮説検証の読み方
+
+複数の不確実性を含むHypothesis Episodeは、`検証対象の分解`で`U1`、`U2`のような
+小さな検証対象に分けます。
+
+- `Coverage state`: どの範囲を確認したか
+- `Finding`: 現在のEvidenceが何を示すか
+- `Applicability`: Evidenceを対象条件へどの程度適用できるか
+- `Residual uncertainty`: 確認後も残る不確実性
+
+Coverageは仮説が正しい割合ではありません。検証対象で参照するEvidenceは原則として
+Observationとし、経験知、外部Research、直接観察などの性質はObservation側の
+`knowledge_basis`を確認します。
+
+残存リスクへの人間の対応判断は`04_decisions/risk-decisions/`に分離します。
+`proceed_with_risk`は限定した範囲で先へ進む判断であり、Hypothesisの`supports`、
+Analysisの採用、Artifactへの採用を意味しません。
+
 ## Observation一覧
 
 | Observation | Knowledge Basis | Status | Confidence | 現在の接続先 |
