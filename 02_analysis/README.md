@@ -18,8 +18,8 @@ Raw Noteや外部入力から作った派生ノードを置きます。
 正本ではありません。
 
 - 内容の正本は、リンク先のNodeとArtifactです。
-- status、knowledge_basis、confidence、result、relationを、リンク先を越えて
-  解釈しません。
+- status、knowledge_basis、confidence、result、hypothesis_scope、
+  hypothesis_level、relationを、リンク先を越えて解釈しません。
 - このIndexに載っていないことを、却下や不存在の証拠として扱いません。
 - NodeやArtifactと矛盾する場合は、リンク先を優先してIndexを再生成します。
 
@@ -48,14 +48,21 @@ Raw Noteや外部入力から作った派生ノードを置きます。
   -> 参加者Journey兼Value Streamとして採用済み
 
 Audienceと価値課題の見立て
-  + 採択済み方向性とDelivery範囲
-  -> AI速度と価値選択・検証の必要性というValue Hypothesis
-  -> 未検証
+  + 参加者が試したいと思うこと、または一つ持ち帰って試すという成功条件
+  -> AI Slopを制御するActionを持ち帰ることのSession Value Hypothesis
+  -> 構造・Signal・仮説検証を一続きに説明するSession Solution Hypothesis
+  -> いずれも未検証、未採用
 
 AIの局所高速化、ハンドオーバー、リレー、早期中止判断
   -> 構成要素と表現選択をObservationとして整理
-  -> リレー中心のSession StoryというSolution Hypothesis
-  -> 人間の意図Review済み、未検証、未採用
+  -> リレー中心の25分トーク構成というSession Feature Hypothesis
+  -> 階層変更により再Review待ち、未検証、未採用
+
+AIによる候補流入と下流への確認、判断、手戻り、SupportのCost Transfer
+  -> 回避可能な下流負荷を減らすPractice Value Hypothesis
+  -> 価値選択と検証、Lean Startup、DVS/OVS観測、Service Contractなどの
+     Practice Solution Hypothesis
+  -> Session階層とは分離し、未検証、未採用
 
 PresalesとProject Deliveryを通じた限定的な実務経験
   + Customerへ毎回、目的とDiscovery結果を質問した経験
@@ -70,18 +77,18 @@ Value Stream上の課題と期待Outcome
 AI SlopによるCost外部化
   + Release前のValue Hypothesis検証と早期廃棄
   -> Lean Startupの選別をAdmission Controlとして使うSolution Hypothesis
-  -> 人間の意図Review済み、未検証、未採用
+  -> 親Value変更により再Review待ち、未検証、未採用
 
 PEのDevelopment Value Stream（DVS）
   + 利用者側Operational Value Stream（OVS）
   + 価値とSlop経験を分ける判断Flow
   -> 二つのValue Streamを接続したObservabilityというSolution Hypothesis
-  -> 人間の意図Review済み、未検証、未採用
+  -> 親Value変更により再Review待ち、未検証、未採用
 
 AI生成物またはPlatform ServiceのHandover
   + Contract、Accountability、Cost Transferの分離
   -> 共有前のService Contract明確化というSolution Hypothesis
-  -> 人間の意図Review済み、未検証、未採用
+  -> 親Value変更により再Review待ち、未検証、未採用
 
 Solution候補が先に出る実務上の思考順序
   + Challenge、Value、Solutionの役割分離
@@ -136,21 +143,39 @@ BCGの10–20–70関連資料
 
 ## MobiusによるHypothesis一覧
 
+`hypothesis_scope`を先に選び、異なるValue Streamの階層を混ぜない。
+子から直上の親への`tests` relationは階層を表すが、子の結果は親へ推移しない。
+
+### Session scope
+
+```text
+AudienceがAI Slopを制御するActionを持ち帰る価値
+  <- tests: 構造・Signal・仮説検証を一続きに説明するSolution
+       <- tests: リレー中心の25分トークというFeature
+```
+
 | Map | Level | Hypothesis Episode | Knowledge Basis | Intent Review | Result |
 | --- | --- | --- | --- | --- | --- |
-| Discovery | `value` | [AIによる作成速度向上は価値選択と検証の必要性を高める](./hypothesis-episodes/HYP-20260730-015718-ai-speed-requires-value-validation.md) | `reasoned_synthesis` | `proposed` | `not_tested` |
-| Discovery | `value` | [Platform利用者の一部は選択肢より安全な標準Pathによる選択負荷軽減を重視する](./hypothesis-episodes/HYP-20260802-230425-platform-choice-burden-value.md) | `practitioner_experience`, `reasoned_synthesis` | `reviewed` | `not_tested` |
-| Decision | `solution` | [リレーを中心にしたセッション構成ならAI SlopからVSMまでを一本道で伝えられる](./hypothesis-episodes/HYP-20260731-004119-relay-centered-session-story.md) | `practitioner_experience`, `reasoned_synthesis` | `reviewed` | `not_tested` |
-| Decision | `solution` | [Lean Startupの選別と早期廃棄は未検証案のコスト外部化を抑える](./hypothesis-episodes/HYP-20260731-193520-lean-startup-as-admission-control.md) | `external_research`, `practitioner_experience`, `reasoned_synthesis` | `reviewed` | `not_tested` |
-| Decision | `solution` | [PEのDVSと利用者側OVSを接続するとAI高速化のCost Transferを検知できる](./hypothesis-episodes/HYP-20260801-004822-coupled-observability-detects-cost-transfer.md) | `practitioner_experience`, `reasoned_synthesis` | `reviewed` | `not_tested` |
-| Decision | `solution` | [共有前のService Contract明確化は下流への理解と判断Costの転移を抑える](./hypothesis-episodes/HYP-20260801-004823-service-contract-reduces-downstream-cost.md) | `practitioner_experience`, `reasoned_synthesis` | `reviewed` | `not_tested` |
-| Decision | `solution` | [Solution-firstでもReasoning Chainを再構成すれば検証可能な仮説を作りやすい](./hypothesis-episodes/HYP-20260802-230423-solution-first-reconstruction-testability.md) | `case_recollection`, `reasoned_synthesis` | `reviewed` | `not_tested` |
-| Decision | `solution` | [Value Streamの課題とOutcomeからAI Capabilityを配置すると局所最適を避けやすい](./hypothesis-episodes/HYP-20260804-013223-outcome-first-ai-resource-allocation.md) | `recorded_statement`, `reasoned_synthesis` | `reviewed` | `not_tested` |
-| Decision | `solution` | [異常検知と原因診断を分ける運用はMetric過剰取得を抑え改善Loopを両立する](./hypothesis-episodes/HYP-20260804-013226-two-stage-metrics-analysis.md) | `practitioner_experience`, `case_recollection`, `reasoned_synthesis` | `reviewed` | `not_tested` |
-| Delivery | `feature` | 該当するEpisodeなし | — | — | — |
+| Discovery | `value` | [AudienceはAI Slopを制御するActionを持ち帰ることに価値を感じる](./hypothesis-episodes/HYP-20260804-183208-audience-actionable-ai-slop-value.md) | `recorded_statement`, `reasoned_synthesis` | `proposed` | `not_tested` |
+| Decision | `solution` | [AI Slopの構造・Signal・仮説検証を一続きに説明するとActionを選びやすい](./hypothesis-episodes/HYP-20260804-183209-ai-slop-learning-path-solution.md) | `practitioner_experience`, `reasoned_synthesis` | `proposed` | `not_tested` |
+| Delivery | `feature` | [リレーを中心にしたセッション構成ならAI SlopからVSMまでを一本道で伝えられる](./hypothesis-episodes/HYP-20260731-004119-relay-centered-session-story.md) | `practitioner_experience`, `reasoned_synthesis` | `proposed` | `not_tested` |
 | 未分類 | `not_assessed` | [開催側の採択を方向性継続の十分なシグナルとして扱う](./hypothesis-episodes/HYP-20260730-015717-organizer-selection-is-sufficient-signal.md) | `explicit_validation`, `external_research`, `reasoned_synthesis` | `reviewed` | `supports` |
 
-`supports` となっている採択シグナルは、Proposalの大方向を維持して制作を
+### Practice scope
+
+| Map | Level | Hypothesis Episode | Knowledge Basis | Intent Review | Result |
+| --- | --- | --- | --- | --- | --- |
+| Discovery | `value` | [Platform Teamと利用者にはAI高速化による下流負荷を特定・制御・削減できる価値がある](./hypothesis-episodes/HYP-20260804-183210-ai-slop-downstream-burden-value.md) | `recorded_statement`, `practitioner_experience`, `external_research`, `reasoned_synthesis` | `proposed` | `not_tested` |
+| Discovery | `value` | [Platform利用者の一部は選択肢より安全な標準Pathによる選択負荷軽減を重視する](./hypothesis-episodes/HYP-20260802-230425-platform-choice-burden-value.md) | `practitioner_experience`, `reasoned_synthesis` | `reviewed` | `not_tested` |
+| Decision | `solution` | [価値選択と検証はAI高速化による回避可能な下流Costを減らす](./hypothesis-episodes/HYP-20260730-015718-ai-speed-requires-value-validation.md) | `practitioner_experience`, `reasoned_synthesis` | `proposed` | `not_tested` |
+| Decision | `solution` | [Lean Startupの選別と早期廃棄は未検証案のコスト外部化を抑える](./hypothesis-episodes/HYP-20260731-193520-lean-startup-as-admission-control.md) | `external_research`, `practitioner_experience`, `reasoned_synthesis` | `proposed` | `not_tested` |
+| Decision | `solution` | [PEのDVSと利用者側OVSを接続するとAI高速化のCost Transferを検知できる](./hypothesis-episodes/HYP-20260801-004822-coupled-observability-detects-cost-transfer.md) | `practitioner_experience`, `reasoned_synthesis` | `proposed` | `not_tested` |
+| Decision | `solution` | [共有前のService Contract明確化は下流への理解と判断Costの転移を抑える](./hypothesis-episodes/HYP-20260801-004823-service-contract-reduces-downstream-cost.md) | `practitioner_experience`, `reasoned_synthesis` | `proposed` | `not_tested` |
+| Decision | `solution` | [Solution-firstでもReasoning Chainを再構成すれば検証可能な仮説を作りやすい](./hypothesis-episodes/HYP-20260802-230423-solution-first-reconstruction-testability.md) | `case_recollection`, `reasoned_synthesis` | `reviewed` | `not_tested` |
+| Decision | `solution` | [Value Streamの課題とOutcomeからAI Capabilityを配置すると局所最適を避けやすい](./hypothesis-episodes/HYP-20260804-013223-outcome-first-ai-resource-allocation.md) | `recorded_statement`, `reasoned_synthesis` | `proposed` | `not_tested` |
+| Decision | `solution` | [異常検知と原因診断を分ける運用はMetric過剰取得を抑え改善Loopを両立する](./hypothesis-episodes/HYP-20260804-013226-two-stage-metrics-analysis.md) | `practitioner_experience`, `case_recollection`, `reasoned_synthesis` | `proposed` | `not_tested` |
+
+`session` scopeで`supports`となっている採択シグナルは、Proposalの大方向を維持して制作を
 進める判断に限定されます。Audience課題やValue Hypothesisの正しさを支持する
 結果ではありません。
 

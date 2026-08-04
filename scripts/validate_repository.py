@@ -94,6 +94,7 @@ ENUMS = {
     "sanitization_status": {"not_reviewed", "not_needed", "sanitized"},
     "status": {"proposed", "reviewed", "rejected", "superseded"},
     "confidence": {"low", "medium", "high", "not_assessed"},
+    "hypothesis_scope": {"session", "practice", "not_assessed"},
     "hypothesis_level": {"value", "solution", "feature", "not_assessed"},
     "review_scope": {"intent_alignment"},
     "decision_status": {"current", "superseded", "withdrawn"},
@@ -143,6 +144,7 @@ DECISION_IMPORTANCE = {"critical", "high", "medium", "low"}
 COVERAGE_STATES = {"not_checked", "partially_checked", "checked_for_current_scope"}
 COMPONENT_FINDINGS = {"unknown", "supports", "challenges", "mixed", "inconclusive"}
 APPLICABILITY = {"direct", "analogous", "contextual", "unknown"}
+HYPOTHESIS_LEVEL_ORDER = {"value": 0, "solution": 1, "feature": 2}
 
 
 def parse_frontmatter(path: Path) -> tuple[dict[str, str], list[str]]:
@@ -427,8 +429,11 @@ def validate_node(
                 )
             if not checked_by or checked_by == "none":
                 errors.append("completed sanitization check requires a checker")
-    if expected_type == "hypothesis_episode" and "hypothesis_level" not in fields:
-        errors.append("hypothesis episode requires hypothesis_level")
+    if expected_type == "hypothesis_episode":
+        if "hypothesis_scope" not in fields:
+            errors.append("hypothesis episode requires hypothesis_scope")
+        if "hypothesis_level" not in fields:
+            errors.append("hypothesis episode requires hypothesis_level")
     if expected_type not in {"raw_note", "risk_decision"}:
         knowledge_bases = parse_list_field(path, "knowledge_basis")
         if not knowledge_bases:
@@ -551,6 +556,36 @@ def validate_node(
     return errors
 
 
+def validate_hypothesis_test_edge(
+    source_id: str,
+    source_fields: dict[str, str],
+    target_id: str,
+    target_fields: dict[str, str],
+) -> list[str]:
+    """Validate a reserved HYP-to-HYP immediate hierarchy edge."""
+    errors: list[str] = []
+    source_scope = source_fields.get("hypothesis_scope")
+    target_scope = target_fields.get("hypothesis_scope")
+    source_level = source_fields.get("hypothesis_level")
+    target_level = target_fields.get("hypothesis_level")
+    if source_scope != target_scope:
+        errors.append(
+            "tests hierarchy must stay in one hypothesis_scope: "
+            f"{source_id} -> {target_id}"
+        )
+    if (
+        source_level not in HYPOTHESIS_LEVEL_ORDER
+        or target_level not in HYPOTHESIS_LEVEL_ORDER
+        or HYPOTHESIS_LEVEL_ORDER[source_level]
+        != HYPOTHESIS_LEVEL_ORDER[target_level] + 1
+    ):
+        errors.append(
+            "tests hierarchy must target the immediately higher level: "
+            f"{source_id} -> {target_id}"
+        )
+    return errors
+
+
 def main() -> int:
     node_ids, failures = discover_node_ids()
     checked = 0
@@ -581,6 +616,11 @@ def main() -> int:
             and "hypothesis_level" not in fields
         ):
             failures.append((path, "hypothesis template requires hypothesis_level"))
+        if (
+            expected_type == "hypothesis_episode"
+            and "hypothesis_scope" not in fields
+        ):
+            failures.append((path, "hypothesis template requires hypothesis_scope"))
         if expected_type not in {"raw_note", "risk_decision"}:
             knowledge_bases = parse_list_field(path, "knowledge_basis")
             if not knowledge_bases:
@@ -623,6 +663,21 @@ def main() -> int:
             checked += 1
             for error in validate_node(path, expected_type, id_pattern, node_ids):
                 failures.append((path, error))
+
+    hypothesis_paths = {
+        path.stem: path
+        for path in sorted((ROOT / "02_analysis/hypothesis-episodes").glob("HYP-*.md"))
+    }
+    for source_id, source_path in hypothesis_paths.items():
+        source_fields, _ = parse_frontmatter(source_path)
+        for relation_type, target_id in parse_relations(source_path):
+            if relation_type != "tests" or target_id not in hypothesis_paths:
+                continue
+            target_fields, _ = parse_frontmatter(hypothesis_paths[target_id])
+            for error in validate_hypothesis_test_edge(
+                source_id, source_fields, target_id, target_fields
+            ):
+                failures.append((source_path, error))
 
     current_risk_targets: dict[tuple[str, str], Path] = {}
     risk_directory = ROOT / "04_decisions/risk-decisions"

@@ -126,5 +126,83 @@ relations:
             self.assertEqual([], errors)
 
 
+class HypothesisScopeTests(unittest.TestCase):
+    def write_hypothesis(self, directory: Path, scope_line: str) -> Path:
+        hypothesis_id = "HYP-20260804-120000-example"
+        path = directory / f"{hypothesis_id}.md"
+        path.write_text(
+            f"""---
+id: {hypothesis_id}
+type: hypothesis_episode
+title: "Scopeを確認する仮説"
+content_language: ja
+created_at: 2026-08-04T12:00:00+09:00
+created_by: agent:codex
+{scope_line}
+hypothesis_level: value
+status: proposed
+confidence: low
+knowledge_basis:
+  - reasoned_synthesis
+relations:
+  - type: derived_from
+    target: OBS-20260804-120001-example
+---
+
+# 仮説
+
+Scopeの検証対象となる仮説である。
+
+## 結果
+
+`not_tested`
+""",
+            encoding="utf-8",
+        )
+        return path
+
+    def validate(self, path: Path) -> list[str]:
+        return VALIDATOR.validate_node(
+            path,
+            "hypothesis_episode",
+            r"HYP-\d{8}-\d{6}-[a-z0-9]+(?:-[a-z0-9]+)*",
+            {path.stem, "OBS-20260804-120001-example"},
+        )
+
+    def test_hypothesis_requires_scope(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            path = self.write_hypothesis(Path(temp_dir), "")
+            errors = self.validate(path)
+            self.assertIn("hypothesis episode requires hypothesis_scope", errors)
+
+    def test_hypothesis_rejects_noncanonical_scope(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            path = self.write_hypothesis(
+                Path(temp_dir), "hypothesis_scope: presentation"
+            )
+            errors = self.validate(path)
+            self.assertIn(
+                "hypothesis_scope has non-canonical value: presentation", errors
+            )
+
+    def test_hypothesis_test_edge_rejects_cross_scope_parent(self) -> None:
+        errors = VALIDATOR.validate_hypothesis_test_edge(
+            "HYP-20260804-120002-feature",
+            {"hypothesis_scope": "session", "hypothesis_level": "feature"},
+            "HYP-20260804-120001-solution",
+            {"hypothesis_scope": "practice", "hypothesis_level": "solution"},
+        )
+        self.assertTrue(any("one hypothesis_scope" in error for error in errors))
+
+    def test_hypothesis_test_edge_rejects_same_level_parent(self) -> None:
+        errors = VALIDATOR.validate_hypothesis_test_edge(
+            "HYP-20260804-120002-solution",
+            {"hypothesis_scope": "practice", "hypothesis_level": "solution"},
+            "HYP-20260804-120001-solution",
+            {"hypothesis_scope": "practice", "hypothesis_level": "solution"},
+        )
+        self.assertTrue(any("immediately higher level" in error for error in errors))
+
+
 if __name__ == "__main__":
     unittest.main()

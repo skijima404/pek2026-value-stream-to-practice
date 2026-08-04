@@ -142,11 +142,18 @@ do not invalidate the existing intent review.
 
 Hypothesis Episodes additionally require:
 
+- `hypothesis_scope`: `session`, `practice`, or `not_assessed`;
 - `hypothesis_level`: `value`, `solution`, `feature`, or `not_assessed`.
 
-The level identifies the hypothesis hierarchy used for retrospective
-explanation. It is not a task state or delivery-progress field. Use
-`not_assessed` when the sources do not support a reliable classification.
+`hypothesis_scope` identifies which Value Stream the hierarchy describes.
+Use `session` for hypotheses about Audience value and the session used to
+deliver it. Use `practice` for hypotheses about Platform Engineering or other
+subject-domain practice. Use `not_assessed` when the source does not support a
+reliable scope.
+
+The level identifies the hypothesis hierarchy within that scope. It is not a
+task state or delivery-progress field. Use `not_assessed` when the sources do
+not support a reliable classification.
 
 ## Risk Decision required fields
 

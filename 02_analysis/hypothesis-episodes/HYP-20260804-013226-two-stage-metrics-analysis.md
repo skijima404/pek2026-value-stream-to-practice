@@ -5,11 +5,9 @@ title: "異常検知と原因診断を分ける運用はMetric過剰取得を抑
 content_language: ja
 created_at: 2026-08-04T01:32:26+09:00
 created_by: agent:codex
+hypothesis_scope: practice
 hypothesis_level: solution
-status: reviewed
-reviewed_at: 2026-08-04T01:53:23+09:00
-reviewed_by: human:kijima
-review_scope: intent_alignment
+status: proposed
 confidence: medium
 knowledge_basis:
   - practitioner_experience
@@ -20,6 +18,8 @@ relations:
     target: OBS-20260804-013225-itsm-metrics-analysis-practice
   - type: references
     target: OBS-20260802-230427-process-flow-and-outcome-quality
+  - type: tests
+    target: HYP-20260804-183210-ai-slop-downstream-burden-value
 ---
 
 # 仮説

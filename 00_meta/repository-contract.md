@@ -42,8 +42,8 @@ repository nodes. It is not a governed node, evidence source, derived claim,
 adoption decision, or current truth.
 
 The index may summarize node titles, declared status, knowledge basis,
-confidence, validation result, hypothesis level, typed relations, and explicit
-limitations. Every
+confidence, validation result, hypothesis scope, hypothesis level, typed
+relations, and explicit limitations. Every
 summary must link to the source node. Do not introduce a new interpretation,
 infer a missing relation, or convert absence from the index into rejection.
 

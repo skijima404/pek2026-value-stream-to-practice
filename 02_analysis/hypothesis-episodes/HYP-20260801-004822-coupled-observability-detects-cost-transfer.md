@@ -5,11 +5,9 @@ title: "PEのDVSと利用者側OVSを接続するとAI高速化のCost Transfer�
 content_language: ja
 created_at: 2026-08-01T00:48:22+09:00
 created_by: agent:codex
+hypothesis_scope: practice
 hypothesis_level: solution
-status: reviewed
-reviewed_at: 2026-08-01T00:53:44+09:00
-reviewed_by: human:kijima
-review_scope: intent_alignment
+status: proposed
 confidence: low
 knowledge_basis:
   - practitioner_experience
@@ -20,7 +18,7 @@ relations:
   - type: derived_from
     target: OBS-20260731-120412-value-and-slop-experience-decision-flow
   - type: tests
-    target: HYP-20260730-015718-ai-speed-requires-value-validation
+    target: HYP-20260804-183210-ai-slop-downstream-burden-value
 ---
 
 # 仮説
@@ -36,7 +34,7 @@ Support、Feedbackの境界で接続して観測すれば、AIで一工程を高
 `solution`
 
 親となるValue Hypothesis
-`HYP-20260730-015718-ai-speed-requires-value-validation`に対して、作成速度とは別に
+`HYP-20260804-183210-ai-slop-downstream-burden-value`に対して、作成速度とは別に
 価値と副作用を検証するための観測方法を置くSolution Hypothesisである。
 
 ## 期待する兆候

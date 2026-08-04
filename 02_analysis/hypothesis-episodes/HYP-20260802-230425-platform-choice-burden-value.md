@@ -5,6 +5,7 @@ title: "Platform利用者の一部は選択肢より安全な標準Pathによる
 content_language: ja
 created_at: 2026-08-02T23:04:25+09:00
 created_by: agent:codex
+hypothesis_scope: practice
 hypothesis_level: value
 status: reviewed
 reviewed_at: 2026-08-02T23:18:14+09:00

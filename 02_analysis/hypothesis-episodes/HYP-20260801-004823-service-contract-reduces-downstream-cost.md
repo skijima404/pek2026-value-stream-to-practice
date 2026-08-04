@@ -5,11 +5,9 @@ title: "共有前のService Contract明確化は下流への理解と判断Cost�
 content_language: ja
 created_at: 2026-08-01T00:48:23+09:00
 created_by: agent:codex
+hypothesis_scope: practice
 hypothesis_level: solution
-status: reviewed
-reviewed_at: 2026-08-01T00:53:44+09:00
-reviewed_by: human:kijima
-review_scope: intent_alignment
+status: proposed
 confidence: low
 knowledge_basis:
   - practitioner_experience
@@ -18,7 +16,7 @@ relations:
   - type: derived_from
     target: OBS-20260801-004821-contract-accountability-cost-transfer
   - type: tests
-    target: HYP-20260730-015718-ai-speed-requires-value-validation
+    target: HYP-20260804-183210-ai-slop-downstream-burden-value
 ---
 
 # 仮説
@@ -33,7 +31,7 @@ Contractとして明らかにし、提供者が理解、検証、採否判断を
 `solution`
 
 親となるValue Hypothesis
-`HYP-20260730-015718-ai-speed-requires-value-validation`に対して、選択・検証能力を
+`HYP-20260804-183210-ai-slop-downstream-burden-value`に対して、選択・検証能力を
 共有境界で実装するSolution Hypothesisである。
 
 ## 期待する兆候

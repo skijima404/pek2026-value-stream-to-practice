@@ -5,11 +5,9 @@ title: "Value Streamの課題とOutcomeからAI Capabilityを配置すると局�
 content_language: ja
 created_at: 2026-08-04T01:32:23+09:00
 created_by: agent:codex
+hypothesis_scope: practice
 hypothesis_level: solution
-status: reviewed
-reviewed_at: 2026-08-04T01:53:22+09:00
-reviewed_by: human:kijima
-review_scope: intent_alignment
+status: proposed
 confidence: low
 knowledge_basis:
   - recorded_statement
@@ -20,7 +18,7 @@ relations:
   - type: derived_from
     target: RN-20260731-214443-ai-resource-management-in-value-stream
   - type: tests
-    target: HYP-20260730-015718-ai-speed-requires-value-validation
+    target: HYP-20260804-183210-ai-slop-downstream-burden-value
 ---
 
 # 仮説
@@ -45,7 +43,7 @@ Capabilityと責任境界の推論を組み合わせた。
 `solution`
 
 親となるValue Hypothesis
-`HYP-20260730-015718-ai-speed-requires-value-validation`に対して、何を作るかの選択と
+`HYP-20260804-183210-ai-slop-downstream-burden-value`に対して、何を作るかの選択と
 価値検証を、Value Streamから必要Capabilityを割り当てる方法として具体化する。
 
 ## 期待する兆候

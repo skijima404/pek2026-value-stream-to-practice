@@ -14,6 +14,18 @@ Canonical visual reference:
 
 ### Hypothesis hierarchy
 
+Classify the Value Stream before classifying the level:
+
+| `hypothesis_scope` | Meaning |
+| --- | --- |
+| `session` | Audience value and the session design used to deliver it |
+| `practice` | Platform Engineering or another subject-domain practice discussed in the session |
+| `not_assessed` | The available source does not support a reliable scope |
+
+Do not mix levels from different scopes into one hierarchy. A practice
+Solution may be subject matter used by a session Solution, but that contextual
+relationship is not automatically a parent-child validation edge.
+
 | Mobius map | `hypothesis_level` | Retrospective question |
 | --- | --- | --- |
 | Discovery | `value` | Whose problem and which customer or business outcome did we consider? |
@@ -31,6 +43,8 @@ Value Hypothesis
 
 This hierarchy is not transitive evidence. A successful Feature Hypothesis does
 not automatically validate its parent Solution or Value Hypothesis.
+HYP-to-HYP `tests` is reserved for the immediate parent in this hierarchy.
+Cross-scope or same-level context uses a non-hierarchical relation.
 
 ### Retrospective output
 
@@ -45,6 +59,8 @@ sections:
 For each section:
 
 - cite the repository node IDs that support the explanation;
+- state the selected `hypothesis_scope` and do not silently combine session and
+  practice hierarchies;
 - preserve each node's declared `knowledge_basis` and distinguish practitioner
   experience from independently tested evidence;
 - explain only what was considered, tested, or learned in the requested scope;

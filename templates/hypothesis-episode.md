@@ -5,6 +5,7 @@ title: "小さな仮説検証のタイトル"
 content_language: ja
 created_at: YYYY-MM-DDTHH:MM:SS+09:00
 created_by: agent:codex
+hypothesis_scope: not_assessed
 hypothesis_level: not_assessed
 status: proposed
 # `status: reviewed` の場合は reviewed_at、reviewed_by、

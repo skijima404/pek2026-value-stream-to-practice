@@ -13,7 +13,7 @@ Allowed relation types:
 | Relation | Source -> target meaning |
 | --- | --- |
 | `derived_from` | This node was extracted or interpreted from target |
-| `tests` | This episode tests the target hypothesis or claim |
+| `tests` | For Hypothesis Episode to Hypothesis Episode, source tests its immediate hierarchy parent within the same scope |
 | `supports` | Evidence in this node supports target |
 | `challenges` | Evidence in this node challenges target |
 | `adopted_from` | This artifact adopts content from target analysis |
@@ -30,6 +30,13 @@ Rules:
 - `target` is a repository node ID, not a path or free-form title.
 - Use `references` only when no evidentiary implication is intended.
 - `supports` and `challenges` require an explanation in the body.
+- Every Hypothesis Episode to Hypothesis Episode `tests` relation is reserved
+  for the immediate Value/Solution/Feature hierarchy parent. Source and target
+  use the same `hypothesis_scope`, and the target is exactly one level above
+  the source.
+- Use `references` or `derived_from` for cross-scope context or same-level
+  hypotheses. If a future workflow needs a non-hierarchical HYP-to-HYP test,
+  define a separate relation type instead of overloading `tests`.
 - Relations do not inherit transitively. A Pattern citing an Episode does not
   automatically cite every Raw Note behind the Episode.
 - Circular `derived_from`, `adopted_from`, or `supersedes` chains are invalid.

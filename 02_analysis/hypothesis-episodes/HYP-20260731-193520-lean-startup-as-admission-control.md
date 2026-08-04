@@ -5,11 +5,9 @@ title: "Lean Startupの選別と早期廃棄は未検証案のコスト外部化
 content_language: ja
 created_at: 2026-07-31T19:35:20+09:00
 created_by: agent:codex
+hypothesis_scope: practice
 hypothesis_level: solution
-status: reviewed
-reviewed_at: 2026-07-31T19:39:23+09:00
-reviewed_by: human:kijima
-review_scope: intent_alignment
+status: proposed
 confidence: low
 knowledge_basis:
   - external_research
@@ -21,7 +19,7 @@ relations:
   - type: derived_from
     target: OBS-20260731-120412-value-and-slop-experience-decision-flow
   - type: tests
-    target: HYP-20260730-015718-ai-speed-requires-value-validation
+    target: HYP-20260804-183210-ai-slop-downstream-burden-value
 ---
 
 # 仮説
@@ -53,8 +51,8 @@ Admit selectively
 ## Solution Hypothesisとしての位置づけ
 
 親となるValue Hypothesis
-`HYP-20260730-015718-ai-speed-requires-value-validation`は、AIによって作成速度が
-上がるほど、Platform Teamには選択、廃棄、検証の能力が必要になるとしている。
+`HYP-20260804-183210-ai-slop-downstream-burden-value`は、AIによって増えた未選別の
+候補が選択、確認、手戻りおよび下流負荷を生み、その回避に価値があるとしている。
 
 本Episodeは、その能力を実現するSolution候補として、Lean Startupの
 選別と早期廃棄をAdmission Controlとして使う方法を置く。

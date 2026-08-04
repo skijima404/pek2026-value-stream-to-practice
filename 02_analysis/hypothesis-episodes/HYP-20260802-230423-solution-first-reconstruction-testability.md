@@ -5,6 +5,7 @@ title: "Solution-firstでもReasoning Chainを再構成すれば検証可能な�
 content_language: ja
 created_at: 2026-08-02T23:04:23+09:00
 created_by: agent:codex
+hypothesis_scope: practice
 hypothesis_level: solution
 status: reviewed
 reviewed_at: 2026-08-02T23:18:14+09:00

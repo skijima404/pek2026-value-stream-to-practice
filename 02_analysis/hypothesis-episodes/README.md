@@ -17,3 +17,16 @@ GenAIは調査可能性の確認、資料探索、質問案の作成、提供さ
 実務経験から形成された仮説には`practitioner_experience`を付けます。このBasisと
 `not_tested`は両立します。経験知として提案できることと、このRepositoryで
 独立検証したことを分け、どちらかを理由にもう一方を推測しません。
+
+## Hypothesis階層のScope
+
+`hypothesis_level`を付ける前に、`hypothesis_scope`で対象Value Streamを分けます。
+
+- `session`: Audience価値と、それを届けるSession Solution・Feature
+- `practice`: Platform Engineeringなど、セッション内で扱う実務上のValue・Solution・Feature
+- `not_assessed`: SourceからScopeを確実に分類できない
+
+異なるScopeのHypothesisを一つのValue／Solution／Feature階層として接続しません。
+HYPからHYPへの`tests` relationは、同じScope内の直上の親だけに使用します。
+Cross-scopeまたは同LevelのContextには使用しません。Featureの結果はSolutionへ、
+Solutionの結果はValueへ自動的には推移しません。

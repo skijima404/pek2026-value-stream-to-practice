@@ -1,47 +1,87 @@
 ---
 id: HYP-20260730-015718-ai-speed-requires-value-validation
 type: hypothesis_episode
-title: "AIによる作成速度向上は価値選択と検証の必要性を高める"
+title: "価値選択と検証はAI高速化による回避可能な下流Costを減らす"
 content_language: ja
 created_at: 2026-07-30T01:57:18+09:00
 created_by: agent:codex
-hypothesis_level: value
+hypothesis_scope: practice
+hypothesis_level: solution
 status: proposed
 confidence: low
 knowledge_basis:
+  - practitioner_experience
   - reasoned_synthesis
 relations:
   - type: derived_from
     target: OBS-20260730-015716-audience-and-value-problem-statements
   - type: derived_from
-    target: OBS-20260730-015715-accepted-direction-and-delivery-scope
+    target: OBS-20260731-120412-value-and-slop-experience-decision-flow
+  - type: derived_from
+    target: OBS-20260804-004531-hypothesis-validation-uncertainty-decision
+  - type: tests
+    target: HYP-20260804-183210-ai-slop-downstream-burden-value
 ---
 
 # 仮説
 
-AIによってPlatform Serviceや支援機能を作る速度が上がるほど、Platform Team
-には、作る能力だけでなく、何を作るかを選び、価値が弱いものを捨て、作った
-ものが価値を生んだか検証する能力が必要になる。
+AIによってPlatform Serviceや支援機能の候補を作る速度が上がる環境で、何を
+作るかを選び、価値が弱いものを早期に捨て、作ったものが価値を生んだかを
+検証すれば、未選別または未検証の候補が下流へ生む回避可能な確認、判断、
+手戻りおよびSupportのCostを減らせる。
+
+## 知識の成立根拠
+
+この仮説は、対象Audienceについて記録された課題の見立て、作成者が現場で使う
+価値判断と受け手のSlop経験を分ける判断Flow、および仮説検証を不確実性の分解と
+意思決定更新として扱う説明を組み合わせたものである。
+
+実務経験はSolutionを検討する根拠だが、価値選択と検証による下流Costの減少を
+このRepositoryで独立検証したものではない。
+
+## Mobiusでの位置づけ
+
+`practice` scopeの`solution`
+
+AI高速化に伴う未選別Outputの下流負荷を減らすというPractice Value Hypothesisに
+対し、価値選択、早期廃棄および検証を行う方法を置くSolution Hypothesisである。
+Audienceへこの方法をどう伝えるかは`session` scopeの別階層で扱う。
 
 ## 期待する兆候
 
-- AI導入後に、機能候補や生成物の増加が選択・確認・手戻りの負荷を生んでいる。
-- Platform Teamが、作成速度とは別に利用者価値やValue Stream上の摩擦を
-  確認する必要を認識している。
+- 候補ごとに対象Actor、期待Outcome、重要な不確実性および期待Signalが示される
+- 支持されない候補が、共有資源またはProductionへ依存を作る前に廃棄または保留される
+- 継続した候補について、利用者価値と下流負荷を観測して判断が更新される
+- 選択と検証を行った場合に、行わない場合より回避可能な確認、手戻りまたはSupportが減る
+
+## 検証対象の分解
+
+| ID | Uncertainty | Decision importance | Evidence refs | Coverage state | Finding | Applicability | Residual uncertainty |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| U1 | 価値仮説と期待Signalを明示すると、継続、廃棄、保留または追加確認の判断を更新しやすくなる | critical | none | not_checked | unknown | unknown | どの表現と確認方法が判断品質を改善するかを比較していない |
+| U2 | 価値の弱い候補を共有前に選別すると、回避可能な下流Costが減る | critical | none | not_checked | unknown | unknown | 選別あり・なしの比較、および減少するCostの範囲を確認していない |
+| U3 | 価値選択と検証に必要な時間、Skill、調整および判断Costは、回避できる損失に対して妥当である | high | none | not_checked | unknown | unknown | 必要な摩擦と過剰なGateを分ける基準、および十分性の閾値を定義していない |
 
 ## 検証方法
 
 ### 方法と対象範囲
 
-- 方法: 公開資料の簡易Researchまたは関係者への少人数インタビュー
+- 方法:
+  - 過去または今後の候補について、価値仮説と期待Signalを置いた場合の
+    継続、廃棄、保留および追加確認の判断を記録する
+  - 可能な範囲で、選別を行わなかった候補のReview、手戻り、Supportまたは
+    廃止Costと比較する
 - 対象・資料: 未選定
-- 選定方法: Platform Serviceの企画、提供、利用に関与する資料または関係者
-- 実施規模: Solutionサイズに見合う小規模な確認とする
+- 選定方法:
+  候補の生成から選択、共有、利用後まで追跡でき、判断理由と下流作業を確認できる
+  小さなCaseを優先する
+- 実施規模:
+  一つの候補または限定Releaseから始める
 
 ### GenAIの利用
 
-- 利用内容: 候補資料の探索、質問案の作成、確認済み資料の整理に利用可能
-- 実際に確認した資料・記録: 現時点ではなし
+- 利用内容: 不確実性、期待Signal、反証条件、判断Optionおよび記録の整理に利用可能
+- 実際に確認した資料・記録: relationで示したRepository Nodeのみ
 
 ## 結果
 
@@ -49,16 +89,22 @@ AIによってPlatform Serviceや支援機能を作る速度が上がるほど�
 
 ### 実際に観測したこと
 
-検証用の根拠ノードとして利用できる資料またはインタビュー記録は、まだ保存
-されていない。
+価値選択と検証を行ったCaseと行わなかったCaseについて、判断または下流Costを
+比較した記録はまだ保存されていない。
 
 ## 解釈
 
-この仮説は採択済みProposalの中核的な方向として維持する。検証は登壇可否の
-ゲートではなく、主張の精度、具体例、注意点を調整するために行う。
+この仮説はPlatform Engineering実務で使うSolution候補であり、Audienceがこの方法を
+有用と感じること、セッションで理解できること、または登壇内容へ採用されたことを
+意味しない。
 
 ## 限界
 
-- 選定上の偏り: 未評価である。
-- 未確認の証拠: 公開資料、現場記録、参加予定者の課題認識。
-- 一般化できない範囲: 現時点では仮説の対象範囲全体について結論できない。
+- 選定上の偏り: 作成者の実務経験とRepository内の説明モデルから形成されている。
+- 未確認の証拠: 選別あり・なしを比較できる現場記録、下流Cost、判断品質。
+- 一般化できない範囲: どのPlatform Team、ServiceまたはRisk水準でも同じ方法が
+  妥当とは結論できない。
+- 残存リスクと影響を受ける判断:
+  componentごとのEvidence Coverageを確認するまで、この方法を標準Practice、
+  登壇の推奨事項、または特定のSolutionを正当化する根拠として扱えるかは
+  判断できない。

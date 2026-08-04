@@ -72,6 +72,8 @@ experience, external research, direct observation, or reasoned synthesis.
 ### Observation to Hypothesis Episode
 
 - State the hypothesis and expected signal.
+- Classify `hypothesis_scope` as `session` or `practice` only when the source
+  supports the Value Stream being described; otherwise use `not_assessed`.
 - Classify `hypothesis_level` as `value`, `solution`, or `feature` only when the
   source supports that classification; otherwise use `not_assessed`.
 - Distinguish planned validation from completed validation.
@@ -79,6 +81,10 @@ experience, external research, direct observation, or reasoned synthesis.
 - Use `not_tested` when no validation occurred.
 - A Solution Hypothesis may test a Value Hypothesis, and a Feature Hypothesis
   may test a Solution Hypothesis. Record those parent relations explicitly.
+- A Hypothesis Episode to Hypothesis Episode `tests` relation always identifies
+  the immediate hierarchy parent. It uses the same `hypothesis_scope` and
+  targets exactly one level above the source. Do not overload `tests` for
+  cross-scope context or same-level comparison.
 - Do not treat a child result as transitive validation of its parent.
 
 ### Validation Components and Evidence Coverage

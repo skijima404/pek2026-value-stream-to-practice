@@ -5,11 +5,9 @@ title: "リレーを中心にしたセッション構成ならAI SlopからVSM�
 content_language: ja
 created_at: 2026-07-31T00:41:19+09:00
 created_by: agent:codex
-hypothesis_level: solution
-status: reviewed
-reviewed_at: 2026-07-31T00:55:25+09:00
-reviewed_by: human:kijima
-review_scope: intent_alignment
+hypothesis_scope: session
+hypothesis_level: feature
+status: proposed
 confidence: not_assessed
 knowledge_basis:
   - practitioner_experience
@@ -21,6 +19,8 @@ relations:
     target: RN-20260730-140133-ai-outcomes-and-mbpm
   - type: references
     target: HYP-20260730-015718-ai-speed-requires-value-validation
+  - type: tests
+    target: HYP-20260804-183209-ai-slop-learning-path-solution
 ---
 
 # 仮説
@@ -37,11 +37,11 @@ VSMへ戻る順序で構成すれば、AI Slop、価値仮説、効果測定の�
 
 ## Mobiusでの位置づけ
 
-`solution`
+`session` scopeの`feature`
 
-Audienceへ価値仮説と効果測定を伝えるための、説明順序と比喩に関する
-Solution Hypothesisとして扱う。スライドや個々の発話は、この構成を
-試すためのFeature候補であり、まだ採用していない。
+AI Slopの構造、Signalおよび仮説検証を一続きに説明するSession Solutionを、
+25分のトーク、説明順序およびリレーの比喩で試すFeature Hypothesisとして扱う。
+スライドや個々の発話は、このFeatureを実装する候補であり、まだ採用していない。
 
 ## 現時点の構成候補
 
@@ -184,7 +184,7 @@ Acceptance Criteria、早期の中止判断、VSMを接続する構成候補が�
 
 Codexによる検索で個々のRaw Noteを再発見することは可能だが、その時点で
 自然に見えていた順序、不採用にした概念、比較基準まで同じ形で再構成される
-とは限らない。そのため、現在の構成をSolution Hypothesisとして保存する。
+とは限らない。そのため、現在の構成をFeature Hypothesisとして保存する。
 
 ## 限界
 
