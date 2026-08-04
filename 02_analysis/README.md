@@ -50,11 +50,13 @@ Value／Solution／Feature階層を表します。子から直上の親だけを
 ```text
 Value: AudienceがAI Slopを制御するActionを持ち帰る価値
   └─ tests ← Solution: 構造・Signal・仮説検証を一続きに説明する
-       └─ tests ← Feature: リレーを中心にした25分トーク
+       ├─ tests ← Feature: リレーを中心にした25分トーク
+       └─ tests ← Feature: 一枚の補助説明とRepositoryへの導線
 ```
 
-3 Nodeはいずれも`proposed`かつ`not_tested`であり、人間の意図Review、検証、
-Session StoryまたはSlidesへの採用は完了していません。
+一枚とRepositoryへの導線というFeatureは`reviewed`、他の3 Nodeは`proposed`で、
+4 Nodeはいずれも`not_tested`です。人間の意図Reviewは検証またはSession Story、
+Slidesへの採用を意味しません。
 
 ### Practice scope
 
@@ -103,6 +105,23 @@ AIの局所高速化、ハンドオーバー、リレー、早期中止判断
   -> 構成要素と表現選択をObservationとして整理
   -> リレー中心の25分トーク構成というSession Feature Hypothesis
   -> 階層変更により再Review待ち、未検証、未採用
+
+Human-AI協業モデルと登壇準備Repository
+  -> 本編では一枚に限定し、Repositoryを登壇後の深掘りへ使う編集判断
+  -> 一枚とRepositoryへの導線というSession Feature Hypothesis
+  -> Focus維持、役割理解、閲覧、Action選択を分け、未検証、未採用
+
+BetterUpのWorkslop調査
+  -> 受け手が追加作業、感情および送信者への評価を自己申告した結果をObservation化
+  -> Platform Engineeringへの適用と因果は未確認
+
+判断Contextを渡すHandoverの事例記憶
+  -> Outputだけでなく、問い、意味、根拠、Contextを渡すというObservation
+  -> 一次資料を持つ比較ではなく、Case RecollectionとReasoned Synthesisとして保持
+
+個別Enablementを反復する人力補完
+  -> Persona、Contract、Service ScopeまたはCapacityの見直しSignalとしてObservation化
+  -> 診断精度、因果および介入効果は未確認
 
 AIによる候補流入と下流への確認、判断、手戻り、SupportのCost Transfer
   -> 回避可能な下流負荷を特定・制御・削減できるPractice Value Hypothesis
@@ -198,6 +217,7 @@ BCGの10–20–70関連資料
 AudienceがAI Slopを制御するActionを持ち帰る価値
   <- tests: 構造・Signal・仮説検証を一続きに説明するSolution
        <- tests: リレー中心の25分トークというFeature
+       <- tests: 一枚の補助説明とRepositoryへの導線というFeature
 ```
 
 | Map | Level | Hypothesis Episode | Knowledge Basis | Intent Review | Result |
@@ -205,6 +225,7 @@ AudienceがAI Slopを制御するActionを持ち帰る価値
 | Discovery | `value` | [AudienceはAI Slopを制御するActionを持ち帰ることに価値を感じる](./hypothesis-episodes/HYP-20260804-183208-audience-actionable-ai-slop-value.md) | `recorded_statement`, `reasoned_synthesis` | `proposed` | `not_tested` |
 | Decision | `solution` | [AI Slopの構造・Signal・仮説検証を一続きに説明するとActionを選びやすい](./hypothesis-episodes/HYP-20260804-183209-ai-slop-learning-path-solution.md) | `practitioner_experience`, `reasoned_synthesis` | `proposed` | `not_tested` |
 | Delivery | `feature` | [リレーを中心にしたセッション構成ならAI SlopからVSMまでを一本道で伝えられる](./hypothesis-episodes/HYP-20260731-004119-relay-centered-session-story.md) | `practitioner_experience`, `reasoned_synthesis` | `proposed` | `not_tested` |
+| Delivery | `feature` | [Human-AI協業を一枚とRepositoryへの導線に限定すると本編を逸らさず深掘りを提供できる](./hypothesis-episodes/HYP-20260805-001809-repository-handoff-preserves-focus.md) | `recorded_statement`, `reasoned_synthesis` | `reviewed` | `not_tested` |
 | 未分類 | `not_assessed` | [開催側の採択を方向性継続の十分なシグナルとして扱う](./hypothesis-episodes/HYP-20260730-015717-organizer-selection-is-sufficient-signal.md) | `explicit_validation`, `external_research`, `reasoned_synthesis` | `reviewed` | `supports` |
 
 ### Practice scope
@@ -271,6 +292,7 @@ Analysisの採用、Artifactへの採用を意味しません。
 | --- | --- | ---: | --- | --- |
 | [AudienceがActionを持ち帰るSession Value](./hypothesis-episodes/HYP-20260804-183208-audience-actionable-ai-slop-value.md) | `session` | 5 | すべて`not_checked` | なし |
 | [一続きの説明によるSession Solution](./hypothesis-episodes/HYP-20260804-183209-ai-slop-learning-path-solution.md) | `session` | 5 | すべて`not_checked` | なし |
+| [一枚とRepositoryへの導線によるSession Feature](./hypothesis-episodes/HYP-20260805-001809-repository-handoff-preserves-focus.md) | `session` | 4 | すべて`not_checked` | なし |
 | [下流負荷を特定・制御・削減するPractice Value](./hypothesis-episodes/HYP-20260804-183210-ai-slop-downstream-burden-value.md) | `practice` | 7 | すべて`not_checked` | なし |
 | [価値選択と検証のPractice Solution](./hypothesis-episodes/HYP-20260730-015718-ai-speed-requires-value-validation.md) | `practice` | 3 | すべて`not_checked` | なし |
 
@@ -301,6 +323,9 @@ Nodeはまだ作成されていません。これはRiskが存在しないこと
 | [Slopとして経験される摩擦にも残す目的があり得ると整理された](./observations/OBS-20260804-013222-necessary-friction-boundary.md) | `reasoned_synthesis` | `reviewed` | `medium` | 価値とSlop経験を分ける判断Flowの境界条件 |
 | [Dashboardと分析を分ける運用がITSMとProject Portfolioで用いられた](./observations/OBS-20260804-013225-itsm-metrics-analysis-practice.md) | `practitioner_experience`, `case_recollection` | `reviewed` | `medium` | 二段階メトリック分析Hypothesis |
 | [今回のProblem Spaceは2026年4月公開記事に記録され、後続準備で実践方法が追加された](./observations/OBS-20260804-014228-prior-article-session-continuity.md) | `external_research`, `recorded_statement`, `reasoned_synthesis` | `proposed` | `high` | 先行する自己資料と今回の実践方法の連続性 |
+| [Workslopの受け手は追加作業と信頼低下を自己申告している](./observations/OBS-20260805-001807-workslop-recipient-burden.md) | `external_research` | `reviewed` | `high` | Practice Value U1への適用候補、Platform Engineeringへの適用は未確認 |
+| [良いハンドオーバーには受け手の判断に必要なContextが含まれると整理された](./observations/OBS-20260805-001808-decision-context-handover.md) | `case_recollection`, `reasoned_synthesis` | `reviewed` | `medium` | Service Contract Hypothesisを補助するContext |
+| [個別Enablementの反復はService設計の人力補完を示す兆候として整理された](./observations/OBS-20260805-001810-repeated-enablement-dependency-signal.md) | `reasoned_synthesis` | `reviewed` | `medium` | Service Contract、Persona、Service Scopeの未検証Signal |
 
 `knowledge_basis`は成立根拠の種類、`confidence`は確率ではなく確信度、
 `result`は実施した検証の結果です。互いに置き換えず、根拠と詳細な限界は
@@ -323,16 +348,13 @@ Nodeはまだ作成されていません。これはRiskが存在しないこと
 
 - [PEK2026プレゼンテーション候補ネタ集](../01_working/raw-notes/RN-20260730-093311-presentation-idea-inventory.md)
 - [Workモード引き継ぎからのプレゼンテーション追加候補](../01_working/raw-notes/RN-20260730-095321-work-mode-idea-supplement.md)
-- [AI活用で狙うOutcomeと人間・AI協業モデル](../01_working/raw-notes/RN-20260730-102859-ai-outcomes-and-collaboration-model.md)
-- [本編とRepositoryへの導線の役割分担](../01_working/raw-notes/RN-20260730-103954-session-repo-role.md)
-- [Enablementで橋を架け続けるべきでない境界](../01_working/raw-notes/RN-20260731-204459-enablement-bridge-boundaries.md)
 - [リレー比喩でシステム思考を説明する設計判断](../01_working/raw-notes/RN-20260802-215509-relay-metaphor-as-systems-thinking-translation.md)
 
 ## Patternの状態
 
 現在、Patternは0件です。
 
-13件のHypothesis Episodeは異なる範囲を扱っており、複数Episodeを横断して
+14件のHypothesis Episodeは異なる範囲を扱っており、複数Episodeを横断して
 繰り返し検証された関係はまだ記録されていません。Indexを埋める目的でPatternを
 作らず、複数の検証結果と反例確認が揃ったときに提案します。
 
@@ -376,6 +398,12 @@ Nodeはまだ作成されていません。これはRiskが存在しないこと
   組み込むScopeは未定義です。
 - Session Featureであるリレー中心の25分トークは、Walkthrough、代替案比較、
   第三者Reviewが未実施です。Practice scopeのFeature Hypothesisはまだありません。
+- Human-AI協業を一枚とRepositoryへの導線に限定するSession Featureは、Focus維持、
+  Repositoryの役割理解、登壇後の閲覧およびAction選択の4 Componentsが未確認です。
+- BetterUpのWorkslop調査は受け手の自己申告を扱いますが、Platform Engineeringへの
+  適用、AI利用との因果および対策の効果は確認していません。
+- 判断Contextを渡すHandoverと、個別Enablementの反復を人力補完のSignalとして扱う
+  整理は、事例記憶またはReasoned Synthesisであり、比較Caseで検証されていません。
 - 想定Audienceの課題と参加者Journeyは、参加者への直接確認を経ていません。
 - 現場適用、Live Document、Takeawayの有効性は未検証です。
 
