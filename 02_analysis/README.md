@@ -40,7 +40,53 @@ Raw Noteや外部入力から作った派生ノードを置きます。
 実務経験に根拠を持つが、このRepositoryでは独立検証していない状態です。
 経験知の価値を消さず、普遍的事実または検証済みEvidenceにも変換しません。
 
-## 現在のReasoning Chain
+## 現在の全体像
+
+Hypothesis Episodeは同じフォルダに置き、`hypothesis_scope`で二つの独立した
+Value／Solution／Feature階層を表します。子から直上の親だけを`tests`で接続します。
+
+### Session scope
+
+```text
+Value: AudienceがAI Slopを制御するActionを持ち帰る価値
+  └─ tests ← Solution: 構造・Signal・仮説検証を一続きに説明する
+       └─ tests ← Feature: リレーを中心にした25分トーク
+```
+
+3 Nodeはいずれも`proposed`かつ`not_tested`であり、人間の意図Review、検証、
+Session StoryまたはSlidesへの採用は完了していません。
+
+### Practice scope
+
+```text
+Value: AI高速化による回避可能な下流負荷を特定・制御・削減できる状態
+  ├─ tests ← Solution: 価値選択と検証
+  ├─ tests ← Solution: Lean Startupによる選別と早期廃棄
+  ├─ tests ← Solution: DVSとOVSを接続した観測
+  ├─ tests ← Solution: Service Contract
+  ├─ tests ← Solution: Outcome-firstのAI Capability配置
+  └─ tests ← Solution: 二段階Metric分析
+```
+
+この主階層の7 Nodeはいずれも`proposed`かつ`not_tested`です。個別Solutionの結果は、
+親Valueの結果へ自動的には推移しません。
+
+### Standaloneまたは未分類のHypothesis
+
+- [Solution-firstから検証可能な仮説を再構成するPractice Solution](./hypothesis-episodes/HYP-20260802-230423-solution-first-reconstruction-testability.md)
+  - `practice`、`solution`、`reviewed`、`not_tested`
+  - 主階層への`tests`はなく、価値選択と検証のPractice Solutionを`references`する
+- [安全な標準Pathによる選択負荷軽減のPractice Value](./hypothesis-episodes/HYP-20260802-230425-platform-choice-burden-value.md)
+  - `practice`、`value`、`reviewed`、`not_tested`
+  - 現在は独立したValue Hypothesisであり、子Solutionは記録されていない
+- [開催側の採択を方向性継続のSignalとして扱うHypothesis](./hypothesis-episodes/HYP-20260730-015717-organizer-selection-is-sufficient-signal.md)
+  - `session`、`not_assessed`、`reviewed`、`supports`
+  - Value／Solution／Feature階層には分類されていない
+
+## Sourceと派生Reasoning Chain
+
+以下はScope階層ではなく、Observation、Hypothesis、ArtifactがどのSource themeから
+形成されたかを追うための詳細Viewです。
 
 ```text
 参加者の成功条件とJourney
@@ -59,7 +105,7 @@ AIの局所高速化、ハンドオーバー、リレー、早期中止判断
   -> 階層変更により再Review待ち、未検証、未採用
 
 AIによる候補流入と下流への確認、判断、手戻り、SupportのCost Transfer
-  -> 回避可能な下流負荷を減らすPractice Value Hypothesis
+  -> 回避可能な下流負荷を特定・制御・削減できるPractice Value Hypothesis
   -> 価値選択と検証、Lean Startup、DVS/OVS観測、Service Contractなどの
      Practice Solution Hypothesis
   -> Session階層とは分離し、未検証、未採用
@@ -175,6 +221,24 @@ AudienceがAI Slopを制御するActionを持ち帰る価値
 | Decision | `solution` | [Value Streamの課題とOutcomeからAI Capabilityを配置すると局所最適を避けやすい](./hypothesis-episodes/HYP-20260804-013223-outcome-first-ai-resource-allocation.md) | `recorded_statement`, `reasoned_synthesis` | `proposed` | `not_tested` |
 | Decision | `solution` | [異常検知と原因診断を分ける運用はMetric過剰取得を抑え改善Loopを両立する](./hypothesis-episodes/HYP-20260804-013226-two-stage-metrics-analysis.md) | `practitioner_experience`, `case_recollection`, `reasoned_synthesis` | `proposed` | `not_tested` |
 
+## Cross-scope connections
+
+SessionとPracticeのHypothesisは、親子検証ではなくContextまたはSource共有として
+接続します。HYPからHYPへのCross-scopeな`tests`はありません。
+
+- [Session Feature](./hypothesis-episodes/HYP-20260731-004119-relay-centered-session-story.md)は、
+  [価値選択と検証のPractice Solution](./hypothesis-episodes/HYP-20260730-015718-ai-speed-requires-value-validation.md)を
+  `references`する。これは25分トークで扱う題材のContextであり、どちらかの検証結果を
+  もう一方へ移すrelationではない。
+- [Session Solution](./hypothesis-episodes/HYP-20260804-183209-ai-slop-learning-path-solution.md)と
+  Practice階層は、次のObservationをSourceとして共有している。
+  - [価値判断と受け手のSlop経験を分けるFlow](./observations/OBS-20260731-120412-value-and-slop-experience-decision-flow.md)
+  - [提供側と利用側のValue Streamを接続して観測する考え](./observations/OBS-20260801-004820-coupled-platform-value-streams.md)
+  - [仮説検証を不確実性の分解として扱う説明](./observations/OBS-20260804-004531-hypothesis-validation-uncertainty-decision.md)
+
+Practiceにおける方法の成立と、SessionでAudienceへ伝わることは、それぞれのScopeで
+別に検証します。
+
 `session` scopeで`supports`となっている採択シグナルは、Proposalの大方向を維持して制作を
 進める判断に限定されます。Audience課題やValue Hypothesisの正しさを支持する
 結果ではありません。
@@ -183,7 +247,7 @@ AudienceがAI Slopを制御するActionを持ち帰る価値
 成立根拠に持つ一方、このRepositoryでは独立検証していないことを示します。
 「根拠なし」または「検証済み」と読み替えません。
 
-## 仮説検証の読み方
+## Evidence Coverageと残存リスク
 
 複数の不確実性を含むHypothesis Episodeは、`検証対象の分解`で`U1`、`U2`のような
 小さな検証対象に分けます。
@@ -200,6 +264,19 @@ Observationとし、経験知、外部Research、直接観察などの性質はO
 残存リスクへの人間の対応判断は`04_decisions/risk-decisions/`に分離します。
 `proceed_with_risk`は限定した範囲で先へ進む判断であり、Hypothesisの`supports`、
 Analysisの採用、Artifactへの採用を意味しません。
+
+### 現在の検証状況
+
+| Hypothesis Episode | Scope | Components | Coverage | Current Risk Decision |
+| --- | --- | ---: | --- | --- |
+| [AudienceがActionを持ち帰るSession Value](./hypothesis-episodes/HYP-20260804-183208-audience-actionable-ai-slop-value.md) | `session` | 5 | すべて`not_checked` | なし |
+| [一続きの説明によるSession Solution](./hypothesis-episodes/HYP-20260804-183209-ai-slop-learning-path-solution.md) | `session` | 5 | すべて`not_checked` | なし |
+| [下流負荷を特定・制御・削減するPractice Value](./hypothesis-episodes/HYP-20260804-183210-ai-slop-downstream-burden-value.md) | `practice` | 7 | すべて`not_checked` | なし |
+| [価値選択と検証のPractice Solution](./hypothesis-episodes/HYP-20260730-015718-ai-speed-requires-value-validation.md) | `practice` | 3 | すべて`not_checked` | なし |
+
+他のHypothesis Episodeには、現在Validation Component表がありません。Risk Decision
+Nodeはまだ作成されていません。これはRiskが存在しないことではなく、人間による
+対応判断がまだ記録されていないことを示します。
 
 ## Observation一覧
 
@@ -255,13 +332,20 @@ Analysisの採用、Artifactへの採用を意味しません。
 
 現在、Patternは0件です。
 
-10件のHypothesis Episodeは異なる範囲を扱っており、複数Episodeを横断して
+13件のHypothesis Episodeは異なる範囲を扱っており、複数Episodeを横断して
 繰り返し検証された関係はまだ記録されていません。Indexを埋める目的でPatternを
 作らず、複数の検証結果と反例確認が揃ったときに提案します。
 
 ## 未解決事項
 
-- AI速度と価値選択・検証のValue Hypothesisは `not_tested` のままです。
+- AudienceがAI Slopを制御するActionを持ち帰ることに価値を感じるかは
+  `not_tested`です。
+- 構造、Signal、仮説検証を一続きに説明するSession Solutionが、Audienceの
+  理解とAction選択を改善するかは`not_tested`です。
+- AI高速化による下流負荷を特定・制御・削減できる状態のPractice Valueは、
+  7 Componentsすべてが`not_checked`です。
+- 価値選択と検証によって回避可能な下流Costが減るというPractice Solutionは、
+  3 Componentsすべてが`not_checked`です。
 - Lean Startupの選別と早期廃棄をAdmission Controlとして使うSolution
   Hypothesisは `not_tested` のままです。
 - PEのDVSと利用者側OVSを接続した観測が、局所指標より早くCost Transferを検知
@@ -290,9 +374,8 @@ Analysisの採用、Artifactへの採用を意味しません。
   `not_tested` です。
 - Outcome、Experience、Trust、Contract Qualityの具体的なMetricと、MBPMへ
   組み込むScopeは未定義です。
-- リレー中心のSession Storyは、25分Walkthrough、代替案比較、第三者Reviewが
-  未実施です。
-- MobiusのFeature Hypothesisに該当するEpisodeはまだありません。
+- Session Featureであるリレー中心の25分トークは、Walkthrough、代替案比較、
+  第三者Reviewが未実施です。Practice scopeのFeature Hypothesisはまだありません。
 - 想定Audienceの課題と参加者Journeyは、参加者への直接確認を経ていません。
 - 現場適用、Live Document、Takeawayの有効性は未検証です。
 
@@ -301,6 +384,8 @@ Analysisの採用、Artifactへの採用を意味しません。
 次の場合に、NodeとArtifactを再読してこのIndexを再生成します。
 
 - Observation、Hypothesis Episode、Patternを追加または実質変更したとき
-- status、knowledge_basis、confidence、result、relationが変わったとき
+- status、knowledge_basis、confidence、result、hypothesis_scope、
+  hypothesis_level、relation、Validation Componentが変わったとき
+- Risk Decisionを追加、置換、撤回したとき
 - Artifactを採用、更新、置換したとき
 - 人間が現在の全体像やReasoning Chainの整理を依頼したとき
