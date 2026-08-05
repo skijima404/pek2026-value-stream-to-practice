@@ -54,9 +54,10 @@ Value: AudienceがAI Slopを制御するActionを持ち帰る価値
        └─ tests ← Feature: 一枚の補助説明とRepositoryへの導線
 ```
 
-一枚とRepositoryへの導線というFeatureは`reviewed`、他の3 Nodeは`proposed`で、
-4 Nodeはいずれも`not_tested`です。人間の意図Reviewは検証またはSession Story、
-Slidesへの採用を意味しません。
+Session ValueはAI PoC InterviewのEvidence追加後に`reviewed`で、結果は
+`inconclusive`です。一枚とRepositoryへの導線というFeatureも`reviewed`、
+Solutionとリレー中心のFeatureは`proposed`で、3つの子Nodeはいずれも`not_tested`です。
+人間の意図Reviewまたは限定的な検証は、Session StoryやSlidesへの採用を意味しません。
 
 ### Practice scope
 
@@ -70,8 +71,9 @@ Value: AI高速化による回避可能な下流負荷を特定・制御・削�
   └─ tests ← Solution: 二段階Metric分析
 ```
 
-この主階層の7 Nodeはいずれも`proposed`かつ`not_tested`です。個別Solutionの結果は、
-親Valueの結果へ自動的には推移しません。
+Practice Valueと価値選択・検証Solutionは`reviewed`かつ`inconclusive`です。
+他の5 Solutionは`proposed`かつ`not_tested`です。個別Solutionの結果は、親Valueの
+結果へ自動的には推移しません。
 
 ### Standaloneまたは未分類のHypothesis
 
@@ -99,7 +101,22 @@ Audienceと価値課題の見立て
   + 参加者が試したいと思うこと、または一つ持ち帰って試すという成功条件
   -> AI Slopを制御するActionを持ち帰ることのSession Value Hypothesis
   -> 構造・Signal・仮説検証を一続きに説明するSession Solution Hypothesis
-  -> いずれも未検証、未採用
+  -> Session ValueのU1・U2を3人へのヒアリングで限定的に検証
+  -> Session Solutionは未検証、いずれも未採用
+
+3人へのAudienceヒアリング
+  -> 機能・着手点、受領物による仕事の増加、効果説明に関する問題を記録
+  -> 3人全員が未検知・未制御のAI Slopを流さない方法を聞きたいと回答
+  -> Session ValueのU1・U2を`partially_checked / supports / contextual`として更新
+  -> Risk特定、Action選択、実際の試行およびAudience全体への一般化は未確認
+
+機能評価型AI PoCについての本人Interview
+  -> 機能評価とReport作成を中心とする複数PoCがBusiness活用判断へ接続しなかった
+     一事例をObservationとして整理
+  -> Session ValueのU1に`contextual`な追加Evidence
+  -> 価値選択と検証のPractice Solutionでは、機能評価側だけを確認した
+     `inconclusive`なContrast Case
+  -> Value Hypothesisを明示した比較、原因、下流Costおよび一般性は未確認
 
 AIの局所高速化、ハンドオーバー、リレー、早期中止判断
   -> 構成要素と表現選択をObservationとして整理
@@ -127,7 +144,7 @@ AIによる候補流入と下流への確認、判断、手戻り、SupportのCo
   -> 回避可能な下流負荷を特定・制御・削減できるPractice Value Hypothesis
   -> 価値選択と検証、Lean Startup、DVS/OVS観測、Service Contractなどの
      Practice Solution Hypothesis
-  -> Session階層とは分離し、未検証、未採用
+  -> Session階層とは分離し、価値選択と検証のU1のみ限定的に確認、未採用
 
 PresalesとProject Deliveryを通じた限定的な実務経験
   + Customerへ毎回、目的とDiscovery結果を質問した経験
@@ -222,7 +239,7 @@ AudienceがAI Slopを制御するActionを持ち帰る価値
 
 | Map | Level | Hypothesis Episode | Knowledge Basis | Intent Review | Result |
 | --- | --- | --- | --- | --- | --- |
-| Discovery | `value` | [AudienceはAI Slopを制御するActionを持ち帰ることに価値を感じる](./hypothesis-episodes/HYP-20260804-183208-audience-actionable-ai-slop-value.md) | `recorded_statement`, `reasoned_synthesis` | `proposed` | `not_tested` |
+| Discovery | `value` | [AudienceはAI Slopを制御するActionを持ち帰ることに価値を感じる](./hypothesis-episodes/HYP-20260804-183208-audience-actionable-ai-slop-value.md) | `recorded_statement`, `case_recollection`, `explicit_validation`, `reasoned_synthesis` | `reviewed` | `inconclusive` |
 | Decision | `solution` | [AI Slopの構造・Signal・仮説検証を一続きに説明するとActionを選びやすい](./hypothesis-episodes/HYP-20260804-183209-ai-slop-learning-path-solution.md) | `practitioner_experience`, `reasoned_synthesis` | `proposed` | `not_tested` |
 | Delivery | `feature` | [リレーを中心にしたセッション構成ならAI SlopからVSMまでを一本道で伝えられる](./hypothesis-episodes/HYP-20260731-004119-relay-centered-session-story.md) | `practitioner_experience`, `reasoned_synthesis` | `proposed` | `not_tested` |
 | Delivery | `feature` | [Human-AI協業を一枚とRepositoryへの導線に限定すると本編を逸らさず深掘りを提供できる](./hypothesis-episodes/HYP-20260805-001809-repository-handoff-preserves-focus.md) | `recorded_statement`, `reasoned_synthesis` | `reviewed` | `not_tested` |
@@ -234,7 +251,7 @@ AudienceがAI Slopを制御するActionを持ち帰る価値
 | --- | --- | --- | --- | --- | --- |
 | Discovery | `value` | [AI高速化による下流負荷の制御はPlatform Teamの価値であり利用者の受入条件である](./hypothesis-episodes/HYP-20260804-183210-ai-slop-downstream-burden-value.md) | `recorded_statement`, `practitioner_experience`, `case_recollection`, `external_research`, `explicit_validation`, `reasoned_synthesis` | `reviewed` | `inconclusive` |
 | Discovery | `value` | [Platform利用者の一部は選択肢より安全な標準Pathによる選択負荷軽減を重視する](./hypothesis-episodes/HYP-20260802-230425-platform-choice-burden-value.md) | `practitioner_experience`, `reasoned_synthesis` | `reviewed` | `not_tested` |
-| Decision | `solution` | [価値選択と検証はAI高速化による回避可能な下流Costを減らす](./hypothesis-episodes/HYP-20260730-015718-ai-speed-requires-value-validation.md) | `practitioner_experience`, `reasoned_synthesis` | `proposed` | `not_tested` |
+| Decision | `solution` | [価値選択と検証はAI高速化による回避可能な下流Costを減らす](./hypothesis-episodes/HYP-20260730-015718-ai-speed-requires-value-validation.md) | `recorded_statement`, `practitioner_experience`, `case_recollection`, `explicit_validation`, `reasoned_synthesis` | `reviewed` | `inconclusive` |
 | Decision | `solution` | [Lean Startupの選別と早期廃棄は未検証案のコスト外部化を抑える](./hypothesis-episodes/HYP-20260731-193520-lean-startup-as-admission-control.md) | `external_research`, `practitioner_experience`, `reasoned_synthesis` | `proposed` | `not_tested` |
 | Decision | `solution` | [PEのDVSと利用者側OVSを接続するとAI高速化のCost Transferを検知できる](./hypothesis-episodes/HYP-20260801-004822-coupled-observability-detects-cost-transfer.md) | `practitioner_experience`, `reasoned_synthesis` | `proposed` | `not_tested` |
 | Decision | `solution` | [共有前のService Contract明確化は下流への理解と判断Costの転移を抑える](./hypothesis-episodes/HYP-20260801-004823-service-contract-reduces-downstream-cost.md) | `practitioner_experience`, `reasoned_synthesis` | `proposed` | `not_tested` |
@@ -290,11 +307,11 @@ Analysisの採用、Artifactへの採用を意味しません。
 
 | Hypothesis Episode | Scope | Components | Coverage | Current Risk Decision |
 | --- | --- | ---: | --- | --- |
-| [AudienceがActionを持ち帰るSession Value](./hypothesis-episodes/HYP-20260804-183208-audience-actionable-ai-slop-value.md) | `session` | 5 | すべて`not_checked` | なし |
+| [AudienceがActionを持ち帰るSession Value](./hypothesis-episodes/HYP-20260804-183208-audience-actionable-ai-slop-value.md) | `session` | 5 | U1・U2は`partially_checked`、U3・U4・U5は`not_checked` | なし |
 | [一続きの説明によるSession Solution](./hypothesis-episodes/HYP-20260804-183209-ai-slop-learning-path-solution.md) | `session` | 5 | すべて`not_checked` | なし |
 | [一枚とRepositoryへの導線によるSession Feature](./hypothesis-episodes/HYP-20260805-001809-repository-handoff-preserves-focus.md) | `session` | 4 | すべて`not_checked` | なし |
 | [下流負荷の制御を提供側の価値と利用者の受入条件として扱うPractice Value](./hypothesis-episodes/HYP-20260804-183210-ai-slop-downstream-burden-value.md) | `practice` | 7 | U1・U2・U4・U5・U6は`partially_checked`、U3・U7は`checked_for_current_scope` | なし |
-| [価値選択と検証のPractice Solution](./hypothesis-episodes/HYP-20260730-015718-ai-speed-requires-value-validation.md) | `practice` | 3 | すべて`not_checked` | なし |
+| [価値選択と検証のPractice Solution](./hypothesis-episodes/HYP-20260730-015718-ai-speed-requires-value-validation.md) | `practice` | 3 | U1は`partially_checked`、U2・U3は`not_checked` | なし |
 
 他のHypothesis Episodeには、現在Validation Component表がありません。Risk Decision
 Nodeはまだ作成されていません。これはRiskが存在しないことではなく、人間による
@@ -328,6 +345,8 @@ Nodeはまだ作成されていません。これはRiskが存在しないこと
 | [個別Enablementの反復はService設計の人力補完を示す兆候として整理された](./observations/OBS-20260805-001810-repeated-enablement-dependency-signal.md) | `reasoned_synthesis` | `reviewed` | `medium` | Service Contract、Persona、Service Scopeの未検証Signal |
 | [提案書の生成短縮後に別担当者へ検証・再構築・意味変換の作業が移り生成停止が判断された](./observations/OBS-20260804-195508-ai-proposal-generation-shifted-review-burden.md) | `case_recollection`, `explicit_validation` | `reviewed` | `medium` | Practice ValueのU1・U2・U3・U4・U7に対する`analogous`な限定Evidence |
 | [下流負荷制御の優先度はServiceの目的とOutputの可逆性に依存すると整理された](./observations/OBS-20260805-005540-downstream-control-priority-reversibility.md) | `practitioner_experience`, `reasoned_synthesis` | `reviewed` | `medium` | Practice ValueのU5・U6に対する`contextual`な境界条件 |
+| [3人へのヒアリングで着手・価値説明・下流負荷の問題とAI Slop対処への関心が記録された](./observations/OBS-20260805-223704-audience-problems-and-ai-slop-interest.md) | `recorded_statement`, `explicit_validation` | `reviewed` | `medium` | Session ValueのU1・U2に対する`contextual`な限定Evidence |
+| [本人Interviewで機能評価型AI PoCがBusiness活用判断へ接続しなかった事例が記録された](./observations/OBS-20260805-225027-function-evaluation-poc-business-use-gap.md) | `recorded_statement`, `case_recollection`, `explicit_validation` | `reviewed` | `medium` | Session Value U1への`contextual`なEvidence、価値選択と検証Solution U1への`inconclusive`なContrast Case |
 
 `knowledge_basis`は成立根拠の種類、`confidence`は確率ではなく確信度、
 `result`は実施した検証の結果です。互いに置き換えず、根拠と詳細な限界は
@@ -362,8 +381,11 @@ Nodeはまだ作成されていません。これはRiskが存在しないこと
 
 ## 未解決事項
 
-- AudienceがAI Slopを制御するActionを持ち帰ることに価値を感じるかは
-  `not_tested`です。
+- AudienceがAI Slopを制御するActionを持ち帰るSession Valueは、3人への
+  ヒアリングによりU1・U2が`partially_checked / supports / contextual`になりました。
+  別の一人へのAI PoC InterviewもU1を`contextual`に支持します。対象者の選定方法、
+  Audience全体への適用、課題の頻度・優先順位、Risk特定、Action選択および実際の
+  試行は未確認で、Episode全体は`inconclusive`です。
 - 構造、Signal、仮説検証を一続きに説明するSession Solutionが、Audienceの
   理解とAction選択を改善するかは`not_tested`です。
 - AI高速化による下流負荷を特定・制御・削減できる状態のPractice Valueは、
@@ -374,7 +396,9 @@ Nodeはまだ作成されていません。これはRiskが存在しないこと
   実際のPlatform TeamによるCapacity配分、採用率との関係、Platform利用者の行動および
   Platform Serviceへの直接適用は未確認です。
 - 価値選択と検証によって回避可能な下流Costが減るというPractice Solutionは、
-  3 Componentsすべてが`not_checked`です。
+  機能評価型AI PoCの一事例によりU1が`partially_checked / inconclusive / contextual`です。
+  Value Hypothesisを明示した比較、原因、判断品質および下流Costを確認しておらず、
+  U2・U3は`not_checked`です。
 - Lean Startupの選別と早期廃棄をAdmission Controlとして使うSolution
   Hypothesisは `not_tested` のままです。
 - PEのDVSと利用者側OVSを接続した観測が、局所指標より早くCost Transferを検知
@@ -411,7 +435,8 @@ Nodeはまだ作成されていません。これはRiskが存在しないこと
   適用、AI利用との因果および対策の効果は確認していません。
 - 判断Contextを渡すHandoverと、個別Enablementの反復を人力補完のSignalとして扱う
   整理は、事例記憶またはReasoned Synthesisであり、比較Caseで検証されていません。
-- 想定Audienceの課題と参加者Journeyは、参加者への直接確認を経ていません。
+- 想定Audienceの課題候補は3人へ限定的に確認しましたが、参加者Journey、実際の
+  参加者構成およびAudience全体の需要は確認していません。
 - 現場適用、Live Document、Takeawayの有効性は未検証です。
 
 ## 更新するタイミング

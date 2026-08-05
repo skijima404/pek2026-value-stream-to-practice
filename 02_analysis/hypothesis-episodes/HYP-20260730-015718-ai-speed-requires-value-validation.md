@@ -7,10 +7,16 @@ created_at: 2026-07-30T01:57:18+09:00
 created_by: agent:codex
 hypothesis_scope: practice
 hypothesis_level: solution
-status: proposed
+status: reviewed
+reviewed_at: 2026-08-05T22:55:41+09:00
+reviewed_by: human:kijima
+review_scope: intent_alignment
 confidence: low
 knowledge_basis:
+  - recorded_statement
   - practitioner_experience
+  - case_recollection
+  - explicit_validation
   - reasoned_synthesis
 relations:
   - type: derived_from
@@ -19,6 +25,8 @@ relations:
     target: OBS-20260731-120412-value-and-slop-experience-decision-flow
   - type: derived_from
     target: OBS-20260804-004531-hypothesis-validation-uncertainty-decision
+  - type: derived_from
+    target: OBS-20260805-225027-function-evaluation-poc-business-use-gap
   - type: tests
     target: HYP-20260804-183210-ai-slop-downstream-burden-value
 ---
@@ -58,7 +66,7 @@ Audienceへこの方法をどう伝えるかは`session` scopeの別階層で扱
 
 | ID | Uncertainty | Decision importance | Evidence refs | Coverage state | Finding | Applicability | Residual uncertainty |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| U1 | 価値仮説と期待Signalを明示すると、継続、廃棄、保留または追加確認の判断を更新しやすくなる | critical | none | not_checked | unknown | unknown | どの表現と確認方法が判断品質を改善するかを比較していない |
+| U1 | 価値仮説と期待Signalを明示すると、継続、廃棄、保留または追加確認の判断を更新しやすくなる | critical | OBS-20260805-225027-function-evaluation-poc-business-use-gap | partially_checked | inconclusive | contextual | 一人へのInterviewで、機能評価型AI PoCを複数実施してもBusiness活用判断へ接続できなかった一例を確認した。一方、価値仮説と期待Signalを明示した比較Case、原因および判断品質の差を確認していない |
 | U2 | 価値の弱い候補を共有前に選別すると、回避可能な下流Costが減る | critical | none | not_checked | unknown | unknown | 選別あり・なしの比較、および減少するCostの範囲を確認していない |
 | U3 | 価値選択と検証に必要な時間、Skill、調整および判断Costは、回避できる損失に対して妥当である | high | none | not_checked | unknown | unknown | 必要な摩擦と過剰なGateを分ける基準、および十分性の閾値を定義していない |
 
@@ -78,6 +86,19 @@ Audienceへこの方法をどう伝えるかは`session` scopeの別階層で扱
 - 実施規模:
   一つの候補または限定Releaseから始める
 
+### 実施した機能評価型AI PoC事例のInterview
+
+- 方法:
+  開発関連AIのPoCについて、その状況を説明した本人へ、PoCの内容、得られた結果、
+  社内およびBusiness活用への接続を確認した
+- 対象・資料:
+  `RN-20260805-225026-ai-poc-business-use-interview`に保存した回答要約。
+  PoCの一次資料は未確認
+- 選定方法:
+  この記録では確認できない
+- 実施規模:
+  一人へのInterview、一組織についての事例記憶。価値仮説を明示した比較Caseはない
+
 ### GenAIの利用
 
 - 利用内容: 不確実性、期待Signal、反証条件、判断Optionおよび記録の整理に利用可能
@@ -85,14 +106,24 @@ Audienceへこの方法をどう伝えるかは`session` scopeの別階層で扱
 
 ## 結果
 
-`not_tested`
+`inconclusive`
 
 ### 実際に観測したこと
 
-価値選択と検証を行ったCaseと行わなかったCaseについて、判断または下流Costを
-比較した記録はまだ保存されていない。
+一人への直接Interviewでは、開発関連AIのPoCを複数実施し、AI Toolの機能評価と
+Report作成を中心とするPoCが複数あったものの、社内またはBusinessでの活用判断へ
+接続できなかった事例が回答された。
+
+これは、機能評価側だけを確認したContrast Caseである。価値仮説と期待Signalを
+明示したCaseとの比較、Business活用へ接続できなかった原因、下流Costおよび
+Value Hypothesisを置くCostは確認していない。したがってU1は`inconclusive`であり、
+U2とU3は`not_checked`のままである。
 
 ## 解釈
+
+Interview事例は、機能評価を行うだけではBusiness活用判断へ自動的に接続しない場合が
+あることを示す。一方、この一例から、価値選択と検証を導入すれば判断が改善するという
+因果または下流Costの削減を結論しない。
 
 この仮説はPlatform Engineering実務で使うSolution候補であり、Audienceがこの方法を
 有用と感じること、セッションで理解できること、または登壇内容へ採用されたことを
@@ -102,9 +133,25 @@ Audienceへこの方法をどう伝えるかは`session` scopeの別階層で扱
 
 - 選定上の偏り: 作成者の実務経験とRepository内の説明モデルから形成されている。
 - 未確認の証拠: 選別あり・なしを比較できる現場記録、下流Cost、判断品質。
+- Interview事例は一人の回答に基づき、PoCの一次資料、他の関係者および原因を
+  確認していない。
 - 一般化できない範囲: どのPlatform Team、ServiceまたはRisk水準でも同じ方法が
   妥当とは結論できない。
 - 残存リスクと影響を受ける判断:
   componentごとのEvidence Coverageを確認するまで、この方法を標準Practice、
   登壇の推奨事項、または特定のSolutionを正当化する根拠として扱えるかは
   判断できない。
+
+## 公開安全性確認
+
+- checked_at: 2026-08-05T22:55:41+09:00
+- checked_by: agent:codex
+- result: `sanitized`
+- scope:
+  この分析ノードの本文、frontmatter、relationの組み合わせを、
+  人間の意図Reviewを確定する時点で再確認した
+- finding:
+  公開対象に不要な識別情報をCategory単位で削除または一般化し、削除値は
+  Repository、訂正履歴、Filename、Logへ保存していない
+- limitation:
+  公開安全性の確認は、内容の正しさ、検証完了、採用を意味しない
