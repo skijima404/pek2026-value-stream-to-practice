@@ -7,29 +7,52 @@ Service設計：価値仮説と効果測定ってどうやるの？」
 このリポジトリは、完成した方法論だけでなく、短い気づきがどのように観察、
 仮説、パターン、登壇成果物へ昇格したかを追跡可能にします。
 
-## Raw Noteを追加する
+## Raw Noteの位置づけ
 
-Codexで「ファイルくださいな」「Raw Noteをください」と依頼すると、ID・時刻・
-provenanceを入力済みの空ファイルを作成します。
+`01_working/raw-notes/` には、検討時点の発言、対話、調査メモなどの原資料を
+保存します。
 
-手動で追加する場合:
+Raw Noteの `Raw` は、文章の粗さや人間による直接執筆を意味しません。人間と
+GenAIの対話を整理した文書も、後から追加した解釈ではなく検討時点の記録で
+あればRaw Noteとして扱います。
 
-1. `templates/raw-note.md` を
-   `01_working/raw-notes/RN-YYYYMMDD-HHMMSS-short-slug.md` としてコピーします。
-2. frontmatterを埋めます。本文は箇条書きや短文のままで構いません。
-3. `python3 scripts/validate_repository.py` を実行します。
+Raw Noteの記述は、検証済みの事実や現在採用されている結論ではありません。
+Observation、Hypothesis Episode、Pattern、Artifactへの派生関係と、それぞれの
+状態を確認してください。
 
-人間が本文を追記した後に「このRaw Noteを仕上げて」と依頼すると、frontmatter
-と安全なファイル名を内容に合わせ、顧客・案件・個人・内部システムなどの
-公開できない情報を除去します。
-
-Raw Noteに最初から仮説や検証計画を書く必要はありません。後日、GenAIまたは
-人間がRaw Noteを根拠として `02_analysis/` に派生ノードを作成します。元の
-Raw Noteは移動・削除しません。
+Raw Noteから派生ノードが作られても、原資料は移動・削除しません。誤りが
+判明した場合も原文を消去せず、Correctionによって訂正範囲を記録します。
 
 Raw Note、派生した分析、採用成果物の本文は日本語で記述します。frontmatter
 のkey、enum、ID、relation typeは英語で固定します。原資料からの直接引用は
 原文を維持できます。
+
+## GenAIでこのRepositoryを読む場合
+
+このRepositoryは単一文書の要約ではなく、複数ノード間のprovenance、typed
+relation、`session` と `practice` のscope、Hypothesis階層、Evidence Coverage、
+残存リスク、Human Risk Decisionを横断して解釈することを前提としています。
+
+Repository全体のSynthesis、Hypothesis構造の解釈、Pattern抽出、または設計意図の
+説明には、複数ファイル間の関係を追跡できる推論モデルと、十分なコンテキスト
+および推論設定を使用することを強く推奨します。最新世代のモデルであること
+自体は必須ではありません。
+
+高速・軽量・推論量を抑えたモデルでは、もっともらしい文章を生成できても、
+次の誤りが生じる可能性があります。
+
+- `session` と `practice` のHypothesis階層を混同する
+- 子Hypothesisの結果を親Hypothesisへ推移させる
+- 経験知を「根拠なし」または独立検証済みとして扱う
+- Evidence Coverageを仮説の正しさの割合として扱う
+- Human Risk Decisionを仮説の支持またはArtifact採用として扱う
+- ファイルをまたぐrelationやCorrectionを取り落とす
+
+使用するモデルがRepository全体のSource graphを安定して追跡できない場合は、
+解釈対象を単一ノードとその直接relationへ限定してください。
+
+モデルの性能にかかわらず、GenAIによる説明はEvidence、人間による意図確認、
+公開安全性確認、またはRepository上の採用判断を代替しません。
 
 ## 人間とAIの協業モデル
 
