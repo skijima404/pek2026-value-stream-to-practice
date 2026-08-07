@@ -27,6 +27,8 @@ relations:
     target: OBS-20260804-004531-hypothesis-validation-uncertainty-decision
   - type: derived_from
     target: OBS-20260805-225027-function-evaluation-poc-business-use-gap
+  - type: derived_from
+    target: OBS-20260807-223144-iterative-problem-understanding
   - type: tests
     target: HYP-20260804-183210-ai-slop-downstream-burden-value
 ---

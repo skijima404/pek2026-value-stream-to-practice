@@ -55,8 +55,8 @@ Value: AudienceがAI Slopを制御するActionを持ち帰る価値
 ```
 
 Session ValueはAI PoC InterviewのEvidence追加後に`reviewed`で、結果は
-`inconclusive`です。一枚とRepositoryへの導線というFeatureも`reviewed`、
-Solutionとリレー中心のFeatureは`proposed`で、3つの子Nodeはいずれも`not_tested`です。
+`inconclusive`です。Solutionと二つのFeatureはすべて`reviewed`で、3つの子Nodeは
+いずれも`not_tested`です。
 人間の意図Reviewまたは限定的な検証は、Session StoryやSlidesへの採用を意味しません。
 
 ### Practice scope
@@ -64,7 +64,7 @@ Solutionとリレー中心のFeatureは`proposed`で、3つの子Nodeはいず�
 ```text
 Value: AI高速化による回避可能な下流負荷を特定・制御・削減できる状態
   ├─ tests ← Solution: 価値選択と検証
-  ├─ tests ← Solution: Lean Startupによる選別と早期廃棄
+  │    └─ tests ← Feature: Value Hypothesis・期待Signal・停止条件によるAdmission Control
   ├─ tests ← Solution: DVSとOVSを接続した観測
   ├─ tests ← Solution: Service Contract
   ├─ tests ← Solution: Outcome-firstのAI Capability配置
@@ -72,17 +72,41 @@ Value: AI高速化による回避可能な下流負荷を特定・制御・削�
 ```
 
 Practice Valueと価値選択・検証Solutionは`reviewed`かつ`inconclusive`です。
-他の5 Solutionは`proposed`かつ`not_tested`です。個別Solutionの結果は、親Valueの
-結果へ自動的には推移しません。
+他の4 Solutionは`reviewed`かつ`not_tested`です。Admission Control Featureは階層と
+意味の変更後に再Reviewされ、`reviewed`かつ`not_tested`です。子の結果は親へ
+自動的には推移しません。
+
+Platform選定に関する別のPractice階層も、次の未検証候補として記録しています。
+
+```text
+Value: 選定へ関与する利用者の探索・判断準備負荷を軽減する
+  └─ tests ← Solution: Contextを確認するPlatform Advisor
+       └─ tests ← Feature: 選定作業を一つのChatへ統合する
+```
+
+3 Nodeはいずれも`reviewed`かつ`not_tested`です。架空Scenario内のPrototype結果、PT、
+LTおよびGuardrailはEvidenceではありません。このValueは、選択を望む利用者Segmentに
+限定し、安全な標準Pathを望む利用者のValue Hypothesisと競合または併存し得ます。
+これらは参照、比較またはScenario作成へ再利用するHypothesis Modelであり、現在この
+Repositoryで検証する予定はありません。記載した検証方法は現在の実施計画ではありません。
+
+選択を負担と感じる利用者については、別の未検証階層を記録しています。
+
+```text
+Value: 安全な標準Pathによって選択負荷を軽減する
+  └─ tests ← Solution: 組織が責任を持つ標準Pathと例外Routing
+```
+
+Valueと子Solutionは`reviewed`かつ`not_tested`です。選択の自由を求めるSegmentと
+標準Pathを求めるSegmentを混同せず、競合または併存するSolutionとして比較します。
+子Solutionは物語内の解説に使うHypothesis Modelであり、このRepositoryでは検証を
+予定していません。標準Path側のFeature Hypothesisはまだ作成していません。
 
 ### Standaloneまたは未分類のHypothesis
 
 - [Solution-firstから検証可能な仮説を再構成するPractice Solution](./hypothesis-episodes/HYP-20260802-230423-solution-first-reconstruction-testability.md)
   - `practice`、`solution`、`reviewed`、`not_tested`
   - 主階層への`tests`はなく、価値選択と検証のPractice Solutionを`references`する
-- [安全な標準Pathによる選択負荷軽減のPractice Value](./hypothesis-episodes/HYP-20260802-230425-platform-choice-burden-value.md)
-  - `practice`、`value`、`reviewed`、`not_tested`
-  - 現在は独立したValue Hypothesisであり、子Solutionは記録されていない
 - [開催側の採択を方向性継続のSignalとして扱うHypothesis](./hypothesis-episodes/HYP-20260730-015717-organizer-selection-is-sufficient-signal.md)
   - `session`、`not_assessed`、`reviewed`、`supports`
   - Value／Solution／Feature階層には分類されていない
@@ -121,7 +145,7 @@ Audienceと価値課題の見立て
 AIの局所高速化、ハンドオーバー、リレー、早期中止判断
   -> 構成要素と表現選択をObservationとして整理
   -> リレー中心の25分トーク構成というSession Feature Hypothesis
-  -> 階層変更により再Review待ち、未検証、未採用
+  -> 人間の意図Review済み、未検証、未採用
 
 Human-AI協業モデルと登壇準備Repository
   -> 本編では一枚に限定し、Repositoryを登壇後の深掘りへ使う編集判断
@@ -142,8 +166,9 @@ BetterUpのWorkslop調査
 
 AIによる候補流入と下流への確認、判断、手戻り、SupportのCost Transfer
   -> 回避可能な下流負荷を特定・制御・削減できるPractice Value Hypothesis
-  -> 価値選択と検証、Lean Startup、DVS/OVS観測、Service Contractなどの
-     Practice Solution Hypothesis
+  -> 価値選択と検証、DVS/OVS観測、Service ContractなどのPractice Solution Hypothesis
+  -> Value Hypothesis、期待Signal、停止条件をAdmission Controlとして運用する
+     Practice Feature Hypothesis
   -> Session階層とは分離し、価値選択と検証のU1のみ限定的に確認、未採用
 
 PresalesとProject Deliveryを通じた限定的な実務経験
@@ -158,29 +183,37 @@ Value Stream上の課題と期待Outcome
 
 AI SlopによるCost外部化
   + Release前のValue Hypothesis検証と早期廃棄
-  -> Lean Startupの選別をAdmission Controlとして使うSolution Hypothesis
-  -> 親Value変更により再Review待ち、未検証、未採用
+  -> 価値選択と検証Solutionを試すAdmission Control Feature Hypothesis
+  -> Practice Featureへの意味変更後に人間の意図Review済み、未検証、未採用
 
 PEのDevelopment Value Stream（DVS）
   + 利用者側Operational Value Stream（OVS）
   + 価値とSlop経験を分ける判断Flow
   -> 二つのValue Streamを接続したObservabilityというSolution Hypothesis
-  -> 親Value変更により再Review待ち、未検証、未採用
+  -> 人間の意図Review済み、未検証、未採用
 
 AI生成物またはPlatform ServiceのHandover
   + Contract、Accountability、Cost Transferの分離
   -> 共有前のService Contract明確化というSolution Hypothesis
-  -> 親Value変更により再Review待ち、未検証、未採用
+  -> 人間の意図Review済み、未検証、未採用
 
 Solution候補が先に出る実務上の思考順序
   + Challenge、Value、Solutionの役割分離
   + GenAIによるReasoning Chainの構造確認
+  + Problem-firstの初期網羅性とSolution-firstの全体品質Trade-off
   -> Solution-firstから検証可能な仮説を再構成するSolution Hypothesis
+  -> 構造品質、参加状態、VSM・MBPMによる欠落回収、後続の検証責任へ分解
   -> 人間の意図Review済み、未検証、未採用
 
 Solution-first再構成の有無が異なるTraining記録
   -> Challenge表現、Idea数、所要時間、Facilitator負荷の違いをObservationとして整理
   -> 比較条件が揃っていないため、既存Solution Hypothesisの検証結果には使わない
+
+実際に使用したSolution-first確認Prompt
+  + 方法の用途と限界に関する記録
+  -> Reasoning Chainの構造確認、VSM・MBPMに対する網羅性Review、実証的な仮説検証を
+     別の確認としてObservation化
+  -> Promptの使用経験は保持するが、有効性を独立検証した結果にはしない
 
 案に含まれる複数の不確実性
   + Riskを引き受けられる状態まで確からしさを更新する意思決定
@@ -194,7 +227,17 @@ Solution-first再構成の有無が異なるTraining記録
 Platform Advisorの隠れた前提
   + Platformを選びたい利用者と、選択を負担と感じる利用者
   -> 安全な標準Pathによる選択負荷軽減というValue Hypothesis
-  -> 人間の意図Review済み、未検証、未採用
+  -> 組織が責任を持つ標準Pathと例外RoutingというSolution Hypothesis
+  -> 人間の意図Review済み、物語内のHypothesis Modelとして未検証、未採用
+
+Platform Advisorの架空Scenarioと感想戦
+  -> VSM・MBPMで観測した摩擦だけでは原因構造を一意に決められないというObservation
+  -> 外れ方を観測し、Problem・Value理解と継続判断へ戻る反復というObservation
+  -> 選定へ関与し比較したい利用者SegmentのValue Hypothesis
+  -> ContextualなPlatform AdvisorのSolution Hypothesis
+  -> 選定作業を一つのChatへ統合するFeature Hypothesis
+  -> 直接効果、下流Guardrail、中間Signal、Business Outcomeを分ける測定設計
+  -> 架空の結果はEvidenceにせず、全Nodeを未検証、未採用として保持
 
 Project・Transformation関連資料の失敗率
   -> 対象、成功定義、Evidenceの性質が異なることをObservationとして整理
@@ -240,8 +283,8 @@ AudienceがAI Slopを制御するActionを持ち帰る価値
 | Map | Level | Hypothesis Episode | Knowledge Basis | Intent Review | Result |
 | --- | --- | --- | --- | --- | --- |
 | Discovery | `value` | [AudienceはAI Slopを制御するActionを持ち帰ることに価値を感じる](./hypothesis-episodes/HYP-20260804-183208-audience-actionable-ai-slop-value.md) | `recorded_statement`, `case_recollection`, `explicit_validation`, `reasoned_synthesis` | `reviewed` | `inconclusive` |
-| Decision | `solution` | [AI Slopの構造・Signal・仮説検証を一続きに説明するとActionを選びやすい](./hypothesis-episodes/HYP-20260804-183209-ai-slop-learning-path-solution.md) | `practitioner_experience`, `reasoned_synthesis` | `proposed` | `not_tested` |
-| Delivery | `feature` | [リレーを中心にしたセッション構成ならAI SlopからVSMまでを一本道で伝えられる](./hypothesis-episodes/HYP-20260731-004119-relay-centered-session-story.md) | `practitioner_experience`, `reasoned_synthesis` | `proposed` | `not_tested` |
+| Decision | `solution` | [AI Slopの構造・Signal・仮説検証を一続きに説明するとActionを選びやすい](./hypothesis-episodes/HYP-20260804-183209-ai-slop-learning-path-solution.md) | `practitioner_experience`, `reasoned_synthesis` | `reviewed` | `not_tested` |
+| Delivery | `feature` | [リレーを中心にしたセッション構成ならAI SlopからVSMまでを一本道で伝えられる](./hypothesis-episodes/HYP-20260731-004119-relay-centered-session-story.md) | `practitioner_experience`, `reasoned_synthesis` | `reviewed` | `not_tested` |
 | Delivery | `feature` | [Human-AI協業を一枚とRepositoryへの導線に限定すると本編を逸らさず深掘りを提供できる](./hypothesis-episodes/HYP-20260805-001809-repository-handoff-preserves-focus.md) | `recorded_statement`, `reasoned_synthesis` | `reviewed` | `not_tested` |
 | 未分類 | `not_assessed` | [開催側の採択を方向性継続の十分なシグナルとして扱う](./hypothesis-episodes/HYP-20260730-015717-organizer-selection-is-sufficient-signal.md) | `explicit_validation`, `external_research`, `reasoned_synthesis` | `reviewed` | `supports` |
 
@@ -251,13 +294,17 @@ AudienceがAI Slopを制御するActionを持ち帰る価値
 | --- | --- | --- | --- | --- | --- |
 | Discovery | `value` | [AI高速化による下流負荷の制御はPlatform Teamの価値であり利用者の受入条件である](./hypothesis-episodes/HYP-20260804-183210-ai-slop-downstream-burden-value.md) | `recorded_statement`, `practitioner_experience`, `case_recollection`, `external_research`, `explicit_validation`, `reasoned_synthesis` | `reviewed` | `inconclusive` |
 | Discovery | `value` | [Platform利用者の一部は選択肢より安全な標準Pathによる選択負荷軽減を重視する](./hypothesis-episodes/HYP-20260802-230425-platform-choice-burden-value.md) | `practitioner_experience`, `reasoned_synthesis` | `reviewed` | `not_tested` |
+| Discovery | `value` | [Platform選定に関与する利用者は探索と判断準備の負荷軽減に価値を感じる](./hypothesis-episodes/HYP-20260807-211651-platform-selection-preparation-value.md) | `practitioner_experience`, `reasoned_synthesis` | `reviewed` | `not_tested` |
 | Decision | `solution` | [価値選択と検証はAI高速化による回避可能な下流Costを減らす](./hypothesis-episodes/HYP-20260730-015718-ai-speed-requires-value-validation.md) | `recorded_statement`, `practitioner_experience`, `case_recollection`, `explicit_validation`, `reasoned_synthesis` | `reviewed` | `inconclusive` |
-| Decision | `solution` | [Lean Startupの選別と早期廃棄は未検証案のコスト外部化を抑える](./hypothesis-episodes/HYP-20260731-193520-lean-startup-as-admission-control.md) | `external_research`, `practitioner_experience`, `reasoned_synthesis` | `proposed` | `not_tested` |
-| Decision | `solution` | [PEのDVSと利用者側OVSを接続するとAI高速化のCost Transferを検知できる](./hypothesis-episodes/HYP-20260801-004822-coupled-observability-detects-cost-transfer.md) | `practitioner_experience`, `reasoned_synthesis` | `proposed` | `not_tested` |
-| Decision | `solution` | [共有前のService Contract明確化は下流への理解と判断Costの転移を抑える](./hypothesis-episodes/HYP-20260801-004823-service-contract-reduces-downstream-cost.md) | `practitioner_experience`, `reasoned_synthesis` | `proposed` | `not_tested` |
-| Decision | `solution` | [Solution-firstでもReasoning Chainを再構成すれば検証可能な仮説を作りやすい](./hypothesis-episodes/HYP-20260802-230423-solution-first-reconstruction-testability.md) | `case_recollection`, `reasoned_synthesis` | `reviewed` | `not_tested` |
-| Decision | `solution` | [Value Streamの課題とOutcomeからAI Capabilityを配置すると局所最適を避けやすい](./hypothesis-episodes/HYP-20260804-013223-outcome-first-ai-resource-allocation.md) | `recorded_statement`, `reasoned_synthesis` | `proposed` | `not_tested` |
-| Decision | `solution` | [異常検知と原因診断を分ける運用はMetric過剰取得を抑え改善Loopを両立する](./hypothesis-episodes/HYP-20260804-013226-two-stage-metrics-analysis.md) | `practitioner_experience`, `case_recollection`, `reasoned_synthesis` | `proposed` | `not_tested` |
+| Delivery | `feature` | [Value Hypothesis・期待Signal・停止条件をAdmission Controlにすると依存形成前に廃棄できる](./hypothesis-episodes/HYP-20260731-193520-lean-startup-as-admission-control.md) | `external_research`, `practitioner_experience`, `reasoned_synthesis` | `reviewed` | `not_tested` |
+| Decision | `solution` | [PEのDVSと利用者側OVSを接続するとAI高速化のCost Transferを検知できる](./hypothesis-episodes/HYP-20260801-004822-coupled-observability-detects-cost-transfer.md) | `practitioner_experience`, `reasoned_synthesis` | `reviewed` | `not_tested` |
+| Decision | `solution` | [共有前のService Contract明確化は下流への理解と判断Costの転移を抑える](./hypothesis-episodes/HYP-20260801-004823-service-contract-reduces-downstream-cost.md) | `practitioner_experience`, `reasoned_synthesis` | `reviewed` | `not_tested` |
+| Decision | `solution` | [Solution-firstでもReasoning Chainを再構成すれば検証可能な仮説を作りやすい](./hypothesis-episodes/HYP-20260802-230423-solution-first-reconstruction-testability.md) | `recorded_statement`, `practitioner_experience`, `case_recollection`, `direct_observation`, `reasoned_synthesis` | `reviewed` | `not_tested` |
+| Decision | `solution` | [Value Streamの課題とOutcomeからAI Capabilityを配置すると局所最適を避けやすい](./hypothesis-episodes/HYP-20260804-013223-outcome-first-ai-resource-allocation.md) | `recorded_statement`, `reasoned_synthesis` | `reviewed` | `not_tested` |
+| Decision | `solution` | [異常検知と原因診断を分ける運用はMetric過剰取得を抑え改善Loopを両立する](./hypothesis-episodes/HYP-20260804-013226-two-stage-metrics-analysis.md) | `practitioner_experience`, `case_recollection`, `reasoned_synthesis` | `reviewed` | `not_tested` |
+| Decision | `solution` | [Contextを確認するPlatform Advisorは静的案内より選定負荷を減らしやすい](./hypothesis-episodes/HYP-20260807-211652-contextual-platform-advisor-solution.md) | `recorded_statement`, `reasoned_synthesis` | `reviewed` | `not_tested` |
+| Decision | `solution` | [組織が責任を持つ標準Pathと例外Routingは選択・説明・意思決定Riskを減らす](./hypothesis-episodes/HYP-20260807-223145-standard-path-exception-routing.md) | `recorded_statement`, `practitioner_experience`, `reasoned_synthesis` | `reviewed` | `not_tested` |
+| Delivery | `feature` | [選定作業を一つのChatへ統合するとPT・LTを減らし下流負荷を増やさない](./hypothesis-episodes/HYP-20260807-211653-platform-advisor-chat-feature.md) | `recorded_statement`, `reasoned_synthesis` | `reviewed` | `not_tested` |
 
 ## Cross-scope connections
 
@@ -312,8 +359,14 @@ Analysisの採用、Artifactへの採用を意味しません。
 | [一枚とRepositoryへの導線によるSession Feature](./hypothesis-episodes/HYP-20260805-001809-repository-handoff-preserves-focus.md) | `session` | 4 | すべて`not_checked` | なし |
 | [下流負荷の制御を提供側の価値と利用者の受入条件として扱うPractice Value](./hypothesis-episodes/HYP-20260804-183210-ai-slop-downstream-burden-value.md) | `practice` | 7 | U1・U2・U4・U5・U6は`partially_checked`、U3・U7は`checked_for_current_scope` | なし |
 | [価値選択と検証のPractice Solution](./hypothesis-episodes/HYP-20260730-015718-ai-speed-requires-value-validation.md) | `practice` | 3 | U1は`partially_checked`、U2・U3は`not_checked` | なし |
+| [Admission ControlによるPractice Feature](./hypothesis-episodes/HYP-20260731-193520-lean-startup-as-admission-control.md) | `practice` | 4 | すべて`not_checked` | なし |
+| [Solution-first再構成のPractice Solution](./hypothesis-episodes/HYP-20260802-230423-solution-first-reconstruction-testability.md) | `practice` | 4 | すべて`not_checked` | なし |
+| [選定へ関与する利用者のPractice Value](./hypothesis-episodes/HYP-20260807-211651-platform-selection-preparation-value.md) | `practice` | 4 | すべて`not_checked` | なし |
+| [Contextual Platform AdvisorのPractice Solution](./hypothesis-episodes/HYP-20260807-211652-contextual-platform-advisor-solution.md) | `practice` | 4 | すべて`not_checked` | なし |
+| [標準Pathと例外RoutingのPractice Solution](./hypothesis-episodes/HYP-20260807-223145-standard-path-exception-routing.md) | `practice` | 4 | すべて`not_checked` | なし |
+| [選定作業をChatへ統合するPractice Feature](./hypothesis-episodes/HYP-20260807-211653-platform-advisor-chat-feature.md) | `practice` | 4 | すべて`not_checked` | なし |
 
-他のHypothesis Episodeには、現在Validation Component表がありません。Risk Decision
+上表以外のHypothesis Episodeには、現在Validation Component表がありません。Risk Decision
 Nodeはまだ作成されていません。これはRiskが存在しないことではなく、人間による
 対応判断がまだ記録されていないことを示します。
 
@@ -339,7 +392,7 @@ Nodeはまだ作成されていません。これはRiskが存在しないこと
 | [Customerへの確認ではDiscovery結果が未定義または担当者に理解されていなかった](./observations/OBS-20260804-013221-discovery-practice-gap.md) | `practitioner_experience` | `reviewed` | `medium` | Solution-firstが起こる背景となる限定的な経験知 |
 | [Slopとして経験される摩擦にも残す目的があり得ると整理された](./observations/OBS-20260804-013222-necessary-friction-boundary.md) | `reasoned_synthesis` | `reviewed` | `medium` | 価値とSlop経験を分ける判断Flowの境界条件 |
 | [Dashboardと分析を分ける運用がITSMとProject Portfolioで用いられた](./observations/OBS-20260804-013225-itsm-metrics-analysis-practice.md) | `practitioner_experience`, `case_recollection` | `reviewed` | `medium` | 二段階メトリック分析Hypothesis |
-| [今回のProblem Spaceは2026年4月公開記事に記録され、後続準備で実践方法が追加された](./observations/OBS-20260804-014228-prior-article-session-continuity.md) | `external_research`, `recorded_statement`, `reasoned_synthesis` | `proposed` | `high` | 先行する自己資料と今回の実践方法の連続性 |
+| [今回のProblem Spaceは2026年4月公開記事に記録され、後続準備で実践方法が追加された](./observations/OBS-20260804-014228-prior-article-session-continuity.md) | `external_research`, `recorded_statement`, `reasoned_synthesis` | `reviewed` | `high` | 先行する自己資料と今回の実践方法の連続性 |
 | [Workslopの受け手は追加作業と信頼低下を自己申告している](./observations/OBS-20260805-001807-workslop-recipient-burden.md) | `external_research` | `reviewed` | `high` | Practice Value U6への`analogous`な限定Evidence、U1への適用候補 |
 | [良いハンドオーバーには受け手の判断に必要なContextが含まれると整理された](./observations/OBS-20260805-001808-decision-context-handover.md) | `case_recollection`, `reasoned_synthesis` | `reviewed` | `medium` | Service Contract Hypothesisを補助するContext |
 | [個別Enablementの反復はService設計の人力補完を示す兆候として整理された](./observations/OBS-20260805-001810-repeated-enablement-dependency-signal.md) | `reasoned_synthesis` | `reviewed` | `medium` | Service Contract、Persona、Service Scopeの未検証Signal |
@@ -347,6 +400,10 @@ Nodeはまだ作成されていません。これはRiskが存在しないこと
 | [下流負荷制御の優先度はServiceの目的とOutputの可逆性に依存すると整理された](./observations/OBS-20260805-005540-downstream-control-priority-reversibility.md) | `practitioner_experience`, `reasoned_synthesis` | `reviewed` | `medium` | Practice ValueのU5・U6に対する`contextual`な境界条件 |
 | [3人へのヒアリングで着手・価値説明・下流負荷の問題とAI Slop対処への関心が記録された](./observations/OBS-20260805-223704-audience-problems-and-ai-slop-interest.md) | `recorded_statement`, `explicit_validation` | `reviewed` | `medium` | Session ValueのU1・U2に対する`contextual`な限定Evidence |
 | [本人Interviewで機能評価型AI PoCがBusiness活用判断へ接続しなかった事例が記録された](./observations/OBS-20260805-225027-function-evaluation-poc-business-use-gap.md) | `recorded_statement`, `case_recollection`, `explicit_validation` | `reviewed` | `medium` | Session Value U1への`contextual`なEvidence、価値選択と検証Solution U1への`inconclusive`なContrast Case |
+| [Reasoning Chainの構造確認・網羅性Review・実証的検証は別の確認として記録された](./observations/OBS-20260807-211648-structural-coverage-empirical-checks.md) | `recorded_statement`, `practitioner_experience`, `reasoned_synthesis` | `reviewed` | `high` | Solution-first再構成Hypothesisの検証対象分解 |
+| [AI Featureの効果測定を直接効果・Guardrail・中間Signal・Business Outcomeへ分ける設計が記録された](./observations/OBS-20260807-211649-effect-measurement-layers.md) | `recorded_statement`, `reasoned_synthesis` | `reviewed` | `high` | Platform Advisor Feature Hypothesisの測定設計 |
+| [VSM・MBPMで観測した摩擦だけではProblemの原因構造を一意に決められないと整理された](./observations/OBS-20260807-211650-vsm-problem-causal-ambiguity.md) | `recorded_statement`, `reasoned_synthesis` | `reviewed` | `medium` | Platform選定Value Hypothesisの原因候補とSelection Bias |
+| [仮説検証は外れ方を観測しProblem・Value理解と継続判断を更新する反復として整理された](./observations/OBS-20260807-223144-iterative-problem-understanding.md) | `recorded_statement`, `practitioner_experience`, `reasoned_synthesis` | `reviewed` | `high` | 価値選択と検証Solutionの学習Loopと廃棄判断 |
 
 `knowledge_basis`は成立根拠の種類、`confidence`は確率ではなく確信度、
 `result`は実施した検証の結果です。互いに置き換えず、根拠と詳細な限界は
@@ -375,7 +432,7 @@ Nodeはまだ作成されていません。これはRiskが存在しないこと
 
 現在、Patternは0件です。
 
-14件のHypothesis Episodeは異なる範囲を扱っており、複数Episodeを横断して
+18件のHypothesis Episodeは異なる範囲を扱っており、複数Episodeを横断して
 繰り返し検証された関係はまだ記録されていません。Indexを埋める目的でPatternを
 作らず、複数の検証結果と反例確認が揃ったときに提案します。
 
@@ -399,18 +456,22 @@ Nodeはまだ作成されていません。これはRiskが存在しないこと
   機能評価型AI PoCの一事例によりU1が`partially_checked / inconclusive / contextual`です。
   Value Hypothesisを明示した比較、原因、判断品質および下流Costを確認しておらず、
   U2・U3は`not_checked`です。
-- Lean Startupの選別と早期廃棄をAdmission Controlとして使うSolution
-  Hypothesisは `not_tested` のままです。
+- Value Hypothesis、期待Signal、停止条件および判断OwnerをAdmission Controlとして
+  運用するPractice Featureは、4 Componentsがすべて`not_checked`です。Featureへの
+  意味変更後の人間の意図Reviewは完了していますが、検証と採用判断は未実施です。
 - PEのDVSと利用者側OVSを接続した観測が、局所指標より早くCost Transferを検知
   できるかは `not_tested` です。
 - 共有前のService Contract明確化が、受け手の理解、検証、判断Costを減らすかは
   `not_tested` です。
-- Solution-firstからの再構成が、教科書的順序または人間だけのReviewより検証可能な
-  仮説を作りやすいかは `not_tested` です。
+- Solution-firstからの再構成は、構造品質、参加状態とFacilitator負荷、VSM・MBPMに
+  よる欠落回収、および後続の検証責任という4 Componentsがすべて`not_checked`です。
+  人間の意図Reviewは完了していますが、手法の効果検証と採用判断は別です。
 - Solution-first再構成の有無が異なるTraining記録は、条件が揃っておらず、手法の
   効果検証には使えません。
 - 仮説検証を不確実性の分解として説明することが、参加者の理解や意思決定を
   改善するかは未確認です。
+- 外れ方の観測からProblem・Value理解と継続判断へ戻る学習Loopは、実務上の説明と
+  Reasoned Synthesisであり、判断品質、廃棄時点またはOutcomeの比較は未実施です。
 - Journey特定後にVSM・MBPMへ展開する今回の順序が、課題抽出やPriority判断を
   改善するかは比較されていません。
 - Customerへ目的とDiscovery結果を質問した経験はありますが、質問件数と一次記録を
@@ -425,10 +486,19 @@ Nodeはまだ作成されていません。これはRiskが存在しないこと
   方法は未定義です。
 - Platform利用者のどのSegmentが選択肢より標準Pathと選択負荷軽減を重視するかは
   `not_tested` です。
+- 組織が責任を持つ標準Pathと例外Routingが、比較、説明、意思決定Riskおよび下流負荷を
+  減らすかは、4 Componentsがすべて`not_checked`です。物語内のHypothesis Modelとして
+  保持し、このRepositoryでは検証を予定していません。標準Path側のFeatureは未作成です。
+- Platform選定へ関与し比較したい利用者SegmentのValue、Contextual Advisorという
+  Solution、および選定作業を一つのChatへ統合するFeatureは、各4 Componentsが
+  `not_checked`です。架空Scenario内の結果はEvidenceではなく、選択意向、権限、
+  責任、代替Solution比較、下流Guardrailおよび運用Costを実在Episodeで確認していません。
+  現在このRepositoryで検証する予定はなく、検証方法は将来別Scopeで検討する場合の
+  再利用可能な設計として保持しています。
 - Outcome、Experience、Trust、Contract Qualityの具体的なMetricと、MBPMへ
   組み込むScopeは未定義です。
 - Session Featureであるリレー中心の25分トークは、Walkthrough、代替案比較、
-  第三者Reviewが未実施です。Practice scopeのFeature Hypothesisはまだありません。
+  第三者Reviewが未実施です。Practice scopeのAdmission Control Featureも未検証です。
 - Human-AI協業を一枚とRepositoryへの導線に限定するSession Featureは、Focus維持、
   Repositoryの役割理解、登壇後の閲覧およびAction選択の4 Componentsが未確認です。
 - BetterUpのWorkslop調査は受け手の自己申告を扱いますが、Platform Engineeringへの

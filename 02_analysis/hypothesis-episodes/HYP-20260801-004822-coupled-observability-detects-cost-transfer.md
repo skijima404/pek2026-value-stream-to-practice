@@ -7,7 +7,10 @@ created_at: 2026-08-01T00:48:22+09:00
 created_by: agent:codex
 hypothesis_scope: practice
 hypothesis_level: solution
-status: proposed
+status: reviewed
+reviewed_at: 2026-08-07T21:51:08+09:00
+reviewed_by: human:kijima
+review_scope: intent_alignment
 confidence: low
 knowledge_basis:
   - practitioner_experience
@@ -106,14 +109,14 @@ AI高速化による局所最適とCost Transferの検知に有効だという�
 
 ## 公開安全性確認
 
-- checked_at: 2026-08-01T00:53:44+09:00
+- checked_at: 2026-08-07T21:51:08+09:00
 - checked_by: agent:codex
 - result: `not_needed`
 - scope:
-  DVS／OVS表記を含むこのHypothesis Episodeの本文、frontmatter、relationの
-  組み合わせを、`proposed`から`reviewed`へ変更する時点で再確認した
+  この分析ノードの本文、frontmatter、relationの組み合わせを、
+  人間の意図Reviewを確定する時点で再確認した
 - finding:
   顧客、案件、非公開の個人、商用条件、内部System、認証情報、再識別に
   つながる組み合わせは確認されず、本文の変更や削除は行っていない
 - limitation:
-  公開安全性の確認は、仮説の正しさ、検証完了、採用を意味しない
+  公開安全性の確認は、内容の正しさ、検証完了、採用を意味しない

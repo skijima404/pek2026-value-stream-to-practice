@@ -1,13 +1,16 @@
 ---
 id: HYP-20260731-193520-lean-startup-as-admission-control
 type: hypothesis_episode
-title: "Lean Startupの選別と早期廃棄は未検証案のコスト外部化を抑える"
+title: "Value Hypothesis・期待Signal・停止条件をAdmission Controlにすると依存形成前に廃棄できる"
 content_language: ja
 created_at: 2026-07-31T19:35:20+09:00
 created_by: agent:codex
 hypothesis_scope: practice
-hypothesis_level: solution
-status: proposed
+hypothesis_level: feature
+status: reviewed
+reviewed_at: 2026-08-07T22:55:05+09:00
+reviewed_by: human:kijima
+review_scope: intent_alignment
 confidence: low
 knowledge_basis:
   - external_research
@@ -19,16 +22,16 @@ relations:
   - type: derived_from
     target: OBS-20260731-120412-value-and-slop-experience-decision-flow
   - type: tests
-    target: HYP-20260804-183210-ai-slop-downstream-burden-value
+    target: HYP-20260730-015718-ai-speed-requires-value-validation
 ---
 
 # 仮説
 
 AIによってPlatform ServiceのIdea、Prototype、Feature候補を安価かつ大量に
-生成できる環境では、Lean Startupが持つValue Hypothesisの検証、選別、
-早期廃棄を、共有資源またはProductionへ流す前のAdmission Controlとして
-使うことで、未検証案が生むReview、導入、Enablement、Support、廃止の
-コストを下流へ外部化することを抑えられる。
+生成できる環境で、候補ごとにValue Hypothesis、期待Signal、停止条件および
+判断Ownerを明示し、共有資源またはProductionへ流す前のAdmission Controlとして
+運用すれば、支持されない案を他者が依存する前に廃棄し、Review、導入、Enablement、
+Supportおよび廃止のコストを下流へ外部化することを抑えられる。
 
 ここで扱うのはLean Startup全体ではなく、次の機能に限定する。
 
@@ -48,16 +51,18 @@ Validate cheaply
 Admit selectively
 ```
 
-## Solution Hypothesisとしての位置づけ
+## Feature Hypothesisとしての位置づけ
 
-親となるValue Hypothesis
-`HYP-20260804-183210-ai-slop-downstream-burden-value`は、AIによって増えた未選別の
-候補が選択、確認、手戻りおよび下流負荷を生み、その回避に価値があるとしている。
+親となるSolution Hypothesis
+`HYP-20260730-015718-ai-speed-requires-value-validation`は、何を作るかを選び、価値が
+弱いものを早期に捨て、作ったものが価値を生んだか検証することで、回避可能な
+下流Costを減らせるとしている。
 
-本Episodeは、その能力を実現するSolution候補として、Lean Startupの
-選別と早期廃棄をAdmission Controlとして使う方法を置く。
+本Episodeは、そのSolutionを試す具体的なProcess Featureとして、Value Hypothesis、
+期待Signal、停止条件および判断Ownerを明示し、Lean Startupの選別と早期廃棄を
+Production前のAdmission Controlとして運用する変更を置く。
 
-このSolutionが機能しても、親のValue Hypothesis全体が自動的に
+このFeatureが機能しても、親Solutionまたはその親Value Hypothesis全体が自動的に
 検証されるわけではない。
 
 ## 根拠となったSource Statement
@@ -80,6 +85,8 @@ Value Hypothesisを安価に検証し、支持されない案をProductionへ約
 
 - Value Hypothesisと期待Signalを持たない候補が、利用者またはProductionへ
   流れる前に識別される
+- 候補ごとに停止条件と判断Ownerがあり、検証結果から継続、修正、保留または
+  廃棄の判断が記録される
 - 支持されない案が、利用者の導入、見積もり、設計、移行の前に中止される
 - 利用者または下流Teamが負担する確認、Enablement、Support、廃止作業が減る
 - Platform TeamのReviewまたはDecision Queueへ流入する未選別WIPが減る
@@ -94,6 +101,15 @@ Value Hypothesisを安価に検証し、支持されない案をProductionへ約
 - Gateが意思決定ではなく承認待ちを増やし、別のQueueになる
 - 価値仮説を形式的に記入するだけで、実際の選別または廃棄が行われない
 
+## 検証対象の分解
+
+| ID | Uncertainty | Decision importance | Evidence refs | Coverage state | Finding | Applicability | Residual uncertainty |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| U1 | Value Hypothesis、期待Signal、停止条件および判断Ownerを明示すると、共有前に継続、修正、保留または廃棄を判断しやすくなる | critical | none | not_checked | unknown | unknown | Admission Controlあり・なしの判断内容、Lead Timeおよび廃棄時点を比較していない |
+| U2 | 支持されない案を依存形成前に廃棄すると、Review、導入、Enablement、Supportおよび廃止の回避可能な下流Costが減る | critical | none | not_checked | unknown | unknown | 早期に廃棄した候補と共有後に廃止した候補の下流作業を比較していない |
+| U3 | Admission Controlの検証、記録および判断Costが、回避できる下流Costに対して妥当である | high | none | not_checked | unknown | unknown | Gateが新しいQueueまたは形式的承認になる境界を確認していない |
+| U4 | 早期廃棄を行っても、価値ある探索、Productionで初めて得られる学習およびTransformationを過剰に失わない | high | none | not_checked | unknown | unknown | False negative、保留後の再検討および廃棄によって失われた学習を追跡していない |
+
 ## 検証方法
 
 ### 方法と対象範囲
@@ -104,7 +120,7 @@ Value Hypothesisを安価に検証し、支持されない案をProductionへ約
   - Release後に廃止または大幅修正した候補について、Release前に確認可能だった
     Value HypothesisとSignalがあったかを確認する
   - 今後の候補一つに、Value Hypothesis、期待Signal、停止条件を置き、
-    限定的な検証を行う
+    判断Ownerを定めて限定的な検証を行う
 - 対象・資料: 未選定
 - 選定方法:
   - 利用者への依存または下流Costが発生した候補と、早期に中止した候補を
@@ -142,15 +158,15 @@ Value Hypothesisを安価に検証し、支持されない案をProductionへ約
 AI Slopをコスト外部化として読むSourceと、Release前にValue Hypothesisを
 検証して支持されない案を捨てる判断FlowはRepositoryに保存されている。
 
-Lean Startupの選別と早期廃棄をAdmission Controlとして適用した結果、
-下流Costが減ったことを示す比較、実験、現場記録はまだ確認していない。
+Value Hypothesis、期待Signal、停止条件および判断OwnerをAdmission Controlとして
+適用した結果、下流Costが減ったことを示す比較、実験、現場記録はまだ確認していない。
 
 ## 解釈
 
-このEpisodeで新しく置いたのは、Lean Startupを単なるIdea創出または
-Product Discoveryの方法ではなく、AIが増やした候補を共有資源へ流す前に
-選別する仕組みとして読むこと、その仕組みがコスト外部化を抑え得るという
-因果である。
+このEpisodeで新しく置いたのは、価値選択と検証というSolutionを、候補が共有資源へ
+入る前の具体的なAdmission Controlとして実装すること、そのProcess Featureが
+コスト外部化を抑え得るという因果である。Lean Startupは、このFeatureの選別と
+早期廃棄を設計する知識源として扱う。
 
 「捨てる」は創造性の抑制ではなく、Ideaが他者の仕事または依存対象へ
 変わる前に、提供者が選別責任を引き受けることとして扱う。
@@ -161,6 +177,7 @@ Product Discoveryの方法ではなく、AIが増やした候補を共有資源�
 - Sourceとなる読書メモは論文と個人的Driftを含み、この因果を論文のClaimとして
   帰属できない
 - Cost外部化の範囲と測定単位は、対象Serviceまたは組織ごとに異なる
+- 判断Ownerに廃棄権限がない場合、停止条件を置いてもFeatureが機能しない可能性がある
 - Release前のSignalだけでは、Productionで初めて分かるValueまたはRiskを
   完全には予測できない
 - 早期廃棄を強くしすぎると、学習機会または価値あるTransformationを
@@ -169,14 +186,14 @@ Product Discoveryの方法ではなく、AIが増やした候補を共有資源�
 
 ## 公開安全性確認
 
-- checked_at: 2026-07-31T19:39:23+09:00
+- checked_at: 2026-08-07T22:55:05+09:00
 - checked_by: agent:codex
 - result: `not_needed`
 - scope:
-  このHypothesis Episodeの本文、frontmatter、relationの組み合わせを、
-  `proposed`から`reviewed`へ変更する時点で再確認した
+  この分析ノードの本文、frontmatter、relationの組み合わせを、
+  人間の意図Reviewを確定する時点で再確認した
 - finding:
-  顧客、案件、非公開の個人、商用条件、内部System、認証情報、
-  再識別につながる組み合わせは確認されず、本文の変更や削除は行っていない
+  顧客、案件、非公開の個人、商用条件、内部System、認証情報、再識別に
+  つながる組み合わせは確認されず、本文の変更や削除は行っていない
 - limitation:
-  公開安全性の確認は、仮説の正しさ、検証完了、採用を意味しない
+  公開安全性の確認は、内容の正しさ、検証完了、採用を意味しない
