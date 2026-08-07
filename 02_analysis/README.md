@@ -104,6 +104,10 @@ Valueと子Solutionは`reviewed`かつ`not_tested`です。選択の自由を求
 
 ### Standaloneまたは未分類のHypothesis
 
+- [DVSの仮説検証と学習品質はOVS品質の継続的改善に必要である](./hypothesis-episodes/HYP-20260807-232639-dvs-learning-sustains-ovs-quality.md)
+  - `practice`、`solution`、`reviewed`、`not_tested`
+  - OVS品質の一時的な成功と、再現・適応・修正を含む継続性を分ける
+  - 既存Practice Valueより広いOVS品質を扱うため、現時点では階層親への`tests`を置かない
 - [Solution-firstから検証可能な仮説を再構成するPractice Solution](./hypothesis-episodes/HYP-20260802-230423-solution-first-reconstruction-testability.md)
   - `practice`、`solution`、`reviewed`、`not_tested`
   - 主階層への`tests`はなく、価値選択と検証のPractice Solutionを`references`する
@@ -190,6 +194,13 @@ PEのDevelopment Value Stream（DVS）
   + 利用者側Operational Value Stream（OVS）
   + 価値とSlop経験を分ける判断Flow
   -> 二つのValue Streamを接続したObservabilityというSolution Hypothesis
+  -> 人間の意図Review済み、未検証、未採用
+
+提供側DVSと利用者側OVSを接続する学習Loop
+  + 仮説検証を外れ方からProblem・Value理解と判断へ戻す反復
+  + Process上のFlowとOutcome Qualityの分離
+  -> DVSの仮説検証と学習品質を、OVS品質の継続的改善に対する必要条件として仮説化
+  -> 一回の偶発的成功、必要条件、非十分条件および循環論法Riskを分離
   -> 人間の意図Review済み、未検証、未採用
 
 AI生成物またはPlatform ServiceのHandover
