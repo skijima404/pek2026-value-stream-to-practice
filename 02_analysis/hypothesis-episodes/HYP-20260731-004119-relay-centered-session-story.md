@@ -7,7 +7,10 @@ created_at: 2026-07-31T00:41:19+09:00
 created_by: agent:codex
 hypothesis_scope: session
 hypothesis_level: feature
-status: proposed
+status: reviewed
+reviewed_at: 2026-08-07T21:51:08+09:00
+reviewed_by: human:kijima
+review_scope: intent_alignment
 confidence: not_assessed
 knowledge_basis:
   - practitioner_experience
@@ -201,14 +204,14 @@ Codexによる検索で個々のRaw Noteを再発見することは可能だが�
 
 ## 公開安全性確認
 
-- checked_at: 2026-07-31T01:11:50+09:00
+- checked_at: 2026-08-07T21:51:08+09:00
 - checked_by: agent:codex
 - result: `not_needed`
 - scope:
-  このHypothesis Episodeの本文、frontmatter、relationの組み合わせを、
-  セッション枠の内訳（25分のトークと5分のQA）へ明確化した時点で再確認した
+  この分析ノードの本文、frontmatter、relationの組み合わせを、
+  人間の意図Reviewを確定する時点で再確認した
 - finding:
-  顧客、案件、非公開の個人、商用条件、内部System、認証情報、
-  再識別につながる組み合わせは確認されず、本文の変更や削除は行っていない
+  顧客、案件、非公開の個人、商用条件、内部System、認証情報、再識別に
+  つながる組み合わせは確認されず、本文の変更や削除は行っていない
 - limitation:
-  公開安全性の確認は、仮説の正しさ、検証完了、構成の採用を意味しない
+  公開安全性の確認は、内容の正しさ、検証完了、採用を意味しない
