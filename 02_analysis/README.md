@@ -105,8 +105,15 @@ Valueと子Solutionは`reviewed`かつ`not_tested`です。選択の自由を求
 ### Standaloneまたは未分類のHypothesis
 
 - [DVSの仮説検証と学習品質はOVS品質の継続的改善に必要である](./hypothesis-episodes/HYP-20260807-232639-dvs-learning-sustains-ovs-quality.md)
-  - `practice`、`solution`、`reviewed`、`not_tested`
+  - `practice`、`solution`、`reviewed`、`inconclusive`
   - OVS品質の一時的な成功と、再現・適応・修正を含む継続性を分ける
+  - 個別Cycle品質と複数Cycleをまたぐ組織的学習Capabilityを分ける
+  - DVS品質をOVS品質から独立に判定するOperational Definition候補と、既存HYPに合わせた
+    Component判定条件を追加した
+  - 限定的なExpert ReviewによりU1〜U4を`partially_checked`とした
+  - U2は個人によるCapability代行のMechanismだけを限定的に支持する
+  - U3はPackage型のData Contract欠落とScratch型のBusiness Use Case欠落を分けて扱う
+  - ITSMのCase Recollectionは学習Mechanismの類似経験であり、Platform Serviceへの直接Evidenceではない
   - 既存Practice Valueより広いOVS品質を扱うため、現時点では階層親への`tests`を置かない
 - [Solution-firstから検証可能な仮説を再構成するPractice Solution](./hypothesis-episodes/HYP-20260802-230423-solution-first-reconstruction-testability.md)
   - `practice`、`solution`、`reviewed`、`not_tested`
@@ -201,7 +208,43 @@ PEのDevelopment Value Stream（DVS）
   + Process上のFlowとOutcome Qualityの分離
   -> DVSの仮説検証と学習品質を、OVS品質の継続的改善に対する必要条件として仮説化
   -> 一回の偶発的成功、必要条件、非十分条件および循環論法Riskを分離
-  -> 人間の意図Review済み、未検証、未採用
+  -> DVSシステム学習と手の届くValue StreamのObservationを反映した意味変更について、
+     人間の意図Reviewを再実施した
+  -> 一回の良質なCycleと、複数Cycleをまたぐ組織的学習Capabilityを分離した
+  -> 二つのObservationと既存HYPの判定条件を使った限定的なExpert Reviewを実施
+  -> U1は`partially_checked / supports / contextual`、U3は
+     `partially_checked / inconclusive / analogous`、U4は
+     `partially_checked / inconclusive / contextual`
+  -> 個人によるCapability代行とValueからData Contractへの接続を追加し、U2を
+     `partially_checked / supports / contextual`へ更新した
+  -> Scratch開発におけるBusiness Use Case喪失をU3へ追加した意味変更について、
+     人間の意図Reviewを再実施した
+  -> Episode全体は`inconclusive`で、未採用
+
+一回限りの基盤移行と、改善Capabilityが未成熟な時期の初回成功に関するCase Recollection
+  -> 組織的な学習改善の仕組みがなくても一回の成功は起こり得るというU2候補
+  -> 個別Cycle品質、組織的仕組みの有無、成功条件の再利用および継続性は未確認
+  -> Raw NoteはCase選定候補であり、Evidence CoverageとFindingには未使用
+
+Valueから意思決定、Data Contract、利用ルールおよびOutcomeへの接続
+  + 制度化された組織Capabilityを例外的な個人が局所代行するという実践説明
+  -> 名目的なRule遵守とValueを生む利用を分けるObservation候補
+  -> U2の個人代行Mechanismを限定的に支持し、U3の社会実装に関する判定内容を具体化
+  -> 発生頻度、個人代行とOutcomeの因果、一次記録および継続性は未確認
+
+EnterpriseのScratch開発における要件・設計Reviewの経験
+  + [Legacy Systemで失われた要求を復元するDDD Workshopの公開自己資料](../10_external-inputs/articles/EXT-20260808-224826-ddd-legacy-modernization-workshop-article.md)
+  -> Business Use Caseが失われ、帳票・画面・属性・計算というSystem Use Caseだけが
+     共有される場合があるというObservation候補
+  -> Actorの判断とOutcomeからRequirement・設計・実装までのTraceabilityをU3へ追加
+  -> 発生頻度、UX責務認識、利用・Outcomeへの因果および一般性は未確認
+
+Review済みのITSM Case Recollectionとシステム思考の実践説明
+  + 定義したProblem、Priority、Responsibility、Decision RightsおよびTime-to-value
+  + 手の届くValue Streamにおける利用者Value、副作用、GuardrailおよびCost Transfer
+  -> DVSのシステム学習と判断十分性をObservationとして整理
+  -> 介入範囲と観測範囲を分け、局所Metricだけで改善を判定しないObservationとして整理
+  -> 二つのObservationは人間の意図Review済みで、対象Hypothesisの検証設計Sourceとして接続
 
 AI生成物またはPlatform ServiceのHandover
   + Contract、Accountability、Cost Transferの分離
@@ -372,6 +415,7 @@ Analysisの採用、Artifactへの採用を意味しません。
 | [価値選択と検証のPractice Solution](./hypothesis-episodes/HYP-20260730-015718-ai-speed-requires-value-validation.md) | `practice` | 3 | U1は`partially_checked`、U2・U3は`not_checked` | なし |
 | [Admission ControlによるPractice Feature](./hypothesis-episodes/HYP-20260731-193520-lean-startup-as-admission-control.md) | `practice` | 4 | すべて`not_checked` | なし |
 | [Solution-first再構成のPractice Solution](./hypothesis-episodes/HYP-20260802-230423-solution-first-reconstruction-testability.md) | `practice` | 4 | すべて`not_checked` | なし |
+| [DVS学習継続性のPractice Solution](./hypothesis-episodes/HYP-20260807-232639-dvs-learning-sustains-ovs-quality.md) | `practice` | 4 | U1〜U4は`partially_checked` | なし |
 | [選定へ関与する利用者のPractice Value](./hypothesis-episodes/HYP-20260807-211651-platform-selection-preparation-value.md) | `practice` | 4 | すべて`not_checked` | なし |
 | [Contextual Platform AdvisorのPractice Solution](./hypothesis-episodes/HYP-20260807-211652-contextual-platform-advisor-solution.md) | `practice` | 4 | すべて`not_checked` | なし |
 | [標準Pathと例外RoutingのPractice Solution](./hypothesis-episodes/HYP-20260807-223145-standard-path-exception-routing.md) | `practice` | 4 | すべて`not_checked` | なし |
@@ -415,6 +459,10 @@ Nodeはまだ作成されていません。これはRiskが存在しないこと
 | [AI Featureの効果測定を直接効果・Guardrail・中間Signal・Business Outcomeへ分ける設計が記録された](./observations/OBS-20260807-211649-effect-measurement-layers.md) | `recorded_statement`, `reasoned_synthesis` | `reviewed` | `high` | Platform Advisor Feature Hypothesisの測定設計 |
 | [VSM・MBPMで観測した摩擦だけではProblemの原因構造を一意に決められないと整理された](./observations/OBS-20260807-211650-vsm-problem-causal-ambiguity.md) | `recorded_statement`, `reasoned_synthesis` | `reviewed` | `medium` | Platform選定Value Hypothesisの原因候補とSelection Bias |
 | [仮説検証は外れ方を観測しProblem・Value理解と継続判断を更新する反復として整理された](./observations/OBS-20260807-223144-iterative-problem-understanding.md) | `recorded_statement`, `practitioner_experience`, `reasoned_synthesis` | `reviewed` | `high` | 価値選択と検証Solutionの学習Loopと廃棄判断 |
+| [DVSのシステム学習は定義したProblemへの判断十分性まで含むと整理された](./observations/OBS-20260808-204750-dvs-system-learning-decision-sufficiency.md) | `recorded_statement`, `practitioner_experience`, `case_recollection`, `reasoned_synthesis` | `reviewed` | `medium` | DVS学習継続性Hypothesisへ`derived_from`で接続 |
+| [手の届くValue Streamでは利用者Value・副作用・Cost移転を分けて確認すると整理された](./observations/OBS-20260808-204751-reachable-value-stream-impact-guardrails.md) | `recorded_statement`, `practitioner_experience`, `case_recollection`, `reasoned_synthesis` | `reviewed` | `medium` | DVS学習継続性Hypothesisへ`derived_from`で接続 |
+| [組織的DVS学習機能の個人代行とValueからData Contractへの接続が整理された](./observations/OBS-20260808-222203-individual-substitution-and-value-data-contract.md) | `recorded_statement`, `practitioner_experience`, `reasoned_synthesis` | `reviewed` | `medium` | DVS学習継続性HypothesisのU2・U3へ限定的に接続 |
+| [Scratch開発ではBusiness Use Caseが失われSystem Use Caseだけが共有される場合がある](./observations/OBS-20260808-224827-business-use-case-loss-in-scratch-development.md) | `recorded_statement`, `practitioner_experience`, `external_research`, `reasoned_synthesis` | `reviewed` | `medium` | DVS学習継続性HypothesisのU3を具体化 |
 
 `knowledge_basis`は成立根拠の種類、`confidence`は確率ではなく確信度、
 `result`は実施した検証の結果です。互いに置き換えず、根拠と詳細な限界は
@@ -467,6 +515,17 @@ Nodeはまだ作成されていません。これはRiskが存在しないこと
   機能評価型AI PoCの一事例によりU1が`partially_checked / inconclusive / contextual`です。
   Value Hypothesisを明示した比較、原因、判断品質および下流Costを確認しておらず、
   U2・U3は`not_checked`です。
+- DVSの仮説検証と学習品質をOVS品質の継続性に対する必要条件とするPractice Solutionは、
+  限定的なExpert Reviewにより、U1とU2が`partially_checked / supports / contextual`、U3が
+  `partially_checked / inconclusive / analogous`、U4が
+  `partially_checked / inconclusive / contextual`です。U1の支持はOperational Definitionの
+  構成可能性、U2の支持は個人によるCapability代行のMechanismだけに限定されます。
+  ValueからData Contract、利用Levelおよび社会実装への接続をU3へ追加しましたが、
+  U3のFindingは変更していません。Scratch開発についても、Business Use CaseからActorの
+  判断、帳票・画面、Dataおよび実装へのTraceabilityを追加しました。同一Platform Serviceの
+  複数Cycle、個人代行とOutcomeの因果、他の非公式な学習経路、Business Use Caseの有無と
+  利用・Outcomeの差、成功条件の再利用、反例および一次記録は未確認で、Episode全体は
+  `inconclusive`です。意味変更後の人間の意図Reviewは完了しています。
 - Value Hypothesis、期待Signal、停止条件および判断OwnerをAdmission Controlとして
   運用するPractice Featureは、4 Componentsがすべて`not_checked`です。Featureへの
   意味変更後の人間の意図Reviewは完了していますが、検証と採用判断は未実施です。
