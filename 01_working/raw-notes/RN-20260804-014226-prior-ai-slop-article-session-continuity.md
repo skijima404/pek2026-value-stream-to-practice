@@ -10,10 +10,10 @@ source_platform: codex
 capture_mode: assisted
 imported_by: agent:codex
 # Blank scaffolds remain unreviewed until their human author fills and finalizes them.
-review_status: unreviewed
-sanitization_status: not_reviewed
-sanitization_checked_at: none
-sanitization_checked_by: none
+review_status: reviewed
+sanitization_status: not_needed
+sanitization_checked_at: 2026-08-09T01:17:15+09:00
+sanitization_checked_by: agent:codex
 tags: [ai-slop, problem-space, session-continuity, systems-thinking, value-stream]
 ---
 

@@ -35,22 +35,26 @@ Analysis nodes do not use `status: accepted`. A human may finish intent review
 by setting an analysis node to `reviewed`, but only an explicitly adopted file
 in `03_artifacts/` establishes current truth within its stated scope.
 
-## Analysis index
+## Analysis navigation views
 
-`02_analysis/README.md` is a regenerable navigation view over existing
-repository nodes. It is not a governed node, evidence source, derived claim,
-adoption decision, or current truth.
+`02_analysis/README.md` and Markdown files under `02_analysis/views/` are
+regenerable navigation views over existing repository nodes. They are not
+governed nodes, evidence sources, derived claims, adoption decisions, or
+current truth. The README is the entry point; specialized views may separate
+reasoning chains, hypothesis maps, or evidence status for readability.
 
-The index may summarize node titles, declared status, knowledge basis,
+These views may summarize node titles, declared status, knowledge basis,
 confidence, validation result, hypothesis scope, hypothesis level, typed
 relations, and explicit limitations. Every
 summary must link to the source node. Do not introduce a new interpretation,
-infer a missing relation, or convert absence from the index into rejection.
+infer a missing relation, or convert absence from a view into rejection.
 
-Regenerate the index when an analysis node is added or materially changes,
-when an Artifact is adopted or superseded, or when a human requests a current
-synthesis. Source nodes and Artifacts remain authoritative when the index is
-stale or disagrees with them.
+Regenerate the affected views when an analysis node is added or materially
+changes, when an Artifact is adopted or superseded, or when a human requests a
+current synthesis. Source nodes and Artifacts remain authoritative when a view
+is stale or disagrees with them. Moving prose between navigation views must
+not silently drop reasoning; preserve it until its supporting node links have
+been verified.
 
 ## Epistemic separation
 
