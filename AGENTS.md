@@ -90,9 +90,10 @@ the session.
   traceability and epistemic status.
 - When asked to explain or retrospect on a body of work, follow
   `00_meta/analysis-lenses.md` and cite the nodes supporting each explanation.
-- Treat `02_analysis/README.md` as a regenerable navigation view only. Keep it
-  synchronized with explicit node metadata, knowledge basis, and relations,
-  and never use the index itself as evidence or an adoption decision.
+- Treat `02_analysis/README.md` and `02_analysis/views/` as regenerable
+  navigation views only. Keep them synchronized with explicit node metadata,
+  knowledge basis, and relations, and never use a view itself as evidence or
+  an adoption decision.
 - `03_artifacts/` contains current adopted outputs, not every explored idea.
 - `10_external-inputs/` contains immutable constraints and references. External
   input is not automatically evidence that a hypothesis is true.
