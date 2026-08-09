@@ -48,8 +48,9 @@ interpreting or creating repository content.
     truth percentage from component Coverage.
 11. Add only canonical typed relations. A derived claim must cite its source node
     IDs, and a child result must not transitively validate a parent.
-12. Update `02_analysis/README.md` as a navigation view without introducing claims
-    that do not exist in source nodes.
+12. When source nodes were created or changed, run
+    `python3 scripts/generate_analysis_views.py`. Do not edit generated projections
+    directly.
 13. Run `python3 scripts/validate_repository.py` and `git diff --check`, including
     for assessment-only work. These checks are read-only and reveal whether the
     inspected repository was already inconsistent.

@@ -52,7 +52,9 @@ hypothesis support, Analysis acceptance, or Artifact adoption.
 8. Perform a fresh publication-safety review. Sanitize customer, project, personal,
    commercial, internal-system, credential, and combined re-identification details
    before commit without retaining removed values elsewhere.
-9. Run `python3 scripts/validate_repository.py` and `git diff --check`.
+9. Run `python3 scripts/generate_analysis_views.py`. Do not edit generated
+   projections directly.
+10. Run `python3 scripts/validate_repository.py` and `git diff --check`.
 
 ## Decision sufficiency
 

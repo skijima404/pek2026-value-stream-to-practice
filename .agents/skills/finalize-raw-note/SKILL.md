@@ -35,8 +35,10 @@ Read the required `00_meta/` contracts before editing.
    copied, transcribed, mixed, or GenAI-authored wording. Newly sanitized
    wording returns to `unreviewed` until a human confirms it.
 
-8. Run `python3 scripts/validate_repository.py`.
-9. Summarize changed metadata and removed information by category only. Return
+8. Run `python3 scripts/generate_analysis_views.py`. A Raw Note enters the
+   projection only after its `sanitization_status` is `not_needed` or `sanitized`.
+9. Run `python3 scripts/validate_repository.py` and `git diff --check`.
+10. Summarize changed metadata and removed information by category only. Return
    a clickable absolute file link. Never quote removed values.
 
 ## Sanitization rules

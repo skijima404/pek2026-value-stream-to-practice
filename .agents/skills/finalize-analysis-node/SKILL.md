@@ -1,6 +1,6 @@
 ---
 name: finalize-analysis-node
-description: Finalize one or more repository Observation, Hypothesis Episode, or Pattern nodes after explicit human intent review by rechecking publication safety, recording reviewed metadata, preserving epistemic and validation state, synchronizing the analysis index, and validating the repository. Use when the user says an analysis node is reviewed, asks to finalize or finish an OBS/HYP/PAT node, confirms that derived wording matches their intent, or requests data-cleansing checks before marking analysis reviewed.
+description: Finalize one or more repository Observation, Hypothesis Episode, or Pattern nodes after explicit human intent review by rechecking publication safety, recording reviewed metadata, preserving epistemic and validation state, regenerating analysis projections, and validating the repository. Use when the user says an analysis node is reviewed, asks to finalize or finish an OBS/HYP/PAT node, confirms that derived wording matches their intent, or requests data-cleansing checks before marking analysis reviewed.
 ---
 
 # Finalize Analysis Node
@@ -44,8 +44,8 @@ editing. This skill does not finalize Raw Notes; use `$finalize-raw-note` for th
    ```
 
    The script is idempotent. A complete, already-reviewed node remains unchanged.
-9. Synchronize status, knowledge basis, confidence, result, title, and relations in
-   `02_analysis/README.md`. Do not add new interpretation to the index.
+9. Run `python3 scripts/generate_analysis_views.py`. Do not edit generated
+   projections directly.
 10. Run `python3 scripts/validate_repository.py` and `git diff --check`.
 
 ## Safety and Epistemic Boundaries
@@ -65,5 +65,5 @@ editing. This skill does not finalize Raw Notes; use `$finalize-raw-note` for th
 ## Handoff
 
 Report finalized node IDs, reviewer, publication-safety result, preserved validation
-state, index synchronization, and repository validation. If no change was needed,
+state, projection regeneration, and repository validation. If no change was needed,
 state that the node was already finalized.

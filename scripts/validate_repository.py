@@ -4,13 +4,15 @@
 from __future__ import annotations
 
 import re
+import subprocess
 import sys
 from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
+RAW_NOTE_ID_PATTERN = r"RN-\d{8}-\d{6}-[a-z0-9]+(?:-[a-z0-9]+)*"
 NODE_DIRS = {
-    "01_working/raw-notes": ("raw_note", r"RN-\d{8}-\d{6}-[a-z0-9]+(?:-[a-z0-9]+)*"),
+    "01_working/raw-notes": ("raw_note", RAW_NOTE_ID_PATTERN),
     "02_analysis/observations": (
         "observation",
         r"OBS-\d{8}-\d{6}-[a-z0-9]+(?:-[a-z0-9]+)*",
@@ -145,6 +147,7 @@ COVERAGE_STATES = {"not_checked", "partially_checked", "checked_for_current_scop
 COMPONENT_FINDINGS = {"unknown", "supports", "challenges", "mixed", "inconclusive"}
 APPLICABILITY = {"direct", "analogous", "contextual", "unknown"}
 HYPOTHESIS_LEVEL_ORDER = {"value": 0, "solution": 1, "feature": 2}
+GENERATED_VIEW_SCRIPT = ROOT / "scripts/generate_analysis_views.py"
 
 
 def parse_frontmatter(path: Path) -> tuple[dict[str, str], list[str]]:
@@ -556,6 +559,11 @@ def validate_node(
     return errors
 
 
+def validate_raw_note_for_projection(path: Path) -> list[str]:
+    """Apply the canonical Raw Note schema before any metadata is projected."""
+    return validate_node(path, "raw_note", RAW_NOTE_ID_PATTERN, set())
+
+
 def validate_hypothesis_test_edge(
     source_id: str,
     source_fields: dict[str, str],
@@ -584,6 +592,24 @@ def validate_hypothesis_test_edge(
             f"{source_id} -> {target_id}"
         )
     return errors
+
+
+def validate_generated_views() -> list[str]:
+    """Check that disposable graph and Markdown navigation match source nodes."""
+    if not GENERATED_VIEW_SCRIPT.is_file():
+        return ["generated view script is missing"]
+    result = subprocess.run(
+        [sys.executable, str(GENERATED_VIEW_SCRIPT), "--check"],
+        cwd=ROOT,
+        capture_output=True,
+        text=True,
+        check=False,
+    )
+    if result.returncode == 0:
+        return []
+    messages = [line for line in result.stdout.splitlines() if line.strip()]
+    messages.extend(line for line in result.stderr.splitlines() if line.strip())
+    return messages or ["generated view check failed without diagnostics"]
 
 
 def main() -> int:
@@ -703,6 +729,9 @@ def main() -> int:
                 )
             else:
                 current_risk_targets[target] = path
+
+    for error in validate_generated_views():
+        failures.append((ROOT / "02_analysis/README.md", error))
 
     if failures:
         for path, error in failures:

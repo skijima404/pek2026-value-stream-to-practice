@@ -88,6 +88,15 @@ Repository全体のSynthesis、Hypothesis構造の解釈、Pattern抽出、ま�
 - `04_decisions/`: 残存リスクに対する人間の意思決定
 - `10_external-inputs/`: CfPや登壇枠などの外部入力
 - `templates/`: 新しいノードのテンプレート
+- `views/`: 正本Markdownから生成する、権威を持たない機械可読Projection
+- `docs/architecture/`: Repository Architectureと設計判断の履歴
+
+AnalysisのNavigationとRepository Graphを更新する場合は、次を実行します。
+
+```text
+python3 scripts/generate_analysis_views.py
+python3 scripts/generate_analysis_views.py --check
+```
 
 重要な原則:
 

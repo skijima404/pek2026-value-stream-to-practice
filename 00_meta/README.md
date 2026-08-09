@@ -14,3 +14,12 @@ Canonical documents:
 
 Changing these files changes how future agents interpret the repository.
 Changes therefore require an explicit rationale and validation.
+
+Supporting operating contracts:
+
+- `analysis-projection-contract.md`: authority, content, generation, and
+  publication-safety rules for deterministic navigation projections
+
+Architecture decision history is stored under `docs/architecture/decisions/`.
+ADRs explain why a contract was selected but do not establish current
+operating truth.
