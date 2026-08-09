@@ -52,6 +52,20 @@ For a completed Raw Note, use the following review-status defaults:
 - A note with a correction history uses `corrected`, including after subsequent
   human review.
 
+Authorization to create, import, update, sanitize, rename, or finalize a Raw
+Note is not review of its persisted content. Agent-produced, imported, copied,
+transcribed, mixed, meaning-changed, or sanitized wording must first be saved as
+`unreviewed` and handed off with its exact persisted node ID or link. Only a
+later human message explicitly confirming that persisted content may change it
+to `reviewed`. Approval of an outline or wording before persistence or
+sanitization does not review the resulting note, and an agent must not create or
+meaningfully change and review such a note in one assistant turn.
+
+The direct-human-author default above is the narrow exception: a Raw Note may
+become `reviewed` during finalization when the persisted wording remains the
+human author's own direct wording and finalization changed neither its wording
+nor its meaning.
+
 `sanitization_status` records only a publication-safety check. It does not
 establish that the note's claims are true. If sanitization changes authored
 wording, set `content_origin: mixed`. Never store removed sensitive values in
@@ -134,6 +148,14 @@ An agent must not change a derived node from `proposed` to `reviewed` without
 explicit human confirmation. Git authorship, an agent self-review, a repository
 validation pass, and a publication-safety review are not substitutes for that
 confirmation.
+
+The confirmation must refer to persisted content. A new or meaning-changed node
+must first be saved as `proposed` and handed off with its exact node ID or link.
+Finalization requires a later human message explicitly confirming that saved
+content. Authorization to create, update, record, or proceed, approval of a
+pre-persistence outline, and confirmation given before meaning-changing
+sanitization are not intent review. An agent must not create or meaningfully
+change and finalize the same derived node in one assistant turn.
 
 If a later edit materially changes the meaning of a reviewed node, return its
 status to `proposed` until a human reviews the changed meaning. Metadata-only,

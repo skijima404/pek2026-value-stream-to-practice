@@ -119,6 +119,10 @@ def parse_args() -> argparse.Namespace:
             "notes, and otherwise preserves the current value"
         ),
     )
+    parser.add_argument(
+        "--confirmed-persisted-id",
+        help="exact persisted Raw Note ID required by explicit reviewed mode",
+    )
     parser.add_argument("--dry-run", action="store_true")
     args = parser.parse_args()
     if not SLUG.fullmatch(args.slug):
@@ -156,10 +160,40 @@ def main() -> int:
     frontmatter, body = split_document(path.read_text(encoding="utf-8"))
     checked_at = datetime.now(ZoneInfo("Asia/Tokyo")).isoformat(timespec="seconds")
     current_review_status = read_field(frontmatter, "review_status")
+    current_sanitization_status = read_field(frontmatter, "sanitization_status")
+    current_title = read_field(frontmatter, "title")
+    current_tags = read_field(frontmatter, "tags")
     content_origin = read_field(frontmatter, "content_origin")
     created_by = read_field(frontmatter, "created_by")
     capture_mode = read_field(frontmatter, "capture_mode")
     imported_by = read_field(frontmatter, "imported_by")
+    if args.review_status == "reviewed":
+        if args.confirmed_persisted_id != current_id:
+            raise RuntimeError(
+                "explicit reviewed mode requires --confirmed-persisted-id "
+                "matching the existing Raw Note"
+            )
+        if next_id != current_id:
+            raise RuntimeError(
+                "explicit reviewed mode cannot rename the confirmed Raw Note"
+            )
+        if args.sanitization_status != current_sanitization_status:
+            raise RuntimeError(
+                "explicit reviewed mode cannot change sanitization status"
+            )
+        if current_sanitization_status not in {"not_needed", "sanitized"}:
+            raise RuntimeError(
+                "explicit reviewed mode requires completed sanitization metadata"
+            )
+        if args.title != current_title:
+            raise RuntimeError(
+                "explicit reviewed mode cannot change the confirmed title"
+            )
+        requested_tags = f"[{', '.join(args.tag)}]" if args.tag else "[]"
+        if requested_tags != current_tags:
+            raise RuntimeError(
+                "explicit reviewed mode cannot change the confirmed tags"
+            )
     next_review_status = resolve_review_status(
         args.review_status,
         current_review_status,

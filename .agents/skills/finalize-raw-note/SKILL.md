@@ -1,11 +1,25 @@
 ---
 name: finalize-raw-note
-description: Finalize a human-authored Raw Note in this repository by sanitizing publication-sensitive customer or project information, updating provenance and tags, and renaming an unreferenced draft to a safe content-based filename. Use when the user says a Raw Note has been filled in, asks to finish, clean, sanitize, review, or rename a Raw Note, or requests checks for Red Hat Consulting client or Platform Engineering engagement information before publication.
+description: Finalize a Raw Note by sanitizing publication-sensitive information, updating provenance and tags, and safely renaming an unreferenced draft. Use for Raw Note cleanup, sanitization, rename, or review. Record review automatically only for unchanged direct human-authored persisted wording, or after a later human message explicitly confirms the saved content of an exact Raw Note ID or link. Do not treat permission to create, update, finish, sanitize, or proceed, pre-persistence approval, or the same assistant turn that changed wording as review.
 ---
 
 # Finalize a Raw Note
 
 Read the required `00_meta/` contracts before editing.
+
+## Review chronology
+
+- Authorization to create, update, finish, sanitize, rename, or proceed is not
+  review of persisted content.
+- Agent-produced, imported, copied, transcribed, mixed, meaning-changed, or
+  sanitized wording must remain `unreviewed` when first persisted. Hand off its
+  exact resulting node ID or link and stop.
+- Set such a note to `reviewed` only after a later human message explicitly
+  confirms that persisted content and the node has not meaningfully changed
+  since the handoff. Never change wording and record that review in one assistant
+  turn.
+- Preserve the schema's narrow direct-human-author exception when finalization
+  does not alter the human author's saved meaning.
 
 ## Workflow
 
@@ -34,6 +48,25 @@ Read the required `00_meta/` contracts before editing.
    preserves `corrected`, and it does not automatically review imported,
    copied, transcribed, mixed, or GenAI-authored wording. Newly sanitized
    wording returns to `unreviewed` until a human confirms it.
+
+   For agent-produced, imported, copied, transcribed, mixed, meaning-changed, or
+   sanitized wording in the current turn, pass `--review-status unreviewed`
+   explicitly. Return the resulting exact ID or link and stop. Do not reuse the
+   request that authorized this workflow as review.
+
+   After a later human message explicitly confirms that unchanged persisted
+   content, a review-only invocation may use:
+
+   ```bash
+   python3 .agents/skills/finalize-raw-note/scripts/finalize_raw_note.py \
+     <path> --title '<existing-title>' --slug <existing-slug> \
+     --sanitization-status <existing-not_needed|sanitized> \
+     --review-status reviewed --confirmed-persisted-id <RN-ID> \
+     --tag <existing-tag>
+   ```
+
+   Explicit review mode refuses a rename or sanitization-status change so the
+   confirmation remains bound to the previously handed-off node.
 
 8. Run `python3 scripts/generate_analysis_views.py`. A Raw Note enters the
    projection only after its `sanitization_status` is `not_needed` or `sanitized`.

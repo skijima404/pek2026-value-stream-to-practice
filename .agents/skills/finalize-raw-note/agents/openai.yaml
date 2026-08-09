@@ -1,4 +1,4 @@
 interface:
   display_name: "Raw Noteを仕上げる"
-  short_description: "追記済みRaw Noteを整理し機密情報を除去します"
-  default_prompt: "$finalize-raw-note を使って、追記済みのRaw Noteを仕上げてください。"
+  short_description: "Raw Noteを整理し保存後のReview境界を守ります"
+  default_prompt: "$finalize-raw-note を使って、Raw Noteを整理し、必要なら保存後の確認を待ってください。"
