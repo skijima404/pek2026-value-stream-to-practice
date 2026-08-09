@@ -4,7 +4,7 @@
     "authority": "none",
     "description": "Disposable navigation projection generated from repository Markdown; source nodes and adopted artifacts remain authoritative.",
     "generator": "scripts/generate_analysis_views.py",
-    "source_digest": "1d7f95889485f872e5ded1dfe3d496f282c87a3bd791943902763ade865f3a32",
+    "source_digest": "b6e87fafb2142e9a6aa856d1e434a7bd7a1716efeff246651327e3dcb266dcbe",
     "excluded_sources": {},
     "excluded_edges": {}
   },
@@ -1807,6 +1807,93 @@
       ]
     },
     {
+      "key": "RN-20260809-174203-value-metric-refined-service-scope",
+      "id": "RN-20260809-174203-value-metric-refined-service-scope",
+      "type": "raw_note",
+      "title": "価値指標の設計が標準Pathの対象Scopeを修正した事例",
+      "path": "01_working/raw-notes/RN-20260809-174203-value-metric-refined-service-scope.md",
+      "content_language": "ja",
+      "created_at": "2026-08-09T17:42:03+09:00",
+      "created_by": "human:kijima",
+      "review_status": "reviewed",
+      "sanitization_status": "sanitized",
+      "tags": [
+        "adoption",
+        "case-recollection",
+        "expected-signal",
+        "feature-scope",
+        "metrics",
+        "platform-service",
+        "value-hypothesis"
+      ]
+    },
+    {
+      "key": "RN-20260809-185044-value-metric-shortened-platform-onboarding",
+      "id": "RN-20260809-185044-value-metric-shortened-platform-onboarding",
+      "type": "raw_note",
+      "title": "価値Metricの修正が共通PlatformのOnboarding作業を減らした事例",
+      "path": "01_working/raw-notes/RN-20260809-185044-value-metric-shortened-platform-onboarding.md",
+      "content_language": "ja",
+      "created_at": "2026-08-09T18:50:44+09:00",
+      "created_by": "human:kijima",
+      "review_status": "reviewed",
+      "sanitization_status": "sanitized",
+      "tags": [
+        "case-recollection",
+        "expected-signal",
+        "itsm",
+        "metrics",
+        "onboarding",
+        "platform-service",
+        "value-hypothesis"
+      ]
+    },
+    {
+      "key": "RN-20260809-194608-dvs-phase-quality-ai-outcomes",
+      "id": "RN-20260809-194608-dvs-phase-quality-ai-outcomes",
+      "type": "raw_note",
+      "title": "DVS各フェーズの品質からAI Outcomeを選ぶ",
+      "path": "01_working/raw-notes/RN-20260809-194608-dvs-phase-quality-ai-outcomes.md",
+      "content_language": "ja",
+      "created_at": "2026-08-09T19:46:08+09:00",
+      "created_by": "agent:codex",
+      "review_status": "reviewed",
+      "sanitization_status": "not_needed",
+      "tags": [
+        "dvs",
+        "ai-outcome",
+        "process-quality",
+        "discovery",
+        "decision-quality",
+        "delivery",
+        "automation",
+        "ai-slop",
+        "presentation-planning"
+      ]
+    },
+    {
+      "key": "RN-20260809-200726-platform-onboarding-validation-cost",
+      "id": "RN-20260809-200726-platform-onboarding-validation-cost",
+      "type": "raw_note",
+      "title": "共通PlatformのMetric検証とOnboarding再設計Cost",
+      "path": "01_working/raw-notes/RN-20260809-200726-platform-onboarding-validation-cost.md",
+      "content_language": "ja",
+      "created_at": "2026-08-09T20:07:26+09:00",
+      "created_by": "human:kijima",
+      "review_status": "reviewed",
+      "sanitization_status": "sanitized",
+      "tags": [
+        "case-recollection",
+        "cost-benefit",
+        "expected-signal",
+        "itsm",
+        "metrics",
+        "onboarding",
+        "platform-service",
+        "validation-cost"
+      ]
+    },
+    {
       "key": "HYP-20260730-015717-organizer-selection-is-sufficient-signal",
       "id": "HYP-20260730-015717-organizer-selection-is-sufficient-signal",
       "type": "hypothesis_episode",
@@ -1851,35 +1938,40 @@
       "validation_components": [
         {
           "id": "U1",
-          "uncertainty": "価値仮説と期待Signalを明示すると、継続、廃棄、保留または追加確認の判断を更新しやすくなる",
+          "uncertainty": "価値仮説と期待Signalを明示すると、継続、修正、廃棄、保留または追加確認の判断を更新しやすくなる",
           "decision_importance": "critical",
           "evidence_refs": [
-            "OBS-20260805-225027-function-evaluation-poc-business-use-gap"
+            "OBS-20260805-225027-function-evaluation-poc-business-use-gap",
+            "OBS-20260809-174204-value-metric-refined-service-scope"
           ],
           "coverage_state": "partially_checked",
-          "finding": "inconclusive",
-          "applicability": "contextual",
-          "residual_uncertainty": "一人へのInterviewで、機能評価型AI PoCを複数実施してもBusiness活用判断へ接続できなかった一例を確認した。一方、価値仮説と期待Signalを明示した比較Case、原因および判断品質の差を確認していない"
+          "finding": "supports",
+          "applicability": "direct",
+          "residual_uncertainty": "機能評価型AI PoCがBusiness活用判断へ接続しなかったContrast Caseに加え、Adoption Metricを定義可能にしようとした活動からActorとValueの不足を発見し、依存形成前にFeature Scopeを修正した一つの直接Caseを確認した。ただし、完成したValue Hypothesisと期待Signalの事前登録、Metricの実測、Metricなしの比較、各活動の寄与および判断品質の差を確認していない"
         },
         {
           "id": "U2",
           "uncertainty": "価値の弱い候補を共有前に選別すると、回避可能な下流Costが減る",
           "decision_importance": "critical",
-          "evidence_refs": [],
-          "coverage_state": "not_checked",
-          "finding": "unknown",
-          "applicability": "unknown",
-          "residual_uncertainty": "選別あり・なしの比較、および減少するCostの範囲を確認していない"
+          "evidence_refs": [
+            "OBS-20260809-185045-value-metric-shortened-platform-onboarding"
+          ],
+          "coverage_state": "partially_checked",
+          "finding": "supports",
+          "applicability": "analogous",
+          "residual_uncertainty": "共通業務Platformの類似Caseでは、利用者Valueと期待Signalを確認して重いOnboarding案を利用前に修正し、再設計後の少数Caseで限定されたMeetingと入力によるOnboardingを完了した。ただし、当初案は実運用しておらず、差は設計上の作業分解と反実仮想の見積もりである。一次記録、実Cost、選別なしの実績比較、長期運用およびAI高速化Contextへの適用を確認していない"
         },
         {
           "id": "U3",
           "uncertainty": "価値選択と検証に必要な時間、Skill、調整および判断Costは、回避できる損失に対して妥当である",
           "decision_importance": "high",
-          "evidence_refs": [],
-          "coverage_state": "not_checked",
-          "finding": "unknown",
-          "applicability": "unknown",
-          "residual_uncertainty": "必要な摩擦と過剰なGateを分ける基準、および十分性の閾値を定義していない"
+          "evidence_refs": [
+            "OBS-20260809-200727-platform-onboarding-validation-cost"
+          ],
+          "coverage_state": "partially_checked",
+          "finding": "supports",
+          "applicability": "analogous",
+          "residual_uncertainty": "共通業務Platformの類似Caseでは、軽量なMetric作成、Stakeholder InterviewおよびConcept確認によって実装Scopeを限定し、一定の再設計・実装Costで作成したFlow、資材およびToolを複数Caseへ追加修正なしに再利用した。ただし、当初案は実装・利用しておらず、Cost差は反実仮想の見積もりである。一次記録、失ったCapabilityのValue、長期維持Cost、潜在Need、Feedback経路およびAI高速化Contextへの適用を確認していない"
         }
       ]
     },
@@ -3444,6 +3536,57 @@
       ]
     },
     {
+      "key": "OBS-20260809-174204-value-metric-refined-service-scope",
+      "id": "OBS-20260809-174204-value-metric-refined-service-scope",
+      "type": "observation",
+      "title": "Adoption Metricの設計が標準Pathの対象Scope修正へ接続した",
+      "path": "02_analysis/observations/OBS-20260809-174204-value-metric-refined-service-scope.md",
+      "content_language": "ja",
+      "created_at": "2026-08-09T17:42:04+09:00",
+      "created_by": "agent:codex",
+      "status": "reviewed",
+      "confidence": "medium",
+      "knowledge_basis": [
+        "recorded_statement",
+        "case_recollection",
+        "explicit_validation"
+      ]
+    },
+    {
+      "key": "OBS-20260809-185045-value-metric-shortened-platform-onboarding",
+      "id": "OBS-20260809-185045-value-metric-shortened-platform-onboarding",
+      "type": "observation",
+      "title": "価値Metric修正後の共通Platform Onboardingは少数回Meetingと単一入力で完了した",
+      "path": "02_analysis/observations/OBS-20260809-185045-value-metric-shortened-platform-onboarding.md",
+      "content_language": "ja",
+      "created_at": "2026-08-09T18:50:45+09:00",
+      "created_by": "agent:codex",
+      "status": "reviewed",
+      "confidence": "medium",
+      "knowledge_basis": [
+        "recorded_statement",
+        "case_recollection",
+        "explicit_validation"
+      ]
+    },
+    {
+      "key": "OBS-20260809-200727-platform-onboarding-validation-cost",
+      "id": "OBS-20260809-200727-platform-onboarding-validation-cost",
+      "type": "observation",
+      "title": "共通PlatformのMetric確認と再設計は限定Costで反復利用された",
+      "path": "02_analysis/observations/OBS-20260809-200727-platform-onboarding-validation-cost.md",
+      "content_language": "ja",
+      "created_at": "2026-08-09T20:07:27+09:00",
+      "created_by": "agent:codex",
+      "status": "reviewed",
+      "confidence": "medium",
+      "knowledge_basis": [
+        "recorded_statement",
+        "case_recollection",
+        "explicit_validation"
+      ]
+    },
+    {
       "key": "artifact:03_artifacts/attendee-journey.md",
       "type": "artifact",
       "title": "参加者Journey兼Value Stream",
@@ -3651,6 +3794,21 @@
       "source": "HYP-20260730-015718-ai-speed-requires-value-validation",
       "type": "derived_from",
       "target": "OBS-20260807-223144-iterative-problem-understanding"
+    },
+    {
+      "source": "HYP-20260730-015718-ai-speed-requires-value-validation",
+      "type": "derived_from",
+      "target": "OBS-20260809-174204-value-metric-refined-service-scope"
+    },
+    {
+      "source": "HYP-20260730-015718-ai-speed-requires-value-validation",
+      "type": "derived_from",
+      "target": "OBS-20260809-185045-value-metric-shortened-platform-onboarding"
+    },
+    {
+      "source": "HYP-20260730-015718-ai-speed-requires-value-validation",
+      "type": "derived_from",
+      "target": "OBS-20260809-200727-platform-onboarding-validation-cost"
     },
     {
       "source": "HYP-20260730-015718-ai-speed-requires-value-validation",
@@ -4456,6 +4614,26 @@
       "source": "OBS-20260808-224827-business-use-case-loss-in-scratch-development",
       "type": "derived_from",
       "target": "RN-20260808-224254-business-use-case-loss-in-scratch-development"
+    },
+    {
+      "source": "OBS-20260809-174204-value-metric-refined-service-scope",
+      "type": "derived_from",
+      "target": "RN-20260809-174203-value-metric-refined-service-scope"
+    },
+    {
+      "source": "OBS-20260809-185045-value-metric-shortened-platform-onboarding",
+      "type": "derived_from",
+      "target": "RN-20260809-185044-value-metric-shortened-platform-onboarding"
+    },
+    {
+      "source": "OBS-20260809-200727-platform-onboarding-validation-cost",
+      "type": "derived_from",
+      "target": "RN-20260809-200726-platform-onboarding-validation-cost"
+    },
+    {
+      "source": "OBS-20260809-200727-platform-onboarding-validation-cost",
+      "type": "references",
+      "target": "OBS-20260809-185045-value-metric-shortened-platform-onboarding"
     },
     {
       "source": "artifact:03_artifacts/attendee-journey.md",

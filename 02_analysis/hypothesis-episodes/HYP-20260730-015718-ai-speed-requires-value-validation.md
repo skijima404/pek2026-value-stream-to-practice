@@ -8,7 +8,7 @@ created_by: agent:codex
 hypothesis_scope: practice
 hypothesis_level: solution
 status: reviewed
-reviewed_at: 2026-08-05T22:55:41+09:00
+reviewed_at: 2026-08-09T20:10:26+09:00
 reviewed_by: human:kijima
 review_scope: intent_alignment
 confidence: low
@@ -29,6 +29,12 @@ relations:
     target: OBS-20260805-225027-function-evaluation-poc-business-use-gap
   - type: derived_from
     target: OBS-20260807-223144-iterative-problem-understanding
+  - type: derived_from
+    target: OBS-20260809-174204-value-metric-refined-service-scope
+  - type: derived_from
+    target: OBS-20260809-185045-value-metric-shortened-platform-onboarding
+  - type: derived_from
+    target: OBS-20260809-200727-platform-onboarding-validation-cost
   - type: tests
     target: HYP-20260804-183210-ai-slop-downstream-burden-value
 ---
@@ -68,9 +74,9 @@ Audienceへこの方法をどう伝えるかは`session` scopeの別階層で扱
 
 | ID | Uncertainty | Decision importance | Evidence refs | Coverage state | Finding | Applicability | Residual uncertainty |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| U1 | 価値仮説と期待Signalを明示すると、継続、廃棄、保留または追加確認の判断を更新しやすくなる | critical | OBS-20260805-225027-function-evaluation-poc-business-use-gap | partially_checked | inconclusive | contextual | 一人へのInterviewで、機能評価型AI PoCを複数実施してもBusiness活用判断へ接続できなかった一例を確認した。一方、価値仮説と期待Signalを明示した比較Case、原因および判断品質の差を確認していない |
-| U2 | 価値の弱い候補を共有前に選別すると、回避可能な下流Costが減る | critical | none | not_checked | unknown | unknown | 選別あり・なしの比較、および減少するCostの範囲を確認していない |
-| U3 | 価値選択と検証に必要な時間、Skill、調整および判断Costは、回避できる損失に対して妥当である | high | none | not_checked | unknown | unknown | 必要な摩擦と過剰なGateを分ける基準、および十分性の閾値を定義していない |
+| U1 | 価値仮説と期待Signalを明示すると、継続、修正、廃棄、保留または追加確認の判断を更新しやすくなる | critical | OBS-20260805-225027-function-evaluation-poc-business-use-gap, OBS-20260809-174204-value-metric-refined-service-scope | partially_checked | supports | direct | 機能評価型AI PoCがBusiness活用判断へ接続しなかったContrast Caseに加え、Adoption Metricを定義可能にしようとした活動からActorとValueの不足を発見し、依存形成前にFeature Scopeを修正した一つの直接Caseを確認した。ただし、完成したValue Hypothesisと期待Signalの事前登録、Metricの実測、Metricなしの比較、各活動の寄与および判断品質の差を確認していない |
+| U2 | 価値の弱い候補を共有前に選別すると、回避可能な下流Costが減る | critical | OBS-20260809-185045-value-metric-shortened-platform-onboarding | partially_checked | supports | analogous | 共通業務Platformの類似Caseでは、利用者Valueと期待Signalを確認して重いOnboarding案を利用前に修正し、再設計後の少数Caseで限定されたMeetingと入力によるOnboardingを完了した。ただし、当初案は実運用しておらず、差は設計上の作業分解と反実仮想の見積もりである。一次記録、実Cost、選別なしの実績比較、長期運用およびAI高速化Contextへの適用を確認していない |
+| U3 | 価値選択と検証に必要な時間、Skill、調整および判断Costは、回避できる損失に対して妥当である | high | OBS-20260809-200727-platform-onboarding-validation-cost | partially_checked | supports | analogous | 共通業務Platformの類似Caseでは、軽量なMetric作成、Stakeholder InterviewおよびConcept確認によって実装Scopeを限定し、一定の再設計・実装Costで作成したFlow、資材およびToolを複数Caseへ追加修正なしに再利用した。ただし、当初案は実装・利用しておらず、Cost差は反実仮想の見積もりである。一次記録、失ったCapabilityのValue、長期維持Cost、潜在Need、Feedback経路およびAI高速化Contextへの適用を確認していない |
 
 ## 検証方法
 
@@ -78,7 +84,7 @@ Audienceへこの方法をどう伝えるかは`session` scopeの別階層で扱
 
 - 方法:
   - 過去または今後の候補について、価値仮説と期待Signalを置いた場合の
-    継続、廃棄、保留および追加確認の判断を記録する
+    継続、修正、廃棄、保留および追加確認の判断を記録する
   - 可能な範囲で、選別を行わなかった候補のReview、手戻り、Supportまたは
     廃止Costと比較する
 - 対象・資料: 未選定
@@ -101,6 +107,51 @@ Audienceへこの方法をどう伝えるかは`session` scopeの別階層で扱
 - 実施規模:
   一人へのInterview、一組織についての事例記憶。価値仮説を明示した比較Caseはない
 
+### 実施した標準PathのFeature Scope修正事例のInterview
+
+- 方法:
+  Platform ServiceのConcept段階で行われたFeature検討について、その状況を説明した
+  実践者へ、Actor、Metric、判断更新、判断Ownerおよび判断時点を確認した
+- 対象・資料:
+  `RN-20260809-174203-value-metric-refined-service-scope`に保存した回答。
+  当時の企画、Metric、Persona、Journeyまたは意思決定の一次記録は未確認
+- 選定方法:
+  実践者が想起した最近の3件から、変更前後と判断理由を説明できる一件を選んだ。
+  Metric設計が役立ったCaseを想起しやすい選定Biasがある
+- 実施規模:
+  一人へのInterview、一つのPlatform Serviceに関する事例記憶。Concept段階の
+  Feature Scope修正までを対象とし、Release後のAdoptionは追跡していない
+
+### 実施した共通業務PlatformのOnboarding再設計事例のInterview
+
+- 方法:
+  過去に共通業務Platformを設計・提供した実践者へ、当初のValue、期待Signal、
+  Stakeholder確認、Onboarding Serviceの修正、実施結果および判断Ownerを確認した
+- 対象・資料:
+  `RN-20260809-185044-value-metric-shortened-platform-onboarding`に保存した回答。
+  当時の設計、Interview、入力資料、Onboardingまたは提案の一次記録は未確認
+- 選定方法:
+  U2を検討する対話で実践者が想起した過去Caseから、変更前後の作業構成と再設計後の
+  限定的な実施結果を説明できる一件を選んだ。成功したCaseを想起しやすいBiasがある
+- 実施規模:
+  一人へのInterview、一つの共通業務Platformに関する事例記憶。当初案は未実施で、
+  再設計後の少数Onboarding Caseのみを実施した
+
+### 実施した共通業務Platformの検証・再設計Costに関するFollow-up Interview
+
+- 方法:
+  同じ実践者へ、Metric作成、Stakeholder Interview、Concept確認、Lead Time、再設計・実装、
+  Scope限定、再利用およびFeedbackを追加確認した
+- 対象・資料:
+  `RN-20260809-200726-platform-onboarding-validation-cost`に保存した回答。
+  当時の作業、設計、Source Code、Interview、OnboardingまたはFeedbackの一次記録は未確認
+- 選定方法:
+  U2へ使用した同一Caseについて、U3のCost妥当性を構成する検証Cost、介入Cost、Lead Time、
+  再利用および回避した開発Scopeを追跡した
+- 実施規模:
+  一人へのFollow-up Interview、一つの共通業務Platformに関する事例記憶。再利用とFeedbackは
+  限定された複数Onboarding Caseについて確認した
+
 ### GenAIの利用
 
 - 利用内容: 不確実性、期待Signal、反証条件、判断Optionおよび記録の整理に利用可能
@@ -118,14 +169,64 @@ Report作成を中心とするPoCが複数あったものの、社内またはBu
 
 これは、機能評価側だけを確認したContrast Caseである。価値仮説と期待Signalを
 明示したCaseとの比較、Business活用へ接続できなかった原因、下流Costおよび
-Value Hypothesisを置くCostは確認していない。したがってU1は`inconclusive`であり、
-U2とU3は`not_checked`のままである。
+Value Hypothesisを置くCostは確認していない。
+
+別の一人への直接Interviewでは、Platform ServiceのConcept段階でAdoption Metricを
+設計しようとした際、対象Actorと利用文脈が不明確であることが発見された。Persona分析と
+Journey分析を改めて行い、最終判断OwnerであるPOは、汎用的な標準PathのFeature案を
+小規模Application向けへ修正した。この判断は実装、Releaseまたは利用者による依存形成より
+前に行われた。
+
+Metricは実測されていない。期待Signalを定義可能にしようとする活動が、ActorとValueの
+不足を発見し、Feature Scopeの修正へ接続した一つの直接Caseとして、U1は現在の限定範囲で
+`supports`となる。一方、完成したValue Hypothesisと期待Signalを事前登録した追跡、
+Metricなしの比較、各活動の寄与および判断品質の差は確認していない。Hypothesis Episode
+全体の結果は`inconclusive`であり、このCaseだけではU2とU3を確認していない。
+
+さらに、過去の共通業務Platformに関する別のInterviewでは、分析・効率化効果の最大化を
+Valueとした当初のOnboarding案について、利用候補者から実行可能か分からないという回答を
+得た事例が確認された。実践者は複数の関係者へ期待するValueを確認し、MetricをOnboardingの
+時間と利用者負荷へ修正したうえで、多数回のMeetingと複数の入力資料を、少数回のMeetingと
+単一入力へ再設計した。
+
+再設計後の方式は少数の実Caseで使用され、設計した少数回のMeeting内でOnboardingが
+完了した。当初案は実運用しておらず、Meeting、入力、説明および利用側の検討作業の差は、
+当時の作業分解に基づく反実仮想の見積もりである。この類似Caseは、依存形成前の修正による
+回避可能な作業の減少を現在の限定範囲で`supports`するため、U2を`partially_checked`、
+Applicabilityを`analogous`とする。AI高速化Context、選別なしの実績比較、実Costおよび
+長期運用は確認していない。Hypothesis Episode全体は`inconclusive`、U3は`not_checked`の
+ままであった。
+
+同じ共通業務Platform CaseのFollow-up Interviewでは、Metric作成、複数名への短時間の
+Stakeholder Interview、Concept確認および短い進捗共有という検証・判断Costが確認された。
+現場へ当てるまでには週次Meetingを待つLead Timeがあり、確認結果を反映したFlow、体験、
+資材およびData Import Toolの再設計・実装には、実践者一人で一定期間の実作業を使った。
+
+実践者は追加ScriptとMetricの一部を見送り、最小限のMetricへScopeを限定した。作成したFlow、
+資材およびToolは複数Caseへ追加修正なしに再利用され、一部利用者から肯定的なFeedbackが
+あった。観測範囲では見送った追加CapabilityへのNeedも表明されなかった。この類似Caseは、
+価値選択と検証に必要なCostの妥当性を現在の限定範囲で`supports`するため、U3を
+`partially_checked`、Applicabilityを`analogous`とする。当初案は未実装であり、Cost差、
+失ったCapabilityのValue、長期維持Cost、潜在NeedおよびAI高速化Contextを確認していない。
+Hypothesis Episode全体は`inconclusive`のままである。
 
 ## 解釈
 
 Interview事例は、機能評価を行うだけではBusiness活用判断へ自動的に接続しない場合が
-あることを示す。一方、この一例から、価値選択と検証を導入すれば判断が改善するという
-因果または下流Costの削減を結論しない。
+あることを示す。標準Pathの事例は、期待Signalを操作可能にしようとすることが、曖昧な
+ActorとValueを発見し、依存形成前の修正判断へ接続し得ることを示す。一方、この一例から、
+価値選択と検証によって判断品質が一般に改善するという因果または下流Costの削減を
+結論しない。
+
+共通業務Platformの類似Caseは、利用者Valueを確認して期待SignalとOnboarding Serviceを
+修正し、再設計後の限定Caseで予定した少数回のMeetingと入力に収められたことを示す。
+一方、当初案は未実施であり、AI高速化のContextでもないため、回避したCostの量、AI環境での
+効果または一般的な因果を結論しない。
+
+同CaseのFollow-upは、軽量な検証・判断Costと、再利用可能なFlow、資材およびToolを作る
+介入Costを分けたうえで、実装Scopeを限定し、追加Needが現れるまでCapability追加を遅らせる
+方法がCost妥当性を持ち得ることを示す。一方、Needが表明されなかったことを不要性の証明へ
+変換せず、見送ったCapabilityのValueと長期Costを未確認のまま残す。
 
 この仮説はPlatform Engineering実務で使うSolution候補であり、Audienceがこの方法を
 有用と感じること、セッションで理解できること、または登壇内容へ採用されたことを
@@ -137,6 +238,17 @@ Interview事例は、機能評価を行うだけではBusiness活用判断へ自
 - 未確認の証拠: 選別あり・なしを比較できる現場記録、下流Cost、判断品質。
 - Interview事例は一人の回答に基づき、PoCの一次資料、他の関係者および原因を
   確認していない。
+- 標準Pathの事例は別の一人の事例記憶に基づき、当時の一次資料、他の関係者、Metric定義、
+  Metricなしの比較および各活動の寄与を確認していない。
+- 実践者が想起した最近の事例から選んだため、Metric設計が判断更新へ役立ったCaseを
+  選びやすいBiasがある。
+- 共通業務Platformの事例は一人の事例記憶に基づき、当初案を実運用していない。一次資料、
+  独立評価、選別なしの実績比較、実Cost、長期運用およびAI高速化Contextを確認していない。
+- 同事例では、後から判明した提案上の競争力を、事前SignalまたはU2の因果Evidenceへ
+  遡及させない。
+- U3のFollow-upも同じ実践者の事例記憶に基づき、検証・再設計・再利用・Feedbackの一次記録、
+  当初案の実Cost、独立評価、失ったCapabilityのValue、長期維持Costおよび潜在Needを
+  確認していない。
 - 一般化できない範囲: どのPlatform Team、ServiceまたはRisk水準でも同じ方法が
   妥当とは結論できない。
 - 残存リスクと影響を受ける判断:
@@ -146,7 +258,7 @@ Interview事例は、機能評価を行うだけではBusiness活用判断へ自
 
 ## 公開安全性確認
 
-- checked_at: 2026-08-05T22:55:41+09:00
+- checked_at: 2026-08-09T20:10:26+09:00
 - checked_by: agent:codex
 - result: `sanitized`
 - scope:
