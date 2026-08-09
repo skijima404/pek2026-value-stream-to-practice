@@ -1,4 +1,4 @@
 interface:
   display_name: "分析ノードを仕上げる"
-  short_description: "人間Review済みの分析ノードを安全にFinalizeします"
-  default_prompt: "$finalize-analysis-node を使って、Review済みの分析ノードをFinalizeしてください。"
+  short_description: "保存済み内容の後続Human Reviewで分析NodeをFinalize"
+  default_prompt: "$finalize-analysis-node を使って、提示済みの保存済み分析ノードを後続ReviewとしてFinalizeしてください。"

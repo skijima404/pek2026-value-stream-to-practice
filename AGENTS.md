@@ -72,6 +72,9 @@ the session.
   treat agent self-review, validation, or publication-safety review as that
   confirmation. Record the human reviewer, confirmation timestamp, and
   `review_scope: intent_alignment`.
+- Authorization to create, update, sanitize, or proceed is not review of
+  persisted content. Follow the applicable finalization skill's persisted-node
+  handoff and later-human-message requirement before recording human review.
 - Never set an analysis node to `status: accepted`. Record human adoption only
   in `03_artifacts/` with an explicit, traceable adoption decision.
 - Do not promote content into `03_artifacts/` unless an adoption decision is

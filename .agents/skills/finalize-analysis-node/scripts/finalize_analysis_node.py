@@ -104,6 +104,11 @@ def replace_safety_section(body: str, section: str) -> str:
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("path", type=Path)
+    parser.add_argument(
+        "--confirmed-persisted-id",
+        required=True,
+        help="exact persisted node ID explicitly confirmed by the human",
+    )
     parser.add_argument("--reviewed-by", required=True)
     parser.add_argument("--checked-by", default="agent:codex")
     parser.add_argument(
@@ -152,6 +157,8 @@ def main() -> int:
         raise RuntimeError(f"type must be {expected_type}")
     if read_field(frontmatter, "id") != path.stem:
         raise RuntimeError("id must match the filename stem")
+    if args.confirmed_persisted_id != path.stem:
+        raise RuntimeError("confirmed persisted node ID must match the target")
     current_status = read_field(frontmatter, "status")
     if current_status in {"rejected", "superseded"}:
         raise RuntimeError(f"cannot finalize a {current_status} analysis node")
