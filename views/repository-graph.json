@@ -4,7 +4,7 @@
     "authority": "none",
     "description": "Disposable navigation projection generated from repository Markdown; source nodes and adopted artifacts remain authoritative.",
     "generator": "scripts/generate_analysis_views.py",
-    "source_digest": "b6e87fafb2142e9a6aa856d1e434a7bd7a1716efeff246651327e3dcb266dcbe",
+    "source_digest": "c9403dea1be5b3f40b5bd2867f3b7f205b1931e042c6331b91bc3411bbc40b72",
     "excluded_sources": {},
     "excluded_edges": {}
   },
@@ -2071,11 +2071,53 @@
       "hypothesis_scope": "practice",
       "hypothesis_level": "solution",
       "knowledge_basis": [
+        "recorded_statement",
         "practitioner_experience",
         "reasoned_synthesis"
       ],
       "result": "not_tested",
-      "validation_components": []
+      "validation_components": [
+        {
+          "id": "U1",
+          "uncertainty": "DVSとOVSのSignalを接続すると、局所指標だけでは見えない追加作業の発生箇所、移動元および移動先を同じ変更の影響として特定できる",
+          "decision_importance": "critical",
+          "evidence_refs": [],
+          "coverage_state": "not_checked",
+          "finding": "unknown",
+          "applicability": "unknown",
+          "residual_uncertainty": "実在するPlatform Serviceについて、二つのValue Streamと同一変更を対応づけていない"
+        },
+        {
+          "id": "U2",
+          "uncertainty": "一回あたりの処理Cost、発生回数、対象Resourceおよび誘発作業を確認すると、Cost Transferの規模と改善Priorityを判断可能な粒度で評価できる",
+          "decision_importance": "high",
+          "evidence_refs": [],
+          "coverage_state": "not_checked",
+          "finding": "unknown",
+          "applicability": "unknown",
+          "residual_uncertainty": "評価候補は記録されたが、単位、対象期間、重複計上、因果および共通単位への換算を確認していない"
+        },
+        {
+          "id": "U3",
+          "uncertainty": "接続した観測は、局所指標だけの場合より早くCost Transferを検知し、Discovery、改善、支援、継続または停止の判断を更新できる",
+          "decision_importance": "critical",
+          "evidence_refs": [],
+          "coverage_state": "not_checked",
+          "finding": "unknown",
+          "applicability": "unknown",
+          "residual_uncertainty": "検知時点の比較、判断者、更新された判断および介入後の変化を確認していない"
+        },
+        {
+          "id": "U4",
+          "uncertainty": "二つのValue Streamを接続し、下流負荷を測定・関連づけるCostは、発見できる副作用と更新できる判断に対して妥当である",
+          "decision_importance": "high",
+          "evidence_refs": [],
+          "coverage_state": "not_checked",
+          "finding": "unknown",
+          "applicability": "unknown",
+          "residual_uncertainty": "Data取得、分析、調整に必要な時間とSkill、および簡略化できる条件を確認していない"
+        }
+      ]
     },
     {
       "key": "HYP-20260801-004823-service-contract-reduces-downstream-cost",
@@ -2199,7 +2241,48 @@
         "reasoned_synthesis"
       ],
       "result": "not_tested",
-      "validation_components": []
+      "validation_components": [
+        {
+          "id": "U1",
+          "uncertainty": "Value Streamの課題と期待Outcomeから始めると、Toolまたは生成Use Caseから始める場合とは異なるAI Capability、責任境界、観測項目または棄却判断を選べる",
+          "decision_importance": "critical",
+          "evidence_refs": [],
+          "coverage_state": "not_checked",
+          "finding": "unknown",
+          "applicability": "unknown",
+          "residual_uncertainty": "同一の改善候補について、二つの開始方法から得られる選択と判断を比較していない"
+        },
+        {
+          "id": "U2",
+          "uncertainty": "同じValue Streamの中でも、対象箇所とContextによって、Speed、Coverage、Decision Quality、Reproducibilityなどの優先品質は異なり、Speedが一貫して最優先になるとは限らない",
+          "decision_importance": "critical",
+          "evidence_refs": [],
+          "coverage_state": "not_checked",
+          "finding": "unknown",
+          "applicability": "unknown",
+          "residual_uncertainty": "優先品質の候補は会話から整理されたが、実在するValue Streamの複数箇所について、Actor、Error Cost、頻度、時間制約および期待Outcomeから優先順位を確認していない"
+        },
+        {
+          "id": "U3",
+          "uncertainty": "対象箇所ごとに優先品質とAI Outcomeを分けて配置する方が、Speedを一律に優先する場合より、局所便益、発生頻度、対象Resource、誘発作業、Error Costおよび下流負荷を含む全体の経済妥当性を高める",
+          "decision_importance": "critical",
+          "evidence_refs": [],
+          "coverage_state": "not_checked",
+          "finding": "unknown",
+          "applicability": "unknown",
+          "residual_uncertainty": "同一Caseで二つの配置を比較しておらず、便益とCostの範囲、単位、対象期間、重複計上および実際のOutcomeを確認していない"
+        },
+        {
+          "id": "U4",
+          "uncertainty": "Value Stream、優先品質、Capability、責任境界および観測を整理するCostは、得られる経済的な判断改善または回避できる局所最適と下流負荷に対して妥当である",
+          "decision_importance": "high",
+          "evidence_refs": [],
+          "coverage_state": "not_checked",
+          "finding": "unknown",
+          "applicability": "unknown",
+          "residual_uncertainty": "小規模利用と高Risk利用の適用境界、所要時間、必要Skillおよび簡略化条件を確認していない"
+        }
+      ]
     },
     {
       "key": "HYP-20260804-013226-two-stage-metrics-analysis",
@@ -2995,6 +3078,67 @@
       ]
     },
     {
+      "key": "HYP-20260809-203135-quality-first-ai-allocation-workflow",
+      "id": "HYP-20260809-203135-quality-first-ai-allocation-workflow",
+      "type": "hypothesis_episode",
+      "title": "対象箇所・必要品質・AI Outcome・Capability・観測の順で設計すると局所速度偏重を避けやすい",
+      "path": "02_analysis/hypothesis-episodes/HYP-20260809-203135-quality-first-ai-allocation-workflow.md",
+      "content_language": "ja",
+      "created_at": "2026-08-09T20:31:35+09:00",
+      "created_by": "agent:codex",
+      "status": "reviewed",
+      "confidence": "low",
+      "hypothesis_scope": "practice",
+      "hypothesis_level": "feature",
+      "knowledge_basis": [
+        "recorded_statement",
+        "reasoned_synthesis"
+      ],
+      "result": "not_tested",
+      "validation_components": [
+        {
+          "id": "U1",
+          "uncertainty": "Tool選定前に、DVS上の対象箇所と成立させたい品質を、実務で判断可能な粒度に定義できる",
+          "decision_importance": "high",
+          "evidence_refs": [],
+          "coverage_state": "not_checked",
+          "finding": "unknown",
+          "applicability": "unknown",
+          "residual_uncertainty": "Discover、Decide、Deliverの補助区分と品質候補を、実Caseへ適用できるか確認していない"
+        },
+        {
+          "id": "U2",
+          "uncertainty": "品質からAI Outcomeを選ぶと、生成Use Case先行とは異なるCapability、責任境界または棄却判断が得られる",
+          "decision_importance": "critical",
+          "evidence_refs": [],
+          "coverage_state": "not_checked",
+          "finding": "unknown",
+          "applicability": "unknown",
+          "residual_uncertainty": "同一の改善候補を二つの開始方法で比較していない"
+        },
+        {
+          "id": "U3",
+          "uncertainty": "観測方法を最後に接続すると、局所速度だけでなく頻度、誘発作業、品質および下流Guardrailを事前に選べる",
+          "decision_importance": "critical",
+          "evidence_refs": [],
+          "coverage_state": "not_checked",
+          "finding": "unknown",
+          "applicability": "unknown",
+          "residual_uncertainty": "観測項目の選択差、実際のData取得可能性、重複計上および判断への利用を確認していない"
+        },
+        {
+          "id": "U4",
+          "uncertainty": "この設計順序の分析、記録および調整Costは、回避可能な局所最適または下流負荷に対して妥当である",
+          "decision_importance": "high",
+          "evidence_refs": [],
+          "coverage_state": "not_checked",
+          "finding": "unknown",
+          "applicability": "unknown",
+          "residual_uncertainty": "小規模利用と高Risk利用の適用境界、所要時間、必要Skillおよび簡略化条件を確認していない"
+        }
+      ]
+    },
+    {
       "key": "OBS-20260730-015714-session-goal-and-journey",
       "id": "OBS-20260730-015714-session-goal-and-journey",
       "type": "observation",
@@ -3587,6 +3731,38 @@
       ]
     },
     {
+      "key": "OBS-20260809-203133-dvs-quality-first-ai-outcome-selection",
+      "id": "OBS-20260809-203133-dvs-quality-first-ai-outcome-selection",
+      "type": "observation",
+      "title": "DVS上の対象箇所と必要品質からAI Outcomeを選ぶ順序が記録された",
+      "path": "02_analysis/observations/OBS-20260809-203133-dvs-quality-first-ai-outcome-selection.md",
+      "content_language": "ja",
+      "created_at": "2026-08-09T20:31:33+09:00",
+      "created_by": "agent:codex",
+      "status": "reviewed",
+      "confidence": "high",
+      "knowledge_basis": [
+        "recorded_statement",
+        "reasoned_synthesis"
+      ]
+    },
+    {
+      "key": "OBS-20260809-203134-downstream-load-frequency-induced-work",
+      "id": "OBS-20260809-203134-downstream-load-frequency-induced-work",
+      "type": "observation",
+      "title": "下流負荷を単発Cost・発生回数・誘発作業に分ける評価候補が記録された",
+      "path": "02_analysis/observations/OBS-20260809-203134-downstream-load-frequency-induced-work.md",
+      "content_language": "ja",
+      "created_at": "2026-08-09T20:31:34+09:00",
+      "created_by": "agent:codex",
+      "status": "reviewed",
+      "confidence": "high",
+      "knowledge_basis": [
+        "recorded_statement",
+        "reasoned_synthesis"
+      ]
+    },
+    {
       "key": "artifact:03_artifacts/attendee-journey.md",
       "type": "artifact",
       "title": "参加者Journey兼Value Stream",
@@ -3862,6 +4038,11 @@
     },
     {
       "source": "HYP-20260801-004822-coupled-observability-detects-cost-transfer",
+      "type": "derived_from",
+      "target": "OBS-20260809-203134-downstream-load-frequency-induced-work"
+    },
+    {
+      "source": "HYP-20260801-004822-coupled-observability-detects-cost-transfer",
       "type": "tests",
       "target": "HYP-20260804-183210-ai-slop-downstream-burden-value"
     },
@@ -3904,6 +4085,16 @@
       "source": "HYP-20260802-230425-platform-choice-burden-value",
       "type": "derived_from",
       "target": "OBS-20260802-230424-platform-choice-hidden-assumption"
+    },
+    {
+      "source": "HYP-20260804-013223-outcome-first-ai-resource-allocation",
+      "type": "derived_from",
+      "target": "OBS-20260809-203133-dvs-quality-first-ai-outcome-selection"
+    },
+    {
+      "source": "HYP-20260804-013223-outcome-first-ai-resource-allocation",
+      "type": "derived_from",
+      "target": "OBS-20260809-203134-downstream-load-frequency-induced-work"
     },
     {
       "source": "HYP-20260804-013223-outcome-first-ai-resource-allocation",
@@ -4214,6 +4405,21 @@
       "source": "HYP-20260809-013742-value-traceability-enables-dvs-learning",
       "type": "derived_from",
       "target": "OBS-20260808-224827-business-use-case-loss-in-scratch-development"
+    },
+    {
+      "source": "HYP-20260809-203135-quality-first-ai-allocation-workflow",
+      "type": "derived_from",
+      "target": "OBS-20260809-203133-dvs-quality-first-ai-outcome-selection"
+    },
+    {
+      "source": "HYP-20260809-203135-quality-first-ai-allocation-workflow",
+      "type": "derived_from",
+      "target": "OBS-20260809-203134-downstream-load-frequency-induced-work"
+    },
+    {
+      "source": "HYP-20260809-203135-quality-first-ai-allocation-workflow",
+      "type": "tests",
+      "target": "HYP-20260804-013223-outcome-first-ai-resource-allocation"
     },
     {
       "source": "OBS-20260730-015714-session-goal-and-journey",
@@ -4634,6 +4840,31 @@
       "source": "OBS-20260809-200727-platform-onboarding-validation-cost",
       "type": "references",
       "target": "OBS-20260809-185045-value-metric-shortened-platform-onboarding"
+    },
+    {
+      "source": "OBS-20260809-203133-dvs-quality-first-ai-outcome-selection",
+      "type": "derived_from",
+      "target": "RN-20260730-140133-ai-outcomes-and-mbpm"
+    },
+    {
+      "source": "OBS-20260809-203133-dvs-quality-first-ai-outcome-selection",
+      "type": "derived_from",
+      "target": "RN-20260806-224717-vsm-mbpm-process-analysis-explanation"
+    },
+    {
+      "source": "OBS-20260809-203133-dvs-quality-first-ai-outcome-selection",
+      "type": "derived_from",
+      "target": "RN-20260809-194608-dvs-phase-quality-ai-outcomes"
+    },
+    {
+      "source": "OBS-20260809-203134-downstream-load-frequency-induced-work",
+      "type": "derived_from",
+      "target": "RN-20260806-224717-vsm-mbpm-process-analysis-explanation"
+    },
+    {
+      "source": "OBS-20260809-203134-downstream-load-frequency-induced-work",
+      "type": "derived_from",
+      "target": "RN-20260809-194608-dvs-phase-quality-ai-outcomes"
     },
     {
       "source": "artifact:03_artifacts/attendee-journey.md",
