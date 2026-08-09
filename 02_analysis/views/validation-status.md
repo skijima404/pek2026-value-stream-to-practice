@@ -7,7 +7,7 @@
 
 | Hypothesis Episode | Scope | Result | Components | Coverage | Current Risk Decisions |
 | --- | --- | --- | ---: | --- | ---: |
-| [価値選択と検証はAI高速化による回避可能な下流Costを減らす](../hypothesis-episodes/HYP-20260730-015718-ai-speed-requires-value-validation.md) | `practice` | `inconclusive` | 3 | `partially_checked` 1、`not_checked` 2 | 0 |
+| [価値選択と検証はAI高速化による回避可能な下流Costを減らす](../hypothesis-episodes/HYP-20260730-015718-ai-speed-requires-value-validation.md) | `practice` | `inconclusive` | 3 | `partially_checked` 3 | 0 |
 | [Value Hypothesis・期待Signal・停止条件をAdmission Controlにすると依存形成前に廃棄できる](../hypothesis-episodes/HYP-20260731-193520-lean-startup-as-admission-control.md) | `practice` | `not_tested` | 4 | `not_checked` 4 | 0 |
 | [PEのDVSと利用者側OVSを接続するとAI高速化のCost Transferを検知できる](../hypothesis-episodes/HYP-20260801-004822-coupled-observability-detects-cost-transfer.md) | `practice` | `not_tested` | 0 | なし | 0 |
 | [共有前のService Contract明確化は下流への理解と判断Costの転移を抑える](../hypothesis-episodes/HYP-20260801-004823-service-contract-reduces-downstream-cost.md) | `practice` | `not_tested` | 0 | なし | 0 |
