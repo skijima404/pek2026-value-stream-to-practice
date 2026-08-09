@@ -1,0 +1,4481 @@
+{
+  "schema_version": 1,
+  "projection": {
+    "authority": "none",
+    "description": "Disposable navigation projection generated from repository Markdown; source nodes and adopted artifacts remain authoritative.",
+    "generator": "scripts/generate_analysis_views.py",
+    "source_digest": "1d7f95889485f872e5ded1dfe3d496f282c87a3bd791943902763ade865f3a32",
+    "excluded_sources": {},
+    "excluded_edges": {}
+  },
+  "nodes": [
+    {
+      "key": "RN-20260729-203124-session-slot-and-audience",
+      "id": "RN-20260729-203124-session-slot-and-audience",
+      "type": "raw_note",
+      "title": "登壇枠と想定参加者の初期メモ",
+      "path": "01_working/raw-notes/RN-20260729-203124-session-slot-and-audience.md",
+      "content_language": "ja",
+      "created_at": "2026-07-29T20:31:24+09:00",
+      "created_by": "human:kijima",
+      "review_status": "reviewed",
+      "sanitization_status": "not_needed",
+      "tags": [
+        "session-planning",
+        "audience",
+        "facilitation"
+      ]
+    },
+    {
+      "key": "RN-20260729-205144-session-goal-and-value-stream",
+      "id": "RN-20260729-205144-session-goal-and-value-stream",
+      "type": "raw_note",
+      "title": "セッションのゴールとValue Stream",
+      "path": "01_working/raw-notes/RN-20260729-205144-session-goal-and-value-stream.md",
+      "content_language": "ja",
+      "created_at": "2026-07-29T20:51:44+09:00",
+      "created_by": "human:kijima",
+      "review_status": "reviewed",
+      "sanitization_status": "not_needed",
+      "tags": [
+        "session-planning",
+        "value-stream",
+        "audience"
+      ]
+    },
+    {
+      "key": "RN-20260729-220353-audience-and-value-hypothesis",
+      "id": "RN-20260729-220353-audience-and-value-hypothesis",
+      "type": "raw_note",
+      "title": "Audienceと価値仮説の検討",
+      "path": "01_working/raw-notes/RN-20260729-220353-audience-and-value-hypothesis.md",
+      "content_language": "ja",
+      "created_at": "2026-07-29T22:03:53+09:00",
+      "created_by": "human:kijima",
+      "review_status": "reviewed",
+      "sanitization_status": "not_needed",
+      "tags": [
+        "audience",
+        "value-hypothesis",
+        "platform-engineering",
+        "ai-slop"
+      ]
+    },
+    {
+      "key": "RN-20260730-003408-journey-strategy-and-session-role",
+      "id": "RN-20260730-003408-journey-strategy-and-session-role",
+      "type": "raw_note",
+      "title": "Journeyの大まかな作戦とセッションの位置づけ",
+      "path": "01_working/raw-notes/RN-20260730-003408-journey-strategy-and-session-role.md",
+      "content_language": "ja",
+      "created_at": "2026-07-30T00:34:08+09:00",
+      "created_by": "human:kijima",
+      "review_status": "reviewed",
+      "sanitization_status": "not_needed",
+      "tags": [
+        "journey",
+        "session-planning",
+        "solution-hypothesis",
+        "live-document"
+      ]
+    },
+    {
+      "key": "RN-20260730-093311-presentation-idea-inventory",
+      "id": "RN-20260730-093311-presentation-idea-inventory",
+      "type": "raw_note",
+      "title": "PEK2026プレゼンテーション候補ネタ集",
+      "path": "01_working/raw-notes/RN-20260730-093311-presentation-idea-inventory.md",
+      "content_language": "ja",
+      "created_at": "2026-07-30T09:33:11+09:00",
+      "created_by": "agent:codex",
+      "review_status": "corrected",
+      "sanitization_status": "sanitized",
+      "tags": [
+        "presentation-planning",
+        "delivery",
+        "ai-slop",
+        "value-hypothesis",
+        "vsm",
+        "platform-advisor",
+        "reasoning-chain",
+        "demand-pipeline",
+        "outcome-delivery"
+      ]
+    },
+    {
+      "key": "RN-20260730-095321-work-mode-idea-supplement",
+      "id": "RN-20260730-095321-work-mode-idea-supplement",
+      "type": "raw_note",
+      "title": "Workモード引き継ぎからのプレゼンテーション追加候補",
+      "path": "01_working/raw-notes/RN-20260730-095321-work-mode-idea-supplement.md",
+      "content_language": "ja",
+      "created_at": "2026-07-30T09:53:21+09:00",
+      "created_by": "agent:codex",
+      "review_status": "corrected",
+      "sanitization_status": "sanitized",
+      "tags": [
+        "presentation-planning",
+        "delivery",
+        "ai-slop",
+        "service-quality",
+        "demand-pipeline",
+        "solution-strategy",
+        "value-stream"
+      ]
+    },
+    {
+      "key": "RN-20260730-101222-discovery-gap-and-talk-continuity",
+      "id": "RN-20260730-101222-discovery-gap-and-talk-continuity",
+      "type": "raw_note",
+      "title": "Discoverの欠落感と前回登壇からの接続",
+      "path": "01_working/raw-notes/RN-20260730-101222-discovery-gap-and-talk-continuity.md",
+      "content_language": "ja",
+      "created_at": "2026-07-30T10:12:22+09:00",
+      "created_by": "agent:codex",
+      "review_status": "reviewed",
+      "sanitization_status": "not_needed",
+      "tags": [
+        "presentation-planning",
+        "discovery",
+        "decision",
+        "delivery",
+        "reasoning-chain",
+        "session-continuity",
+        "field-observation",
+        "outcome-delivery"
+      ]
+    },
+    {
+      "key": "RN-20260730-102859-ai-outcomes-and-collaboration-model",
+      "id": "RN-20260730-102859-ai-outcomes-and-collaboration-model",
+      "type": "raw_note",
+      "title": "AI活用で狙うOutcomeと人間・AI協業モデル",
+      "path": "01_working/raw-notes/RN-20260730-102859-ai-outcomes-and-collaboration-model.md",
+      "content_language": "ja",
+      "created_at": "2026-07-30T10:28:59+09:00",
+      "created_by": "agent:codex",
+      "review_status": "corrected",
+      "sanitization_status": "sanitized",
+      "tags": [
+        "presentation-planning",
+        "ai-outcome",
+        "human-ai-collaboration",
+        "decision-quality",
+        "second-brain",
+        "traceability"
+      ]
+    },
+    {
+      "key": "RN-20260730-103954-session-repo-role",
+      "id": "RN-20260730-103954-session-repo-role",
+      "type": "raw_note",
+      "title": "本編とRepositoryへの導線の役割分担",
+      "path": "01_working/raw-notes/RN-20260730-103954-session-repo-role.md",
+      "content_language": "ja",
+      "created_at": "2026-07-30T10:39:54+09:00",
+      "created_by": "human:kijima",
+      "review_status": "reviewed",
+      "sanitization_status": "not_needed",
+      "tags": [
+        "presentation-planning",
+        "session-design",
+        "repository",
+        "audience-journey",
+        "human-ai-collaboration"
+      ]
+    },
+    {
+      "key": "RN-20260730-111926-value-stream-ai-outcomes",
+      "id": "RN-20260730-111926-value-stream-ai-outcomes",
+      "type": "raw_note",
+      "title": "Value Streamの課題からAIで狙う効果を考える",
+      "path": "01_working/raw-notes/RN-20260730-111926-value-stream-ai-outcomes.md",
+      "content_language": "ja",
+      "created_at": "2026-07-30T11:19:26+09:00",
+      "created_by": "human:kijima",
+      "review_status": "reviewed",
+      "sanitization_status": "not_needed",
+      "tags": [
+        "presentation-planning",
+        "value-stream",
+        "ai-outcome",
+        "process-time",
+        "lead-time",
+        "decision-quality"
+      ]
+    },
+    {
+      "key": "RN-20260730-140133-ai-outcomes-and-mbpm",
+      "id": "RN-20260730-140133-ai-outcomes-and-mbpm",
+      "type": "raw_note",
+      "title": "AIに期待するOutcome分類とMBPMとの関係",
+      "path": "01_working/raw-notes/RN-20260730-140133-ai-outcomes-and-mbpm.md",
+      "content_language": "ja",
+      "created_at": "2026-07-30T14:01:33+09:00",
+      "created_by": "human:kijima",
+      "review_status": "reviewed",
+      "sanitization_status": "sanitized",
+      "tags": [
+        "presentation-planning",
+        "ai-outcome",
+        "mbpm",
+        "value-stream",
+        "decision-quality",
+        "reasoning-chain",
+        "chatgpt-import"
+      ]
+    },
+    {
+      "key": "RN-20260730-212352-discard-hypotheses-before-production-commitment",
+      "id": "RN-20260730-212352-discard-hypotheses-before-production-commitment",
+      "type": "raw_note",
+      "title": "Productionへの約束前に仮説を捨てる",
+      "path": "01_working/raw-notes/RN-20260730-212352-discard-hypotheses-before-production-commitment.md",
+      "content_language": "ja",
+      "created_at": "2026-07-30T21:23:52+09:00",
+      "created_by": "human:kijima",
+      "review_status": "reviewed",
+      "sanitization_status": "not_needed",
+      "tags": [
+        "presentation-planning",
+        "value-hypothesis",
+        "lean-startup",
+        "platform-service",
+        "value-stream",
+        "ai-slop"
+      ]
+    },
+    {
+      "key": "RN-20260730-224354-seventy-percent-failure-source-check",
+      "id": "RN-20260730-224354-seventy-percent-failure-source-check",
+      "type": "raw_note",
+      "title": "70%失敗説の出典探索と不採用判断",
+      "path": "01_working/raw-notes/RN-20260730-224354-seventy-percent-failure-source-check.md",
+      "content_language": "ja",
+      "created_at": "2026-07-30T22:43:54+09:00",
+      "created_by": "human:kijima",
+      "review_status": "reviewed",
+      "sanitization_status": "not_needed",
+      "tags": [
+        "presentation-planning",
+        "external-research",
+        "failure-definition",
+        "scaled-agile",
+        "business-outcome"
+      ]
+    },
+    {
+      "key": "RN-20260730-224731-ai-acceleration-to-contract-first",
+      "id": "RN-20260730-224731-ai-acceleration-to-contract-first",
+      "type": "raw_note",
+      "title": "AI高速化からContract Firstへ至る因果",
+      "path": "01_working/raw-notes/RN-20260730-224731-ai-acceleration-to-contract-first.md",
+      "content_language": "ja",
+      "created_at": "2026-07-30T22:47:31+09:00",
+      "created_by": "human:kijima",
+      "review_status": "reviewed",
+      "sanitization_status": "not_needed",
+      "tags": [
+        "presentation-planning",
+        "ai-slop",
+        "contract-first",
+        "platform-service",
+        "value-stream",
+        "handover",
+        "outcome-delivery"
+      ]
+    },
+    {
+      "key": "RN-20260730-225227-relay-baton-handover-metaphor",
+      "id": "RN-20260730-225227-relay-baton-handover-metaphor",
+      "type": "raw_note",
+      "title": "リレーのバトンパスとしてのハンドオーバー",
+      "path": "01_working/raw-notes/RN-20260730-225227-relay-baton-handover-metaphor.md",
+      "content_language": "ja",
+      "created_at": "2026-07-30T22:52:27+09:00",
+      "created_by": "human:kijima",
+      "review_status": "reviewed",
+      "sanitization_status": "not_needed",
+      "tags": [
+        "presentation-planning",
+        "handover",
+        "contract-first",
+        "platform-service",
+        "value-stream",
+        "human-ai-collaboration",
+        "metaphor"
+      ]
+    },
+    {
+      "key": "RN-20260730-230242-communicating-invisible-handover",
+      "id": "RN-20260730-230242-communicating-invisible-handover",
+      "type": "raw_note",
+      "title": "見えないハンドオーバーを伝える",
+      "path": "01_working/raw-notes/RN-20260730-230242-communicating-invisible-handover.md",
+      "content_language": "ja",
+      "created_at": "2026-07-30T23:02:42+09:00",
+      "created_by": "human:kijima",
+      "review_status": "reviewed",
+      "sanitization_status": "not_needed",
+      "tags": [
+        "presentation-planning",
+        "session-design",
+        "handover",
+        "contract-first",
+        "user-story",
+        "acceptance-criteria",
+        "value-stream",
+        "ai-slop"
+      ]
+    },
+    {
+      "key": "RN-20260731-003419-drop-api-contract-framing",
+      "id": "RN-20260731-003419-drop-api-contract-framing",
+      "type": "raw_note",
+      "title": "API Contract表現を本編から外す判断",
+      "path": "01_working/raw-notes/RN-20260731-003419-drop-api-contract-framing.md",
+      "content_language": "ja",
+      "created_at": "2026-07-31T00:34:19+09:00",
+      "created_by": "human:kijima",
+      "review_status": "reviewed",
+      "sanitization_status": "not_needed",
+      "tags": [
+        "presentation-planning",
+        "design-decision",
+        "idea-rejection",
+        "audience",
+        "contract-first",
+        "handover",
+        "metaphor"
+      ]
+    },
+    {
+      "key": "RN-20260731-092125-it-meeting-handover-enablement",
+      "id": "RN-20260731-092125-it-meeting-handover-enablement",
+      "type": "raw_note",
+      "title": "情シス会議への同席に潜むハンドオーバーとEnablement",
+      "path": "01_working/raw-notes/RN-20260731-092125-it-meeting-handover-enablement.md",
+      "content_language": "ja",
+      "created_at": "2026-07-31T09:21:25+09:00",
+      "created_by": "human:kijima",
+      "review_status": "reviewed",
+      "sanitization_status": "not_needed",
+      "tags": [
+        "cognitive-load",
+        "enablement",
+        "handover",
+        "saas"
+      ]
+    },
+    {
+      "key": "RN-20260731-105559-handover-decision-context-ai-enablement",
+      "id": "RN-20260731-105559-handover-decision-context-ai-enablement",
+      "type": "raw_note",
+      "title": "判断ContextとしてのハンドオーバーとAI Enablement Service",
+      "path": "01_working/raw-notes/RN-20260731-105559-handover-decision-context-ai-enablement.md",
+      "content_language": "ja",
+      "created_at": "2026-07-31T10:55:59+09:00",
+      "created_by": "human:kijima",
+      "review_status": "reviewed",
+      "sanitization_status": "not_needed",
+      "tags": [
+        "ai-slop",
+        "decision-context",
+        "enablement",
+        "handover",
+        "platform-service",
+        "vsm"
+      ]
+    },
+    {
+      "key": "RN-20260731-113600-mbpm-session-emphasis",
+      "id": "RN-20260731-113600-mbpm-session-emphasis",
+      "type": "raw_note",
+      "title": "PEK2026ではMBPMを前面に出す",
+      "path": "01_working/raw-notes/RN-20260731-113600-mbpm-session-emphasis.md",
+      "content_language": "ja",
+      "created_at": "2026-07-31T11:36:00+09:00",
+      "created_by": "human:kijima",
+      "review_status": "reviewed",
+      "sanitization_status": "not_needed",
+      "tags": [
+        "mbpm",
+        "presentation-planning",
+        "value-stream"
+      ]
+    },
+    {
+      "key": "RN-20260731-115056-managed-ai-slop-transformation",
+      "id": "RN-20260731-115056-managed-ai-slop-transformation",
+      "type": "raw_note",
+      "title": "AI Slopを管理可能なTransformationの摩擦として捉える",
+      "path": "01_working/raw-notes/RN-20260731-115056-managed-ai-slop-transformation.md",
+      "content_language": "ja",
+      "created_at": "2026-07-31T11:50:56+09:00",
+      "created_by": "human:kijima",
+      "review_status": "reviewed",
+      "sanitization_status": "not_needed",
+      "tags": [
+        "ai-slop",
+        "enablement",
+        "handover",
+        "mbpm",
+        "non-functional-requirements",
+        "platform-service",
+        "transformation"
+      ]
+    },
+    {
+      "key": "RN-20260731-123647-session-timing-outline",
+      "id": "RN-20260731-123647-session-timing-outline",
+      "type": "raw_note",
+      "title": "25分セッションの時間配分案",
+      "path": "01_working/raw-notes/RN-20260731-123647-session-timing-outline.md",
+      "content_language": "ja",
+      "created_at": "2026-07-31T12:36:47+09:00",
+      "created_by": "human:kijima",
+      "review_status": "reviewed",
+      "sanitization_status": "not_needed",
+      "tags": [
+        "ai-slop",
+        "lean-startup",
+        "mbpm",
+        "session-structure"
+      ]
+    },
+    {
+      "key": "RN-20260731-143326-mbpm-blind-spots-and-outcome-quality",
+      "id": "RN-20260731-143326-mbpm-blind-spots-and-outcome-quality",
+      "type": "raw_note",
+      "title": "MBPMで観測できないAI SlopとOutcome Quality",
+      "path": "01_working/raw-notes/RN-20260731-143326-mbpm-blind-spots-and-outcome-quality.md",
+      "content_language": "ja",
+      "created_at": "2026-07-31T14:33:26+09:00",
+      "created_by": "human:kijima",
+      "review_status": "reviewed",
+      "sanitization_status": "not_needed",
+      "tags": [
+        "ai-slop",
+        "mbpm",
+        "outcome-quality",
+        "quality-assurance",
+        "service-contract",
+        "trust"
+      ]
+    },
+    {
+      "key": "RN-20260731-144737-platform-dvs-and-user-value-stream",
+      "id": "RN-20260731-144737-platform-dvs-and-user-value-stream",
+      "type": "raw_note",
+      "title": "Platform ServiceのDVSと利用者Value Streamを接続して観測する",
+      "path": "01_working/raw-notes/RN-20260731-144737-platform-dvs-and-user-value-stream.md",
+      "content_language": "ja",
+      "created_at": "2026-07-31T14:47:37+09:00",
+      "created_by": "human:kijima",
+      "review_status": "reviewed",
+      "sanitization_status": "not_needed",
+      "tags": [
+        "ai-adoption",
+        "development-value-stream",
+        "mbpm",
+        "platform-service",
+        "sdlc",
+        "value-stream"
+      ]
+    },
+    {
+      "key": "RN-20260731-190846-endless-stream-ai-slop-reading-notes",
+      "id": "RN-20260731-190846-endless-stream-ai-slop-reading-notes",
+      "type": "raw_note",
+      "title": "「An Endless Stream of AI Slop」読書メモ",
+      "path": "01_working/raw-notes/RN-20260731-190846-endless-stream-ai-slop-reading-notes.md",
+      "content_language": "ja",
+      "created_at": "2026-07-31T19:08:46+09:00",
+      "created_by": "human:kijima",
+      "review_status": "reviewed",
+      "sanitization_status": "not_needed",
+      "tags": [
+        "accountability",
+        "ai-slop",
+        "platform-engineering",
+        "queue",
+        "research-reading",
+        "software-development",
+        "workslop"
+      ]
+    },
+    {
+      "key": "RN-20260731-190847-ai-slop-paper-to-platform-service",
+      "id": "RN-20260731-190847-ai-slop-paper-to-platform-service",
+      "type": "raw_note",
+      "title": "AI Slop論文からPlatform Service設計へ読み替えた対話",
+      "path": "01_working/raw-notes/RN-20260731-190847-ai-slop-paper-to-platform-service.md",
+      "content_language": "ja",
+      "created_at": "2026-07-31T19:08:47+09:00",
+      "created_by": "human:kijima",
+      "review_status": "reviewed",
+      "sanitization_status": "sanitized",
+      "tags": [
+        "accountability",
+        "ai-slop",
+        "platform-service",
+        "queue",
+        "wip",
+        "workslop"
+      ]
+    },
+    {
+      "key": "RN-20260731-200122-handover-contract-accountability-transfer",
+      "id": "RN-20260731-200122-handover-contract-accountability-transfer",
+      "type": "raw_note",
+      "title": "ハンドオーバー、Contract、責任移行、コスト転移の分解",
+      "path": "01_working/raw-notes/RN-20260731-200122-handover-contract-accountability-transfer.md",
+      "content_language": "ja",
+      "created_at": "2026-07-31T20:01:22+09:00",
+      "created_by": "agent:codex",
+      "review_status": "reviewed",
+      "sanitization_status": "not_needed",
+      "tags": [
+        "accountability",
+        "ai-slop",
+        "contract",
+        "cost-transfer",
+        "decision-rights",
+        "handover",
+        "platform-service"
+      ]
+    },
+    {
+      "key": "RN-20260731-201346-platform-service-rejection-authority-and-duty",
+      "id": "RN-20260731-201346-platform-service-rejection-authority-and-duty",
+      "type": "raw_note",
+      "title": "Platform Service案を作らない・まだ出さないと判断する責任",
+      "path": "01_working/raw-notes/RN-20260731-201346-platform-service-rejection-authority-and-duty.md",
+      "content_language": "ja",
+      "created_at": "2026-07-31T20:13:46+09:00",
+      "created_by": "human:kijima",
+      "review_status": "reviewed",
+      "sanitization_status": "not_needed",
+      "tags": [
+        "accountability",
+        "decision-authority",
+        "governance",
+        "lean-startup",
+        "platform-product-management",
+        "platform-service"
+      ]
+    },
+    {
+      "key": "RN-20260731-204459-enablement-bridge-boundaries",
+      "id": "RN-20260731-204459-enablement-bridge-boundaries",
+      "type": "raw_note",
+      "title": "Enablementで橋を架け続けるべきでない境界",
+      "path": "01_working/raw-notes/RN-20260731-204459-enablement-bridge-boundaries.md",
+      "content_language": "ja",
+      "created_at": "2026-07-31T20:44:59+09:00",
+      "created_by": "agent:codex",
+      "review_status": "reviewed",
+      "sanitization_status": "not_needed",
+      "tags": [
+        "enablement",
+        "platform-service",
+        "service-contract",
+        "self-service",
+        "capacity",
+        "persona",
+        "ai-slop",
+        "presentation-scope"
+      ]
+    },
+    {
+      "key": "RN-20260731-214443-ai-resource-management-in-value-stream",
+      "id": "RN-20260731-214443-ai-resource-management-in-value-stream",
+      "type": "raw_note",
+      "title": "AIをValue Streamへ配置するResource Management",
+      "path": "01_working/raw-notes/RN-20260731-214443-ai-resource-management-in-value-stream.md",
+      "content_language": "ja",
+      "created_at": "2026-07-31T21:44:43+09:00",
+      "created_by": "agent:codex",
+      "review_status": "reviewed",
+      "sanitization_status": "not_needed",
+      "tags": [
+        "ai-capability",
+        "accountability",
+        "human-ai-collaboration",
+        "raci",
+        "resource-management",
+        "responsibility-boundary",
+        "value-stream",
+        "work-design"
+      ]
+    },
+    {
+      "key": "RN-20260731-214443-necessary-friction-experienced-as-slop",
+      "id": "RN-20260731-214443-necessary-friction-experienced-as-slop",
+      "type": "raw_note",
+      "title": "Slopと感じても残すべき摩擦",
+      "path": "01_working/raw-notes/RN-20260731-214443-necessary-friction-experienced-as-slop.md",
+      "content_language": "ja",
+      "created_at": "2026-07-31T21:44:43+09:00",
+      "created_by": "agent:codex",
+      "review_status": "reviewed",
+      "sanitization_status": "not_needed",
+      "tags": [
+        "ai-slop",
+        "accountability",
+        "enablement",
+        "friction",
+        "governance",
+        "learning",
+        "platform-service",
+        "responsibility-boundary"
+      ]
+    },
+    {
+      "key": "RN-20260801-001118-pe-investment-purpose-and-sustainable-value-observation",
+      "id": "RN-20260801-001118-pe-investment-purpose-and-sustainable-value-observation",
+      "type": "raw_note",
+      "title": "PE投資目的と提供側の持続可能性を含む価値観測",
+      "path": "01_working/raw-notes/RN-20260801-001118-pe-investment-purpose-and-sustainable-value-observation.md",
+      "content_language": "ja",
+      "created_at": "2026-08-01T00:11:18+09:00",
+      "created_by": "agent:codex",
+      "review_status": "reviewed",
+      "sanitization_status": "not_needed",
+      "tags": [
+        "platform-engineering",
+        "value-hypothesis",
+        "observability",
+        "adoption",
+        "retention",
+        "sustainability",
+        "mbpm"
+      ]
+    },
+    {
+      "key": "RN-20260801-121633-platform-user-choice-hypothesis",
+      "id": "RN-20260801-121633-platform-user-choice-hypothesis",
+      "type": "raw_note",
+      "title": "Platform利用者はプラットフォームを選びたいのか",
+      "path": "01_working/raw-notes/RN-20260801-121633-platform-user-choice-hypothesis.md",
+      "content_language": "ja",
+      "created_at": "2026-08-01T12:16:33+09:00",
+      "created_by": "human:kijima",
+      "review_status": "reviewed",
+      "sanitization_status": "not_needed",
+      "tags": [
+        "platform-advisor",
+        "platform-service",
+        "value-hypothesis",
+        "user-choice",
+        "cognitive-load"
+      ]
+    },
+    {
+      "key": "RN-20260801-122154-platform-advisor-hidden-hypothesis-and-dvs-learning",
+      "id": "RN-20260801-122154-platform-advisor-hidden-hypothesis-and-dvs-learning",
+      "type": "raw_note",
+      "title": "Platform Advisorの隠れた仮説とDVSの学習能力",
+      "path": "01_working/raw-notes/RN-20260801-122154-platform-advisor-hidden-hypothesis-and-dvs-learning.md",
+      "content_language": "ja",
+      "created_at": "2026-08-01T12:21:54+09:00",
+      "created_by": "human:kijima",
+      "review_status": "reviewed",
+      "sanitization_status": "not_needed",
+      "tags": [
+        "platform-advisor",
+        "value-hypothesis",
+        "hypothesis-validation",
+        "unknown-unknown",
+        "development-value-stream",
+        "operational-value-stream",
+        "presentation-scope"
+      ]
+    },
+    {
+      "key": "RN-20260802-195858-open-organization-change-project-evidence-review",
+      "id": "RN-20260802-195858-open-organization-change-project-evidence-review",
+      "type": "raw_note",
+      "title": "Open Organization関連資料から見るプロジェクト・変革成功率の根拠精査",
+      "path": "01_working/raw-notes/RN-20260802-195858-open-organization-change-project-evidence-review.md",
+      "content_language": "ja",
+      "created_at": "2026-08-02T19:58:58+09:00",
+      "created_by": "human:kijima",
+      "review_status": "reviewed",
+      "sanitization_status": "not_needed",
+      "tags": [
+        "presentation-planning",
+        "external-research",
+        "open-organization",
+        "organizational-change",
+        "change-management",
+        "project-success",
+        "failure-definition",
+        "business-outcome",
+        "evidence-review"
+      ]
+    },
+    {
+      "key": "RN-20260802-201449-project-change-failure-rate-not-used",
+      "id": "RN-20260802-201449-project-change-failure-rate-not-used",
+      "type": "raw_note",
+      "title": "プロジェクト・変革失敗率の数字を登壇で使わない判断",
+      "path": "01_working/raw-notes/RN-20260802-201449-project-change-failure-rate-not-used.md",
+      "content_language": "ja",
+      "created_at": "2026-08-02T20:14:49+09:00",
+      "created_by": "human:kijima",
+      "review_status": "reviewed",
+      "sanitization_status": "sanitized",
+      "tags": [
+        "presentation-planning",
+        "delivery-decision",
+        "external-research",
+        "failure-definition",
+        "evidence-review",
+        "scope-decision"
+      ]
+    },
+    {
+      "key": "RN-20260802-204018-derive-value-hypothesis-from-decide-backlog",
+      "id": "RN-20260802-204018-derive-value-hypothesis-from-decide-backlog",
+      "type": "raw_note",
+      "title": "Decideのバックログ候補からValue Hypothesisを逆算する技法",
+      "path": "01_working/raw-notes/RN-20260802-204018-derive-value-hypothesis-from-decide-backlog.md",
+      "content_language": "ja",
+      "created_at": "2026-08-02T20:40:18+09:00",
+      "created_by": "human:kijima",
+      "review_status": "reviewed",
+      "sanitization_status": "sanitized",
+      "tags": [
+        "facilitation-technique",
+        "value-hypothesis",
+        "solution-hypothesis",
+        "challenge",
+        "reasoning-chain",
+        "generative-ai",
+        "workshop"
+      ]
+    },
+    {
+      "key": "RN-20260802-211319-textbook-hypothesis-flow-and-solution-first-reconstruction",
+      "id": "RN-20260802-211319-textbook-hypothesis-flow-and-solution-first-reconstruction",
+      "type": "raw_note",
+      "title": "教科書的な仮説構築とSolution候補からの逆算",
+      "path": "01_working/raw-notes/RN-20260802-211319-textbook-hypothesis-flow-and-solution-first-reconstruction.md",
+      "content_language": "ja",
+      "created_at": "2026-08-02T21:13:19+09:00",
+      "created_by": "human:kijima",
+      "review_status": "reviewed",
+      "sanitization_status": "not_needed",
+      "tags": [
+        "hypothesis-construction",
+        "value-hypothesis",
+        "solution-hypothesis",
+        "challenge",
+        "reasoning-chain",
+        "vsm",
+        "mbpm",
+        "facilitation-technique",
+        "quantitative-outcome"
+      ]
+    },
+    {
+      "key": "RN-20260802-215509-relay-metaphor-as-systems-thinking-translation",
+      "id": "RN-20260802-215509-relay-metaphor-as-systems-thinking-translation",
+      "type": "raw_note",
+      "title": "リレー比喩でシステム思考を説明する設計判断",
+      "path": "01_working/raw-notes/RN-20260802-215509-relay-metaphor-as-systems-thinking-translation.md",
+      "content_language": "ja",
+      "created_at": "2026-08-02T21:55:09+09:00",
+      "created_by": "human:kijima",
+      "review_status": "reviewed",
+      "sanitization_status": "not_needed",
+      "tags": [
+        "presentation-design",
+        "relay-metaphor",
+        "systems-thinking",
+        "handover",
+        "vsm",
+        "mbpm",
+        "metric-based-improvement",
+        "rejected-alternative"
+      ]
+    },
+    {
+      "key": "RN-20260802-232517-solution-first-training-observations",
+      "id": "RN-20260802-232517-solution-first-training-observations",
+      "type": "raw_note",
+      "title": "Solution-first再構成あり・なしで観測した受講者行動",
+      "path": "01_working/raw-notes/RN-20260802-232517-solution-first-training-observations.md",
+      "content_language": "ja",
+      "created_at": "2026-08-02T23:25:17+09:00",
+      "created_by": "human:kijima",
+      "review_status": "reviewed",
+      "sanitization_status": "not_needed",
+      "tags": [
+        "facilitation-technique",
+        "hypothesis-validation",
+        "solution-hypothesis",
+        "challenge",
+        "reasoning-chain",
+        "generative-ai",
+        "workshop-observation"
+      ]
+    },
+    {
+      "key": "RN-20260803-000641-data-analysis-in-process-improvement",
+      "id": "RN-20260803-000641-data-analysis-in-process-improvement",
+      "type": "raw_note",
+      "title": "プロセス改善におけるデータ分析",
+      "path": "01_working/raw-notes/RN-20260803-000641-data-analysis-in-process-improvement.md",
+      "content_language": "ja",
+      "created_at": "2026-08-03T00:06:41+09:00",
+      "created_by": "human:kijima",
+      "review_status": "reviewed",
+      "sanitization_status": "not_needed",
+      "tags": [
+        "data-analysis",
+        "metrics",
+        "observability",
+        "dashboard",
+        "business-intelligence",
+        "process-improvement",
+        "anomaly-detection"
+      ]
+    },
+    {
+      "key": "RN-20260803-000910-vsm-mbpm-timing-and-previous-talk-sequence",
+      "id": "RN-20260803-000910-vsm-mbpm-timing-and-previous-talk-sequence",
+      "type": "raw_note",
+      "title": "VSM・MBPM作成タイミングと前回登壇との前後関係",
+      "path": "01_working/raw-notes/RN-20260803-000910-vsm-mbpm-timing-and-previous-talk-sequence.md",
+      "content_language": "ja",
+      "created_at": "2026-08-03T00:09:10+09:00",
+      "created_by": "human:kijima",
+      "review_status": "reviewed",
+      "sanitization_status": "not_needed",
+      "tags": [
+        "presentation-design",
+        "vsm",
+        "mbpm",
+        "journey",
+        "previous-talk",
+        "sequencing",
+        "genai-context"
+      ]
+    },
+    {
+      "key": "RN-20260803-011229-ai-slop-experience-and-organizational-effect-matrix",
+      "id": "RN-20260803-011229-ai-slop-experience-and-organizational-effect-matrix",
+      "type": "raw_note",
+      "title": "AI Slop経験と組織効果を分ける2×2の見せ方",
+      "path": "01_working/raw-notes/RN-20260803-011229-ai-slop-experience-and-organizational-effect-matrix.md",
+      "content_language": "ja",
+      "created_at": "2026-08-03T01:12:29+09:00",
+      "created_by": "agent:codex",
+      "review_status": "reviewed",
+      "sanitization_status": "not_needed",
+      "tags": [
+        "presentation-design",
+        "ai-slop",
+        "organizational-outcome",
+        "downstream-load",
+        "value-hypothesis",
+        "lean-startup",
+        "mbpm",
+        "decision-matrix"
+      ]
+    },
+    {
+      "key": "RN-20260803-200307-netflix-cpto-systems-thinking-ai-era",
+      "id": "RN-20260803-200307-netflix-cpto-systems-thinking-ai-era",
+      "type": "raw_note",
+      "title": "PEK参考資料メモ：Netflix CPTO Elizabeth Stone",
+      "path": "01_working/raw-notes/RN-20260803-200307-netflix-cpto-systems-thinking-ai-era.md",
+      "content_language": "ja",
+      "created_at": "2026-08-03T20:03:07+09:00",
+      "created_by": "human:kijima",
+      "review_status": "corrected",
+      "sanitization_status": "not_needed",
+      "tags": [
+        "ai-collaboration",
+        "ai-fluency",
+        "netflix",
+        "organizational-design",
+        "platform-engineering",
+        "systems-thinking"
+      ]
+    },
+    {
+      "key": "RN-20260803-201826-netflix-cpto-video-session-positioning",
+      "id": "RN-20260803-201826-netflix-cpto-video-session-positioning",
+      "type": "raw_note",
+      "title": "Netflix CPTO動画を登壇で紹介する位置づけ",
+      "path": "01_working/raw-notes/RN-20260803-201826-netflix-cpto-video-session-positioning.md",
+      "content_language": "ja",
+      "created_at": "2026-08-03T20:18:26+09:00",
+      "created_by": "human:kijima",
+      "review_status": "reviewed",
+      "sanitization_status": "not_needed",
+      "tags": [
+        "external-reference",
+        "netflix",
+        "problem-space",
+        "session-design",
+        "systems-thinking"
+      ]
+    },
+    {
+      "key": "RN-20260804-002446-hypothesis-validation-as-uncertainty-reduction",
+      "id": "RN-20260804-002446-hypothesis-validation-as-uncertainty-reduction",
+      "type": "raw_note",
+      "title": "仮説検証を不確実性の分解と意思決定として説明する",
+      "path": "01_working/raw-notes/RN-20260804-002446-hypothesis-validation-as-uncertainty-reduction.md",
+      "content_language": "ja",
+      "created_at": "2026-08-04T00:24:46+09:00",
+      "created_by": "human:kijima",
+      "review_status": "reviewed",
+      "sanitization_status": "not_needed",
+      "tags": [
+        "decision-making",
+        "hypothesis-validation",
+        "lean-startup",
+        "risk-management",
+        "uncertainty"
+      ]
+    },
+    {
+      "key": "RN-20260804-013224-itsm-metrics-analysis-practice",
+      "id": "RN-20260804-013224-itsm-metrics-analysis-practice",
+      "type": "raw_note",
+      "title": "ITSMにおけるDashboardと分析運用の実践経験",
+      "path": "01_working/raw-notes/RN-20260804-013224-itsm-metrics-analysis-practice.md",
+      "content_language": "ja",
+      "created_at": "2026-08-04T01:32:24+09:00",
+      "created_by": "human:kijima",
+      "review_status": "reviewed",
+      "sanitization_status": "not_needed",
+      "tags": [
+        "itsm",
+        "metrics",
+        "dashboard",
+        "data-analysis",
+        "practitioner-experience",
+        "process-improvement"
+      ]
+    },
+    {
+      "key": "RN-20260804-013822-discovery-result-customer-inquiry",
+      "id": "RN-20260804-013822-discovery-result-customer-inquiry",
+      "type": "raw_note",
+      "title": "Discovery結果をCustomerへ確認してきた実務経験",
+      "path": "01_working/raw-notes/RN-20260804-013822-discovery-result-customer-inquiry.md",
+      "content_language": "ja",
+      "created_at": "2026-08-04T01:38:22+09:00",
+      "created_by": "human:kijima",
+      "review_status": "reviewed",
+      "sanitization_status": "not_needed",
+      "tags": [
+        "discovery",
+        "practitioner-experience",
+        "customer-inquiry",
+        "outcome-delivery",
+        "mobius"
+      ]
+    },
+    {
+      "key": "RN-20260804-014226-prior-ai-slop-article-session-continuity",
+      "id": "RN-20260804-014226-prior-ai-slop-article-session-continuity",
+      "type": "raw_note",
+      "title": "2026年4月公開記事と今回の登壇の連続性",
+      "path": "01_working/raw-notes/RN-20260804-014226-prior-ai-slop-article-session-continuity.md",
+      "content_language": "ja",
+      "created_at": "2026-08-04T01:42:26+09:00",
+      "created_by": "agent:codex",
+      "review_status": "reviewed",
+      "sanitization_status": "not_needed",
+      "tags": [
+        "ai-slop",
+        "problem-space",
+        "session-continuity",
+        "systems-thinking",
+        "value-stream"
+      ]
+    },
+    {
+      "key": "RN-20260804-014715-cross-domain-metrics-analysis-practice",
+      "id": "RN-20260804-014715-cross-domain-metrics-analysis-practice",
+      "type": "raw_note",
+      "title": "分野をまたいだメトリック分析運用の適用経験",
+      "path": "01_working/raw-notes/RN-20260804-014715-cross-domain-metrics-analysis-practice.md",
+      "content_language": "ja",
+      "created_at": "2026-08-04T01:47:15+09:00",
+      "created_by": "human:kijima",
+      "review_status": "reviewed",
+      "sanitization_status": "not_needed",
+      "tags": [
+        "metrics",
+        "data-analysis",
+        "practitioner-experience",
+        "project-portfolio",
+        "platform-engineering"
+      ]
+    },
+    {
+      "key": "RN-20260804-015137-analysis-skill-required-for-metrics",
+      "id": "RN-20260804-015137-analysis-skill-required-for-metrics",
+      "type": "raw_note",
+      "title": "MetricからFactを取り出すには分析Techniqueの習熟が必要",
+      "path": "01_working/raw-notes/RN-20260804-015137-analysis-skill-required-for-metrics.md",
+      "content_language": "ja",
+      "created_at": "2026-08-04T01:51:37+09:00",
+      "created_by": "human:kijima",
+      "review_status": "reviewed",
+      "sanitization_status": "not_needed",
+      "tags": [
+        "metrics",
+        "data-analysis",
+        "analytical-skill",
+        "practitioner-experience",
+        "dashboard"
+      ]
+    },
+    {
+      "key": "RN-20260804-144101-betterup-workslop-recipient-experience-reading",
+      "id": "RN-20260804-144101-betterup-workslop-recipient-experience-reading",
+      "type": "raw_note",
+      "title": "BetterUp Workslop調査を受け手の体験から読む",
+      "path": "01_working/raw-notes/RN-20260804-144101-betterup-workslop-recipient-experience-reading.md",
+      "content_language": "ja",
+      "created_at": "2026-08-04T14:41:01+09:00",
+      "created_by": "agent:codex",
+      "review_status": "reviewed",
+      "sanitization_status": "not_needed",
+      "tags": [
+        "accountability",
+        "ai-slop",
+        "customer-meaning",
+        "platform-service",
+        "recipient-experience",
+        "trust",
+        "workslop"
+      ]
+    },
+    {
+      "key": "RN-20260804-195507-ai-proposal-review-burden-case",
+      "id": "RN-20260804-195507-ai-proposal-review-burden-case",
+      "type": "raw_note",
+      "title": "生成AIによる提案書生成で検証・再構築作業が増え停止判断に至った事例",
+      "path": "01_working/raw-notes/RN-20260804-195507-ai-proposal-review-burden-case.md",
+      "content_language": "ja",
+      "created_at": "2026-08-04T19:55:07+09:00",
+      "created_by": "agent:codex",
+      "review_status": "corrected",
+      "sanitization_status": "sanitized",
+      "tags": [
+        "ai-slop",
+        "case-recollection",
+        "cost-transfer",
+        "proposal",
+        "review",
+        "workslop"
+      ]
+    },
+    {
+      "key": "RN-20260804-204359-ai-low-downstream-burden-conditions",
+      "id": "RN-20260804-204359-ai-low-downstream-burden-conditions",
+      "type": "raw_note",
+      "title": "AI活用で下流負荷が生じにくい条件と段階的自動化",
+      "path": "01_working/raw-notes/RN-20260804-204359-ai-low-downstream-burden-conditions.md",
+      "content_language": "ja",
+      "created_at": "2026-08-04T20:43:59+09:00",
+      "created_by": "agent:codex",
+      "review_status": "reviewed",
+      "sanitization_status": "sanitized",
+      "tags": [
+        "ai-automation",
+        "contract-first",
+        "guardrails",
+        "handover",
+        "human-ai-collaboration",
+        "progressive-automation",
+        "workslop"
+      ]
+    },
+    {
+      "key": "RN-20260804-204359-conversational-repository-decision-support",
+      "id": "RN-20260804-204359-conversational-repository-decision-support",
+      "type": "raw_note",
+      "title": "対話型RepositoryによるEnterprise Architecture意思決定支援",
+      "path": "01_working/raw-notes/RN-20260804-204359-conversational-repository-decision-support.md",
+      "content_language": "ja",
+      "created_at": "2026-08-04T20:43:59+09:00",
+      "created_by": "agent:codex",
+      "review_status": "reviewed",
+      "sanitization_status": "sanitized",
+      "tags": [
+        "contract-first",
+        "decision-support",
+        "enterprise-architecture",
+        "human-ai-collaboration",
+        "personal-assistant",
+        "practitioner-case"
+      ]
+    },
+    {
+      "key": "RN-20260804-211806-domain-synthesis-answer-quality-change",
+      "id": "RN-20260804-211806-domain-synthesis-answer-quality-change",
+      "type": "raw_note",
+      "title": "EA Repositoryの領域別Synthesis導入と回答品質変化",
+      "path": "01_working/raw-notes/RN-20260804-211806-domain-synthesis-answer-quality-change.md",
+      "content_language": "ja",
+      "created_at": "2026-08-04T21:18:06+09:00",
+      "created_by": "agent:codex",
+      "review_status": "reviewed",
+      "sanitization_status": "sanitized",
+      "tags": [
+        "answer-quality",
+        "blind-spot",
+        "enterprise-architecture",
+        "knowledge-base",
+        "reasoning-chain",
+        "synthesis",
+        "workslop"
+      ]
+    },
+    {
+      "key": "RN-20260804-220602-ai-outcome-closure-practitioner-interview",
+      "id": "RN-20260804-220602-ai-outcome-closure-practitioner-interview",
+      "type": "raw_note",
+      "title": "AI OutcomeとClosure条件に関する一人の実践者への反証的インタビュー",
+      "path": "01_working/raw-notes/RN-20260804-220602-ai-outcome-closure-practitioner-interview.md",
+      "content_language": "ja",
+      "created_at": "2026-08-04T22:06:02+09:00",
+      "created_by": "agent:codex",
+      "review_status": "reviewed",
+      "sanitization_status": "sanitized",
+      "tags": [
+        "ai-outcome",
+        "closure",
+        "cfp",
+        "human-ai-collaboration",
+        "ideation",
+        "interview",
+        "second-brain",
+        "workslop"
+      ]
+    },
+    {
+      "key": "RN-20260804-230526-platform-engineering-as-service-engineering",
+      "id": "RN-20260804-230526-platform-engineering-as-service-engineering",
+      "type": "raw_note",
+      "title": "AI時代のPlatform EngineeringをService Engineeringとして捉える",
+      "path": "01_working/raw-notes/RN-20260804-230526-platform-engineering-as-service-engineering.md",
+      "content_language": "ja",
+      "created_at": "2026-08-04T23:05:26+09:00",
+      "created_by": "agent:codex",
+      "review_status": "reviewed",
+      "sanitization_status": "not_needed",
+      "tags": [
+        "ai-slop",
+        "contract-first",
+        "platform-advisor",
+        "platform-engineering",
+        "service-contract",
+        "service-engineering",
+        "work-design"
+      ]
+    },
+    {
+      "key": "RN-20260804-235840-ai-proposal-stakeholder-concerns-handoff-contract",
+      "id": "RN-20260804-235840-ai-proposal-stakeholder-concerns-handoff-contract",
+      "type": "raw_note",
+      "title": "AI生成提案書におけるStakeholder ConcernとHand-off Contract",
+      "path": "01_working/raw-notes/RN-20260804-235840-ai-proposal-stakeholder-concerns-handoff-contract.md",
+      "content_language": "ja",
+      "created_at": "2026-08-04T23:58:40+09:00",
+      "created_by": "agent:codex",
+      "review_status": "reviewed",
+      "sanitization_status": "not_needed",
+      "tags": [
+        "ai-slop",
+        "contract",
+        "handoff",
+        "proposal",
+        "service-design",
+        "stakeholder-concern"
+      ]
+    },
+    {
+      "key": "RN-20260805-002030-ai-output-reviewer-feedback-withdrawal-case",
+      "id": "RN-20260805-002030-ai-output-reviewer-feedback-withdrawal-case",
+      "type": "raw_note",
+      "title": "未成熟なAI生成資料を受けたReviewerがFeedback簡略化を検討した事例",
+      "path": "01_working/raw-notes/RN-20260805-002030-ai-output-reviewer-feedback-withdrawal-case.md",
+      "content_language": "ja",
+      "created_at": "2026-08-05T00:20:30+09:00",
+      "created_by": "agent:codex",
+      "review_status": "reviewed",
+      "sanitization_status": "not_needed",
+      "tags": [
+        "ai-slop",
+        "case-recollection",
+        "collaboration",
+        "feedback",
+        "handoff",
+        "review",
+        "trust",
+        "workslop"
+      ]
+    },
+    {
+      "key": "RN-20260805-004725-ai-downstream-control-priority-and-output-reversibility",
+      "id": "RN-20260805-004725-ai-downstream-control-priority-and-output-reversibility",
+      "type": "raw_note",
+      "title": "AI下流負荷制御の優先条件とOutputの可逆性",
+      "path": "01_working/raw-notes/RN-20260805-004725-ai-downstream-control-priority-and-output-reversibility.md",
+      "content_language": "ja",
+      "created_at": "2026-08-05T00:47:25+09:00",
+      "created_by": "agent:codex",
+      "review_status": "reviewed",
+      "sanitization_status": "not_needed",
+      "tags": [
+        "ai-slop",
+        "platform-service",
+        "downstream-burden",
+        "reversibility",
+        "two-way-door",
+        "service-adoption"
+      ]
+    },
+    {
+      "key": "RN-20260805-094034-ai-building-block-automation-maturity",
+      "id": "RN-20260805-094034-ai-building-block-automation-maturity",
+      "type": "raw_note",
+      "title": "AI Building BlockからLoop・Graphへ進む段階的自動化",
+      "path": "01_working/raw-notes/RN-20260805-094034-ai-building-block-automation-maturity.md",
+      "content_language": "ja",
+      "created_at": "2026-08-05T09:40:34+09:00",
+      "created_by": "agent:codex",
+      "review_status": "reviewed",
+      "sanitization_status": "not_needed",
+      "tags": [
+        "ai-automation",
+        "ai-outcome",
+        "building-block",
+        "evaluator",
+        "graph",
+        "human-in-the-loop",
+        "loop",
+        "orchestration",
+        "progressive-automation"
+      ]
+    },
+    {
+      "key": "RN-20260805-211320-ai-slop-design-layers",
+      "id": "RN-20260805-211320-ai-slop-design-layers",
+      "type": "raw_note",
+      "title": "AI SlopをBuilding Block・Automation・Feature・Serviceの設計層で分ける",
+      "path": "01_working/raw-notes/RN-20260805-211320-ai-slop-design-layers.md",
+      "content_language": "ja",
+      "created_at": "2026-08-05T21:13:20+09:00",
+      "created_by": "agent:codex",
+      "review_status": "reviewed",
+      "sanitization_status": "not_needed",
+      "tags": [
+        "ai-slop",
+        "automation-design",
+        "building-block",
+        "feature-design",
+        "service-design",
+        "test-pyramid",
+        "validation"
+      ]
+    },
+    {
+      "key": "RN-20260805-211321-ai-platform-prerequisite-knowledge-gap",
+      "id": "RN-20260805-211321-ai-platform-prerequisite-knowledge-gap",
+      "type": "raw_note",
+      "title": "AI開発基盤の理解に必要なAutomation・Platform前提知識への気づき",
+      "path": "01_working/raw-notes/RN-20260805-211321-ai-platform-prerequisite-knowledge-gap.md",
+      "content_language": "ja",
+      "created_at": "2026-08-05T21:13:21+09:00",
+      "created_by": "agent:codex",
+      "review_status": "reviewed",
+      "sanitization_status": "sanitized",
+      "tags": [
+        "ai-platform",
+        "audience-assumption",
+        "automation-engineering",
+        "enablement",
+        "knowledge-gap",
+        "platform-engineering",
+        "session-design"
+      ]
+    },
+    {
+      "key": "RN-20260805-223703-audience-ai-slop-interviews",
+      "id": "RN-20260805-223703-audience-ai-slop-interviews",
+      "type": "raw_note",
+      "title": "AI Slopに関係する課題と対処方法への関心についての3人へのヒアリング",
+      "path": "01_working/raw-notes/RN-20260805-223703-audience-ai-slop-interviews.md",
+      "content_language": "ja",
+      "created_at": "2026-08-05T22:37:03+09:00",
+      "created_by": "agent:codex",
+      "review_status": "reviewed",
+      "sanitization_status": "not_needed",
+      "tags": [
+        "ai-slop",
+        "audience",
+        "interview",
+        "session-value",
+        "validation"
+      ]
+    },
+    {
+      "key": "RN-20260805-225026-ai-poc-business-use-interview",
+      "id": "RN-20260805-225026-ai-poc-business-use-interview",
+      "type": "raw_note",
+      "title": "機能評価型のAI PoCがBusiness活用判断へ接続しなかった事例の本人Interview",
+      "path": "01_working/raw-notes/RN-20260805-225026-ai-poc-business-use-interview.md",
+      "content_language": "ja",
+      "created_at": "2026-08-05T22:50:26+09:00",
+      "created_by": "agent:codex",
+      "review_status": "reviewed",
+      "sanitization_status": "not_needed",
+      "tags": [
+        "ai-poc",
+        "business-outcome",
+        "capability-first",
+        "interview",
+        "validation"
+      ]
+    },
+    {
+      "key": "RN-20260806-011126-platform-advisor-genai-scenario-draft",
+      "id": "RN-20260806-011126-platform-advisor-genai-scenario-draft",
+      "type": "raw_note",
+      "title": "Platform Advisor通し事例の未採用GenAI作業案",
+      "path": "01_working/raw-notes/RN-20260806-011126-platform-advisor-genai-scenario-draft.md",
+      "content_language": "ja",
+      "created_at": "2026-08-06T01:11:26+09:00",
+      "created_by": "agent:codex",
+      "review_status": "reviewed",
+      "sanitization_status": "not_needed",
+      "tags": [
+        "platform-advisor",
+        "worked-example",
+        "hypothesis-construction",
+        "hypothesis-validation",
+        "value-hypothesis",
+        "service-design",
+        "genai-proposal",
+        "not-adopted"
+      ]
+    },
+    {
+      "key": "RN-20260806-014446-platform-advisor-business-goal-and-blind-spot",
+      "id": "RN-20260806-014446-platform-advisor-business-goal-and-blind-spot",
+      "type": "raw_note",
+      "title": "Platform Advisor物語のビジネスゴールとBlind Spot",
+      "path": "01_working/raw-notes/RN-20260806-014446-platform-advisor-business-goal-and-blind-spot.md",
+      "content_language": "ja",
+      "created_at": "2026-08-06T01:44:46+09:00",
+      "created_by": "human:kijima",
+      "review_status": "reviewed",
+      "sanitization_status": "not_needed",
+      "tags": [
+        "platform-advisor",
+        "worked-example",
+        "business-goal",
+        "platform-engineering",
+        "kubernetes",
+        "value-hypothesis",
+        "blind-spot"
+      ]
+    },
+    {
+      "key": "RN-20260806-194532-platform-advisor-selection-vsm-and-mbpm",
+      "id": "RN-20260806-194532-platform-advisor-selection-vsm-and-mbpm",
+      "type": "raw_note",
+      "title": "Platform Advisor物語のPlatform選択VSMとMBPM",
+      "path": "01_working/raw-notes/RN-20260806-194532-platform-advisor-selection-vsm-and-mbpm.md",
+      "content_language": "ja",
+      "created_at": "2026-08-06T19:45:32+09:00",
+      "created_by": "human:kijima",
+      "review_status": "reviewed",
+      "sanitization_status": "not_needed",
+      "tags": [
+        "platform-advisor",
+        "vsm",
+        "mbpm",
+        "platform-engineering",
+        "process-analysis",
+        "user-research",
+        "selection-bias"
+      ]
+    },
+    {
+      "key": "RN-20260806-205437-platform-selection-solution-options",
+      "id": "RN-20260806-205437-platform-selection-solution-options",
+      "type": "raw_note",
+      "title": "Platform選択課題に対するSolution Option",
+      "path": "01_working/raw-notes/RN-20260806-205437-platform-selection-solution-options.md",
+      "content_language": "ja",
+      "created_at": "2026-08-06T20:54:37+09:00",
+      "created_by": "human:kijima",
+      "review_status": "reviewed",
+      "sanitization_status": "not_needed",
+      "tags": [
+        "platform-advisor",
+        "platform-selection",
+        "solution-options",
+        "service-design",
+        "documentation",
+        "decision-support"
+      ]
+    },
+    {
+      "key": "RN-20260806-210946-platform-advisor-fictional-validation",
+      "id": "RN-20260806-210946-platform-advisor-fictional-validation",
+      "type": "raw_note",
+      "title": "Platform Advisorを選ぶ物語内検証の設定",
+      "path": "01_working/raw-notes/RN-20260806-210946-platform-advisor-fictional-validation.md",
+      "content_language": "ja",
+      "created_at": "2026-08-06T21:09:46+09:00",
+      "created_by": "agent:codex",
+      "review_status": "reviewed",
+      "sanitization_status": "not_needed",
+      "tags": [
+        "platform-advisor",
+        "worked-example",
+        "fictional-scenario",
+        "hypothesis-validation",
+        "prototype-testing",
+        "user-research",
+        "selection-bias",
+        "value-hypothesis"
+      ]
+    },
+    {
+      "key": "RN-20260806-212832-platform-advisor-vsm-effect-hypothesis",
+      "id": "RN-20260806-212832-platform-advisor-vsm-effect-hypothesis",
+      "type": "raw_note",
+      "title": "Platform AdvisorのVSM上の効果仮説",
+      "path": "01_working/raw-notes/RN-20260806-212832-platform-advisor-vsm-effect-hypothesis.md",
+      "content_language": "ja",
+      "created_at": "2026-08-06T21:28:32+09:00",
+      "created_by": "agent:codex",
+      "review_status": "reviewed",
+      "sanitization_status": "not_needed",
+      "tags": [
+        "platform-advisor",
+        "vsm",
+        "effect-hypothesis",
+        "process-improvement",
+        "lead-time",
+        "decision-support",
+        "adr",
+        "human-ai-collaboration"
+      ]
+    },
+    {
+      "key": "RN-20260806-213822-platform-advisor-downstream-ai-slop-signals",
+      "id": "RN-20260806-213822-platform-advisor-downstream-ai-slop-signals",
+      "type": "raw_note",
+      "title": "Platform AdvisorによるAI Slopの下流観測ポイント",
+      "path": "01_working/raw-notes/RN-20260806-213822-platform-advisor-downstream-ai-slop-signals.md",
+      "content_language": "ja",
+      "created_at": "2026-08-06T21:38:22+09:00",
+      "created_by": "agent:codex",
+      "review_status": "reviewed",
+      "sanitization_status": "not_needed",
+      "tags": [
+        "platform-advisor",
+        "ai-slop",
+        "vsm",
+        "downstream-load",
+        "quality-guardrail",
+        "ticket-metrics",
+        "follow-up-interview",
+        "cost-transfer"
+      ]
+    },
+    {
+      "key": "RN-20260806-224717-vsm-mbpm-process-analysis-explanation",
+      "id": "RN-20260806-224717-vsm-mbpm-process-analysis-explanation",
+      "type": "raw_note",
+      "title": "VSM・MBPMによるプロセス分析の登壇用解説",
+      "path": "01_working/raw-notes/RN-20260806-224717-vsm-mbpm-process-analysis-explanation.md",
+      "content_language": "ja",
+      "created_at": "2026-08-06T22:47:17+09:00",
+      "created_by": "human:kijima",
+      "review_status": "reviewed",
+      "sanitization_status": "not_needed",
+      "tags": [
+        "vsm",
+        "mbpm",
+        "process-analysis",
+        "process-improvement",
+        "presentation-planning",
+        "platform-advisor"
+      ]
+    },
+    {
+      "key": "RN-20260807-123008-platform-advisor-effect-measurement-observation-rationale",
+      "id": "RN-20260807-123008-platform-advisor-effect-measurement-observation-rationale",
+      "type": "raw_note",
+      "title": "Platform Advisorの効果測定と観測点の根拠",
+      "path": "01_working/raw-notes/RN-20260807-123008-platform-advisor-effect-measurement-observation-rationale.md",
+      "content_language": "ja",
+      "created_at": "2026-08-07T12:30:08+09:00",
+      "created_by": "human:kijima",
+      "review_status": "reviewed",
+      "sanitization_status": "not_needed",
+      "tags": [
+        "platform-advisor",
+        "effect-measurement",
+        "vsm",
+        "mbpm",
+        "ai-slop",
+        "quality-guardrail",
+        "business-outcome",
+        "cost-transfer"
+      ]
+    },
+    {
+      "key": "RN-20260807-140147-platform-advisor-story-solution-first-mobius",
+      "id": "RN-20260807-140147-platform-advisor-story-solution-first-mobius",
+      "type": "raw_note",
+      "title": "Platform Advisor物語内のSolution-first再構成とMobius 3区分",
+      "path": "01_working/raw-notes/RN-20260807-140147-platform-advisor-story-solution-first-mobius.md",
+      "content_language": "ja",
+      "created_at": "2026-08-07T14:01:47+09:00",
+      "created_by": "human:kijima",
+      "review_status": "reviewed",
+      "sanitization_status": "not_needed",
+      "tags": [
+        "platform-advisor",
+        "solution-first",
+        "mobius",
+        "problem-hypothesis",
+        "value-hypothesis",
+        "solution-hypothesis",
+        "feature-hypothesis",
+        "fictional-scenario"
+      ]
+    },
+    {
+      "key": "RN-20260807-142745-closing-10-20-70-process-practice",
+      "id": "RN-20260807-142745-closing-10-20-70-process-practice",
+      "type": "raw_note",
+      "title": "クロージングで10–20–70へ接続する構成案",
+      "path": "01_working/raw-notes/RN-20260807-142745-closing-10-20-70-process-practice.md",
+      "content_language": "ja",
+      "created_at": "2026-08-07T14:27:45+09:00",
+      "created_by": "human:kijima",
+      "review_status": "unreviewed",
+      "sanitization_status": "not_needed",
+      "tags": [
+        "presentation-planning",
+        "closing",
+        "ai-slop",
+        "hypothesis-validation",
+        "process-improvement",
+        "bcg-10-20-70"
+      ]
+    },
+    {
+      "key": "RN-20260807-181236-reasoning-chain-validation-prompt-sanitized",
+      "id": "RN-20260807-181236-reasoning-chain-validation-prompt-sanitized",
+      "type": "raw_note",
+      "title": "Reasoning Chain強度チェック用Promptの公開用クレンジング版",
+      "path": "01_working/raw-notes/RN-20260807-181236-reasoning-chain-validation-prompt-sanitized.md",
+      "content_language": "ja",
+      "created_at": "2026-08-07T18:12:36+09:00",
+      "created_by": "human:kijima",
+      "review_status": "reviewed",
+      "sanitization_status": "sanitized",
+      "tags": [
+        "reasoning-chain",
+        "solution-first",
+        "problem-statement",
+        "generative-ai",
+        "workshop-prompt",
+        "platform-engineering",
+        "sanitized-source"
+      ]
+    },
+    {
+      "key": "RN-20260807-185019-solution-first-problem-statement-rationale-and-limits",
+      "id": "RN-20260807-185019-solution-first-problem-statement-rationale-and-limits",
+      "type": "raw_note",
+      "title": "Solution-firstでProblem Statementを再構成する理由と限界",
+      "path": "01_working/raw-notes/RN-20260807-185019-solution-first-problem-statement-rationale-and-limits.md",
+      "content_language": "ja",
+      "created_at": "2026-08-07T18:50:19+09:00",
+      "created_by": "human:kijima",
+      "review_status": "reviewed",
+      "sanitization_status": "not_needed",
+      "tags": [
+        "solution-first",
+        "problem-statement",
+        "reasoning-chain",
+        "vsm",
+        "mbpm",
+        "generative-ai",
+        "cognitive-bias",
+        "facilitation",
+        "platform-advisor"
+      ]
+    },
+    {
+      "key": "RN-20260807-191024-problem-first-solution-first-quality-tradeoff",
+      "id": "RN-20260807-191024-problem-first-solution-first-quality-tradeoff",
+      "type": "raw_note",
+      "title": "Problem-firstの網羅性とSolution-firstの全体品質Trade-off",
+      "path": "01_working/raw-notes/RN-20260807-191024-problem-first-solution-first-quality-tradeoff.md",
+      "content_language": "ja",
+      "created_at": "2026-08-07T19:10:24+09:00",
+      "created_by": "human:kijima",
+      "review_status": "reviewed",
+      "sanitization_status": "not_needed",
+      "tags": [
+        "solution-first",
+        "problem-first",
+        "problem-analysis",
+        "workshop-quality",
+        "facilitation",
+        "participant-motivation",
+        "vsm",
+        "mbpm",
+        "cognitive-bias",
+        "platform-advisor"
+      ]
+    },
+    {
+      "key": "RN-20260807-194919-platform-advisor-retrospective-iterative-problem-learning",
+      "id": "RN-20260807-194919-platform-advisor-retrospective-iterative-problem-learning",
+      "type": "raw_note",
+      "title": "Platform Advisor感想戦と反復的なProblem理解",
+      "path": "01_working/raw-notes/RN-20260807-194919-platform-advisor-retrospective-iterative-problem-learning.md",
+      "content_language": "ja",
+      "created_at": "2026-08-07T19:49:19+09:00",
+      "created_by": "human:kijima",
+      "review_status": "reviewed",
+      "sanitization_status": "not_needed",
+      "tags": [
+        "platform-advisor",
+        "retrospective",
+        "problem-understanding",
+        "iterative-learning",
+        "blind-spot",
+        "value-hypothesis",
+        "decision-rights",
+        "standard-path",
+        "selection-bias",
+        "development-value-stream"
+      ]
+    },
+    {
+      "key": "RN-20260808-195818-problem-sufficiency-reachable-system-improvement",
+      "id": "RN-20260808-195818-problem-sufficiency-reachable-system-improvement",
+      "type": "raw_note",
+      "title": "定義した問題への十分性と到達可能なEnd-to-End改善",
+      "path": "01_working/raw-notes/RN-20260808-195818-problem-sufficiency-reachable-system-improvement.md",
+      "content_language": "ja",
+      "created_at": "2026-08-08T19:58:18+09:00",
+      "created_by": "agent:codex",
+      "review_status": "reviewed",
+      "sanitization_status": "not_needed",
+      "tags": [
+        "decision-sufficiency",
+        "dvs",
+        "hypothesis-validation",
+        "itsm",
+        "ovs",
+        "problem-definition",
+        "practitioner-experience",
+        "systems-thinking"
+      ]
+    },
+    {
+      "key": "RN-20260808-201058-reachable-value-stream-impact-guardrails",
+      "id": "RN-20260808-201058-reachable-value-stream-impact-guardrails",
+      "type": "raw_note",
+      "title": "手の届くValue Streamで効果と副作用を確認する",
+      "path": "01_working/raw-notes/RN-20260808-201058-reachable-value-stream-impact-guardrails.md",
+      "content_language": "ja",
+      "created_at": "2026-08-08T20:10:58+09:00",
+      "created_by": "agent:codex",
+      "review_status": "reviewed",
+      "sanitization_status": "not_needed",
+      "tags": [
+        "cost-transfer",
+        "guardrails",
+        "itsm",
+        "local-optimization",
+        "ovs",
+        "practitioner-experience",
+        "systems-thinking",
+        "value-stream"
+      ]
+    },
+    {
+      "key": "RN-20260808-202752-responsibility-bounded-problem-scope",
+      "id": "RN-20260808-202752-responsibility-bounded-problem-scope",
+      "type": "raw_note",
+      "title": "責務を超えるProblem Scopeと手の届くValue Stream",
+      "path": "01_working/raw-notes/RN-20260808-202752-responsibility-bounded-problem-scope.md",
+      "content_language": "ja",
+      "created_at": "2026-08-08T20:27:52+09:00",
+      "created_by": "agent:codex",
+      "review_status": "reviewed",
+      "sanitization_status": "not_needed",
+      "tags": [
+        "decision-rights",
+        "decision-sufficiency",
+        "local-optimization",
+        "problem-definition",
+        "problem-scope",
+        "practitioner-experience",
+        "systems-thinking",
+        "value-stream"
+      ]
+    },
+    {
+      "key": "RN-20260808-213258-one-shot-success-without-organizational-dvs-learning",
+      "id": "RN-20260808-213258-one-shot-success-without-organizational-dvs-learning",
+      "type": "raw_note",
+      "title": "組織的なDVS学習改善がない場合の一回の成功候補",
+      "path": "01_working/raw-notes/RN-20260808-213258-one-shot-success-without-organizational-dvs-learning.md",
+      "content_language": "ja",
+      "created_at": "2026-08-08T21:32:58+09:00",
+      "created_by": "agent:codex",
+      "review_status": "reviewed",
+      "sanitization_status": "not_needed",
+      "tags": [
+        "case-recollection",
+        "dvs",
+        "hypothesis-validation",
+        "organizational-learning",
+        "ovs",
+        "platform-service"
+      ]
+    },
+    {
+      "key": "RN-20260808-221549-individual-substitution-for-organizational-dvs-learning",
+      "id": "RN-20260808-221549-individual-substitution-for-organizational-dvs-learning",
+      "type": "raw_note",
+      "title": "例外的な個人による組織的DVS学習Capabilityの局所代行",
+      "path": "01_working/raw-notes/RN-20260808-221549-individual-substitution-for-organizational-dvs-learning.md",
+      "content_language": "ja",
+      "created_at": "2026-08-08T22:15:49+09:00",
+      "created_by": "agent:codex",
+      "review_status": "reviewed",
+      "sanitization_status": "not_needed",
+      "tags": [
+        "data-contract",
+        "dvs",
+        "individual-dependency",
+        "organizational-learning",
+        "platform-adoption",
+        "practitioner-experience",
+        "social-implementation"
+      ]
+    },
+    {
+      "key": "RN-20260808-224254-business-use-case-loss-in-scratch-development",
+      "id": "RN-20260808-224254-business-use-case-loss-in-scratch-development",
+      "type": "raw_note",
+      "title": "Scratch開発でBusiness Use CaseがSystem Use Caseへ縮退する構造",
+      "path": "01_working/raw-notes/RN-20260808-224254-business-use-case-loss-in-scratch-development.md",
+      "content_language": "ja",
+      "created_at": "2026-08-08T22:42:54+09:00",
+      "created_by": "agent:codex",
+      "review_status": "reviewed",
+      "sanitization_status": "not_needed",
+      "tags": [
+        "business-use-case",
+        "ddd",
+        "dvs",
+        "enterprise-development",
+        "requirements",
+        "scratch-development",
+        "system-use-case",
+        "ux-responsibility"
+      ]
+    },
+    {
+      "key": "HYP-20260730-015717-organizer-selection-is-sufficient-signal",
+      "id": "HYP-20260730-015717-organizer-selection-is-sufficient-signal",
+      "type": "hypothesis_episode",
+      "title": "開催側の採択を方向性継続の十分なシグナルとして扱う",
+      "path": "02_analysis/hypothesis-episodes/HYP-20260730-015717-organizer-selection-is-sufficient-signal.md",
+      "content_language": "ja",
+      "created_at": "2026-07-30T01:57:17+09:00",
+      "created_by": "agent:codex",
+      "status": "reviewed",
+      "confidence": "medium",
+      "hypothesis_scope": "session",
+      "hypothesis_level": "not_assessed",
+      "knowledge_basis": [
+        "explicit_validation",
+        "external_research",
+        "reasoned_synthesis"
+      ],
+      "result": "supports",
+      "validation_components": []
+    },
+    {
+      "key": "HYP-20260730-015718-ai-speed-requires-value-validation",
+      "id": "HYP-20260730-015718-ai-speed-requires-value-validation",
+      "type": "hypothesis_episode",
+      "title": "価値選択と検証はAI高速化による回避可能な下流Costを減らす",
+      "path": "02_analysis/hypothesis-episodes/HYP-20260730-015718-ai-speed-requires-value-validation.md",
+      "content_language": "ja",
+      "created_at": "2026-07-30T01:57:18+09:00",
+      "created_by": "agent:codex",
+      "status": "reviewed",
+      "confidence": "low",
+      "hypothesis_scope": "practice",
+      "hypothesis_level": "solution",
+      "knowledge_basis": [
+        "recorded_statement",
+        "practitioner_experience",
+        "case_recollection",
+        "explicit_validation",
+        "reasoned_synthesis"
+      ],
+      "result": "inconclusive",
+      "validation_components": [
+        {
+          "id": "U1",
+          "uncertainty": "価値仮説と期待Signalを明示すると、継続、廃棄、保留または追加確認の判断を更新しやすくなる",
+          "decision_importance": "critical",
+          "evidence_refs": [
+            "OBS-20260805-225027-function-evaluation-poc-business-use-gap"
+          ],
+          "coverage_state": "partially_checked",
+          "finding": "inconclusive",
+          "applicability": "contextual",
+          "residual_uncertainty": "一人へのInterviewで、機能評価型AI PoCを複数実施してもBusiness活用判断へ接続できなかった一例を確認した。一方、価値仮説と期待Signalを明示した比較Case、原因および判断品質の差を確認していない"
+        },
+        {
+          "id": "U2",
+          "uncertainty": "価値の弱い候補を共有前に選別すると、回避可能な下流Costが減る",
+          "decision_importance": "critical",
+          "evidence_refs": [],
+          "coverage_state": "not_checked",
+          "finding": "unknown",
+          "applicability": "unknown",
+          "residual_uncertainty": "選別あり・なしの比較、および減少するCostの範囲を確認していない"
+        },
+        {
+          "id": "U3",
+          "uncertainty": "価値選択と検証に必要な時間、Skill、調整および判断Costは、回避できる損失に対して妥当である",
+          "decision_importance": "high",
+          "evidence_refs": [],
+          "coverage_state": "not_checked",
+          "finding": "unknown",
+          "applicability": "unknown",
+          "residual_uncertainty": "必要な摩擦と過剰なGateを分ける基準、および十分性の閾値を定義していない"
+        }
+      ]
+    },
+    {
+      "key": "HYP-20260731-004119-relay-centered-session-story",
+      "id": "HYP-20260731-004119-relay-centered-session-story",
+      "type": "hypothesis_episode",
+      "title": "リレーを中心にしたセッション構成ならAI SlopからVSMまでを一本道で伝えられる",
+      "path": "02_analysis/hypothesis-episodes/HYP-20260731-004119-relay-centered-session-story.md",
+      "content_language": "ja",
+      "created_at": "2026-07-31T00:41:19+09:00",
+      "created_by": "agent:codex",
+      "status": "reviewed",
+      "confidence": "not_assessed",
+      "hypothesis_scope": "session",
+      "hypothesis_level": "feature",
+      "knowledge_basis": [
+        "practitioner_experience",
+        "reasoned_synthesis"
+      ],
+      "result": "not_tested",
+      "validation_components": []
+    },
+    {
+      "key": "HYP-20260731-193520-lean-startup-as-admission-control",
+      "id": "HYP-20260731-193520-lean-startup-as-admission-control",
+      "type": "hypothesis_episode",
+      "title": "Value Hypothesis・期待Signal・停止条件をAdmission Controlにすると依存形成前に廃棄できる",
+      "path": "02_analysis/hypothesis-episodes/HYP-20260731-193520-lean-startup-as-admission-control.md",
+      "content_language": "ja",
+      "created_at": "2026-07-31T19:35:20+09:00",
+      "created_by": "agent:codex",
+      "status": "reviewed",
+      "confidence": "low",
+      "hypothesis_scope": "practice",
+      "hypothesis_level": "feature",
+      "knowledge_basis": [
+        "external_research",
+        "practitioner_experience",
+        "reasoned_synthesis"
+      ],
+      "result": "not_tested",
+      "validation_components": [
+        {
+          "id": "U1",
+          "uncertainty": "Value Hypothesis、期待Signal、停止条件および判断Ownerを明示すると、共有前に継続、修正、保留または廃棄を判断しやすくなる",
+          "decision_importance": "critical",
+          "evidence_refs": [],
+          "coverage_state": "not_checked",
+          "finding": "unknown",
+          "applicability": "unknown",
+          "residual_uncertainty": "Admission Controlあり・なしの判断内容、Lead Timeおよび廃棄時点を比較していない"
+        },
+        {
+          "id": "U2",
+          "uncertainty": "支持されない案を依存形成前に廃棄すると、Review、導入、Enablement、Supportおよび廃止の回避可能な下流Costが減る",
+          "decision_importance": "critical",
+          "evidence_refs": [],
+          "coverage_state": "not_checked",
+          "finding": "unknown",
+          "applicability": "unknown",
+          "residual_uncertainty": "早期に廃棄した候補と共有後に廃止した候補の下流作業を比較していない"
+        },
+        {
+          "id": "U3",
+          "uncertainty": "Admission Controlの検証、記録および判断Costが、回避できる下流Costに対して妥当である",
+          "decision_importance": "high",
+          "evidence_refs": [],
+          "coverage_state": "not_checked",
+          "finding": "unknown",
+          "applicability": "unknown",
+          "residual_uncertainty": "Gateが新しいQueueまたは形式的承認になる境界を確認していない"
+        },
+        {
+          "id": "U4",
+          "uncertainty": "早期廃棄を行っても、価値ある探索、Productionで初めて得られる学習およびTransformationを過剰に失わない",
+          "decision_importance": "high",
+          "evidence_refs": [],
+          "coverage_state": "not_checked",
+          "finding": "unknown",
+          "applicability": "unknown",
+          "residual_uncertainty": "False negative、保留後の再検討および廃棄によって失われた学習を追跡していない"
+        }
+      ]
+    },
+    {
+      "key": "HYP-20260801-004822-coupled-observability-detects-cost-transfer",
+      "id": "HYP-20260801-004822-coupled-observability-detects-cost-transfer",
+      "type": "hypothesis_episode",
+      "title": "PEのDVSと利用者側OVSを接続するとAI高速化のCost Transferを検知できる",
+      "path": "02_analysis/hypothesis-episodes/HYP-20260801-004822-coupled-observability-detects-cost-transfer.md",
+      "content_language": "ja",
+      "created_at": "2026-08-01T00:48:22+09:00",
+      "created_by": "agent:codex",
+      "status": "reviewed",
+      "confidence": "low",
+      "hypothesis_scope": "practice",
+      "hypothesis_level": "solution",
+      "knowledge_basis": [
+        "practitioner_experience",
+        "reasoned_synthesis"
+      ],
+      "result": "not_tested",
+      "validation_components": []
+    },
+    {
+      "key": "HYP-20260801-004823-service-contract-reduces-downstream-cost",
+      "id": "HYP-20260801-004823-service-contract-reduces-downstream-cost",
+      "type": "hypothesis_episode",
+      "title": "共有前のService Contract明確化は下流への理解と判断Costの転移を抑える",
+      "path": "02_analysis/hypothesis-episodes/HYP-20260801-004823-service-contract-reduces-downstream-cost.md",
+      "content_language": "ja",
+      "created_at": "2026-08-01T00:48:23+09:00",
+      "created_by": "agent:codex",
+      "status": "reviewed",
+      "confidence": "low",
+      "hypothesis_scope": "practice",
+      "hypothesis_level": "solution",
+      "knowledge_basis": [
+        "practitioner_experience",
+        "reasoned_synthesis"
+      ],
+      "result": "not_tested",
+      "validation_components": []
+    },
+    {
+      "key": "HYP-20260802-230423-solution-first-reconstruction-testability",
+      "id": "HYP-20260802-230423-solution-first-reconstruction-testability",
+      "type": "hypothesis_episode",
+      "title": "Solution-firstでもReasoning Chainを再構成すれば検証可能な仮説を作りやすい",
+      "path": "02_analysis/hypothesis-episodes/HYP-20260802-230423-solution-first-reconstruction-testability.md",
+      "content_language": "ja",
+      "created_at": "2026-08-02T23:04:23+09:00",
+      "created_by": "agent:codex",
+      "status": "reviewed",
+      "confidence": "low",
+      "hypothesis_scope": "practice",
+      "hypothesis_level": "solution",
+      "knowledge_basis": [
+        "recorded_statement",
+        "practitioner_experience",
+        "case_recollection",
+        "direct_observation",
+        "reasoned_synthesis"
+      ],
+      "result": "not_tested",
+      "validation_components": [
+        {
+          "id": "U1",
+          "uncertainty": "Solution-first再構成とGenAIによる構造確認が、教科書的順序または人間だけのReviewよりReasoning Chainの構造品質を高める",
+          "decision_importance": "critical",
+          "evidence_refs": [],
+          "coverage_state": "not_checked",
+          "finding": "unknown",
+          "applicability": "unknown",
+          "residual_uncertainty": "同一題材、同一参加条件および第三者評価による比較がない"
+        },
+        {
+          "id": "U2",
+          "uncertainty": "方法を使っても参加者のIdea貢献、表現および主体性が保たれ、Facilitator負荷が許容範囲になる",
+          "decision_importance": "high",
+          "evidence_refs": [],
+          "coverage_state": "not_checked",
+          "finding": "unknown",
+          "applicability": "unknown",
+          "residual_uncertainty": "Training間の観測差はあるが、人数、Team構成、題材および進行条件が揃っていない"
+        },
+        {
+          "id": "U3",
+          "uncertainty": "VSM・MBPMに対する網羅性Reviewが、見落としたActor、工程、摩擦またはOptionの回収に役立つ",
+          "decision_importance": "high",
+          "evidence_refs": [],
+          "coverage_state": "not_checked",
+          "finding": "unknown",
+          "applicability": "unknown",
+          "residual_uncertainty": "Review前後の差分と、Source自体にある欠落を区別した記録がない"
+        },
+        {
+          "id": "U4",
+          "uncertainty": "構造確認後も参加者または後続Ownerが仮説の意味と検証責任を保持し、実証的な検証へ接続できる",
+          "decision_importance": "critical",
+          "evidence_refs": [],
+          "coverage_state": "not_checked",
+          "finding": "unknown",
+          "applicability": "unknown",
+          "residual_uncertainty": "構造確認後に生成した仮説のOwner、検証計画、実施結果および意思決定を追跡していない"
+        }
+      ]
+    },
+    {
+      "key": "HYP-20260802-230425-platform-choice-burden-value",
+      "id": "HYP-20260802-230425-platform-choice-burden-value",
+      "type": "hypothesis_episode",
+      "title": "Platform利用者の一部は選択肢より安全な標準Pathによる選択負荷軽減を重視する",
+      "path": "02_analysis/hypothesis-episodes/HYP-20260802-230425-platform-choice-burden-value.md",
+      "content_language": "ja",
+      "created_at": "2026-08-02T23:04:25+09:00",
+      "created_by": "agent:codex",
+      "status": "reviewed",
+      "confidence": "low",
+      "hypothesis_scope": "practice",
+      "hypothesis_level": "value",
+      "knowledge_basis": [
+        "practitioner_experience",
+        "reasoned_synthesis"
+      ],
+      "result": "not_tested",
+      "validation_components": []
+    },
+    {
+      "key": "HYP-20260804-013223-outcome-first-ai-resource-allocation",
+      "id": "HYP-20260804-013223-outcome-first-ai-resource-allocation",
+      "type": "hypothesis_episode",
+      "title": "Value Streamの課題とOutcomeからAI Capabilityを配置すると局所最適を避けやすい",
+      "path": "02_analysis/hypothesis-episodes/HYP-20260804-013223-outcome-first-ai-resource-allocation.md",
+      "content_language": "ja",
+      "created_at": "2026-08-04T01:32:23+09:00",
+      "created_by": "agent:codex",
+      "status": "reviewed",
+      "confidence": "low",
+      "hypothesis_scope": "practice",
+      "hypothesis_level": "solution",
+      "knowledge_basis": [
+        "recorded_statement",
+        "reasoned_synthesis"
+      ],
+      "result": "not_tested",
+      "validation_components": []
+    },
+    {
+      "key": "HYP-20260804-013226-two-stage-metrics-analysis",
+      "id": "HYP-20260804-013226-two-stage-metrics-analysis",
+      "type": "hypothesis_episode",
+      "title": "異常検知と原因診断を分ける運用はMetric過剰取得を抑え改善Loopを両立する",
+      "path": "02_analysis/hypothesis-episodes/HYP-20260804-013226-two-stage-metrics-analysis.md",
+      "content_language": "ja",
+      "created_at": "2026-08-04T01:32:26+09:00",
+      "created_by": "agent:codex",
+      "status": "reviewed",
+      "confidence": "medium",
+      "hypothesis_scope": "practice",
+      "hypothesis_level": "solution",
+      "knowledge_basis": [
+        "practitioner_experience",
+        "case_recollection",
+        "reasoned_synthesis"
+      ],
+      "result": "not_tested",
+      "validation_components": []
+    },
+    {
+      "key": "HYP-20260804-183208-audience-actionable-ai-slop-value",
+      "id": "HYP-20260804-183208-audience-actionable-ai-slop-value",
+      "type": "hypothesis_episode",
+      "title": "AudienceはAI Slopを制御するActionを持ち帰ることに価値を感じる",
+      "path": "02_analysis/hypothesis-episodes/HYP-20260804-183208-audience-actionable-ai-slop-value.md",
+      "content_language": "ja",
+      "created_at": "2026-08-04T18:32:08+09:00",
+      "created_by": "agent:codex",
+      "status": "reviewed",
+      "confidence": "low",
+      "hypothesis_scope": "session",
+      "hypothesis_level": "value",
+      "knowledge_basis": [
+        "recorded_statement",
+        "case_recollection",
+        "explicit_validation",
+        "reasoned_synthesis"
+      ],
+      "result": "inconclusive",
+      "validation_components": [
+        {
+          "id": "U1",
+          "uncertainty": "対象Audienceが、AI Slop、価値判断、効果測定または下流負荷に関係する問題を実際に持つ",
+          "decision_importance": "critical",
+          "evidence_refs": [
+            "OBS-20260805-223704-audience-problems-and-ai-slop-interest",
+            "OBS-20260805-225027-function-evaluation-poc-business-use-gap"
+          ],
+          "coverage_state": "partially_checked",
+          "finding": "supports",
+          "applicability": "contextual",
+          "residual_uncertainty": "3人から関係する問題の回答を得たほか、別の一人への直接Interviewで機能評価型AI PoCをBusiness活用判断へ接続できない問題を確認した。一方、選定方法、想定Audienceとの一致、課題の保有率、頻度、影響および優先順位を確認していない"
+        },
+        {
+          "id": "U2",
+          "uncertainty": "対象Audienceが、AI Slopを未検知・未制御のまま流さない方法を知ることに価値を感じる",
+          "decision_importance": "critical",
+          "evidence_refs": [
+            "OBS-20260805-223704-audience-problems-and-ai-slop-interest"
+          ],
+          "coverage_state": "partially_checked",
+          "finding": "supports",
+          "applicability": "contextual",
+          "residual_uncertainty": "同じ3人全員が聞きたいと回答したが、質問条件、他のテーマとの優先順位、理解またはActionへの移行および対象Audience全体の需要を確認していない"
+        },
+        {
+          "id": "U3",
+          "uncertainty": "セッション後に、対象者が自身の現場で確認すべきRiskまたは箇所を特定できる",
+          "decision_importance": "high",
+          "evidence_refs": [],
+          "coverage_state": "not_checked",
+          "finding": "unknown",
+          "applicability": "unknown",
+          "residual_uncertainty": "理解したという自己評価と、具体的な識別能力を区別して確認していない"
+        },
+        {
+          "id": "U4",
+          "uncertainty": "対象者が、持ち帰って試すActionを一つ選び、実施する意向を持つ",
+          "decision_importance": "critical",
+          "evidence_refs": [],
+          "coverage_state": "not_checked",
+          "finding": "unknown",
+          "applicability": "unknown",
+          "residual_uncertainty": "満足度、実施意向および実際の行動の関係を確認していない"
+        },
+        {
+          "id": "U5",
+          "uncertainty": "一部の対象者が、セッション後に選んだActionを実際の組織で試す",
+          "decision_importance": "medium",
+          "evidence_refs": [],
+          "coverage_state": "not_checked",
+          "finding": "unknown",
+          "applicability": "unknown",
+          "residual_uncertainty": "後日行動を追跡できる手段、期間および選択Biasを定義していない"
+        }
+      ]
+    },
+    {
+      "key": "HYP-20260804-183209-ai-slop-learning-path-solution",
+      "id": "HYP-20260804-183209-ai-slop-learning-path-solution",
+      "type": "hypothesis_episode",
+      "title": "AI Slopの構造・Signal・仮説検証を一続きに説明するとActionを選びやすい",
+      "path": "02_analysis/hypothesis-episodes/HYP-20260804-183209-ai-slop-learning-path-solution.md",
+      "content_language": "ja",
+      "created_at": "2026-08-04T18:32:09+09:00",
+      "created_by": "agent:codex",
+      "status": "reviewed",
+      "confidence": "low",
+      "hypothesis_scope": "session",
+      "hypothesis_level": "solution",
+      "knowledge_basis": [
+        "practitioner_experience",
+        "reasoned_synthesis"
+      ],
+      "result": "not_tested",
+      "validation_components": [
+        {
+          "id": "U1",
+          "uncertainty": "発生構造を示すと、AudienceがAI Slopを生成品質だけでなくValue Stream上の問題として捉えられる",
+          "decision_importance": "critical",
+          "evidence_refs": [],
+          "coverage_state": "not_checked",
+          "finding": "unknown",
+          "applicability": "unknown",
+          "residual_uncertainty": "どの構造と用語が理解に必要かを確認していない"
+        },
+        {
+          "id": "U2",
+          "uncertainty": "Cost Transferと観測Signalを示すと、自身の現場で確認すべき箇所を特定できる",
+          "decision_importance": "critical",
+          "evidence_refs": [],
+          "coverage_state": "not_checked",
+          "finding": "unknown",
+          "applicability": "unknown",
+          "residual_uncertainty": "DVS、OVS、MBPMなどの概念が理解を助けるか負荷になるかを確認していない"
+        },
+        {
+          "id": "U3",
+          "uncertainty": "Validation Componentへの分解を示すと、仮説の正誤ではなく次に減らす不確実性を選べる",
+          "decision_importance": "critical",
+          "evidence_refs": [],
+          "coverage_state": "not_checked",
+          "finding": "unknown",
+          "applicability": "unknown",
+          "residual_uncertainty": "分解例を見た後に対象者自身が適用できるかを確認していない"
+        },
+        {
+          "id": "U4",
+          "uncertainty": "残存リスクへのResponseを示すと、Evidence不足のまま断定せず次のActionを選べる",
+          "decision_importance": "high",
+          "evidence_refs": [],
+          "coverage_state": "not_checked",
+          "finding": "unknown",
+          "applicability": "unknown",
+          "residual_uncertainty": "Risk Decisionの説明が25分のSessionに必要か、過剰かを確認していない"
+        },
+        {
+          "id": "U5",
+          "uncertainty": "発生構造、Signal、仮説検証およびリスク判断を一続きにしても、Audienceが中心メッセージを保持できる",
+          "decision_importance": "critical",
+          "evidence_refs": [],
+          "coverage_state": "not_checked",
+          "finding": "unknown",
+          "applicability": "unknown",
+          "residual_uncertainty": "説明量、順序、前提知識および所要時間を確認していない"
+        }
+      ]
+    },
+    {
+      "key": "HYP-20260804-183210-ai-slop-downstream-burden-value",
+      "id": "HYP-20260804-183210-ai-slop-downstream-burden-value",
+      "type": "hypothesis_episode",
+      "title": "AI高速化による下流負荷の制御はPlatform Teamの価値であり利用者の受入条件である",
+      "path": "02_analysis/hypothesis-episodes/HYP-20260804-183210-ai-slop-downstream-burden-value.md",
+      "content_language": "ja",
+      "created_at": "2026-08-04T18:32:10+09:00",
+      "created_by": "agent:codex",
+      "status": "reviewed",
+      "confidence": "low",
+      "hypothesis_scope": "practice",
+      "hypothesis_level": "value",
+      "knowledge_basis": [
+        "recorded_statement",
+        "practitioner_experience",
+        "case_recollection",
+        "external_research",
+        "explicit_validation",
+        "reasoned_synthesis"
+      ],
+      "result": "inconclusive",
+      "validation_components": [
+        {
+          "id": "U1",
+          "uncertainty": "AI利用による候補・生成物の流入増加と、人間の選択・Review Capacityの制約によって、回避可能なCostが下流へ移る",
+          "decision_importance": "critical",
+          "evidence_refs": [
+            "OBS-20260804-195508-ai-proposal-generation-shifted-review-burden"
+          ],
+          "coverage_state": "partially_checked",
+          "finding": "mixed",
+          "applicability": "analogous",
+          "residual_uncertainty": "一件のConsulting提案で生成短縮と、生成担当者とは別の後続担当者への検証・再構築・意味変換の作業移動を確認したが、流入量、Review Queue、比較可能な総Cost、AIとの因果およびPlatform Serviceへの適用は確認していない"
+        },
+        {
+          "id": "U2",
+          "uncertainty": "提供側と利用側のSignalを接続すると、下流負荷が生じた箇所と影響を特定できる",
+          "decision_importance": "high",
+          "evidence_refs": [
+            "OBS-20260804-195508-ai-proposal-generation-shifted-review-burden"
+          ],
+          "coverage_state": "partially_checked",
+          "finding": "supports",
+          "applicability": "analogous",
+          "residual_uncertainty": "生成担当者側の生成時間と、別の後続担当者側のReview時間・回数、再構築および追加資料から負荷箇所を振り返りで特定したが、顧客側の直接Signal、継続観測およびPlatform Serviceの移動元・移動先は確認していない"
+        },
+        {
+          "id": "U3",
+          "uncertainty": "特定した下流負荷を使って、候補の流入、継続、停止、支援または改善の判断を更新できる",
+          "decision_importance": "critical",
+          "evidence_refs": [
+            "OBS-20260804-195508-ai-proposal-generation-shifted-review-burden"
+          ],
+          "coverage_state": "checked_for_current_scope",
+          "finding": "supports",
+          "applicability": "analogous",
+          "residual_uncertainty": "一件では提案書生成を停止する判断へ更新したが、別の判断者、継続・支援・改善OptionおよびPlatform Engineeringで同様に判断が更新されるかは確認していない"
+        },
+        {
+          "id": "U4",
+          "uncertainty": "選別、Contract、支援またはProcess改善によって、回避可能な下流負荷を実際に減らせる",
+          "decision_importance": "critical",
+          "evidence_refs": [
+            "OBS-20260804-195508-ai-proposal-generation-shifted-review-burden"
+          ],
+          "coverage_state": "partially_checked",
+          "finding": "inconclusive",
+          "applicability": "analogous",
+          "residual_uncertainty": "生成停止という流入制御は行われたが、停止後の負荷、手動作成との比較および他の介入による削減効果を測定していない"
+        },
+        {
+          "id": "U5",
+          "uncertainty": "Platform TeamがServiceのScale、利用者の認知負荷軽減または採用改善を目指す場合、反復または拡大する下流負荷の特定・制御・削減へCapacityを配分する",
+          "decision_importance": "high",
+          "evidence_refs": [
+            "OBS-20260805-005540-downstream-control-priority-reversibility"
+          ],
+          "coverage_state": "partially_checked",
+          "finding": "supports",
+          "applicability": "contextual",
+          "residual_uncertainty": "実践者は目的に応じた条件付きの優先価値として扱ったが、Platform Teamが実際に他の課題より優先してCapacityを配分した事例、発生頻度、総負荷および採用率との関係は確認していない"
+        },
+        {
+          "id": "U6",
+          "uncertainty": "Platform利用者にとって、Outputの誤りまたは揺れを検知しにくい、後続業務へそのまま渡す、または回復Costが大きい場合、追加確認、再構築、誤判断および過度な支援負荷を許容範囲に抑えることがService利用の基本条件である",
+          "decision_importance": "critical",
+          "evidence_refs": [
+            "OBS-20260805-001807-workslop-recipient-burden",
+            "OBS-20260805-005540-downstream-control-priority-reversibility"
+          ],
+          "coverage_state": "partially_checked",
+          "finding": "supports",
+          "applicability": "contextual",
+          "residual_uncertainty": "Desk Workerの自己申告調査は追加作業と信頼評価の低下を示し、実践者の整理は低保証Outputを許容できる用途とtwo-way doorの反例候補を示した。一方、因果効果、Platform利用者本人の行動、可逆性と回復Costによる差、反復時の総負荷およびPlatform Serviceへの直接適用は確認していない"
+        },
+        {
+          "id": "U7",
+          "uncertainty": "品質、学習、Accountabilityまたは安全性に必要な摩擦と、回避可能な下流負荷を判断に使える程度に区別できる",
+          "decision_importance": "high",
+          "evidence_refs": [
+            "OBS-20260804-195508-ai-proposal-generation-shifted-review-burden"
+          ],
+          "coverage_state": "checked_for_current_scope",
+          "finding": "supports",
+          "applicability": "analogous",
+          "residual_uncertainty": "一件では提案の整合性、具体的活動、責務および顧客に届く意味の確認を残し、全体再生成に伴う再Reviewと目的外のPipeline改善を停止したが、この区別のOutcome、他Contextの境界、Signalまたは閾値は確認していない"
+        }
+      ]
+    },
+    {
+      "key": "HYP-20260805-001809-repository-handoff-preserves-focus",
+      "id": "HYP-20260805-001809-repository-handoff-preserves-focus",
+      "type": "hypothesis_episode",
+      "title": "Human-AI協業を一枚とRepositoryへの導線に限定すると本編を逸らさず深掘りを提供できる",
+      "path": "02_analysis/hypothesis-episodes/HYP-20260805-001809-repository-handoff-preserves-focus.md",
+      "content_language": "ja",
+      "created_at": "2026-08-05T00:18:09+09:00",
+      "created_by": "agent:codex",
+      "status": "reviewed",
+      "confidence": "low",
+      "hypothesis_scope": "session",
+      "hypothesis_level": "feature",
+      "knowledge_basis": [
+        "recorded_statement",
+        "reasoned_synthesis"
+      ],
+      "result": "not_tested",
+      "validation_components": [
+        {
+          "id": "U1",
+          "uncertainty": "一枚の補助説明が本編の中心線と時間配分を損なわない",
+          "decision_importance": "critical",
+          "evidence_refs": [],
+          "coverage_state": "not_checked",
+          "finding": "unknown",
+          "applicability": "unknown",
+          "residual_uncertainty": "実際のSlide、発話量および25分Walkthroughで確認していない"
+        },
+        {
+          "id": "U2",
+          "uncertainty": "AudienceがRepositoryを思考LogとTraceabilityの実例として理解できる",
+          "decision_importance": "high",
+          "evidence_refs": [],
+          "coverage_state": "not_checked",
+          "finding": "unknown",
+          "applicability": "unknown",
+          "residual_uncertainty": "Repository構造の前提知識と、一枚で必要な説明量を確認していない"
+        },
+        {
+          "id": "U3",
+          "uncertainty": "Repositoryへの導線が登壇後の閲覧と深掘りにつながる",
+          "decision_importance": "medium",
+          "evidence_refs": [],
+          "coverage_state": "not_checked",
+          "finding": "unknown",
+          "applicability": "unknown",
+          "residual_uncertainty": "Access、閲覧範囲またはFollow-upを観測する方法と対象を決めていない"
+        },
+        {
+          "id": "U4",
+          "uncertainty": "Repositoryの閲覧がAudienceによる具体的なAction選択を助ける",
+          "decision_importance": "high",
+          "evidence_refs": [],
+          "coverage_state": "not_checked",
+          "finding": "unknown",
+          "applicability": "unknown",
+          "residual_uncertainty": "閲覧とAction選択または現場適用の関係を確認していない"
+        }
+      ]
+    },
+    {
+      "key": "HYP-20260807-211651-platform-selection-preparation-value",
+      "id": "HYP-20260807-211651-platform-selection-preparation-value",
+      "type": "hypothesis_episode",
+      "title": "Platform選定に関与する利用者は探索と判断準備の負荷軽減に価値を感じる",
+      "path": "02_analysis/hypothesis-episodes/HYP-20260807-211651-platform-selection-preparation-value.md",
+      "content_language": "ja",
+      "created_at": "2026-08-07T21:16:51+09:00",
+      "created_by": "agent:codex",
+      "status": "reviewed",
+      "confidence": "low",
+      "hypothesis_scope": "practice",
+      "hypothesis_level": "value",
+      "knowledge_basis": [
+        "practitioner_experience",
+        "reasoned_synthesis"
+      ],
+      "result": "not_tested",
+      "validation_components": [
+        {
+          "id": "U1",
+          "uncertainty": "Platformを自分で比較して選びたい利用者Segmentが存在する",
+          "decision_importance": "critical",
+          "evidence_refs": [],
+          "coverage_state": "not_checked",
+          "finding": "unknown",
+          "applicability": "unknown",
+          "residual_uncertainty": "作成者の経験から利用者像はあるが、対象範囲、人数、Roleおよび選定方法を確認していない"
+        },
+        {
+          "id": "U2",
+          "uncertainty": "情報探索と判断準備の負荷が、対応する価値があるほど重要である",
+          "decision_importance": "critical",
+          "evidence_refs": [],
+          "coverage_state": "not_checked",
+          "finding": "unknown",
+          "applicability": "unknown",
+          "residual_uncertainty": "架空VSM以外の実在Episode、頻度、影響および代替手段を確認していない"
+        },
+        {
+          "id": "U3",
+          "uncertainty": "負荷軽減によって、速さだけでなく安全に次の判断または作業へ進める",
+          "decision_importance": "high",
+          "evidence_refs": [],
+          "coverage_state": "not_checked",
+          "finding": "unknown",
+          "applicability": "unknown",
+          "residual_uncertainty": "自己申告、判断品質、後続行動および手戻りの関係を確認していない"
+        },
+        {
+          "id": "U4",
+          "uncertainty": "利用者の選択意向、意思決定権限、説明責任およびRisk負担が整合している",
+          "decision_importance": "critical",
+          "evidence_refs": [],
+          "coverage_state": "not_checked",
+          "finding": "unknown",
+          "applicability": "unknown",
+          "residual_uncertainty": "選びたい人が決定できるとは限らず、責任だけを負っている可能性もある"
+        }
+      ]
+    },
+    {
+      "key": "HYP-20260807-211652-contextual-platform-advisor-solution",
+      "id": "HYP-20260807-211652-contextual-platform-advisor-solution",
+      "type": "hypothesis_episode",
+      "title": "Contextを確認するPlatform Advisorは静的案内より選定負荷を減らしやすい",
+      "path": "02_analysis/hypothesis-episodes/HYP-20260807-211652-contextual-platform-advisor-solution.md",
+      "content_language": "ja",
+      "created_at": "2026-08-07T21:16:52+09:00",
+      "created_by": "agent:codex",
+      "status": "reviewed",
+      "confidence": "low",
+      "hypothesis_scope": "practice",
+      "hypothesis_level": "solution",
+      "knowledge_basis": [
+        "recorded_statement",
+        "reasoned_synthesis"
+      ],
+      "result": "not_tested",
+      "validation_components": [
+        {
+          "id": "U1",
+          "uncertainty": "Contextualな対話が静的案内より探索と比較判断の負荷を減らす",
+          "decision_importance": "critical",
+          "evidence_refs": [],
+          "coverage_state": "not_checked",
+          "finding": "unknown",
+          "applicability": "unknown",
+          "residual_uncertainty": "架空比較以外の実測Task、時間、追加質問および誤りを確認していない"
+        },
+        {
+          "id": "U2",
+          "uncertainty": "Advisorが適用条件、制約、根拠、不足情報および非対応範囲を伝えられる",
+          "decision_importance": "critical",
+          "evidence_refs": [],
+          "coverage_state": "not_checked",
+          "finding": "unknown",
+          "applicability": "unknown",
+          "residual_uncertainty": "流暢な回答と安全な判断支援を区別する評価を実施していない"
+        },
+        {
+          "id": "U3",
+          "uncertainty": "Advisorの作成、Source更新、訂正、SupportおよびEscalation Costが妥当である",
+          "decision_importance": "high",
+          "evidence_refs": [],
+          "coverage_state": "not_checked",
+          "finding": "unknown",
+          "applicability": "unknown",
+          "residual_uncertainty": "静的案内や人による相談との総Cost比較がない"
+        },
+        {
+          "id": "U4",
+          "uncertainty": "Advisorが、選択を望む対象Segmentに適合する",
+          "decision_importance": "critical",
+          "evidence_refs": [],
+          "coverage_state": "not_checked",
+          "finding": "unknown",
+          "applicability": "unknown",
+          "residual_uncertainty": "標準Pathを望む利用者へ選択作業を追加する可能性がある"
+        }
+      ]
+    },
+    {
+      "key": "HYP-20260807-211653-platform-advisor-chat-feature",
+      "id": "HYP-20260807-211653-platform-advisor-chat-feature",
+      "type": "hypothesis_episode",
+      "title": "選定作業を一つのChatへ統合するとPT・LTを減らし下流負荷を増やさない",
+      "path": "02_analysis/hypothesis-episodes/HYP-20260807-211653-platform-advisor-chat-feature.md",
+      "content_language": "ja",
+      "created_at": "2026-08-07T21:16:53+09:00",
+      "created_by": "agent:codex",
+      "status": "reviewed",
+      "confidence": "low",
+      "hypothesis_scope": "practice",
+      "hypothesis_level": "feature",
+      "knowledge_basis": [
+        "recorded_statement",
+        "reasoned_synthesis"
+      ],
+      "result": "not_tested",
+      "validation_components": [
+        {
+          "id": "U1",
+          "uncertainty": "Chat統合によって対象工程のPT、LTおよび手戻りが減る",
+          "decision_importance": "critical",
+          "evidence_refs": [],
+          "coverage_state": "not_checked",
+          "finding": "unknown",
+          "applicability": "unknown",
+          "residual_uncertainty": "架空Baselineに対する削減式だけがあり、実測値はない"
+        },
+        {
+          "id": "U2",
+          "uncertainty": "利用者が適切な候補へ到達し、条件と根拠を説明できる",
+          "decision_importance": "critical",
+          "evidence_refs": [],
+          "coverage_state": "not_checked",
+          "finding": "unknown",
+          "applicability": "unknown",
+          "residual_uncertainty": "速度改善と判断品質を同時に確認していない"
+        },
+        {
+          "id": "U3",
+          "uncertainty": "下流のReview、詳細調査、払い出しおよび利用時の負荷を増やさない",
+          "decision_importance": "critical",
+          "evidence_refs": [],
+          "coverage_state": "not_checked",
+          "finding": "unknown",
+          "applicability": "unknown",
+          "residual_uncertainty": "Cost Transferを確認する実在Episodeと追跡期間がない"
+        },
+        {
+          "id": "U4",
+          "uncertainty": "Feature Scope外の意思決定、ADR確定、詳細調査および例外を人へ安全に渡せる",
+          "decision_importance": "high",
+          "evidence_refs": [],
+          "coverage_state": "not_checked",
+          "finding": "unknown",
+          "applicability": "unknown",
+          "residual_uncertainty": "Scope境界、EscalationおよびService Contractを実地確認していない"
+        }
+      ]
+    },
+    {
+      "key": "HYP-20260807-223145-standard-path-exception-routing",
+      "id": "HYP-20260807-223145-standard-path-exception-routing",
+      "type": "hypothesis_episode",
+      "title": "組織が責任を持つ標準Pathと例外Routingは選択・説明・意思決定Riskを減らす",
+      "path": "02_analysis/hypothesis-episodes/HYP-20260807-223145-standard-path-exception-routing.md",
+      "content_language": "ja",
+      "created_at": "2026-08-07T22:31:45+09:00",
+      "created_by": "agent:codex",
+      "status": "reviewed",
+      "confidence": "low",
+      "hypothesis_scope": "practice",
+      "hypothesis_level": "solution",
+      "knowledge_basis": [
+        "recorded_statement",
+        "practitioner_experience",
+        "reasoned_synthesis"
+      ],
+      "result": "not_tested",
+      "validation_components": [
+        {
+          "id": "U1",
+          "uncertainty": "標準Pathと適用条件が、対象利用者の比較、説明および合意形成負荷を減らす",
+          "decision_importance": "critical",
+          "evidence_refs": [],
+          "coverage_state": "not_checked",
+          "finding": "unknown",
+          "applicability": "unknown",
+          "residual_uncertainty": "標準Pathあり・なしの選定行動、PT、LTおよび説明作業を比較していない"
+        },
+        {
+          "id": "U2",
+          "uncertainty": "標準Pathを外れるCaseだけを、必要なEvidenceとともに正しい意思決定者へRoutingできる",
+          "decision_importance": "critical",
+          "evidence_refs": [],
+          "coverage_state": "not_checked",
+          "finding": "unknown",
+          "applicability": "unknown",
+          "residual_uncertainty": "例外の検知、必要Evidence、Routing精度および判断Lead Timeを確認していない"
+        },
+        {
+          "id": "U3",
+          "uncertainty": "組織が選択の正当性、更新、Riskおよび廃止へのAccountabilityを引き受けられる",
+          "decision_importance": "critical",
+          "evidence_refs": [],
+          "coverage_state": "not_checked",
+          "finding": "unknown",
+          "applicability": "unknown",
+          "residual_uncertainty": "Decision Rights、Owner、運営Capacityおよび責任受容を実在組織で確認していない"
+        },
+        {
+          "id": "U4",
+          "uncertainty": "選択負荷を減らしても、誤適用、差し戻し、Supportおよび例外対応の下流負荷が増えない",
+          "decision_importance": "high",
+          "evidence_refs": [],
+          "coverage_state": "not_checked",
+          "finding": "unknown",
+          "applicability": "unknown",
+          "residual_uncertainty": "利用開始後のOutcome、下流作業およびPlatform Team負荷を追跡していない"
+        }
+      ]
+    },
+    {
+      "key": "HYP-20260807-232639-dvs-learning-sustains-ovs-quality",
+      "id": "HYP-20260807-232639-dvs-learning-sustains-ovs-quality",
+      "type": "hypothesis_episode",
+      "title": "DVSの仮説検証と学習品質はOVS品質の継続的改善に必要である",
+      "path": "02_analysis/hypothesis-episodes/HYP-20260807-232639-dvs-learning-sustains-ovs-quality.md",
+      "content_language": "ja",
+      "created_at": "2026-08-07T23:26:39+09:00",
+      "created_by": "agent:codex",
+      "status": "reviewed",
+      "confidence": "low",
+      "hypothesis_scope": "practice",
+      "hypothesis_level": "solution",
+      "knowledge_basis": [
+        "recorded_statement",
+        "practitioner_experience",
+        "case_recollection",
+        "external_research",
+        "explicit_validation",
+        "reasoned_synthesis"
+      ],
+      "result": "inconclusive",
+      "validation_components": [
+        {
+          "id": "U1",
+          "uncertainty": "DVSの仮説検証と学習品質を、OVS品質そのものとは独立した行動または記録から判定できる",
+          "decision_importance": "critical",
+          "evidence_refs": [
+            "OBS-20260808-204750-dvs-system-learning-decision-sufficiency",
+            "OBS-20260808-204751-reachable-value-stream-impact-guardrails"
+          ],
+          "coverage_state": "partially_checked",
+          "finding": "supports",
+          "applicability": "contextual",
+          "residual_uncertainty": "OVS品質を判定条件に含めず、個別Cycleと組織的学習Capabilityを分けたOperational Definitionを構成できた。ただし、実Caseへの適用、必要なCycle数、記録の最低水準および評価者間の一致を確認していない。このFindingは定義の構成可能性だけを支持し、必要条件であるという仮説全体を支持しない"
+        },
+        {
+          "id": "U2",
+          "uncertainty": "制度化され再利用可能なDVS学習Capabilityがなくても、Value、意思決定、Data、利用ルールおよび利用者Impactを接続できる個人が学習機能を局所的に代行するか、好条件または偶然の適合があれば、一回の変更で期待Valueまたは高いOVS品質を達成できる",
+          "decision_importance": "medium",
+          "evidence_refs": [
+            "OBS-20260808-222203-individual-substitution-and-value-data-contract"
+          ],
+          "coverage_state": "partially_checked",
+          "finding": "supports",
+          "applicability": "contextual",
+          "residual_uncertainty": "Review済みの実践者の説明は、個人によるCapability代行で一回の成功が成立するMechanismに整合する。ただし、Bounded Caseの一次記録、組織的仕組みの不在、個人の行動とOutcomeの因果、他の非公式な学習経路、発生頻度、再利用および継続性を確認していない"
+        },
+        {
+          "id": "U3",
+          "uncertainty": "DVSがBusiness Use Caseと期待Valueを、Actorの判断、必要なDataと粒度、入力Owner、Mandatory・Optional、Requirement、System Use Case、Platform設定、利用ルールおよびEnablementへ変換せず、System Use Caseの完成または最低限のRule遵守とValueを生む利用を分けて観測できない場合、想定利用への到達、OVS品質の再現、適応または修正が困難になる",
+          "decision_importance": "critical",
+          "evidence_refs": [
+            "OBS-20260808-204750-dvs-system-learning-decision-sufficiency",
+            "OBS-20260808-204751-reachable-value-stream-impact-guardrails",
+            "OBS-20260808-222203-individual-substitution-and-value-data-contract",
+            "OBS-20260808-224827-business-use-case-loss-in-scratch-development"
+          ],
+          "coverage_state": "partially_checked",
+          "finding": "inconclusive",
+          "applicability": "analogous",
+          "residual_uncertainty": "ITSMのCase Recollectionは学習Mechanismに整合し、Package型のObservationはValueからData Contractと利用Level、Scratch型のObservationはBusiness Use Caseから帳票・画面・属性・計算・実装へのTraceabilityを具体化した。ただし、一次記録、低品質DVSとの比較、Business Use Caseの有無と利用・Outcomeの差、Mandatory利用とOutcomeを生む利用の実測、同一Platform Serviceの複数Cycle、および必要条件をChallengeする反例を確認していない"
+        },
+        {
+          "id": "U4",
+          "uncertainty": "DVSの仮説検証と学習品質が高くても、それだけではOVS品質の継続を保証しない",
+          "decision_importance": "high",
+          "evidence_refs": [
+            "OBS-20260808-204750-dvs-system-learning-decision-sufficiency",
+            "OBS-20260808-204751-reachable-value-stream-impact-guardrails"
+          ],
+          "coverage_state": "partially_checked",
+          "finding": "inconclusive",
+          "applicability": "contextual",
+          "residual_uncertainty": "他ActorのPriority、Decision Rights、Policy、共通基盤、利用者Value、副作用およびCost移転を、DVSだけでは制御できない条件として具体化した。ただし、高品質DVSでもOVS効果が出なかったBounded Case、利用側Process、需要、採用および外部環境との交互作用を確認していない"
+        }
+      ]
+    },
+    {
+      "key": "HYP-20260809-013741-individual-learning-substitution-one-shot-success",
+      "id": "HYP-20260809-013741-individual-learning-substitution-one-shot-success",
+      "type": "hypothesis_episode",
+      "title": "個人による学習機能の代行または好条件があれば制度化されたCapabilityなしでも一回の成功は起こり得る",
+      "path": "02_analysis/hypothesis-episodes/HYP-20260809-013741-individual-learning-substitution-one-shot-success.md",
+      "content_language": "ja",
+      "created_at": "2026-08-09T01:37:41+09:00",
+      "created_by": "agent:codex",
+      "status": "reviewed",
+      "confidence": "low",
+      "hypothesis_scope": "practice",
+      "hypothesis_level": "solution",
+      "knowledge_basis": [
+        "recorded_statement",
+        "practitioner_experience",
+        "case_recollection",
+        "explicit_validation",
+        "reasoned_synthesis"
+      ],
+      "result": "inconclusive",
+      "validation_components": [
+        {
+          "id": "U1",
+          "uncertainty": "個人が制度化されていないDVS学習機能を一つのCycleで局所代行できる",
+          "decision_importance": "high",
+          "evidence_refs": [
+            "OBS-20260808-222203-individual-substitution-and-value-data-contract"
+          ],
+          "coverage_state": "partially_checked",
+          "finding": "supports",
+          "applicability": "contextual",
+          "residual_uncertainty": "実践者の説明はMechanismに整合するが、Bounded Caseの一次記録、個人の行動とOutcomeの因果および発生頻度を確認していない"
+        },
+        {
+          "id": "U2",
+          "uncertainty": "制度化され再利用可能なCapabilityがなくても、一回の変更で期待Valueを達成したBounded Caseが存在する",
+          "decision_importance": "high",
+          "evidence_refs": [],
+          "coverage_state": "not_checked",
+          "finding": "unknown",
+          "applicability": "unknown",
+          "residual_uncertainty": "Case Recollection候補はあるが、組織的仕組みの不在、成功条件、Outcomeおよび代替説明を一次記録で確認していない"
+        },
+        {
+          "id": "U3",
+          "uncertainty": "一回の成功条件は、担当者またはContextの変化をまたいで再利用・修正できない",
+          "decision_importance": "critical",
+          "evidence_refs": [],
+          "coverage_state": "not_checked",
+          "finding": "unknown",
+          "applicability": "unknown",
+          "residual_uncertainty": "複数Cycle、担当者変更、Context変化および成功条件の継承を追跡していない"
+        }
+      ]
+    },
+    {
+      "key": "HYP-20260809-013742-value-traceability-enables-dvs-learning",
+      "id": "HYP-20260809-013742-value-traceability-enables-dvs-learning",
+      "type": "hypothesis_episode",
+      "title": "Valueから意思決定・Data・利用・OutcomeへのTraceabilityはDVSの継続的学習を成立させる",
+      "path": "02_analysis/hypothesis-episodes/HYP-20260809-013742-value-traceability-enables-dvs-learning.md",
+      "content_language": "ja",
+      "created_at": "2026-08-09T01:37:42+09:00",
+      "created_by": "agent:codex",
+      "status": "reviewed",
+      "confidence": "low",
+      "hypothesis_scope": "practice",
+      "hypothesis_level": "solution",
+      "knowledge_basis": [
+        "recorded_statement",
+        "practitioner_experience",
+        "external_research",
+        "explicit_validation",
+        "reasoned_synthesis"
+      ],
+      "result": "inconclusive",
+      "validation_components": [
+        {
+          "id": "U1",
+          "uncertainty": "Valueから判断・Data・利用・Outcomeまでを、OVS品質そのものと独立した記録として構成できる",
+          "decision_importance": "high",
+          "evidence_refs": [
+            "OBS-20260808-204750-dvs-system-learning-decision-sufficiency",
+            "OBS-20260808-204751-reachable-value-stream-impact-guardrails",
+            "OBS-20260808-222203-individual-substitution-and-value-data-contract",
+            "OBS-20260808-224827-business-use-case-loss-in-scratch-development"
+          ],
+          "coverage_state": "partially_checked",
+          "finding": "supports",
+          "applicability": "contextual",
+          "residual_uncertainty": "構成要素は整理できたが、実Caseへの適用、最低限必要な項目、評価者間一致および維持Costを確認していない"
+        },
+        {
+          "id": "U2",
+          "uncertainty": "Package型でTraceabilityが欠けると、Mandatory条件の遵守とValueを生む利用を区別しにくくなる",
+          "decision_importance": "high",
+          "evidence_refs": [
+            "OBS-20260808-222203-individual-substitution-and-value-data-contract"
+          ],
+          "coverage_state": "partially_checked",
+          "finding": "inconclusive",
+          "applicability": "contextual",
+          "residual_uncertainty": "実践者の説明はMechanismを具体化するが、Traceabilityの有無と利用・判断・Outcomeの差を確認していない"
+        },
+        {
+          "id": "U3",
+          "uncertainty": "Scratch型でBusiness Use CaseへのTraceabilityが欠けると、System Use Caseの完成とValue実現を区別しにくくなる",
+          "decision_importance": "high",
+          "evidence_refs": [
+            "OBS-20260808-224827-business-use-case-loss-in-scratch-development"
+          ],
+          "coverage_state": "partially_checked",
+          "finding": "inconclusive",
+          "applicability": "analogous",
+          "residual_uncertainty": "Practitioner ExperienceとLegacy Modernization向け自己資料は欠落と復元方法を具体化するが、新規Scratch開発での利用・Outcomeへの影響を確認していない"
+        },
+        {
+          "id": "U4",
+          "uncertainty": "Traceabilityを明示し観測結果を戻すことで、DVSの判断更新とOVS品質の継続的改善が向上する",
+          "decision_importance": "critical",
+          "evidence_refs": [],
+          "coverage_state": "not_checked",
+          "finding": "unknown",
+          "applicability": "unknown",
+          "residual_uncertainty": "Traceability導入前後、複数Cycle、代替Mechanism、判断品質およびOutcomeを比較していない"
+        }
+      ]
+    },
+    {
+      "key": "OBS-20260730-015714-session-goal-and-journey",
+      "id": "OBS-20260730-015714-session-goal-and-journey",
+      "type": "observation",
+      "title": "セッション成功条件と参加者Journeyの原案",
+      "path": "02_analysis/observations/OBS-20260730-015714-session-goal-and-journey.md",
+      "content_language": "ja",
+      "created_at": "2026-07-30T01:57:14+09:00",
+      "created_by": "agent:codex",
+      "status": "reviewed",
+      "confidence": "high",
+      "knowledge_basis": [
+        "recorded_statement"
+      ]
+    },
+    {
+      "key": "OBS-20260730-015715-accepted-direction-and-delivery-scope",
+      "id": "OBS-20260730-015715-accepted-direction-and-delivery-scope",
+      "type": "observation",
+      "title": "採択済み方向性とDeliveryの検討範囲",
+      "path": "02_analysis/observations/OBS-20260730-015715-accepted-direction-and-delivery-scope.md",
+      "content_language": "ja",
+      "created_at": "2026-07-30T01:57:15+09:00",
+      "created_by": "agent:codex",
+      "status": "reviewed",
+      "confidence": "high",
+      "knowledge_basis": [
+        "external_research",
+        "recorded_statement"
+      ]
+    },
+    {
+      "key": "OBS-20260730-015716-audience-and-value-problem-statements",
+      "id": "OBS-20260730-015716-audience-and-value-problem-statements",
+      "type": "observation",
+      "title": "Audienceと価値課題について記録された見立て",
+      "path": "02_analysis/observations/OBS-20260730-015716-audience-and-value-problem-statements.md",
+      "content_language": "ja",
+      "created_at": "2026-07-30T01:57:16+09:00",
+      "created_by": "agent:codex",
+      "status": "reviewed",
+      "confidence": "high",
+      "knowledge_basis": [
+        "recorded_statement"
+      ]
+    },
+    {
+      "key": "OBS-20260730-210822-bcg-10-20-70-claim-variation",
+      "id": "OBS-20260730-210822-bcg-10-20-70-claim-variation",
+      "type": "observation",
+      "title": "BCG資料内で10–20–70の説明対象が変化している",
+      "path": "02_analysis/observations/OBS-20260730-210822-bcg-10-20-70-claim-variation.md",
+      "content_language": "ja",
+      "created_at": "2026-07-30T21:08:22+09:00",
+      "created_by": "agent:codex",
+      "status": "reviewed",
+      "confidence": "high",
+      "knowledge_basis": [
+        "external_research"
+      ]
+    },
+    {
+      "key": "OBS-20260731-021631-relay-story-source-elements",
+      "id": "OBS-20260731-021631-relay-story-source-elements",
+      "type": "observation",
+      "title": "リレー中心の構成候補を形成した要素と表現選択",
+      "path": "02_analysis/observations/OBS-20260731-021631-relay-story-source-elements.md",
+      "content_language": "ja",
+      "created_at": "2026-07-31T02:16:31+09:00",
+      "created_by": "agent:codex",
+      "status": "reviewed",
+      "confidence": "high",
+      "knowledge_basis": [
+        "practitioner_experience",
+        "reasoned_synthesis"
+      ]
+    },
+    {
+      "key": "OBS-20260731-120412-value-and-slop-experience-decision-flow",
+      "id": "OBS-20260731-120412-value-and-slop-experience-decision-flow",
+      "type": "observation",
+      "title": "価値判断と受け手のSlop経験を分ける判断Flowが記録された",
+      "path": "02_analysis/observations/OBS-20260731-120412-value-and-slop-experience-decision-flow.md",
+      "content_language": "ja",
+      "created_at": "2026-07-31T12:04:12+09:00",
+      "created_by": "agent:codex",
+      "status": "reviewed",
+      "confidence": "high",
+      "knowledge_basis": [
+        "practitioner_experience"
+      ]
+    },
+    {
+      "key": "OBS-20260801-004820-coupled-platform-value-streams",
+      "id": "OBS-20260801-004820-coupled-platform-value-streams",
+      "type": "observation",
+      "title": "Platform Serviceの提供側と利用側を接続して観測する考えが記録された",
+      "path": "02_analysis/observations/OBS-20260801-004820-coupled-platform-value-streams.md",
+      "content_language": "ja",
+      "created_at": "2026-08-01T00:48:20+09:00",
+      "created_by": "agent:codex",
+      "status": "reviewed",
+      "confidence": "high",
+      "knowledge_basis": [
+        "reasoned_synthesis"
+      ]
+    },
+    {
+      "key": "OBS-20260801-004821-contract-accountability-cost-transfer",
+      "id": "OBS-20260801-004821-contract-accountability-cost-transfer",
+      "type": "observation",
+      "title": "ハンドオーバーとContractとCost Transferを分ける考えが記録された",
+      "path": "02_analysis/observations/OBS-20260801-004821-contract-accountability-cost-transfer.md",
+      "content_language": "ja",
+      "created_at": "2026-08-01T00:48:21+09:00",
+      "created_by": "agent:codex",
+      "status": "reviewed",
+      "confidence": "high",
+      "knowledge_basis": [
+        "external_research",
+        "reasoned_synthesis"
+      ]
+    },
+    {
+      "key": "OBS-20260802-230422-solution-first-hypothesis-reconstruction",
+      "id": "OBS-20260802-230422-solution-first-hypothesis-reconstruction",
+      "type": "observation",
+      "title": "Solution候補からChallengeとValue Hypothesisを再構成する技法が記録された",
+      "path": "02_analysis/observations/OBS-20260802-230422-solution-first-hypothesis-reconstruction.md",
+      "content_language": "ja",
+      "created_at": "2026-08-02T23:04:22+09:00",
+      "created_by": "agent:codex",
+      "status": "reviewed",
+      "confidence": "high",
+      "knowledge_basis": [
+        "case_recollection"
+      ]
+    },
+    {
+      "key": "OBS-20260802-230424-platform-choice-hidden-assumption",
+      "id": "OBS-20260802-230424-platform-choice-hidden-assumption",
+      "type": "observation",
+      "title": "Platform Advisorには利用者がPlatformを選びたいという隠れた前提が記録された",
+      "path": "02_analysis/observations/OBS-20260802-230424-platform-choice-hidden-assumption.md",
+      "content_language": "ja",
+      "created_at": "2026-08-02T23:04:24+09:00",
+      "created_by": "agent:codex",
+      "status": "reviewed",
+      "confidence": "high",
+      "knowledge_basis": [
+        "practitioner_experience"
+      ]
+    },
+    {
+      "key": "OBS-20260802-230426-failure-rate-definition-mismatch",
+      "id": "OBS-20260802-230426-failure-rate-definition-mismatch",
+      "type": "observation",
+      "title": "プロジェクトと変革の失敗率は対象と成功定義が異なり統合できない",
+      "path": "02_analysis/observations/OBS-20260802-230426-failure-rate-definition-mismatch.md",
+      "content_language": "ja",
+      "created_at": "2026-08-02T23:04:26+09:00",
+      "created_by": "agent:codex",
+      "status": "reviewed",
+      "confidence": "high",
+      "knowledge_basis": [
+        "external_research"
+      ]
+    },
+    {
+      "key": "OBS-20260802-230427-process-flow-and-outcome-quality",
+      "id": "OBS-20260802-230427-process-flow-and-outcome-quality",
+      "type": "observation",
+      "title": "Process上のFlowと最終成果物のOutcome Qualityは別の観測対象として記録された",
+      "path": "02_analysis/observations/OBS-20260802-230427-process-flow-and-outcome-quality.md",
+      "content_language": "ja",
+      "created_at": "2026-08-02T23:04:27+09:00",
+      "created_by": "agent:codex",
+      "status": "reviewed",
+      "confidence": "high",
+      "knowledge_basis": [
+        "reasoned_synthesis"
+      ]
+    },
+    {
+      "key": "OBS-20260804-004530-solution-first-training-behavior",
+      "id": "OBS-20260804-004530-solution-first-training-behavior",
+      "type": "observation",
+      "title": "Solution-first再構成の有無でTraining中の記述とIdea数に異なる様子が記録された",
+      "path": "02_analysis/observations/OBS-20260804-004530-solution-first-training-behavior.md",
+      "content_language": "ja",
+      "created_at": "2026-08-04T00:45:30+09:00",
+      "created_by": "agent:codex",
+      "status": "reviewed",
+      "confidence": "medium",
+      "knowledge_basis": [
+        "case_recollection",
+        "direct_observation"
+      ]
+    },
+    {
+      "key": "OBS-20260804-004531-hypothesis-validation-uncertainty-decision",
+      "id": "OBS-20260804-004531-hypothesis-validation-uncertainty-decision",
+      "type": "observation",
+      "title": "仮説検証を不確実性の分解と意思決定更新として扱う説明が記録された",
+      "path": "02_analysis/observations/OBS-20260804-004531-hypothesis-validation-uncertainty-decision.md",
+      "content_language": "ja",
+      "created_at": "2026-08-04T00:45:31+09:00",
+      "created_by": "agent:codex",
+      "status": "reviewed",
+      "confidence": "high",
+      "knowledge_basis": [
+        "reasoned_synthesis"
+      ]
+    },
+    {
+      "key": "OBS-20260804-004532-journey-before-vsm-mbpm",
+      "id": "OBS-20260804-004532-journey-before-vsm-mbpm",
+      "type": "observation",
+      "title": "前回登壇で対象Journeyを特定し今回VSM・MBPMへ展開する前後関係が記録された",
+      "path": "02_analysis/observations/OBS-20260804-004532-journey-before-vsm-mbpm.md",
+      "content_language": "ja",
+      "created_at": "2026-08-04T00:45:32+09:00",
+      "created_by": "agent:codex",
+      "status": "reviewed",
+      "confidence": "high",
+      "knowledge_basis": [
+        "external_research",
+        "recorded_statement"
+      ]
+    },
+    {
+      "key": "OBS-20260804-013221-discovery-practice-gap",
+      "id": "OBS-20260804-013221-discovery-practice-gap",
+      "type": "observation",
+      "title": "Customerへの確認ではDiscovery結果が未定義または担当者に理解されていなかった",
+      "path": "02_analysis/observations/OBS-20260804-013221-discovery-practice-gap.md",
+      "content_language": "ja",
+      "created_at": "2026-08-04T01:32:21+09:00",
+      "created_by": "agent:codex",
+      "status": "reviewed",
+      "confidence": "medium",
+      "knowledge_basis": [
+        "practitioner_experience"
+      ]
+    },
+    {
+      "key": "OBS-20260804-013222-necessary-friction-boundary",
+      "id": "OBS-20260804-013222-necessary-friction-boundary",
+      "type": "observation",
+      "title": "Slopとして経験される摩擦にも残す目的があり得ると整理された",
+      "path": "02_analysis/observations/OBS-20260804-013222-necessary-friction-boundary.md",
+      "content_language": "ja",
+      "created_at": "2026-08-04T01:32:22+09:00",
+      "created_by": "agent:codex",
+      "status": "reviewed",
+      "confidence": "medium",
+      "knowledge_basis": [
+        "reasoned_synthesis"
+      ]
+    },
+    {
+      "key": "OBS-20260804-013225-itsm-metrics-analysis-practice",
+      "id": "OBS-20260804-013225-itsm-metrics-analysis-practice",
+      "type": "observation",
+      "title": "Dashboardと分析を分ける運用がITSMとProject Portfolioで用いられた",
+      "path": "02_analysis/observations/OBS-20260804-013225-itsm-metrics-analysis-practice.md",
+      "content_language": "ja",
+      "created_at": "2026-08-04T01:32:25+09:00",
+      "created_by": "agent:codex",
+      "status": "reviewed",
+      "confidence": "medium",
+      "knowledge_basis": [
+        "practitioner_experience",
+        "case_recollection"
+      ]
+    },
+    {
+      "key": "OBS-20260804-014228-prior-article-session-continuity",
+      "id": "OBS-20260804-014228-prior-article-session-continuity",
+      "type": "observation",
+      "title": "今回のProblem Spaceは2026年4月公開記事に記録され、後続準備で実践方法が追加された",
+      "path": "02_analysis/observations/OBS-20260804-014228-prior-article-session-continuity.md",
+      "content_language": "ja",
+      "created_at": "2026-08-04T01:42:28+09:00",
+      "created_by": "agent:codex",
+      "status": "reviewed",
+      "confidence": "high",
+      "knowledge_basis": [
+        "external_research",
+        "recorded_statement",
+        "reasoned_synthesis"
+      ]
+    },
+    {
+      "key": "OBS-20260804-195508-ai-proposal-generation-shifted-review-burden",
+      "id": "OBS-20260804-195508-ai-proposal-generation-shifted-review-burden",
+      "type": "observation",
+      "title": "提案書の生成短縮後に別担当者へ検証・再構築・意味変換の作業が移り生成停止が判断された",
+      "path": "02_analysis/observations/OBS-20260804-195508-ai-proposal-generation-shifted-review-burden.md",
+      "content_language": "ja",
+      "created_at": "2026-08-04T19:55:08+09:00",
+      "created_by": "agent:codex",
+      "status": "reviewed",
+      "confidence": "medium",
+      "knowledge_basis": [
+        "case_recollection",
+        "explicit_validation"
+      ]
+    },
+    {
+      "key": "OBS-20260805-001807-workslop-recipient-burden",
+      "id": "OBS-20260805-001807-workslop-recipient-burden",
+      "type": "observation",
+      "title": "Workslopの受け手は追加作業と信頼低下を自己申告している",
+      "path": "02_analysis/observations/OBS-20260805-001807-workslop-recipient-burden.md",
+      "content_language": "ja",
+      "created_at": "2026-08-05T00:18:07+09:00",
+      "created_by": "agent:codex",
+      "status": "reviewed",
+      "confidence": "high",
+      "knowledge_basis": [
+        "external_research"
+      ]
+    },
+    {
+      "key": "OBS-20260805-001808-decision-context-handover",
+      "id": "OBS-20260805-001808-decision-context-handover",
+      "type": "observation",
+      "title": "良いハンドオーバーには受け手の判断に必要なContextが含まれると整理された",
+      "path": "02_analysis/observations/OBS-20260805-001808-decision-context-handover.md",
+      "content_language": "ja",
+      "created_at": "2026-08-05T00:18:08+09:00",
+      "created_by": "agent:codex",
+      "status": "reviewed",
+      "confidence": "medium",
+      "knowledge_basis": [
+        "case_recollection",
+        "reasoned_synthesis"
+      ]
+    },
+    {
+      "key": "OBS-20260805-001810-repeated-enablement-dependency-signal",
+      "id": "OBS-20260805-001810-repeated-enablement-dependency-signal",
+      "type": "observation",
+      "title": "個別Enablementの反復はService設計の人力補完を示す兆候として整理された",
+      "path": "02_analysis/observations/OBS-20260805-001810-repeated-enablement-dependency-signal.md",
+      "content_language": "ja",
+      "created_at": "2026-08-05T00:18:10+09:00",
+      "created_by": "agent:codex",
+      "status": "reviewed",
+      "confidence": "medium",
+      "knowledge_basis": [
+        "reasoned_synthesis"
+      ]
+    },
+    {
+      "key": "OBS-20260805-005540-downstream-control-priority-reversibility",
+      "id": "OBS-20260805-005540-downstream-control-priority-reversibility",
+      "type": "observation",
+      "title": "下流負荷制御の優先度はServiceの目的とOutputの可逆性に依存すると整理された",
+      "path": "02_analysis/observations/OBS-20260805-005540-downstream-control-priority-reversibility.md",
+      "content_language": "ja",
+      "created_at": "2026-08-05T00:55:40+09:00",
+      "created_by": "agent:codex",
+      "status": "reviewed",
+      "confidence": "medium",
+      "knowledge_basis": [
+        "practitioner_experience",
+        "reasoned_synthesis"
+      ]
+    },
+    {
+      "key": "OBS-20260805-223704-audience-problems-and-ai-slop-interest",
+      "id": "OBS-20260805-223704-audience-problems-and-ai-slop-interest",
+      "type": "observation",
+      "title": "3人へのヒアリングで着手・価値説明・下流負荷の問題とAI Slop対処への関心が記録された",
+      "path": "02_analysis/observations/OBS-20260805-223704-audience-problems-and-ai-slop-interest.md",
+      "content_language": "ja",
+      "created_at": "2026-08-05T22:37:04+09:00",
+      "created_by": "agent:codex",
+      "status": "reviewed",
+      "confidence": "medium",
+      "knowledge_basis": [
+        "recorded_statement",
+        "explicit_validation"
+      ]
+    },
+    {
+      "key": "OBS-20260805-225027-function-evaluation-poc-business-use-gap",
+      "id": "OBS-20260805-225027-function-evaluation-poc-business-use-gap",
+      "type": "observation",
+      "title": "本人Interviewで機能評価型AI PoCがBusiness活用判断へ接続しなかった事例が記録された",
+      "path": "02_analysis/observations/OBS-20260805-225027-function-evaluation-poc-business-use-gap.md",
+      "content_language": "ja",
+      "created_at": "2026-08-05T22:50:27+09:00",
+      "created_by": "agent:codex",
+      "status": "reviewed",
+      "confidence": "medium",
+      "knowledge_basis": [
+        "recorded_statement",
+        "case_recollection",
+        "explicit_validation"
+      ]
+    },
+    {
+      "key": "OBS-20260807-211648-structural-coverage-empirical-checks",
+      "id": "OBS-20260807-211648-structural-coverage-empirical-checks",
+      "type": "observation",
+      "title": "Reasoning Chainの構造確認・網羅性Review・実証的検証は別の確認として記録された",
+      "path": "02_analysis/observations/OBS-20260807-211648-structural-coverage-empirical-checks.md",
+      "content_language": "ja",
+      "created_at": "2026-08-07T21:16:48+09:00",
+      "created_by": "agent:codex",
+      "status": "reviewed",
+      "confidence": "high",
+      "knowledge_basis": [
+        "recorded_statement",
+        "practitioner_experience",
+        "reasoned_synthesis"
+      ]
+    },
+    {
+      "key": "OBS-20260807-211649-effect-measurement-layers",
+      "id": "OBS-20260807-211649-effect-measurement-layers",
+      "type": "observation",
+      "title": "AI Featureの効果測定を直接効果・Guardrail・中間Signal・Business Outcomeへ分ける設計が記録された",
+      "path": "02_analysis/observations/OBS-20260807-211649-effect-measurement-layers.md",
+      "content_language": "ja",
+      "created_at": "2026-08-07T21:16:49+09:00",
+      "created_by": "agent:codex",
+      "status": "reviewed",
+      "confidence": "high",
+      "knowledge_basis": [
+        "recorded_statement",
+        "reasoned_synthesis"
+      ]
+    },
+    {
+      "key": "OBS-20260807-211650-vsm-problem-causal-ambiguity",
+      "id": "OBS-20260807-211650-vsm-problem-causal-ambiguity",
+      "type": "observation",
+      "title": "VSM・MBPMで観測した摩擦だけではProblemの原因構造を一意に決められないと整理された",
+      "path": "02_analysis/observations/OBS-20260807-211650-vsm-problem-causal-ambiguity.md",
+      "content_language": "ja",
+      "created_at": "2026-08-07T21:16:50+09:00",
+      "created_by": "agent:codex",
+      "status": "reviewed",
+      "confidence": "medium",
+      "knowledge_basis": [
+        "recorded_statement",
+        "reasoned_synthesis"
+      ]
+    },
+    {
+      "key": "OBS-20260807-223144-iterative-problem-understanding",
+      "id": "OBS-20260807-223144-iterative-problem-understanding",
+      "type": "observation",
+      "title": "仮説検証は外れ方を観測しProblem・Value理解と継続判断を更新する反復として整理された",
+      "path": "02_analysis/observations/OBS-20260807-223144-iterative-problem-understanding.md",
+      "content_language": "ja",
+      "created_at": "2026-08-07T22:31:44+09:00",
+      "created_by": "agent:codex",
+      "status": "reviewed",
+      "confidence": "high",
+      "knowledge_basis": [
+        "recorded_statement",
+        "practitioner_experience",
+        "reasoned_synthesis"
+      ]
+    },
+    {
+      "key": "OBS-20260808-204750-dvs-system-learning-decision-sufficiency",
+      "id": "OBS-20260808-204750-dvs-system-learning-decision-sufficiency",
+      "type": "observation",
+      "title": "DVSのシステム学習は定義したProblemへの判断十分性まで含むと整理された",
+      "path": "02_analysis/observations/OBS-20260808-204750-dvs-system-learning-decision-sufficiency.md",
+      "content_language": "ja",
+      "created_at": "2026-08-08T20:47:50+09:00",
+      "created_by": "agent:codex",
+      "status": "reviewed",
+      "confidence": "medium",
+      "knowledge_basis": [
+        "recorded_statement",
+        "practitioner_experience",
+        "case_recollection",
+        "reasoned_synthesis"
+      ]
+    },
+    {
+      "key": "OBS-20260808-204751-reachable-value-stream-impact-guardrails",
+      "id": "OBS-20260808-204751-reachable-value-stream-impact-guardrails",
+      "type": "observation",
+      "title": "手の届くValue Streamでは利用者Value・副作用・Cost移転を分けて確認すると整理された",
+      "path": "02_analysis/observations/OBS-20260808-204751-reachable-value-stream-impact-guardrails.md",
+      "content_language": "ja",
+      "created_at": "2026-08-08T20:47:51+09:00",
+      "created_by": "agent:codex",
+      "status": "reviewed",
+      "confidence": "medium",
+      "knowledge_basis": [
+        "recorded_statement",
+        "practitioner_experience",
+        "case_recollection",
+        "reasoned_synthesis"
+      ]
+    },
+    {
+      "key": "OBS-20260808-222203-individual-substitution-and-value-data-contract",
+      "id": "OBS-20260808-222203-individual-substitution-and-value-data-contract",
+      "type": "observation",
+      "title": "組織的DVS学習機能の個人代行とValueからData Contractへの接続が整理された",
+      "path": "02_analysis/observations/OBS-20260808-222203-individual-substitution-and-value-data-contract.md",
+      "content_language": "ja",
+      "created_at": "2026-08-08T22:22:03+09:00",
+      "created_by": "agent:codex",
+      "status": "reviewed",
+      "confidence": "medium",
+      "knowledge_basis": [
+        "recorded_statement",
+        "practitioner_experience",
+        "reasoned_synthesis"
+      ]
+    },
+    {
+      "key": "OBS-20260808-224827-business-use-case-loss-in-scratch-development",
+      "id": "OBS-20260808-224827-business-use-case-loss-in-scratch-development",
+      "type": "observation",
+      "title": "Scratch開発ではBusiness Use Caseが失われSystem Use Caseだけが共有される場合がある",
+      "path": "02_analysis/observations/OBS-20260808-224827-business-use-case-loss-in-scratch-development.md",
+      "content_language": "ja",
+      "created_at": "2026-08-08T22:48:27+09:00",
+      "created_by": "agent:codex",
+      "status": "reviewed",
+      "confidence": "medium",
+      "knowledge_basis": [
+        "recorded_statement",
+        "practitioner_experience",
+        "external_research",
+        "reasoned_synthesis"
+      ]
+    },
+    {
+      "key": "artifact:03_artifacts/attendee-journey.md",
+      "type": "artifact",
+      "title": "参加者Journey兼Value Stream",
+      "path": "03_artifacts/attendee-journey.md",
+      "content_language": "ja",
+      "status": "accepted",
+      "adopted_at": "2026-07-30T01:57:19+09:00",
+      "adopted_by": "human:kijima",
+      "scope": "pek2026-session"
+    },
+    {
+      "key": "artifact:03_artifacts/value-stream.md",
+      "type": "artifact",
+      "title": "バリューストリーム",
+      "path": "03_artifacts/value-stream.md",
+      "content_language": "ja",
+      "status": "accepted",
+      "adopted_at": "2026-07-30T01:57:19+09:00",
+      "adopted_by": "human:kijima",
+      "scope": "pek2026-session"
+    },
+    {
+      "key": "EXT-20260730-015112-accepted-session-proposal",
+      "id": "EXT-20260730-015112-accepted-session-proposal",
+      "type": "external_input",
+      "title": "採択済みセッションProposal",
+      "path": "10_external-inputs/EXT-20260730-015112-accepted-session-proposal.md",
+      "content_language": "ja",
+      "created_at": "2026-07-30T01:51:12+09:00",
+      "created_by": "agent:codex"
+    },
+    {
+      "key": "EXT-20260730-015120-session-acceptance-and-schedule",
+      "id": "EXT-20260730-015120-session-acceptance-and-schedule",
+      "type": "external_input",
+      "title": "セッション採択通知と公開タイムテーブル掲載",
+      "path": "10_external-inputs/EXT-20260730-015120-session-acceptance-and-schedule.md",
+      "content_language": "ja",
+      "created_at": "2026-07-30T01:51:20+09:00",
+      "created_by": "agent:codex"
+    },
+    {
+      "key": "EXT-20260801-005344-safe-value-stream-definitions",
+      "id": "EXT-20260801-005344-safe-value-stream-definitions",
+      "type": "external_input",
+      "title": "SAFeにおけるDevelopment Value StreamとOperational Value Streamの定義",
+      "path": "10_external-inputs/EXT-20260801-005344-safe-value-stream-definitions.md",
+      "content_language": "ja",
+      "created_at": "2026-08-01T00:53:44+09:00",
+      "created_by": "agent:codex"
+    },
+    {
+      "key": "EXT-20260804-014227-ai-slop-responsibility-gap-article",
+      "id": "EXT-20260804-014227-ai-slop-responsibility-gap-article",
+      "type": "external_input",
+      "title": "なぜAI導入は失敗するのか：ソフトウェア開発を壊す『責務の空白』",
+      "path": "10_external-inputs/articles/EXT-20260804-014227-ai-slop-responsibility-gap-article.md",
+      "content_language": "ja",
+      "created_at": "2026-08-04T01:42:27+09:00",
+      "created_by": "agent:codex"
+    },
+    {
+      "key": "EXT-20260808-224826-ddd-legacy-modernization-workshop-article",
+      "id": "EXT-20260808-224826-ddd-legacy-modernization-workshop-article",
+      "type": "external_input",
+      "title": "レガシーモダナイゼーションのためのDDDワークショップ設計メモ",
+      "path": "10_external-inputs/articles/EXT-20260808-224826-ddd-legacy-modernization-workshop-article.md",
+      "content_language": "ja",
+      "created_at": "2026-08-08T22:48:26+09:00",
+      "created_by": "agent:codex"
+    },
+    {
+      "key": "EXT-20260731-113601-mbpm-open-practice-library",
+      "id": "EXT-20260731-113601-mbpm-open-practice-library",
+      "type": "external_input",
+      "title": "Open Practice Library「Metrics Based Process Mapping」",
+      "path": "10_external-inputs/frameworks/mbpm/EXT-20260731-113601-mbpm-open-practice-library.md",
+      "content_language": "ja",
+      "created_at": "2026-07-31T11:36:01+09:00",
+      "created_by": "agent:codex"
+    },
+    {
+      "key": "EXT-20260729-225555-mobius-outcome-delivery-map",
+      "id": "EXT-20260729-225555-mobius-outcome-delivery-map",
+      "type": "external_input",
+      "title": "Mobius Outcome Delivery統合マップ",
+      "path": "10_external-inputs/frameworks/mobius/EXT-20260729-225555-mobius-outcome-delivery-map.md",
+      "content_language": "ja",
+      "created_at": "2026-07-29T22:55:55+09:00",
+      "created_by": "human:kijima"
+    },
+    {
+      "key": "EXT-20260730-210419-bcg-ai-process-redesign-10-20-70",
+      "id": "EXT-20260730-210419-bcg-ai-process-redesign-10-20-70",
+      "type": "external_input",
+      "title": "BCG「Scaling AI Requires New Processes, Not Just New Tools」",
+      "path": "10_external-inputs/research/bcg/EXT-20260730-210419-bcg-ai-process-redesign-10-20-70.md",
+      "content_language": "ja",
+      "created_at": "2026-07-30T21:04:19+09:00",
+      "created_by": "agent:codex"
+    },
+    {
+      "key": "EXT-20260730-210820-bcg-leaders-guide-ai-transformation",
+      "id": "EXT-20260730-210820-bcg-leaders-guide-ai-transformation",
+      "type": "external_input",
+      "title": "BCG「The Leader’s Guide to Transforming with AI」",
+      "path": "10_external-inputs/research/bcg/EXT-20260730-210820-bcg-leaders-guide-ai-transformation.md",
+      "content_language": "ja",
+      "created_at": "2026-07-30T21:08:20+09:00",
+      "created_by": "agent:codex"
+    },
+    {
+      "key": "EXT-20260730-210821-bcg-wheres-value-ai-report",
+      "id": "EXT-20260730-210821-bcg-wheres-value-ai-report",
+      "type": "external_input",
+      "title": "BCG Report「Where’s the Value in AI?」",
+      "path": "10_external-inputs/research/bcg/EXT-20260730-210821-bcg-wheres-value-ai-report.md",
+      "content_language": "ja",
+      "created_at": "2026-07-30T21:08:21+09:00",
+      "created_by": "agent:codex"
+    },
+    {
+      "key": "EXT-20260804-144101-betterup-workslop-recipient-experience",
+      "id": "EXT-20260804-144101-betterup-workslop-recipient-experience",
+      "type": "external_input",
+      "title": "BetterUp Workslop調査：受け手の負荷と信頼への影響",
+      "path": "10_external-inputs/research/betterup/EXT-20260804-144101-betterup-workslop-recipient-experience.md",
+      "content_language": "ja",
+      "created_at": "2026-08-04T14:41:01+09:00",
+      "created_by": "agent:codex"
+    },
+    {
+      "key": "EXT-20260803-200308-netflix-cpto-systems-thinking-ai-era-video",
+      "id": "EXT-20260803-200308-netflix-cpto-systems-thinking-ai-era-video",
+      "type": "external_input",
+      "title": "Why Netflix is betting on systems thinkers—not specialists—in the AI era",
+      "path": "10_external-inputs/research/netflix/EXT-20260803-200308-netflix-cpto-systems-thinking-ai-era-video.md",
+      "content_language": "ja",
+      "created_at": "2026-08-03T20:03:08+09:00",
+      "created_by": "agent:codex"
+    },
+    {
+      "key": "EXT-20260803-002840-previous-platform-engineering-talk",
+      "id": "EXT-20260803-002840-previous-platform-engineering-talk",
+      "type": "external_input",
+      "title": "前回登壇『Platform Engineeringはなぜスケールしないのか』",
+      "path": "10_external-inputs/talks/previous-session/EXT-20260803-002840-previous-platform-engineering-talk.md",
+      "content_language": "ja",
+      "created_at": "2026-08-03T00:28:40+09:00",
+      "created_by": "agent:codex"
+    }
+  ],
+  "edges": [
+    {
+      "source": "EXT-20260730-015120-session-acceptance-and-schedule",
+      "type": "references",
+      "target": "EXT-20260730-015112-accepted-session-proposal"
+    },
+    {
+      "source": "EXT-20260730-210419-bcg-ai-process-redesign-10-20-70",
+      "type": "references",
+      "target": "EXT-20260730-210820-bcg-leaders-guide-ai-transformation"
+    },
+    {
+      "source": "EXT-20260730-210419-bcg-ai-process-redesign-10-20-70",
+      "type": "references",
+      "target": "EXT-20260730-210821-bcg-wheres-value-ai-report"
+    },
+    {
+      "source": "EXT-20260730-210820-bcg-leaders-guide-ai-transformation",
+      "type": "references",
+      "target": "EXT-20260730-210821-bcg-wheres-value-ai-report"
+    },
+    {
+      "source": "HYP-20260730-015717-organizer-selection-is-sufficient-signal",
+      "type": "derived_from",
+      "target": "OBS-20260730-015715-accepted-direction-and-delivery-scope"
+    },
+    {
+      "source": "HYP-20260730-015717-organizer-selection-is-sufficient-signal",
+      "type": "derived_from",
+      "target": "OBS-20260730-015716-audience-and-value-problem-statements"
+    },
+    {
+      "source": "HYP-20260730-015718-ai-speed-requires-value-validation",
+      "type": "derived_from",
+      "target": "OBS-20260730-015716-audience-and-value-problem-statements"
+    },
+    {
+      "source": "HYP-20260730-015718-ai-speed-requires-value-validation",
+      "type": "derived_from",
+      "target": "OBS-20260731-120412-value-and-slop-experience-decision-flow"
+    },
+    {
+      "source": "HYP-20260730-015718-ai-speed-requires-value-validation",
+      "type": "derived_from",
+      "target": "OBS-20260804-004531-hypothesis-validation-uncertainty-decision"
+    },
+    {
+      "source": "HYP-20260730-015718-ai-speed-requires-value-validation",
+      "type": "derived_from",
+      "target": "OBS-20260805-225027-function-evaluation-poc-business-use-gap"
+    },
+    {
+      "source": "HYP-20260730-015718-ai-speed-requires-value-validation",
+      "type": "derived_from",
+      "target": "OBS-20260807-223144-iterative-problem-understanding"
+    },
+    {
+      "source": "HYP-20260730-015718-ai-speed-requires-value-validation",
+      "type": "tests",
+      "target": "HYP-20260804-183210-ai-slop-downstream-burden-value"
+    },
+    {
+      "source": "HYP-20260731-004119-relay-centered-session-story",
+      "type": "derived_from",
+      "target": "OBS-20260731-021631-relay-story-source-elements"
+    },
+    {
+      "source": "HYP-20260731-004119-relay-centered-session-story",
+      "type": "references",
+      "target": "HYP-20260730-015718-ai-speed-requires-value-validation"
+    },
+    {
+      "source": "HYP-20260731-004119-relay-centered-session-story",
+      "type": "references",
+      "target": "RN-20260730-140133-ai-outcomes-and-mbpm"
+    },
+    {
+      "source": "HYP-20260731-004119-relay-centered-session-story",
+      "type": "tests",
+      "target": "HYP-20260804-183209-ai-slop-learning-path-solution"
+    },
+    {
+      "source": "HYP-20260731-193520-lean-startup-as-admission-control",
+      "type": "derived_from",
+      "target": "OBS-20260731-120412-value-and-slop-experience-decision-flow"
+    },
+    {
+      "source": "HYP-20260731-193520-lean-startup-as-admission-control",
+      "type": "derived_from",
+      "target": "RN-20260731-190846-endless-stream-ai-slop-reading-notes"
+    },
+    {
+      "source": "HYP-20260731-193520-lean-startup-as-admission-control",
+      "type": "tests",
+      "target": "HYP-20260730-015718-ai-speed-requires-value-validation"
+    },
+    {
+      "source": "HYP-20260801-004822-coupled-observability-detects-cost-transfer",
+      "type": "derived_from",
+      "target": "OBS-20260731-120412-value-and-slop-experience-decision-flow"
+    },
+    {
+      "source": "HYP-20260801-004822-coupled-observability-detects-cost-transfer",
+      "type": "derived_from",
+      "target": "OBS-20260801-004820-coupled-platform-value-streams"
+    },
+    {
+      "source": "HYP-20260801-004822-coupled-observability-detects-cost-transfer",
+      "type": "tests",
+      "target": "HYP-20260804-183210-ai-slop-downstream-burden-value"
+    },
+    {
+      "source": "HYP-20260801-004823-service-contract-reduces-downstream-cost",
+      "type": "derived_from",
+      "target": "OBS-20260801-004821-contract-accountability-cost-transfer"
+    },
+    {
+      "source": "HYP-20260801-004823-service-contract-reduces-downstream-cost",
+      "type": "tests",
+      "target": "HYP-20260804-183210-ai-slop-downstream-burden-value"
+    },
+    {
+      "source": "HYP-20260802-230423-solution-first-reconstruction-testability",
+      "type": "derived_from",
+      "target": "OBS-20260802-230422-solution-first-hypothesis-reconstruction"
+    },
+    {
+      "source": "HYP-20260802-230423-solution-first-reconstruction-testability",
+      "type": "derived_from",
+      "target": "OBS-20260804-004530-solution-first-training-behavior"
+    },
+    {
+      "source": "HYP-20260802-230423-solution-first-reconstruction-testability",
+      "type": "derived_from",
+      "target": "OBS-20260807-211648-structural-coverage-empirical-checks"
+    },
+    {
+      "source": "HYP-20260802-230423-solution-first-reconstruction-testability",
+      "type": "derived_from",
+      "target": "RN-20260807-191024-problem-first-solution-first-quality-tradeoff"
+    },
+    {
+      "source": "HYP-20260802-230423-solution-first-reconstruction-testability",
+      "type": "references",
+      "target": "HYP-20260730-015718-ai-speed-requires-value-validation"
+    },
+    {
+      "source": "HYP-20260802-230425-platform-choice-burden-value",
+      "type": "derived_from",
+      "target": "OBS-20260802-230424-platform-choice-hidden-assumption"
+    },
+    {
+      "source": "HYP-20260804-013223-outcome-first-ai-resource-allocation",
+      "type": "derived_from",
+      "target": "RN-20260730-111926-value-stream-ai-outcomes"
+    },
+    {
+      "source": "HYP-20260804-013223-outcome-first-ai-resource-allocation",
+      "type": "derived_from",
+      "target": "RN-20260731-214443-ai-resource-management-in-value-stream"
+    },
+    {
+      "source": "HYP-20260804-013223-outcome-first-ai-resource-allocation",
+      "type": "tests",
+      "target": "HYP-20260804-183210-ai-slop-downstream-burden-value"
+    },
+    {
+      "source": "HYP-20260804-013226-two-stage-metrics-analysis",
+      "type": "derived_from",
+      "target": "OBS-20260804-013225-itsm-metrics-analysis-practice"
+    },
+    {
+      "source": "HYP-20260804-013226-two-stage-metrics-analysis",
+      "type": "references",
+      "target": "OBS-20260802-230427-process-flow-and-outcome-quality"
+    },
+    {
+      "source": "HYP-20260804-013226-two-stage-metrics-analysis",
+      "type": "tests",
+      "target": "HYP-20260804-183210-ai-slop-downstream-burden-value"
+    },
+    {
+      "source": "HYP-20260804-183208-audience-actionable-ai-slop-value",
+      "type": "derived_from",
+      "target": "OBS-20260730-015714-session-goal-and-journey"
+    },
+    {
+      "source": "HYP-20260804-183208-audience-actionable-ai-slop-value",
+      "type": "derived_from",
+      "target": "OBS-20260730-015715-accepted-direction-and-delivery-scope"
+    },
+    {
+      "source": "HYP-20260804-183208-audience-actionable-ai-slop-value",
+      "type": "derived_from",
+      "target": "OBS-20260730-015716-audience-and-value-problem-statements"
+    },
+    {
+      "source": "HYP-20260804-183208-audience-actionable-ai-slop-value",
+      "type": "derived_from",
+      "target": "OBS-20260805-223704-audience-problems-and-ai-slop-interest"
+    },
+    {
+      "source": "HYP-20260804-183208-audience-actionable-ai-slop-value",
+      "type": "derived_from",
+      "target": "OBS-20260805-225027-function-evaluation-poc-business-use-gap"
+    },
+    {
+      "source": "HYP-20260804-183209-ai-slop-learning-path-solution",
+      "type": "derived_from",
+      "target": "OBS-20260730-015714-session-goal-and-journey"
+    },
+    {
+      "source": "HYP-20260804-183209-ai-slop-learning-path-solution",
+      "type": "derived_from",
+      "target": "OBS-20260730-015716-audience-and-value-problem-statements"
+    },
+    {
+      "source": "HYP-20260804-183209-ai-slop-learning-path-solution",
+      "type": "derived_from",
+      "target": "OBS-20260731-120412-value-and-slop-experience-decision-flow"
+    },
+    {
+      "source": "HYP-20260804-183209-ai-slop-learning-path-solution",
+      "type": "derived_from",
+      "target": "OBS-20260801-004820-coupled-platform-value-streams"
+    },
+    {
+      "source": "HYP-20260804-183209-ai-slop-learning-path-solution",
+      "type": "derived_from",
+      "target": "OBS-20260804-004531-hypothesis-validation-uncertainty-decision"
+    },
+    {
+      "source": "HYP-20260804-183209-ai-slop-learning-path-solution",
+      "type": "tests",
+      "target": "HYP-20260804-183208-audience-actionable-ai-slop-value"
+    },
+    {
+      "source": "HYP-20260804-183210-ai-slop-downstream-burden-value",
+      "type": "derived_from",
+      "target": "OBS-20260730-015716-audience-and-value-problem-statements"
+    },
+    {
+      "source": "HYP-20260804-183210-ai-slop-downstream-burden-value",
+      "type": "derived_from",
+      "target": "OBS-20260731-120412-value-and-slop-experience-decision-flow"
+    },
+    {
+      "source": "HYP-20260804-183210-ai-slop-downstream-burden-value",
+      "type": "derived_from",
+      "target": "OBS-20260801-004820-coupled-platform-value-streams"
+    },
+    {
+      "source": "HYP-20260804-183210-ai-slop-downstream-burden-value",
+      "type": "derived_from",
+      "target": "OBS-20260801-004821-contract-accountability-cost-transfer"
+    },
+    {
+      "source": "HYP-20260804-183210-ai-slop-downstream-burden-value",
+      "type": "derived_from",
+      "target": "OBS-20260804-013222-necessary-friction-boundary"
+    },
+    {
+      "source": "HYP-20260804-183210-ai-slop-downstream-burden-value",
+      "type": "derived_from",
+      "target": "OBS-20260804-195508-ai-proposal-generation-shifted-review-burden"
+    },
+    {
+      "source": "HYP-20260804-183210-ai-slop-downstream-burden-value",
+      "type": "derived_from",
+      "target": "OBS-20260805-001807-workslop-recipient-burden"
+    },
+    {
+      "source": "HYP-20260804-183210-ai-slop-downstream-burden-value",
+      "type": "derived_from",
+      "target": "OBS-20260805-005540-downstream-control-priority-reversibility"
+    },
+    {
+      "source": "HYP-20260805-001809-repository-handoff-preserves-focus",
+      "type": "derived_from",
+      "target": "RN-20260730-102859-ai-outcomes-and-collaboration-model"
+    },
+    {
+      "source": "HYP-20260805-001809-repository-handoff-preserves-focus",
+      "type": "derived_from",
+      "target": "RN-20260730-103954-session-repo-role"
+    },
+    {
+      "source": "HYP-20260805-001809-repository-handoff-preserves-focus",
+      "type": "tests",
+      "target": "HYP-20260804-183209-ai-slop-learning-path-solution"
+    },
+    {
+      "source": "HYP-20260807-211651-platform-selection-preparation-value",
+      "type": "derived_from",
+      "target": "OBS-20260802-230424-platform-choice-hidden-assumption"
+    },
+    {
+      "source": "HYP-20260807-211651-platform-selection-preparation-value",
+      "type": "derived_from",
+      "target": "OBS-20260807-211650-vsm-problem-causal-ambiguity"
+    },
+    {
+      "source": "HYP-20260807-211651-platform-selection-preparation-value",
+      "type": "references",
+      "target": "HYP-20260802-230425-platform-choice-burden-value"
+    },
+    {
+      "source": "HYP-20260807-211652-contextual-platform-advisor-solution",
+      "type": "derived_from",
+      "target": "RN-20260806-205437-platform-selection-solution-options"
+    },
+    {
+      "source": "HYP-20260807-211652-contextual-platform-advisor-solution",
+      "type": "derived_from",
+      "target": "RN-20260807-140147-platform-advisor-story-solution-first-mobius"
+    },
+    {
+      "source": "HYP-20260807-211652-contextual-platform-advisor-solution",
+      "type": "tests",
+      "target": "HYP-20260807-211651-platform-selection-preparation-value"
+    },
+    {
+      "source": "HYP-20260807-211653-platform-advisor-chat-feature",
+      "type": "derived_from",
+      "target": "OBS-20260807-211649-effect-measurement-layers"
+    },
+    {
+      "source": "HYP-20260807-211653-platform-advisor-chat-feature",
+      "type": "derived_from",
+      "target": "RN-20260806-212832-platform-advisor-vsm-effect-hypothesis"
+    },
+    {
+      "source": "HYP-20260807-211653-platform-advisor-chat-feature",
+      "type": "tests",
+      "target": "HYP-20260807-211652-contextual-platform-advisor-solution"
+    },
+    {
+      "source": "HYP-20260807-223145-standard-path-exception-routing",
+      "type": "derived_from",
+      "target": "OBS-20260802-230424-platform-choice-hidden-assumption"
+    },
+    {
+      "source": "HYP-20260807-223145-standard-path-exception-routing",
+      "type": "derived_from",
+      "target": "OBS-20260807-211650-vsm-problem-causal-ambiguity"
+    },
+    {
+      "source": "HYP-20260807-223145-standard-path-exception-routing",
+      "type": "derived_from",
+      "target": "RN-20260807-194919-platform-advisor-retrospective-iterative-problem-learning"
+    },
+    {
+      "source": "HYP-20260807-223145-standard-path-exception-routing",
+      "type": "tests",
+      "target": "HYP-20260802-230425-platform-choice-burden-value"
+    },
+    {
+      "source": "HYP-20260807-232639-dvs-learning-sustains-ovs-quality",
+      "type": "derived_from",
+      "target": "OBS-20260801-004820-coupled-platform-value-streams"
+    },
+    {
+      "source": "HYP-20260807-232639-dvs-learning-sustains-ovs-quality",
+      "type": "derived_from",
+      "target": "OBS-20260802-230427-process-flow-and-outcome-quality"
+    },
+    {
+      "source": "HYP-20260807-232639-dvs-learning-sustains-ovs-quality",
+      "type": "derived_from",
+      "target": "OBS-20260804-004531-hypothesis-validation-uncertainty-decision"
+    },
+    {
+      "source": "HYP-20260807-232639-dvs-learning-sustains-ovs-quality",
+      "type": "derived_from",
+      "target": "OBS-20260807-223144-iterative-problem-understanding"
+    },
+    {
+      "source": "HYP-20260807-232639-dvs-learning-sustains-ovs-quality",
+      "type": "derived_from",
+      "target": "OBS-20260808-204750-dvs-system-learning-decision-sufficiency"
+    },
+    {
+      "source": "HYP-20260807-232639-dvs-learning-sustains-ovs-quality",
+      "type": "derived_from",
+      "target": "OBS-20260808-204751-reachable-value-stream-impact-guardrails"
+    },
+    {
+      "source": "HYP-20260807-232639-dvs-learning-sustains-ovs-quality",
+      "type": "derived_from",
+      "target": "OBS-20260808-222203-individual-substitution-and-value-data-contract"
+    },
+    {
+      "source": "HYP-20260807-232639-dvs-learning-sustains-ovs-quality",
+      "type": "derived_from",
+      "target": "OBS-20260808-224827-business-use-case-loss-in-scratch-development"
+    },
+    {
+      "source": "HYP-20260807-232639-dvs-learning-sustains-ovs-quality",
+      "type": "derived_from",
+      "target": "RN-20260808-213258-one-shot-success-without-organizational-dvs-learning"
+    },
+    {
+      "source": "HYP-20260807-232639-dvs-learning-sustains-ovs-quality",
+      "type": "references",
+      "target": "HYP-20260730-015718-ai-speed-requires-value-validation"
+    },
+    {
+      "source": "HYP-20260807-232639-dvs-learning-sustains-ovs-quality",
+      "type": "references",
+      "target": "HYP-20260801-004822-coupled-observability-detects-cost-transfer"
+    },
+    {
+      "source": "HYP-20260807-232639-dvs-learning-sustains-ovs-quality",
+      "type": "references",
+      "target": "HYP-20260804-183208-audience-actionable-ai-slop-value"
+    },
+    {
+      "source": "HYP-20260807-232639-dvs-learning-sustains-ovs-quality",
+      "type": "references",
+      "target": "HYP-20260804-183210-ai-slop-downstream-burden-value"
+    },
+    {
+      "source": "HYP-20260809-013741-individual-learning-substitution-one-shot-success",
+      "type": "derived_from",
+      "target": "HYP-20260807-232639-dvs-learning-sustains-ovs-quality"
+    },
+    {
+      "source": "HYP-20260809-013741-individual-learning-substitution-one-shot-success",
+      "type": "derived_from",
+      "target": "OBS-20260808-222203-individual-substitution-and-value-data-contract"
+    },
+    {
+      "source": "HYP-20260809-013741-individual-learning-substitution-one-shot-success",
+      "type": "derived_from",
+      "target": "RN-20260808-213258-one-shot-success-without-organizational-dvs-learning"
+    },
+    {
+      "source": "HYP-20260809-013742-value-traceability-enables-dvs-learning",
+      "type": "derived_from",
+      "target": "HYP-20260807-232639-dvs-learning-sustains-ovs-quality"
+    },
+    {
+      "source": "HYP-20260809-013742-value-traceability-enables-dvs-learning",
+      "type": "derived_from",
+      "target": "OBS-20260808-204750-dvs-system-learning-decision-sufficiency"
+    },
+    {
+      "source": "HYP-20260809-013742-value-traceability-enables-dvs-learning",
+      "type": "derived_from",
+      "target": "OBS-20260808-204751-reachable-value-stream-impact-guardrails"
+    },
+    {
+      "source": "HYP-20260809-013742-value-traceability-enables-dvs-learning",
+      "type": "derived_from",
+      "target": "OBS-20260808-222203-individual-substitution-and-value-data-contract"
+    },
+    {
+      "source": "HYP-20260809-013742-value-traceability-enables-dvs-learning",
+      "type": "derived_from",
+      "target": "OBS-20260808-224827-business-use-case-loss-in-scratch-development"
+    },
+    {
+      "source": "OBS-20260730-015714-session-goal-and-journey",
+      "type": "derived_from",
+      "target": "RN-20260729-205144-session-goal-and-value-stream"
+    },
+    {
+      "source": "OBS-20260730-015714-session-goal-and-journey",
+      "type": "derived_from",
+      "target": "RN-20260730-003408-journey-strategy-and-session-role"
+    },
+    {
+      "source": "OBS-20260730-015715-accepted-direction-and-delivery-scope",
+      "type": "derived_from",
+      "target": "EXT-20260730-015112-accepted-session-proposal"
+    },
+    {
+      "source": "OBS-20260730-015715-accepted-direction-and-delivery-scope",
+      "type": "derived_from",
+      "target": "EXT-20260730-015120-session-acceptance-and-schedule"
+    },
+    {
+      "source": "OBS-20260730-015715-accepted-direction-and-delivery-scope",
+      "type": "derived_from",
+      "target": "RN-20260730-003408-journey-strategy-and-session-role"
+    },
+    {
+      "source": "OBS-20260730-015716-audience-and-value-problem-statements",
+      "type": "derived_from",
+      "target": "RN-20260729-203124-session-slot-and-audience"
+    },
+    {
+      "source": "OBS-20260730-015716-audience-and-value-problem-statements",
+      "type": "derived_from",
+      "target": "RN-20260729-220353-audience-and-value-hypothesis"
+    },
+    {
+      "source": "OBS-20260730-210822-bcg-10-20-70-claim-variation",
+      "type": "derived_from",
+      "target": "EXT-20260730-210419-bcg-ai-process-redesign-10-20-70"
+    },
+    {
+      "source": "OBS-20260730-210822-bcg-10-20-70-claim-variation",
+      "type": "derived_from",
+      "target": "EXT-20260730-210820-bcg-leaders-guide-ai-transformation"
+    },
+    {
+      "source": "OBS-20260730-210822-bcg-10-20-70-claim-variation",
+      "type": "derived_from",
+      "target": "EXT-20260730-210821-bcg-wheres-value-ai-report"
+    },
+    {
+      "source": "OBS-20260731-021631-relay-story-source-elements",
+      "type": "derived_from",
+      "target": "RN-20260730-212352-discard-hypotheses-before-production-commitment"
+    },
+    {
+      "source": "OBS-20260731-021631-relay-story-source-elements",
+      "type": "derived_from",
+      "target": "RN-20260730-224731-ai-acceleration-to-contract-first"
+    },
+    {
+      "source": "OBS-20260731-021631-relay-story-source-elements",
+      "type": "derived_from",
+      "target": "RN-20260730-225227-relay-baton-handover-metaphor"
+    },
+    {
+      "source": "OBS-20260731-021631-relay-story-source-elements",
+      "type": "derived_from",
+      "target": "RN-20260730-230242-communicating-invisible-handover"
+    },
+    {
+      "source": "OBS-20260731-021631-relay-story-source-elements",
+      "type": "derived_from",
+      "target": "RN-20260731-003419-drop-api-contract-framing"
+    },
+    {
+      "source": "OBS-20260731-120412-value-and-slop-experience-decision-flow",
+      "type": "derived_from",
+      "target": "RN-20260731-115056-managed-ai-slop-transformation"
+    },
+    {
+      "source": "OBS-20260801-004820-coupled-platform-value-streams",
+      "type": "derived_from",
+      "target": "RN-20260731-144737-platform-dvs-and-user-value-stream"
+    },
+    {
+      "source": "OBS-20260801-004820-coupled-platform-value-streams",
+      "type": "derived_from",
+      "target": "RN-20260801-001118-pe-investment-purpose-and-sustainable-value-observation"
+    },
+    {
+      "source": "OBS-20260801-004820-coupled-platform-value-streams",
+      "type": "references",
+      "target": "EXT-20260801-005344-safe-value-stream-definitions"
+    },
+    {
+      "source": "OBS-20260801-004821-contract-accountability-cost-transfer",
+      "type": "derived_from",
+      "target": "RN-20260731-190847-ai-slop-paper-to-platform-service"
+    },
+    {
+      "source": "OBS-20260801-004821-contract-accountability-cost-transfer",
+      "type": "derived_from",
+      "target": "RN-20260731-200122-handover-contract-accountability-transfer"
+    },
+    {
+      "source": "OBS-20260801-004821-contract-accountability-cost-transfer",
+      "type": "derived_from",
+      "target": "RN-20260731-201346-platform-service-rejection-authority-and-duty"
+    },
+    {
+      "source": "OBS-20260802-230422-solution-first-hypothesis-reconstruction",
+      "type": "derived_from",
+      "target": "RN-20260802-204018-derive-value-hypothesis-from-decide-backlog"
+    },
+    {
+      "source": "OBS-20260802-230422-solution-first-hypothesis-reconstruction",
+      "type": "derived_from",
+      "target": "RN-20260802-211319-textbook-hypothesis-flow-and-solution-first-reconstruction"
+    },
+    {
+      "source": "OBS-20260802-230424-platform-choice-hidden-assumption",
+      "type": "derived_from",
+      "target": "RN-20260801-121633-platform-user-choice-hypothesis"
+    },
+    {
+      "source": "OBS-20260802-230424-platform-choice-hidden-assumption",
+      "type": "derived_from",
+      "target": "RN-20260801-122154-platform-advisor-hidden-hypothesis-and-dvs-learning"
+    },
+    {
+      "source": "OBS-20260802-230426-failure-rate-definition-mismatch",
+      "type": "derived_from",
+      "target": "RN-20260730-224354-seventy-percent-failure-source-check"
+    },
+    {
+      "source": "OBS-20260802-230426-failure-rate-definition-mismatch",
+      "type": "derived_from",
+      "target": "RN-20260802-195858-open-organization-change-project-evidence-review"
+    },
+    {
+      "source": "OBS-20260802-230426-failure-rate-definition-mismatch",
+      "type": "references",
+      "target": "RN-20260802-201449-project-change-failure-rate-not-used"
+    },
+    {
+      "source": "OBS-20260802-230427-process-flow-and-outcome-quality",
+      "type": "derived_from",
+      "target": "RN-20260731-143326-mbpm-blind-spots-and-outcome-quality"
+    },
+    {
+      "source": "OBS-20260802-230427-process-flow-and-outcome-quality",
+      "type": "references",
+      "target": "EXT-20260731-113601-mbpm-open-practice-library"
+    },
+    {
+      "source": "OBS-20260804-004530-solution-first-training-behavior",
+      "type": "derived_from",
+      "target": "RN-20260802-232517-solution-first-training-observations"
+    },
+    {
+      "source": "OBS-20260804-004530-solution-first-training-behavior",
+      "type": "references",
+      "target": "HYP-20260802-230423-solution-first-reconstruction-testability"
+    },
+    {
+      "source": "OBS-20260804-004531-hypothesis-validation-uncertainty-decision",
+      "type": "derived_from",
+      "target": "RN-20260804-002446-hypothesis-validation-as-uncertainty-reduction"
+    },
+    {
+      "source": "OBS-20260804-004531-hypothesis-validation-uncertainty-decision",
+      "type": "references",
+      "target": "HYP-20260731-193520-lean-startup-as-admission-control"
+    },
+    {
+      "source": "OBS-20260804-004532-journey-before-vsm-mbpm",
+      "type": "derived_from",
+      "target": "EXT-20260803-002840-previous-platform-engineering-talk"
+    },
+    {
+      "source": "OBS-20260804-004532-journey-before-vsm-mbpm",
+      "type": "derived_from",
+      "target": "RN-20260803-000910-vsm-mbpm-timing-and-previous-talk-sequence"
+    },
+    {
+      "source": "OBS-20260804-013221-discovery-practice-gap",
+      "type": "derived_from",
+      "target": "RN-20260730-101222-discovery-gap-and-talk-continuity"
+    },
+    {
+      "source": "OBS-20260804-013221-discovery-practice-gap",
+      "type": "derived_from",
+      "target": "RN-20260804-013822-discovery-result-customer-inquiry"
+    },
+    {
+      "source": "OBS-20260804-013222-necessary-friction-boundary",
+      "type": "derived_from",
+      "target": "RN-20260731-214443-necessary-friction-experienced-as-slop"
+    },
+    {
+      "source": "OBS-20260804-013222-necessary-friction-boundary",
+      "type": "references",
+      "target": "OBS-20260731-120412-value-and-slop-experience-decision-flow"
+    },
+    {
+      "source": "OBS-20260804-013225-itsm-metrics-analysis-practice",
+      "type": "derived_from",
+      "target": "RN-20260803-000641-data-analysis-in-process-improvement"
+    },
+    {
+      "source": "OBS-20260804-013225-itsm-metrics-analysis-practice",
+      "type": "derived_from",
+      "target": "RN-20260804-013224-itsm-metrics-analysis-practice"
+    },
+    {
+      "source": "OBS-20260804-013225-itsm-metrics-analysis-practice",
+      "type": "derived_from",
+      "target": "RN-20260804-014715-cross-domain-metrics-analysis-practice"
+    },
+    {
+      "source": "OBS-20260804-013225-itsm-metrics-analysis-practice",
+      "type": "derived_from",
+      "target": "RN-20260804-015137-analysis-skill-required-for-metrics"
+    },
+    {
+      "source": "OBS-20260804-014228-prior-article-session-continuity",
+      "type": "derived_from",
+      "target": "EXT-20260804-014227-ai-slop-responsibility-gap-article"
+    },
+    {
+      "source": "OBS-20260804-014228-prior-article-session-continuity",
+      "type": "derived_from",
+      "target": "RN-20260804-014226-prior-ai-slop-article-session-continuity"
+    },
+    {
+      "source": "OBS-20260804-014228-prior-article-session-continuity",
+      "type": "references",
+      "target": "EXT-20260803-200308-netflix-cpto-systems-thinking-ai-era-video"
+    },
+    {
+      "source": "OBS-20260804-014228-prior-article-session-continuity",
+      "type": "references",
+      "target": "RN-20260803-011229-ai-slop-experience-and-organizational-effect-matrix"
+    },
+    {
+      "source": "OBS-20260804-014228-prior-article-session-continuity",
+      "type": "references",
+      "target": "RN-20260804-002446-hypothesis-validation-as-uncertainty-reduction"
+    },
+    {
+      "source": "OBS-20260804-195508-ai-proposal-generation-shifted-review-burden",
+      "type": "derived_from",
+      "target": "RN-20260804-195507-ai-proposal-review-burden-case"
+    },
+    {
+      "source": "OBS-20260805-001807-workslop-recipient-burden",
+      "type": "derived_from",
+      "target": "EXT-20260804-144101-betterup-workslop-recipient-experience"
+    },
+    {
+      "source": "OBS-20260805-001807-workslop-recipient-burden",
+      "type": "references",
+      "target": "RN-20260804-144101-betterup-workslop-recipient-experience-reading"
+    },
+    {
+      "source": "OBS-20260805-001808-decision-context-handover",
+      "type": "derived_from",
+      "target": "RN-20260731-105559-handover-decision-context-ai-enablement"
+    },
+    {
+      "source": "OBS-20260805-001808-decision-context-handover",
+      "type": "references",
+      "target": "OBS-20260801-004821-contract-accountability-cost-transfer"
+    },
+    {
+      "source": "OBS-20260805-001810-repeated-enablement-dependency-signal",
+      "type": "derived_from",
+      "target": "RN-20260731-204459-enablement-bridge-boundaries"
+    },
+    {
+      "source": "OBS-20260805-001810-repeated-enablement-dependency-signal",
+      "type": "references",
+      "target": "HYP-20260801-004823-service-contract-reduces-downstream-cost"
+    },
+    {
+      "source": "OBS-20260805-001810-repeated-enablement-dependency-signal",
+      "type": "references",
+      "target": "OBS-20260801-004821-contract-accountability-cost-transfer"
+    },
+    {
+      "source": "OBS-20260805-005540-downstream-control-priority-reversibility",
+      "type": "derived_from",
+      "target": "RN-20260805-004725-ai-downstream-control-priority-and-output-reversibility"
+    },
+    {
+      "source": "OBS-20260805-223704-audience-problems-and-ai-slop-interest",
+      "type": "derived_from",
+      "target": "RN-20260805-223703-audience-ai-slop-interviews"
+    },
+    {
+      "source": "OBS-20260805-225027-function-evaluation-poc-business-use-gap",
+      "type": "derived_from",
+      "target": "RN-20260805-225026-ai-poc-business-use-interview"
+    },
+    {
+      "source": "OBS-20260807-211648-structural-coverage-empirical-checks",
+      "type": "derived_from",
+      "target": "RN-20260807-181236-reasoning-chain-validation-prompt-sanitized"
+    },
+    {
+      "source": "OBS-20260807-211648-structural-coverage-empirical-checks",
+      "type": "derived_from",
+      "target": "RN-20260807-185019-solution-first-problem-statement-rationale-and-limits"
+    },
+    {
+      "source": "OBS-20260807-211649-effect-measurement-layers",
+      "type": "derived_from",
+      "target": "RN-20260806-212832-platform-advisor-vsm-effect-hypothesis"
+    },
+    {
+      "source": "OBS-20260807-211649-effect-measurement-layers",
+      "type": "derived_from",
+      "target": "RN-20260806-213822-platform-advisor-downstream-ai-slop-signals"
+    },
+    {
+      "source": "OBS-20260807-211649-effect-measurement-layers",
+      "type": "derived_from",
+      "target": "RN-20260807-123008-platform-advisor-effect-measurement-observation-rationale"
+    },
+    {
+      "source": "OBS-20260807-211650-vsm-problem-causal-ambiguity",
+      "type": "derived_from",
+      "target": "RN-20260806-194532-platform-advisor-selection-vsm-and-mbpm"
+    },
+    {
+      "source": "OBS-20260807-211650-vsm-problem-causal-ambiguity",
+      "type": "derived_from",
+      "target": "RN-20260806-224717-vsm-mbpm-process-analysis-explanation"
+    },
+    {
+      "source": "OBS-20260807-211650-vsm-problem-causal-ambiguity",
+      "type": "derived_from",
+      "target": "RN-20260807-194919-platform-advisor-retrospective-iterative-problem-learning"
+    },
+    {
+      "source": "OBS-20260807-223144-iterative-problem-understanding",
+      "type": "derived_from",
+      "target": "RN-20260801-122154-platform-advisor-hidden-hypothesis-and-dvs-learning"
+    },
+    {
+      "source": "OBS-20260807-223144-iterative-problem-understanding",
+      "type": "derived_from",
+      "target": "RN-20260807-194919-platform-advisor-retrospective-iterative-problem-learning"
+    },
+    {
+      "source": "OBS-20260808-204750-dvs-system-learning-decision-sufficiency",
+      "type": "derived_from",
+      "target": "RN-20260808-195818-problem-sufficiency-reachable-system-improvement"
+    },
+    {
+      "source": "OBS-20260808-204750-dvs-system-learning-decision-sufficiency",
+      "type": "derived_from",
+      "target": "RN-20260808-201058-reachable-value-stream-impact-guardrails"
+    },
+    {
+      "source": "OBS-20260808-204750-dvs-system-learning-decision-sufficiency",
+      "type": "derived_from",
+      "target": "RN-20260808-202752-responsibility-bounded-problem-scope"
+    },
+    {
+      "source": "OBS-20260808-204751-reachable-value-stream-impact-guardrails",
+      "type": "derived_from",
+      "target": "RN-20260808-195818-problem-sufficiency-reachable-system-improvement"
+    },
+    {
+      "source": "OBS-20260808-204751-reachable-value-stream-impact-guardrails",
+      "type": "derived_from",
+      "target": "RN-20260808-201058-reachable-value-stream-impact-guardrails"
+    },
+    {
+      "source": "OBS-20260808-204751-reachable-value-stream-impact-guardrails",
+      "type": "derived_from",
+      "target": "RN-20260808-202752-responsibility-bounded-problem-scope"
+    },
+    {
+      "source": "OBS-20260808-222203-individual-substitution-and-value-data-contract",
+      "type": "derived_from",
+      "target": "RN-20260808-221549-individual-substitution-for-organizational-dvs-learning"
+    },
+    {
+      "source": "OBS-20260808-224827-business-use-case-loss-in-scratch-development",
+      "type": "derived_from",
+      "target": "EXT-20260808-224826-ddd-legacy-modernization-workshop-article"
+    },
+    {
+      "source": "OBS-20260808-224827-business-use-case-loss-in-scratch-development",
+      "type": "derived_from",
+      "target": "RN-20260808-224254-business-use-case-loss-in-scratch-development"
+    },
+    {
+      "source": "artifact:03_artifacts/attendee-journey.md",
+      "type": "adopted_from",
+      "target": "OBS-20260730-015714-session-goal-and-journey"
+    },
+    {
+      "source": "artifact:03_artifacts/attendee-journey.md",
+      "type": "adopted_from",
+      "target": "OBS-20260730-015715-accepted-direction-and-delivery-scope"
+    },
+    {
+      "source": "artifact:03_artifacts/attendee-journey.md",
+      "type": "references",
+      "target": "HYP-20260730-015717-organizer-selection-is-sufficient-signal"
+    },
+    {
+      "source": "artifact:03_artifacts/value-stream.md",
+      "type": "adopted_from",
+      "target": "OBS-20260730-015714-session-goal-and-journey"
+    }
+  ]
+}

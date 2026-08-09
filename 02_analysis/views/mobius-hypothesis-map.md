@@ -2,9 +2,11 @@
 
 [分析Indexへ戻る](../README.md)
 
-このファイルは、既存NodeとArtifactを横断して探すための再生成可能な
-Navigation Viewです。Evidence、派生Claim、採用判断、現在の正本ではありません。
-内容がリンク先と矛盾する場合は、リンク先を優先してこのViewを再生成します。
+このファイルは、Mobiusでの位置づけとCross-scope connectionを説明するために
+Repository authorが保守する非同期な解説Viewです。Evidence、派生Claim、採用判断、
+現在の正本ではなく、Source更新との同期も保証しません。現在のstatus、resultおよび
+直接Parentは生成されたscope別Viewで候補を絞り、リンク先のNodeを直接確認します。
+内容がリンク先と矛盾する場合はリンク先を優先します。
 
 このViewはHypothesisの検討階層を説明するためにだけ使用します。Mobiusの
 ボード列を作業状態の追跡には使用しません。

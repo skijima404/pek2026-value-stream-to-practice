@@ -7,8 +7,11 @@ description: Create a blank, timestamped Raw Note with valid provenance in this 
 
 1. Run `python3 .agents/skills/new-raw-note/scripts/new_raw_note.py`.
 2. Do not add interpretations, hypotheses, or inferred content to the new file.
-3. Return a clickable absolute link to the created file.
-4. Run `python3 scripts/validate_repository.py`.
+3. Run `python3 scripts/generate_analysis_views.py`. The blank scaffold has
+   `sanitization_status: not_reviewed`, so its ID, title, path, tags, and body are
+   excluded from the projection; only the aggregate excluded count may change.
+4. Run `python3 scripts/validate_repository.py` and `git diff --check`.
+5. Return a clickable absolute link to the created file.
 
 The default provenance means that a human will author the content while Codex
 assisted with capture:

@@ -2,9 +2,10 @@
 
 [分析Indexへ戻る](../README.md)
 
-このファイルは、既存NodeとArtifactを横断して探すための再生成可能な
-Navigation Viewです。Evidence、派生Claim、採用判断、現在の正本ではありません。
-内容がリンク先と矛盾する場合は、リンク先を優先してこのViewを再生成します。
+このファイルは、既存NodeとArtifactを横断して探すためにRepository authorが保守する
+非同期な解説Viewです。Evidence、派生Claim、採用判断、現在の正本ではなく、Source更新との
+同期も保証しません。現在のstatus、result、relationおよびCoverageは生成Viewで候補を絞り、
+リンク先のNodeを直接確認します。内容がリンク先と矛盾する場合はリンク先を優先します。
 
 以下はScope階層ではなく、Observation、Hypothesis、ArtifactがどのSource themeから
 形成されたかを追うための詳細Viewです。

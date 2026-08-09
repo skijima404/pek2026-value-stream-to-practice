@@ -81,6 +81,8 @@ the session.
 - Use Mobius only to explain the hypothesis levels considered in a
   retrospective. Never use its board columns to track task execution.
 - Run `python3 scripts/validate_repository.py` after changing governed Markdown.
+- Run `python3 scripts/generate_analysis_views.py` after changing a source node
+  or adopted Artifact and before repository validation.
 
 ## Scope rules
 
@@ -90,10 +92,24 @@ the session.
   traceability and epistemic status.
 - When asked to explain or retrospect on a body of work, follow
   `00_meta/analysis-lenses.md` and cite the nodes supporting each explanation.
-- Treat `02_analysis/README.md` and `02_analysis/views/` as regenerable
-  navigation views only. Keep them synchronized with explicit node metadata,
-  knowledge basis, and relations, and never use a view itself as evidence or
-  an adoption decision.
+- Treat `02_analysis/README.md`, `node-catalog.md`, the scope-specific
+  hypothesis views, and `validation-status.md` as deterministic generated
+  projections. Regenerate them with `scripts/generate_analysis_views.py`; do
+  not edit them directly.
+- Treat `reasoning-chain.md` and `mobius-hypothesis-map.md` as
+  Repository-authored, asynchronous explanatory views. Do not overwrite them
+  during generation or assume that their duplicated metadata is current. Edit
+  them only when intentionally maintaining their non-derivable explanation.
+  `evidence-status.md` is a compatibility pointer to the generated
+  `validation-status.md`, not a current-state view.
+- For repository-wide retrieval, start with `02_analysis/README.md`, a
+  scope-specific view, or `node-catalog.md`. Search
+  `views/repository-graph.json` selectively for candidate IDs and direct
+  relations; do not load the entire graph unless the task requires a complete
+  graph operation. Then read the authoritative Markdown nodes before
+  interpreting or citing content. Follow
+  `00_meta/analysis-projection-contract.md`; no view is evidence, an adoption
+  decision, or current truth.
 - `03_artifacts/` contains current adopted outputs, not every explored idea.
 - `10_external-inputs/` contains immutable constraints and references. External
   input is not automatically evidence that a hypothesis is true.

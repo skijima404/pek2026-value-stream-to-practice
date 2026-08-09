@@ -37,11 +37,18 @@ in `03_artifacts/` establishes current truth within its stated scope.
 
 ## Analysis navigation views
 
-`02_analysis/README.md` and Markdown files under `02_analysis/views/` are
-regenerable navigation views over existing repository nodes. They are not
-governed nodes, evidence sources, derived claims, adoption decisions, or
-current truth. The README is the entry point; specialized views may separate
-reasoning chains, hypothesis maps, or evidence status for readability.
+`02_analysis/README.md`, files under `02_analysis/views/`, and
+`views/repository-graph.json` are non-authoritative navigation over existing
+repository nodes. They are not governed nodes, evidence sources, derived
+claims, adoption decisions, or current truth. Repository Markdown nodes and
+adopted Artifacts remain authoritative; the JSON graph is not a second
+persistence authority. The README is the entry point.
+
+Deterministic projections are generated from declared source state and checked
+for freshness. Repository-authored explanatory views may preserve reasoning
+chains or cross-scope context that cannot be derived mechanically, but they
+must state that synchronization is not guaranteed and must not present
+duplicated mutable metadata as authoritative current state.
 
 These views may summarize node titles, declared status, knowledge basis,
 confidence, validation result, hypothesis scope, hypothesis level, typed
@@ -49,12 +56,17 @@ relations, and explicit limitations. Every
 summary must link to the source node. Do not introduce a new interpretation,
 infer a missing relation, or convert absence from a view into rejection.
 
-Regenerate the affected views when an analysis node is added or materially
-changes, when an Artifact is adopted or superseded, or when a human requests a
-current synthesis. Source nodes and Artifacts remain authoritative when a view
-is stale or disagrees with them. Moving prose between navigation views must
-not silently drop reasoning; preserve it until its supporting node links have
-been verified.
+Regenerate deterministic projections whenever a source node changes or the
+projection schema changes. Generated projections
+may contain only declared metadata, direct typed relations, explicitly
+recorded validation components, and deterministic counts. New interpretation
+belongs in a governed Analysis node, not in a generated projection.
+Repository validation fails when deterministic projections are stale. Source
+nodes and Artifacts remain authoritative if any view is stale or disagrees
+with them. Review Repository-authored explanatory views when their covered
+reasoning changes, without treating them as freshness-checked projections.
+Moving prose between navigation views must not silently drop reasoning;
+preserve it until its supporting node links have been verified.
 
 ## Epistemic separation
 
