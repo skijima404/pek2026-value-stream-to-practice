@@ -177,11 +177,51 @@ The level identifies the hypothesis hierarchy within that scope. It is not a
 task state or delivery-progress field. Use `not_assessed` when the sources do
 not support a reliable classification.
 
+### Hypothesis validation approach
+
+A Hypothesis Episode may record one primary approach for its current learning
+step in the body under `## 検証`:
+
+- `experiment`: observe a bounded change, prototype, walkthrough, or behavior;
+- `research`: inspect identifiable existing sources, records, or expert input;
+- `interview`: ask one or more actual relevant people and preserve what was
+  heard;
+- `not_selected`: no approach has been selected yet.
+
+The approach routes the learning activity. It is not Evidence, a
+`knowledge_basis`, a result, confidence, or adoption. Existing Episodes created
+before this lightweight format may omit it; do not backfill an approach from
+plausibility. Validation Components are optional extended structure, not
+required Hypothesis fields.
+
+### Hypothesis validation disposition
+
+A Hypothesis Episode using the lightweight format records one disposition in
+the body under `## 次の判断`:
+
+- `proceed`: the bounded learning is sufficient for the declared next step;
+- `revise`: revise the hypothesis before continuing;
+- `validate_further`: perform another bounded validation step;
+- `stop_for_current_scope`: perform no further validation in the current scope;
+- `not_decided`: no disposition has been selected yet.
+
+The disposition closes or routes the bounded Episode. It is not a hypothesis
+result, a statement of truth, a Risk Decision, or Artifact adoption. An
+`inconclusive` result may still use `stop_for_current_scope`; inconclusive does
+not by itself mean that the Episode remains open. Existing Episodes created
+before this lightweight format may omit the disposition. Do not backfill one
+from Git state or plausibility.
+
 ## Risk Decision required fields
 
 A Risk Decision records an explicit human response to one residual risk. It is
 not a derived analysis node and does not use `status`, `confidence`,
 `knowledge_basis`, or a hypothesis `result`.
+
+The decision schema is used only after a lightweight Hypothesis has been
+extended with a stable Validation Component and the human makes a material
+decision about that component. It is not required for routine uncertainty,
+`not_tested` work, or an ordinary choice of the next validation approach.
 
 | Field | Type | Allowed values or rule |
 | --- | --- | --- |

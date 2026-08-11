@@ -73,11 +73,22 @@ Repository全体のSynthesis、Hypothesis構造の解釈、Pattern抽出、ま�
 表していると判断したことを示します。事実確認、仮説の検証、公開安全性確認、
 成果物への採用を意味しません。
 
-複合仮説はHypothesis Episode内で小さな検証対象に分解できます。各対象について、
-確認範囲、Evidenceが示す結果、対象条件への適用可能性、残存リスクを区別します。
-残存リスクに対して先へ進む、追加調査する、軽減するなどの判断は
-`04_decisions/risk-decisions/` に履歴として残します。この判断は仮説が真であることや、
-成果物へ採用されたことを意味しません。
+Hypothesis Episodeの通常の検証は、Outcome Deliveryに合わせて`experiment`、
+`research`、`interview`のいずれか一つで小さく進めます。何を学びたいか、前へ進む
+Signal、実際に確認したこと、結果、主な限界を記録すれば十分です。`research`は
+Evidenceの品質ではなく学習方法の分類です。著名なFrameworkや業界団体の資料も、
+その資料が実際に支えられる主張と適用範囲に限定して使用します。
+
+各Episodeは結果とは別に、`proceed`、`revise`、`validate_further`、
+`stop_for_current_scope`のいずれかで次の扱いを決めます。`inconclusive`でも追加調査を
+行わないなら現在Scopeで閉じられます。これらは仮説の真偽、Risk受容、Artifact採用を
+意味しません。
+
+複数の重要な不確実性を別々に追う必要がある場合だけ、Hypothesis Episodeを
+Extended形式にしてValidation Components、Evidence Coverage、Finding、Applicabilityを
+使います。Risk Decisionも毎回は作成せず、不確実性が登壇Artifactの採用などの現在判断へ
+実質的に影響し、人間がその対応を明示的に決めた場合だけ履歴として残します。
+この判断は仮説が真であることや、成果物へ採用されたことを意味しません。
 
 ## ディレクトリ
 

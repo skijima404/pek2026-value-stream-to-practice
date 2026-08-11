@@ -214,6 +214,12 @@ def node_projection(root: Path, path: Path) -> dict[str, Any]:
             node[field_name] = values
     if node_type == "hypothesis_episode":
         node["result"] = VALIDATOR.parse_hypothesis_result(path)
+        approach, _ = VALIDATOR.parse_validation_approach(path)
+        if approach:
+            node["validation_approach"] = approach
+        disposition, _ = VALIDATOR.parse_validation_disposition(path)
+        if disposition:
+            node["validation_disposition"] = disposition
         components, _ = VALIDATOR.parse_validation_components(path)
         node["validation_components"] = [
             component_projection(components[component_id])
@@ -250,7 +256,7 @@ def build_graph(root: Path = ROOT) -> dict[str, Any]:
         )
     )
     return {
-        "schema_version": 1,
+        "schema_version": 3,
         "projection": {
             "authority": "none",
             "description": (
@@ -372,8 +378,8 @@ def render_validation_view(graph: dict[str, Any], output_path: str) -> str:
         "このViewは、宣言済みの結果、Evidence Coverage、現在のRisk Decisionを",
         "機械的に並べたNavigationです。未記録のDecisionを対応漏れとは解釈しません。",
         "",
-        "| Hypothesis Episode | Scope | Result | Components | Coverage | Current Risk Decisions |",
-        "| --- | --- | --- | ---: | --- | ---: |",
+        "| Hypothesis Episode | Scope | Approach | Result | Disposition | Components | Coverage | Current Risk Decisions |",
+        "| --- | --- | --- | --- | --- | ---: | --- | ---: |",
     ]
     for node in hypotheses:
         components = node.get("validation_components", [])
@@ -382,10 +388,20 @@ def render_validation_view(graph: dict[str, Any], output_path: str) -> str:
             for component in components
         )
         lines.append(
-            "| {node} | `{scope}` | `{result}` | {count} | {coverage} | {decisions} |".format(
+            "| {node} | `{scope}` | {approach} | `{result}` | {disposition} | {count} | {coverage} | {decisions} |".format(
                 node=node_link(node, output_path),
                 scope=node.get("hypothesis_scope", "unknown"),
+                approach=(
+                    f"`{node['validation_approach']}`"
+                    if node.get("validation_approach")
+                    else "—"
+                ),
                 result=node.get("result", "unknown"),
+                disposition=(
+                    f"`{node['validation_disposition']}`"
+                    if node.get("validation_disposition")
+                    else "—"
+                ),
                 count=len(components),
                 coverage=coverage_summary(components) or "なし",
                 decisions=decision_count,
@@ -394,6 +410,7 @@ def render_validation_view(graph: dict[str, Any], output_path: str) -> str:
     lines.extend(
         [
             "",
+            "DispositionはEpisodeの次の扱いであり、仮説の真偽やRisk受容ではありません。",
             "Coverageは仮説が正しい割合ではありません。Risk Decisionは仮説の支持、",
             "AnalysisのReview、Artifact採用のいずれも代替しません。",
             "",

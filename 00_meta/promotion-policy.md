@@ -87,11 +87,51 @@ experience, external research, direct observation, or reasoned synthesis.
   cross-scope context or same-level comparison.
 - Do not treat a child result as transitive validation of its parent.
 
-### Validation Components and Evidence Coverage
+### Default lightweight validation
 
-A complex Hypothesis Episode may declare a `検証対象の分解` table. Components
-are bounded uncertainties inside that Episode, not independent claims or a
-permanent dossier.
+Use a lightweight learning loop by default. A Hypothesis Episode chooses one
+primary approach for the current step:
+
+- `experiment`: make or simulate a bounded change and observe the result;
+- `research`: inspect identifiable existing sources, records, a case, or
+  relevant expert input;
+- `interview`: ask actual relevant people and preserve the bounded response.
+
+Use `not_selected` while no approach has been chosen. Expert review may be
+recorded as `research`, but human intent review of persisted wording is not a
+validation activity.
+
+A lightweight Episode needs only:
+
+- the claim and learning question;
+- one selected approach and the signal that permits the next step;
+- what was actually done and inspected;
+- what was observed;
+- `supports`, `challenges`, `inconclusive`, or `not_tested`;
+- the main limitation and residual uncertainty;
+- one explicit disposition: `proceed`, `revise`, `validate_further`,
+  `stop_for_current_scope`, or `not_decided` while no disposition exists.
+
+The disposition answers what happens after this bounded learning attempt. It
+does not answer whether the hypothesis is universally true. `proceed`,
+`revise`, and `stop_for_current_scope` close the current Episode;
+`validate_further` closes the current attempt while declaring another bounded
+validation step. `inconclusive` is a completed result when evidence was
+gathered; it does not remain open unless the disposition is
+`validate_further` or `not_decided`.
+
+Do not add Validation Components merely because the template or schema can
+represent them. Do not require a Risk Decision to continue ordinary learning.
+The goal is decision-relevant learning, not conclusive proof or a complete
+risk register.
+
+### Extended Validation Components and Evidence Coverage
+
+Extend a Hypothesis Episode with a `検証対象の分解` table only when it contains
+multiple decision-relevant uncertainties, different Evidence applies to
+different parts, or a material residual-risk decision needs a stable target.
+Components are bounded uncertainties inside that Episode, not independent
+claims or a permanent dossier.
 
 - Give each component a stable local ID: `U1`, `U2`, and so on. Never renumber
   or reuse an ID after another node references it.
@@ -120,10 +160,22 @@ some component findings support the hypothesis.
 
 ### Residual risk to Human Risk Decision
 
-When a human explicitly chooses how to respond to a component's documented
-residual risk, create a Risk Decision in `04_decisions/risk-decisions/`.
+Most residual uncertainty remains prose in the Hypothesis Episode. Create a
+Risk Decision in `04_decisions/risk-decisions/` only when all of the following
+are true:
+
+- the uncertainty is material to an Artifact adoption or another explicitly
+  declared current action;
+- the Hypothesis has an Extended Validation Component that documents it;
+- a human explicitly chooses how to respond within a bounded scope;
+- preserving the decision separately is useful for later review.
 
 - Do not create a decision while the response is undecided.
+- Do not create one merely to record `not_tested`, a limitation, routine
+  uncertainty, or the next `experiment`, `research`, or `interview` step.
+- If a lightweight Hypothesis later needs a formal decision, first add and
+  human-review the smallest stable Validation Component that represents the
+  material uncertainty. Do not infer that component during decision recording.
 - Record exactly one target Hypothesis Episode and component ID.
 - Keep decision sufficiency on the Risk Decision, never on Evidence Coverage.
 - Preserve decision scope, rationale, conditions, and review triggers in the
@@ -135,22 +187,18 @@ residual risk, create a Risk Decision in `04_decisions/risk-decisions/`.
 - Risk Decision creation does not change Analysis review status, confidence,
   knowledge basis, validation result, or Artifact adoption.
 
-### Proportional and lightweight validation
+### Proportional evidence
 
 A Hypothesis Episode is one bounded learning attempt, not a requirement to
-prove a claim conclusively. The effort and rigor of a validation method may be
-proportional to the decision it informs and the maturity of the hypothesis.
-This keeps early exploration feasible without overstating what weak evidence
-can establish.
+prove a claim conclusively. The effort and rigor may be proportional to the
+decision it informs and the maturity of the hypothesis.
 
-Acceptable lightweight methods include:
+Examples within the three approaches include:
 
-- desk research using identifiable sources;
-- interviews with a small number of relevant participants;
-- expert review;
-- a small prototype or walkthrough;
-- a session poll or other bounded participant response;
-- a limited follow-up after the session.
+- `research`: desk research, inspectable case reconstruction, or expert review;
+- `interview`: a small number of relevant participants or a limited follow-up;
+- `experiment`: a prototype, walkthrough, session poll, or bounded behavior
+  observation.
 
 There is no universal minimum sample size. Every completed episode must record:
 
@@ -166,6 +214,29 @@ or challenge the hypothesis. It does not justify population-wide validity,
 causality, or proof unless the method independently supports that stronger
 claim. Confidence must reflect the accumulated evidence, not the amount of
 effort spent.
+
+### Research source appraisal
+
+`research` identifies a learning approach, not an Evidence grade. A widely
+used or trusted reference may be sufficient for a bounded uncertainty about
+terminology, an established conceptual model, published guidance, or a
+recognized industry practice. Its reputation alone does not establish causal
+effect, prevalence, audience demand, or applicability to the repository's
+target context.
+
+For a completed Research step, record:
+
+- why the inspected source was selected;
+- which exact claim and source context it can support;
+- the source type and method when they affect credibility;
+- how far its context applies to the current hypothesis; and
+- the scope of any counterevidence or alternative-source search.
+
+Do not require an exhaustive literature review. A single inspectable source
+may be sufficient for the declared next decision when the supported claim is
+narrowly stated. If source quality or applicability remains material, narrow
+the claim, use `inconclusive`, select `validate_further`, or record a formal
+Risk Decision only when the separate material-decision criteria are met.
 
 ### GenAI-assisted research
 
