@@ -18,7 +18,7 @@
 | Risk Decision | 0 |
 | Accepted Artifact | 2 |
 
-Source digest: `42b4b44ef3978d97f5561350246fd2d2dc2f33d2a7aeb6739a93d75763ac10cf`
+Source digest: `5420be1191dfa907f0c08d0ad6c2842dfd03e8e06c902be084485bc8c68cdafa`
 
 ## 採用済みArtifact
 

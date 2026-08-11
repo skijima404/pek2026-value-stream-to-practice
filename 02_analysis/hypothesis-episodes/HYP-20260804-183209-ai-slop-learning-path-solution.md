@@ -8,7 +8,7 @@ created_by: agent:codex
 hypothesis_scope: session
 hypothesis_level: solution
 status: reviewed
-reviewed_at: 2026-08-07T21:51:09+09:00
+reviewed_at: 2026-08-11T15:59:06+09:00
 reviewed_by: human:kijima
 review_scope: intent_alignment
 confidence: low
@@ -71,7 +71,9 @@ AudienceがAI Slopを制御するActionを持ち帰るというSession Value Hyp
 | U4 | 残存リスクへのResponseを示すと、Evidence不足のまま断定せず次のActionを選べる | high | none | not_checked | unknown | unknown | Risk Decisionの説明が25分のSessionに必要か、過剰かを確認していない |
 | U5 | 発生構造、Signal、仮説検証およびリスク判断を一続きにしても、Audienceが中心メッセージを保持できる | critical | none | not_checked | unknown | unknown | 説明量、順序、前提知識および所要時間を確認していない |
 
-## 検証方法
+## 検証
+
+- アプローチ: `experiment`
 
 ### 方法と対象範囲
 
@@ -108,9 +110,19 @@ Practice Hypothesisの支持または実務経験は、このSession Solutionの
 - 再説明できることは、実際の現場適用またはOutcomeを保証しない
 - この仮説は登壇構成またはスライドの採用決定ではない
 
+## 次の判断
+
+- 判断: `validate_further`
+- 判断の対象範囲: 短い説明後の問題構造、Signal、および最初のActionの選択
+- 次に進めること:
+  一人または少人数への短いWalkthroughで、AI SlopをValue Stream上の問題として
+  説明できるか、確認したいSignalを一つ挙げられるか、最初のActionを一つ
+  選べるかを確認する。個別Tool列挙との厳密な比較、現場適用、全Audienceへの
+  一般化は今回の必須条件にしない
+
 ## 公開安全性確認
 
-- checked_at: 2026-08-07T21:51:09+09:00
+- checked_at: 2026-08-11T15:59:06+09:00
 - checked_by: agent:codex
 - result: `not_needed`
 - scope:

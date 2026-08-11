@@ -8,7 +8,7 @@ created_by: agent:codex
 hypothesis_scope: session
 hypothesis_level: value
 status: reviewed
-reviewed_at: 2026-08-05T22:55:41+09:00
+reviewed_at: 2026-08-11T15:59:06+09:00
 reviewed_by: human:kijima
 review_scope: intent_alignment
 confidence: low
@@ -75,7 +75,9 @@ relations:
 | U4 | 対象者が、持ち帰って試すActionを一つ選び、実施する意向を持つ | critical | none | not_checked | unknown | unknown | 満足度、実施意向および実際の行動の関係を確認していない |
 | U5 | 一部の対象者が、セッション後に選んだActionを実際の組織で試す | medium | none | not_checked | unknown | unknown | 後日行動を追跡できる手段、期間および選択Biasを定義していない |
 
-## 検証方法
+## 検証
+
+- アプローチ: `interview`
 
 ### 方法と対象範囲
 
@@ -156,9 +158,18 @@ U1とU2は限定した3人の範囲で`partially_checked / supports / contextual
 - 当日の反応だけでは、組織での適用またはOutcomeを確認できない
 - この仮説は登壇内容または評価方法の採用決定ではない
 
+## 次の判断
+
+- 判断: `validate_further`
+- 判断の対象範囲: U3のRisk特定とU4の最初のAction選択
+- 次に進めること:
+  Walkthrough、当日の短い応答、または登壇後アンケートのいずれかで、対象者が
+  Riskを一つ特定し、Actionを一つ選べるかを確認する。U5の実行追跡は現段階の
+  必須条件にしない
+
 ## 公開安全性確認
 
-- checked_at: 2026-08-05T22:55:41+09:00
+- checked_at: 2026-08-11T15:59:06+09:00
 - checked_by: agent:codex
 - result: `not_needed`
 - scope:

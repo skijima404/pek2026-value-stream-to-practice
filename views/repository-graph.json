@@ -4,7 +4,7 @@
     "authority": "none",
     "description": "Disposable navigation projection generated from repository Markdown; source nodes and adopted artifacts remain authoritative.",
     "generator": "scripts/generate_analysis_views.py",
-    "source_digest": "42b4b44ef3978d97f5561350246fd2d2dc2f33d2a7aeb6739a93d75763ac10cf",
+    "source_digest": "5420be1191dfa907f0c08d0ad6c2842dfd03e8e06c902be084485bc8c68cdafa",
     "excluded_sources": {},
     "excluded_edges": {}
   },
@@ -2045,6 +2045,8 @@
         "reasoned_synthesis"
       ],
       "result": "supports",
+      "validation_approach": "research",
+      "validation_disposition": "proceed",
       "validation_components": []
     },
     {
@@ -2468,6 +2470,8 @@
         "reasoned_synthesis"
       ],
       "result": "inconclusive",
+      "validation_approach": "interview",
+      "validation_disposition": "validate_further",
       "validation_components": [
         {
           "id": "U1",
@@ -2544,6 +2548,8 @@
         "reasoned_synthesis"
       ],
       "result": "not_tested",
+      "validation_approach": "experiment",
+      "validation_disposition": "validate_further",
       "validation_components": [
         {
           "id": "U1",
