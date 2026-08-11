@@ -73,6 +73,11 @@ relations:
 
 # 仮説
 
+## 検証
+
+- アプローチ: `research`
+- 学習したい問い: Sourceから確認できるか
+
 ## 検証対象の分解
 
 | ID | Uncertainty | Decision importance | Evidence refs | Coverage state | Finding | Applicability | Residual uncertainty |
@@ -82,6 +87,10 @@ relations:
 ## 結果
 
 `not_tested`
+
+## 次の判断
+
+- 判断: `not_decided`
 """,
             encoding="utf-8",
         )
@@ -91,13 +100,25 @@ relations:
             root = Path(temp_dir)
             self.write_fixture(root)
             graph = GENERATOR.build_graph(root)
+            self.assertEqual(3, graph["schema_version"])
             hypothesis = next(
                 node
                 for node in graph["nodes"]
                 if node["type"] == "hypothesis_episode"
             )
             self.assertEqual("not_tested", hypothesis["result"])
+            self.assertEqual("research", hypothesis["validation_approach"])
+            self.assertEqual(
+                "not_decided", hypothesis["validation_disposition"]
+            )
             self.assertEqual("U1", hypothesis["validation_components"][0]["id"])
+            validation_view = GENERATOR.render_validation_view(
+                graph, "02_analysis/views/validation-status.md"
+            )
+            self.assertIn(
+                "| `research` | `not_tested` | `not_decided` |",
+                validation_view,
+            )
             self.assertIn(
                 {
                     "source": hypothesis["id"],

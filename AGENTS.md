@@ -54,9 +54,22 @@ the session.
   relations.
 - Keep observation, interpretation, hypothesis, decision, and current artifact
   distinct. Do not collapse them into one document.
-- Keep Evidence Coverage, findings, residual risk, Human Risk Decisions, and
-  Artifact adoption distinct. A decision to proceed with risk changes none of
-  the hypothesis result, evidence basis, or adoption state.
+- Use lightweight Hypothesis validation by default. Choose one primary learning
+  approach for the current step: `experiment`, `research`, or `interview`.
+- Treat `research` as an approach, not an Evidence grade. A recognized
+  reference may resolve a bounded terminology, conceptual-model, or published-
+  guidance uncertainty, but its reputation alone does not establish causal
+  effect, prevalence, audience demand, or target-context applicability.
+- Close or route each new lightweight Episode with `proceed`, `revise`,
+  `validate_further`, `stop_for_current_scope`, or `not_decided`. An
+  `inconclusive` result is completed learning and remains active only when the
+  recorded disposition requires further validation or remains undecided.
+- Add Validation Components, Evidence Coverage, Finding, and Applicability only
+  when a Hypothesis contains multiple decision-relevant uncertainties or a
+  formal residual-risk decision needs a stable component target.
+- Keep lightweight or extended validation results, residual uncertainty, Human
+  Risk Decisions, and Artifact adoption distinct. A decision to proceed with
+  risk changes none of the hypothesis result, evidence basis, or adoption state.
 - Do not infer that a placeholder, directory name, template, or planned
   artifact is an adopted conclusion.
 - Do not invent missing provenance, validation results, participant behavior,
@@ -79,8 +92,10 @@ the session.
   in `03_artifacts/` with an explicit, traceable adoption decision.
 - Do not promote content into `03_artifacts/` unless an adoption decision is
   explicit and traceable.
-- Create a Risk Decision only after an explicit human response to a documented
-  residual risk. Do not create an `undecided` decision node.
+- Create a Risk Decision only for an explicit human response to a documented,
+  material residual risk that affects an Artifact adoption or another declared
+  current action. Routine uncertainty and the next learning step remain in the
+  Hypothesis Episode. Do not create an `undecided` decision node.
 - Use Mobius only to explain the hypothesis levels considered in a
   retrospective. Never use its board columns to track task execution.
 - Run `python3 scripts/validate_repository.py` after changing governed Markdown.

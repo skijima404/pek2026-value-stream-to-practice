@@ -1,4 +1,4 @@
 interface:
-  display_name: "Record Risk Decision"
-  short_description: "Record scoped human responses to residual hypothesis risk"
-  default_prompt: "Use $record-risk-decision to record my scoped response to a hypothesis component residual risk."
+  display_name: "Record Material Risk Decision"
+  short_description: "Record formal decisions on material residual hypothesis risk"
+  default_prompt: "Use $record-risk-decision to record my formal response to a material residual risk that affects a current adoption or action."

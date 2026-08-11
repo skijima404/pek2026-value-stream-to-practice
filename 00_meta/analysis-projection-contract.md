@@ -14,7 +14,8 @@
 ## Projection content
 
 The deterministic projection may contain only declared metadata, typed
-relations, explicitly recorded hypothesis results, validation components,
+relations, an explicitly recorded lightweight validation approach and
+disposition, explicitly recorded hypothesis results, validation components,
 current Risk Decision references, source paths, and deterministic counts.
 
 Source bodies are not copied into the JSON graph. A consumer uses the graph to
