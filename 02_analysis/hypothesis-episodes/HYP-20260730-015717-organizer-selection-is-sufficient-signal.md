@@ -8,7 +8,7 @@ created_by: agent:codex
 hypothesis_scope: session
 hypothesis_level: not_assessed
 status: reviewed
-reviewed_at: 2026-07-31T01:11:21+09:00
+reviewed_at: 2026-08-11T15:59:06+09:00
 reviewed_by: human:kijima
 review_scope: intent_alignment
 confidence: medium
@@ -34,7 +34,9 @@ relations:
 - Proposalが開催側に採択される。
 - 対象セッションが公式タイムテーブルへ掲載される。
 
-## 検証方法
+## 検証
+
+- アプローチ: `research`
 
 ### 方法と対象範囲
 
@@ -44,6 +46,14 @@ relations:
   - `EXT-20260730-015120-session-acceptance-and-schedule`
 - 選定方法: 今回のセッションに直接関係する外部入力を使用
 - 実施規模: Proposal 1件、採択通知の報告1件、公式掲載1件
+- 資料を選んだ理由: 今回の採択と掲載を直接記録するProposal、登壇者の報告、
+  公式タイムテーブルであるため
+- 資料が支えられる主張・資料文脈・今回への適用範囲:
+  採択と公式掲載が行われ、採択済みProposalの大方向を維持して今回のDelivery調整へ
+  進むための外部ゲートとして扱えること。Audience課題や内容の有効性には適用しない
+- 反証・代替資料を確認した範囲:
+  審査コメントや個別の採択理由は利用可能なRepository Sourceに含まれないため、
+  今回の制作継続判断の追加条件にはしない
 
 ### GenAIの利用
 
@@ -75,16 +85,23 @@ relations:
 - 一般化できない範囲: 採択からAudience全体の課題保有や解決方法の有効性を
   結論づけることはできない。
 
+## 次の判断
+
+- 判断: `proceed`
+- 判断の対象範囲: 採択済みProposalの大方向を維持し、今回のSession Delivery調整へ進む
+- 次に進めること: 内容の優先順位、説明方法、具体例、参加者とのInteraction、
+  持ち帰り手段を調整する
+
 ## 公開安全性確認
 
-- checked_at: 2026-07-31T01:11:50+09:00
+- checked_at: 2026-08-11T15:59:06+09:00
 - checked_by: agent:codex
 - result: `not_needed`
 - scope:
-  このHypothesis Episodeの本文、frontmatter、relationの組み合わせを、
-  `proposed` から `reviewed` へ変更する時点で再確認した
+  この分析ノードの本文、frontmatter、relationの組み合わせを、
+  人間の意図Reviewを確定する時点で再確認した
 - finding:
-  顧客、案件、非公開の個人、商用条件、内部System、認証情報、
-  再識別につながる組み合わせは確認されず、本文の変更や削除は行っていない
+  顧客、案件、非公開の個人、商用条件、内部System、認証情報、再識別に
+  つながる組み合わせは確認されず、本文の変更や削除は行っていない
 - limitation:
-  公開安全性の確認は、採択がAudience課題や価値仮説を実証したことを意味しない
+  公開安全性の確認は、内容の正しさ、検証完了、採用を意味しない
