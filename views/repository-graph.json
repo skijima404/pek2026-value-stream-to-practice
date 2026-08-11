@@ -4,7 +4,7 @@
     "authority": "none",
     "description": "Disposable navigation projection generated from repository Markdown; source nodes and adopted artifacts remain authoritative.",
     "generator": "scripts/generate_analysis_views.py",
-    "source_digest": "c9403dea1be5b3f40b5bd2867f3b7f205b1931e042c6331b91bc3411bbc40b72",
+    "source_digest": "9cc1c28afae294ea2d7f77c904d1dbaaae522cc760c31c060f3a9a93c063447f",
     "excluded_sources": {},
     "excluded_edges": {}
   },
@@ -1894,6 +1894,97 @@
       ]
     },
     {
+      "key": "RN-20260811-003709-platform-selection-step-quality-interview",
+      "id": "RN-20260811-003709-platform-selection-step-quality-interview",
+      "type": "raw_note",
+      "title": "Platform選定・環境入手FlowのStep別品質Interview",
+      "path": "01_working/raw-notes/RN-20260811-003709-platform-selection-step-quality-interview.md",
+      "content_language": "ja",
+      "created_at": "2026-08-11T00:37:09+09:00",
+      "created_by": "agent:codex",
+      "review_status": "reviewed",
+      "sanitization_status": "sanitized",
+      "tags": [
+        "ai-allocation",
+        "case-recollection",
+        "focused-interview",
+        "one-way-door",
+        "platform-selection",
+        "practitioner-experience",
+        "quality-priority",
+        "service-catalog",
+        "value-stream"
+      ]
+    },
+    {
+      "key": "RN-20260811-113030-modernization-platform-decision-walkthrough",
+      "id": "RN-20260811-113030-modernization-platform-decision-walkthrough",
+      "type": "raw_note",
+      "title": "Modernize基盤選定におけるOutcome起点とSpeed起点の比較Interview",
+      "path": "01_working/raw-notes/RN-20260811-113030-modernization-platform-decision-walkthrough.md",
+      "content_language": "ja",
+      "created_at": "2026-08-11T11:30:30+09:00",
+      "created_by": "agent:codex",
+      "review_status": "reviewed",
+      "sanitization_status": "sanitized",
+      "tags": [
+        "accountability",
+        "architecture-vision",
+        "case-recollection",
+        "decision-quality",
+        "focused-interview",
+        "modernization",
+        "platform-selection",
+        "practitioner-experience",
+        "residual-risk"
+      ]
+    },
+    {
+      "key": "RN-20260811-115140-small-application-standard-path-walkthrough",
+      "id": "RN-20260811-115140-small-application-standard-path-walkthrough",
+      "type": "raw_note",
+      "title": "小規模Applicationの標準Path・Scope判定・軽量分析Interview",
+      "path": "01_working/raw-notes/RN-20260811-115140-small-application-standard-path-walkthrough.md",
+      "content_language": "ja",
+      "created_at": "2026-08-11T11:51:40+09:00",
+      "created_by": "agent:codex",
+      "review_status": "reviewed",
+      "sanitization_status": "sanitized",
+      "tags": [
+        "admission-control",
+        "case-recollection",
+        "focused-interview",
+        "lightweight-analysis",
+        "platform-standard",
+        "practitioner-experience",
+        "service-scope",
+        "standard-path",
+        "two-way-door"
+      ]
+    },
+    {
+      "key": "RN-20260811-131146-ai-capability-consumer-value-stream-boundary",
+      "id": "RN-20260811-131146-ai-capability-consumer-value-stream-boundary",
+      "type": "raw_note",
+      "title": "AI Capabilityと消費側Value Streamの境界に関する対話",
+      "path": "01_working/raw-notes/RN-20260811-131146-ai-capability-consumer-value-stream-boundary.md",
+      "content_language": "ja",
+      "created_at": "2026-08-11T13:11:46+09:00",
+      "created_by": "agent:codex",
+      "review_status": "reviewed",
+      "sanitization_status": "not_needed",
+      "tags": [
+        "acceptance-criteria",
+        "ai-capability",
+        "capability-contract",
+        "complicated-subsystem",
+        "platform-capability",
+        "responsibility-boundary",
+        "team-topologies",
+        "value-stream"
+      ]
+    },
+    {
       "key": "HYP-20260730-015717-organizer-selection-is-sufficient-signal",
       "id": "HYP-20260730-015717-organizer-selection-is-sufficient-signal",
       "type": "hypothesis_episode",
@@ -2232,35 +2323,43 @@
       "content_language": "ja",
       "created_at": "2026-08-04T01:32:23+09:00",
       "created_by": "agent:codex",
-      "status": "reviewed",
+      "status": "superseded",
       "confidence": "low",
       "hypothesis_scope": "practice",
       "hypothesis_level": "solution",
       "knowledge_basis": [
         "recorded_statement",
+        "practitioner_experience",
+        "case_recollection",
+        "explicit_validation",
         "reasoned_synthesis"
       ],
-      "result": "not_tested",
+      "result": "inconclusive",
       "validation_components": [
         {
           "id": "U1",
           "uncertainty": "Value Streamの課題と期待Outcomeから始めると、Toolまたは生成Use Caseから始める場合とは異なるAI Capability、責任境界、観測項目または棄却判断を選べる",
           "decision_importance": "critical",
-          "evidence_refs": [],
-          "coverage_state": "not_checked",
-          "finding": "unknown",
-          "applicability": "unknown",
-          "residual_uncertainty": "同一の改善候補について、二つの開始方法から得られる選択と判断を比較していない"
+          "evidence_refs": [
+            "OBS-20260811-113031-outcome-first-changed-platform-decision",
+            "OBS-20260811-115141-standard-path-replaced-platform-selection"
+          ],
+          "coverage_state": "checked_for_current_scope",
+          "finding": "supports",
+          "applicability": "direct",
+          "residual_uncertainty": "同じ一人の実践者による重いOne Way Doorと小規模Applicationの二つのWalkthroughである。二つの開始方法を実装せず、当時の資料、他のActor、判断後のOutcome、Routing結果および比較Costは未確認である"
         },
         {
           "id": "U2",
           "uncertainty": "同じValue Streamの中でも、対象箇所とContextによって、Speed、Coverage、Decision Quality、Reproducibilityなどの優先品質は異なり、Speedが一貫して最優先になるとは限らない",
           "decision_importance": "critical",
-          "evidence_refs": [],
-          "coverage_state": "not_checked",
-          "finding": "unknown",
-          "applicability": "unknown",
-          "residual_uncertainty": "優先品質の候補は会話から整理されたが、実在するValue Streamの複数箇所について、Actor、Error Cost、頻度、時間制約および期待Outcomeから優先順位を確認していない"
+          "evidence_refs": [
+            "OBS-20260811-003710-platform-flow-step-quality-priorities"
+          ],
+          "coverage_state": "checked_for_current_scope",
+          "finding": "supports",
+          "applicability": "direct",
+          "residual_uncertainty": "一人の実践者によるBounded Walkthroughで8 Step中3 Stepを確認した。一次資料、他のActor、実施頻度、全Stepおよび自動化済みProcessへの観点の包含は未確認である"
         },
         {
           "id": "U3",
@@ -2276,11 +2375,13 @@
           "id": "U4",
           "uncertainty": "Value Stream、優先品質、Capability、責任境界および観測を整理するCostは、得られる経済的な判断改善または回避できる局所最適と下流負荷に対して妥当である",
           "decision_importance": "high",
-          "evidence_refs": [],
-          "coverage_state": "not_checked",
-          "finding": "unknown",
-          "applicability": "unknown",
-          "residual_uncertainty": "小規模利用と高Risk利用の適用境界、所要時間、必要Skillおよび簡略化条件を確認していない"
+          "evidence_refs": [
+            "OBS-20260811-115142-lightweight-analysis-cost-judgment"
+          ],
+          "coverage_state": "partially_checked",
+          "finding": "supports",
+          "applicability": "direct",
+          "residual_uncertainty": "小規模Applicationでは一枚程度のStatementと実働約16時間という実践者個人の感覚値を得たが、実測Cost、組織合意、複数Case、回避効果、標準維持Costおよび高Risk利用の分析Costは未確認である"
         }
       ]
     },
@@ -3092,29 +3193,36 @@
       "hypothesis_level": "feature",
       "knowledge_basis": [
         "recorded_statement",
+        "practitioner_experience",
+        "case_recollection",
+        "explicit_validation",
         "reasoned_synthesis"
       ],
-      "result": "not_tested",
+      "result": "inconclusive",
       "validation_components": [
         {
           "id": "U1",
           "uncertainty": "Tool選定前に、DVS上の対象箇所と成立させたい品質を、実務で判断可能な粒度に定義できる",
           "decision_importance": "high",
-          "evidence_refs": [],
-          "coverage_state": "not_checked",
-          "finding": "unknown",
-          "applicability": "unknown",
-          "residual_uncertainty": "Discover、Decide、Deliverの補助区分と品質候補を、実Caseへ適用できるか確認していない"
+          "evidence_refs": [
+            "OBS-20260811-003710-platform-flow-step-quality-priorities"
+          ],
+          "coverage_state": "checked_for_current_scope",
+          "finding": "supports",
+          "applicability": "direct",
+          "residual_uncertainty": "一人の実践者によるBounded Walkthroughで8 Step中3 Stepを確認した。全Step、他のActor、実測閾値および自動化仕様への観点の反映は未確認である"
         },
         {
           "id": "U2",
           "uncertainty": "品質からAI Outcomeを選ぶと、生成Use Case先行とは異なるCapability、責任境界または棄却判断が得られる",
           "decision_importance": "critical",
-          "evidence_refs": [],
-          "coverage_state": "not_checked",
-          "finding": "unknown",
-          "applicability": "unknown",
-          "residual_uncertainty": "同一の改善候補を二つの開始方法で比較していない"
+          "evidence_refs": [
+            "OBS-20260811-003711-quality-first-changed-ai-allocation"
+          ],
+          "coverage_state": "checked_for_current_scope",
+          "finding": "supports",
+          "applicability": "direct",
+          "residual_uncertainty": "一人のWalkthroughで判断差を確認したが、二つの開始方法を実装・運用して比較せず、AIの再現性試験とCapability条件も未定義である"
         },
         {
           "id": "U3",
@@ -3135,6 +3243,78 @@
           "finding": "unknown",
           "applicability": "unknown",
           "residual_uncertainty": "小規模利用と高Risk利用の適用境界、所要時間、必要Skillおよび簡略化条件を確認していない"
+        }
+      ]
+    },
+    {
+      "key": "HYP-20260811-131148-consumer-governed-ai-capability",
+      "id": "HYP-20260811-131148-consumer-governed-ai-capability",
+      "type": "hypothesis_episode",
+      "title": "消費側Value StreamのConcernからAI Capabilityの利用条件を決めると局所最適を避けやすい",
+      "path": "02_analysis/hypothesis-episodes/HYP-20260811-131148-consumer-governed-ai-capability.md",
+      "content_language": "ja",
+      "created_at": "2026-08-11T13:11:48+09:00",
+      "created_by": "agent:codex",
+      "status": "reviewed",
+      "confidence": "low",
+      "hypothesis_scope": "practice",
+      "hypothesis_level": "solution",
+      "knowledge_basis": [
+        "recorded_statement",
+        "external_research",
+        "reasoned_synthesis"
+      ],
+      "result": "not_tested",
+      "validation_components": [
+        {
+          "id": "U1",
+          "uncertainty": "消費側Value Streamが、AIの提供Topologyを決める前に、Business Outcome、業務後のConcern、受入条件、Error CostおよびAccountabilityを実務で判断可能な粒度に定義できる",
+          "decision_importance": "critical",
+          "evidence_refs": [],
+          "coverage_state": "not_checked",
+          "finding": "unknown",
+          "applicability": "unknown",
+          "residual_uncertainty": "定義に必要なActor、入力、粒度、時間、Decision Ownerおよび提供側の関与範囲を確認していない"
+        },
+        {
+          "id": "U2",
+          "uncertainty": "消費側のConcernと受入条件から始めると、提供側のCapabilityまたは局所指標から始める場合とは異なるAI利用範囲、責任境界、Guardrail、代替、保留または棄却判断を選べる",
+          "decision_importance": "critical",
+          "evidence_refs": [],
+          "coverage_state": "not_checked",
+          "finding": "unknown",
+          "applicability": "unknown",
+          "residual_uncertainty": "同一Caseで二つの開始方法を比較しておらず、旧EpisodeのFindingを転用していない"
+        },
+        {
+          "id": "U3",
+          "uncertainty": "同じConcernと受入条件を満たす実現案の中でAIを利用すると、非AI案または他のCapability配置より、手戻り、待ち、Error Costおよび下流負荷を含むEnd-to-EndのFlowまたは総Costを改善できる",
+          "decision_importance": "critical",
+          "evidence_refs": [],
+          "coverage_state": "not_checked",
+          "finding": "unknown",
+          "applicability": "unknown",
+          "residual_uncertainty": "比較可能なCase、単位、対象期間、Baseline、発生頻度、対象Resourceおよび実Outcomeを確認していない"
+        },
+        {
+          "id": "U4",
+          "uncertainty": "AI CapabilityをComplicated Subsystem teamまたはPlatform teamが提供する場合でも、外部Serviceまたは通常の開発Toolとして利用する場合でも、消費側のOutcome、受入条件および最終利用判断を維持できる",
+          "decision_importance": "high",
+          "evidence_refs": [],
+          "coverage_state": "not_checked",
+          "finding": "unknown",
+          "applicability": "unknown",
+          "residual_uncertainty": "Team Topologies公式ページによる用語とInteraction Modeは確認したが、AI Capabilityの分類、複数の提供主体・提供形態のCase、Capability Contractおよび例外時のDecision Ownerは確認していない"
+        },
+        {
+          "id": "U5",
+          "uncertainty": "Concern、受入条件、Capability Contractおよび責任境界を整理・維持するCostは、対象の規模、可逆性およびRiskに対して比例的である",
+          "decision_importance": "high",
+          "evidence_refs": [],
+          "coverage_state": "not_checked",
+          "finding": "unknown",
+          "applicability": "unknown",
+          "residual_uncertainty": "小規模Tool利用と高Riskな内部Subsystemを比較しておらず、作成・Review・更新Costおよび回避効果を確認していない"
         }
       ]
     },
@@ -3763,6 +3943,131 @@
       ]
     },
     {
+      "key": "OBS-20260811-003710-platform-flow-step-quality-priorities",
+      "id": "OBS-20260811-003710-platform-flow-step-quality-priorities",
+      "type": "observation",
+      "title": "Platform選定・環境入手FlowではStepごとに優先品質とError Costが異なった",
+      "path": "02_analysis/observations/OBS-20260811-003710-platform-flow-step-quality-priorities.md",
+      "content_language": "ja",
+      "created_at": "2026-08-11T00:37:10+09:00",
+      "created_by": "agent:codex",
+      "status": "reviewed",
+      "confidence": "medium",
+      "knowledge_basis": [
+        "recorded_statement",
+        "practitioner_experience",
+        "case_recollection",
+        "explicit_validation"
+      ]
+    },
+    {
+      "key": "OBS-20260811-003711-quality-first-changed-ai-allocation",
+      "id": "OBS-20260811-003711-quality-first-changed-ai-allocation",
+      "type": "observation",
+      "title": "申請Stepの品質起点検討はAI優先から決定的自動化と限定的AI補助へ割り当てを変えた",
+      "path": "02_analysis/observations/OBS-20260811-003711-quality-first-changed-ai-allocation.md",
+      "content_language": "ja",
+      "created_at": "2026-08-11T00:37:11+09:00",
+      "created_by": "agent:codex",
+      "status": "reviewed",
+      "confidence": "medium",
+      "knowledge_basis": [
+        "recorded_statement",
+        "practitioner_experience",
+        "explicit_validation",
+        "reasoned_synthesis"
+      ]
+    },
+    {
+      "key": "OBS-20260811-113031-outcome-first-changed-platform-decision",
+      "id": "OBS-20260811-113031-outcome-first-changed-platform-decision",
+      "type": "observation",
+      "title": "Outcome起点の検討はModernize基盤選定へ保留・暫定化・Risk承認を追加した",
+      "path": "02_analysis/observations/OBS-20260811-113031-outcome-first-changed-platform-decision.md",
+      "content_language": "ja",
+      "created_at": "2026-08-11T11:30:31+09:00",
+      "created_by": "agent:codex",
+      "status": "reviewed",
+      "confidence": "medium",
+      "knowledge_basis": [
+        "recorded_statement",
+        "practitioner_experience",
+        "case_recollection",
+        "explicit_validation",
+        "reasoned_synthesis"
+      ]
+    },
+    {
+      "key": "OBS-20260811-115141-standard-path-replaced-platform-selection",
+      "id": "OBS-20260811-115141-standard-path-replaced-platform-selection",
+      "type": "observation",
+      "title": "小規模Applicationでは標準PathとAdmission Controlが個別基盤選定を置き換えた",
+      "path": "02_analysis/observations/OBS-20260811-115141-standard-path-replaced-platform-selection.md",
+      "content_language": "ja",
+      "created_at": "2026-08-11T11:51:41+09:00",
+      "created_by": "agent:codex",
+      "status": "reviewed",
+      "confidence": "medium",
+      "knowledge_basis": [
+        "recorded_statement",
+        "practitioner_experience",
+        "case_recollection",
+        "explicit_validation",
+        "reasoned_synthesis"
+      ]
+    },
+    {
+      "key": "OBS-20260811-115142-lightweight-analysis-cost-judgment",
+      "id": "OBS-20260811-115142-lightweight-analysis-cost-judgment",
+      "type": "observation",
+      "title": "小規模Applicationでは約16時間の軽量分析が数か月の誤投資回避に妥当と判断された",
+      "path": "02_analysis/observations/OBS-20260811-115142-lightweight-analysis-cost-judgment.md",
+      "content_language": "ja",
+      "created_at": "2026-08-11T11:51:42+09:00",
+      "created_by": "agent:codex",
+      "status": "reviewed",
+      "confidence": "low",
+      "knowledge_basis": [
+        "recorded_statement",
+        "practitioner_experience",
+        "explicit_validation",
+        "reasoned_synthesis"
+      ]
+    },
+    {
+      "key": "OBS-20260811-131147-consumer-concerns-govern-ai-capability",
+      "id": "OBS-20260811-131147-consumer-concerns-govern-ai-capability",
+      "type": "observation",
+      "title": "AI提供Topologyより消費側Value StreamのConcernを上位に置く境界原則が整理された",
+      "path": "02_analysis/observations/OBS-20260811-131147-consumer-concerns-govern-ai-capability.md",
+      "content_language": "ja",
+      "created_at": "2026-08-11T13:11:47+09:00",
+      "created_by": "agent:codex",
+      "status": "reviewed",
+      "confidence": "medium",
+      "knowledge_basis": [
+        "recorded_statement",
+        "reasoned_synthesis"
+      ]
+    },
+    {
+      "key": "OBS-20260811-140549-ai-subsystem-team-terminology-fit",
+      "id": "OBS-20260811-140549-ai-subsystem-team-terminology-fit",
+      "type": "observation",
+      "title": "AI Capabilityを担うComplicated Subsystem teamという整理は公式用語と両立する",
+      "path": "02_analysis/observations/OBS-20260811-140549-ai-subsystem-team-terminology-fit.md",
+      "content_language": "ja",
+      "created_at": "2026-08-11T14:05:49+09:00",
+      "created_by": "agent:codex",
+      "status": "reviewed",
+      "confidence": "medium",
+      "knowledge_basis": [
+        "recorded_statement",
+        "external_research",
+        "reasoned_synthesis"
+      ]
+    },
+    {
       "key": "artifact:03_artifacts/attendee-journey.md",
       "type": "artifact",
       "title": "参加者Journey兼Value Stream",
@@ -3853,6 +4158,16 @@
       "content_language": "ja",
       "created_at": "2026-07-29T22:55:55+09:00",
       "created_by": "human:kijima"
+    },
+    {
+      "key": "EXT-20260811-140548-team-topologies-key-concepts",
+      "id": "EXT-20260811-140548-team-topologies-key-concepts",
+      "type": "external_input",
+      "title": "Team Topologiesの主要概念とTeam間Interaction Mode",
+      "path": "10_external-inputs/frameworks/team-topologies/EXT-20260811-140548-team-topologies-key-concepts.md",
+      "content_language": "ja",
+      "created_at": "2026-08-11T14:05:48+09:00",
+      "created_by": "agent:codex"
     },
     {
       "key": "EXT-20260730-210419-bcg-ai-process-redesign-10-20-70",
@@ -4099,12 +4414,37 @@
     {
       "source": "HYP-20260804-013223-outcome-first-ai-resource-allocation",
       "type": "derived_from",
+      "target": "OBS-20260811-003710-platform-flow-step-quality-priorities"
+    },
+    {
+      "source": "HYP-20260804-013223-outcome-first-ai-resource-allocation",
+      "type": "derived_from",
+      "target": "OBS-20260811-113031-outcome-first-changed-platform-decision"
+    },
+    {
+      "source": "HYP-20260804-013223-outcome-first-ai-resource-allocation",
+      "type": "derived_from",
+      "target": "OBS-20260811-115141-standard-path-replaced-platform-selection"
+    },
+    {
+      "source": "HYP-20260804-013223-outcome-first-ai-resource-allocation",
+      "type": "derived_from",
+      "target": "OBS-20260811-115142-lightweight-analysis-cost-judgment"
+    },
+    {
+      "source": "HYP-20260804-013223-outcome-first-ai-resource-allocation",
+      "type": "derived_from",
       "target": "RN-20260730-111926-value-stream-ai-outcomes"
     },
     {
       "source": "HYP-20260804-013223-outcome-first-ai-resource-allocation",
       "type": "derived_from",
       "target": "RN-20260731-214443-ai-resource-management-in-value-stream"
+    },
+    {
+      "source": "HYP-20260804-013223-outcome-first-ai-resource-allocation",
+      "type": "superseded_by",
+      "target": "HYP-20260811-131148-consumer-governed-ai-capability"
     },
     {
       "source": "HYP-20260804-013223-outcome-first-ai-resource-allocation",
@@ -4418,8 +4758,38 @@
     },
     {
       "source": "HYP-20260809-203135-quality-first-ai-allocation-workflow",
+      "type": "derived_from",
+      "target": "OBS-20260811-003710-platform-flow-step-quality-priorities"
+    },
+    {
+      "source": "HYP-20260809-203135-quality-first-ai-allocation-workflow",
+      "type": "derived_from",
+      "target": "OBS-20260811-003711-quality-first-changed-ai-allocation"
+    },
+    {
+      "source": "HYP-20260809-203135-quality-first-ai-allocation-workflow",
       "type": "tests",
       "target": "HYP-20260804-013223-outcome-first-ai-resource-allocation"
+    },
+    {
+      "source": "HYP-20260811-131148-consumer-governed-ai-capability",
+      "type": "derived_from",
+      "target": "OBS-20260811-131147-consumer-concerns-govern-ai-capability"
+    },
+    {
+      "source": "HYP-20260811-131148-consumer-governed-ai-capability",
+      "type": "derived_from",
+      "target": "OBS-20260811-140549-ai-subsystem-team-terminology-fit"
+    },
+    {
+      "source": "HYP-20260811-131148-consumer-governed-ai-capability",
+      "type": "supersedes",
+      "target": "HYP-20260804-013223-outcome-first-ai-resource-allocation"
+    },
+    {
+      "source": "HYP-20260811-131148-consumer-governed-ai-capability",
+      "type": "tests",
+      "target": "HYP-20260804-183210-ai-slop-downstream-burden-value"
     },
     {
       "source": "OBS-20260730-015714-session-goal-and-journey",
@@ -4865,6 +5235,56 @@
       "source": "OBS-20260809-203134-downstream-load-frequency-induced-work",
       "type": "derived_from",
       "target": "RN-20260809-194608-dvs-phase-quality-ai-outcomes"
+    },
+    {
+      "source": "OBS-20260811-003710-platform-flow-step-quality-priorities",
+      "type": "derived_from",
+      "target": "RN-20260811-003709-platform-selection-step-quality-interview"
+    },
+    {
+      "source": "OBS-20260811-003711-quality-first-changed-ai-allocation",
+      "type": "derived_from",
+      "target": "RN-20260811-003709-platform-selection-step-quality-interview"
+    },
+    {
+      "source": "OBS-20260811-113031-outcome-first-changed-platform-decision",
+      "type": "derived_from",
+      "target": "RN-20260811-113030-modernization-platform-decision-walkthrough"
+    },
+    {
+      "source": "OBS-20260811-115141-standard-path-replaced-platform-selection",
+      "type": "derived_from",
+      "target": "RN-20260811-115140-small-application-standard-path-walkthrough"
+    },
+    {
+      "source": "OBS-20260811-115142-lightweight-analysis-cost-judgment",
+      "type": "derived_from",
+      "target": "RN-20260811-115140-small-application-standard-path-walkthrough"
+    },
+    {
+      "source": "OBS-20260811-131147-consumer-concerns-govern-ai-capability",
+      "type": "derived_from",
+      "target": "RN-20260811-131146-ai-capability-consumer-value-stream-boundary"
+    },
+    {
+      "source": "OBS-20260811-131147-consumer-concerns-govern-ai-capability",
+      "type": "references",
+      "target": "OBS-20260801-004820-coupled-platform-value-streams"
+    },
+    {
+      "source": "OBS-20260811-140549-ai-subsystem-team-terminology-fit",
+      "type": "derived_from",
+      "target": "EXT-20260811-140548-team-topologies-key-concepts"
+    },
+    {
+      "source": "OBS-20260811-140549-ai-subsystem-team-terminology-fit",
+      "type": "derived_from",
+      "target": "RN-20260811-131146-ai-capability-consumer-value-stream-boundary"
+    },
+    {
+      "source": "OBS-20260811-140549-ai-subsystem-team-terminology-fit",
+      "type": "references",
+      "target": "OBS-20260811-131147-consumer-concerns-govern-ai-capability"
     },
     {
       "source": "artifact:03_artifacts/attendee-journey.md",
