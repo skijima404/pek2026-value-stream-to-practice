@@ -24,7 +24,8 @@
 | [個人による学習機能の代行または好条件があれば制度化されたCapabilityなしでも一回の成功は起こり得る](../hypothesis-episodes/HYP-20260809-013741-individual-learning-substitution-one-shot-success.md) | `practice` | — | `inconclusive` | — | 3 | `partially_checked` 1、`not_checked` 2 | 0 |
 | [Valueから意思決定・Data・利用・OutcomeへのTraceabilityはDVSの継続的学習を成立させる](../hypothesis-episodes/HYP-20260809-013742-value-traceability-enables-dvs-learning.md) | `practice` | — | `inconclusive` | — | 4 | `partially_checked` 3、`not_checked` 1 | 0 |
 | [対象箇所・必要品質・AI Outcome・Capability・観測の順で設計すると局所速度偏重を避けやすい](../hypothesis-episodes/HYP-20260809-203135-quality-first-ai-allocation-workflow.md) | `practice` | — | `inconclusive` | — | 4 | `checked_for_current_scope` 2、`not_checked` 2 | 0 |
-| [消費側Value StreamのConcernからAI Capabilityの利用条件を決めると局所最適を避けやすい](../hypothesis-episodes/HYP-20260811-131148-consumer-governed-ai-capability.md) | `practice` | — | `not_tested` | — | 5 | `not_checked` 5 | 0 |
+| [消費側Value StreamのConcernからAI Capabilityの利用条件を決めると局所最適を避けやすい](../hypothesis-episodes/HYP-20260811-131148-consumer-governed-ai-capability.md) | `practice` | — | `not_tested` | — | 6 | `not_checked` 6 | 0 |
+| [AI導入前にValue Streamを診断して観測網を置くと導入後の混乱へ早く対処しやすい](../hypothesis-episodes/HYP-20260811-221401-adaptive-ai-readiness.md) | `practice` | — | `not_tested` | — | 5 | `not_checked` 5 | 0 |
 | [開催側の採択を方向性継続の十分なシグナルとして扱う](../hypothesis-episodes/HYP-20260730-015717-organizer-selection-is-sufficient-signal.md) | `session` | — | `supports` | — | 0 | なし | 0 |
 | [リレーを中心にしたセッション構成ならAI SlopからVSMまでを一本道で伝えられる](../hypothesis-episodes/HYP-20260731-004119-relay-centered-session-story.md) | `session` | — | `not_tested` | — | 0 | なし | 0 |
 | [AudienceはAI Slopを制御するActionを持ち帰ることに価値を感じる](../hypothesis-episodes/HYP-20260804-183208-audience-actionable-ai-slop-value.md) | `session` | — | `inconclusive` | — | 5 | `partially_checked` 2、`not_checked` 3 | 0 |

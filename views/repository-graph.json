@@ -4,7 +4,7 @@
     "authority": "none",
     "description": "Disposable navigation projection generated from repository Markdown; source nodes and adopted artifacts remain authoritative.",
     "generator": "scripts/generate_analysis_views.py",
-    "source_digest": "9cc1c28afae294ea2d7f77c904d1dbaaae522cc760c31c060f3a9a93c063447f",
+    "source_digest": "42b4b44ef3978d97f5561350246fd2d2dc2f33d2a7aeb6739a93d75763ac10cf",
     "excluded_sources": {},
     "excluded_edges": {}
   },
@@ -1985,6 +1985,48 @@
       ]
     },
     {
+      "key": "RN-20260811-204844-ai-flow-team-topologies-reading-dialogue",
+      "id": "RN-20260811-204844-ai-flow-team-topologies-reading-dialogue",
+      "type": "raw_note",
+      "title": "AI、Value Flow、Team Topologiesに関する6資料の読書対話",
+      "path": "01_working/raw-notes/RN-20260811-204844-ai-flow-team-topologies-reading-dialogue.md",
+      "content_language": "ja",
+      "created_at": "2026-08-11T20:48:44+09:00",
+      "created_by": "agent:codex",
+      "review_status": "corrected",
+      "sanitization_status": "not_needed",
+      "tags": [
+        "ai-capability",
+        "cognitive-load",
+        "complicated-subsystem",
+        "dora",
+        "interaction-mode",
+        "platform-product",
+        "team-topologies",
+        "value-flow",
+        "verification-tax"
+      ]
+    },
+    {
+      "key": "RN-20260811-224043-readiness-diagnosis-observation-net",
+      "id": "RN-20260811-224043-readiness-diagnosis-observation-net",
+      "type": "raw_note",
+      "title": "AI Readinessは混乱への事前診断と観測網として扱う",
+      "path": "01_working/raw-notes/RN-20260811-224043-readiness-diagnosis-observation-net.md",
+      "content_language": "ja",
+      "created_at": "2026-08-11T22:40:43+09:00",
+      "created_by": "human:kijima",
+      "review_status": "reviewed",
+      "sanitization_status": "not_needed",
+      "tags": [
+        "ai-readiness",
+        "j-curve",
+        "mbpm",
+        "organizational-adaptation",
+        "value-flow"
+      ]
+    },
+    {
       "key": "HYP-20260730-015717-organizer-selection-is-sufficient-signal",
       "id": "HYP-20260730-015717-organizer-selection-is-sufficient-signal",
       "type": "hypothesis_episode",
@@ -3315,6 +3357,88 @@
           "finding": "unknown",
           "applicability": "unknown",
           "residual_uncertainty": "小規模Tool利用と高Riskな内部Subsystemを比較しておらず、作成・Review・更新Costおよび回避効果を確認していない"
+        },
+        {
+          "id": "U6",
+          "uncertainty": "AIをWorkload上のResourceとして扱う場合でも、その実体をFeature、Model、Inference、Evaluation、GuardrailなどのSoftware Componentと責任へ分解し、高度な専門部分をComplicated Subsystem、その所有者をComplicated Subsystem teamとして区別して、通常のSoftware Engineeringに必要なOwnership、Boundary、Version、TestまたはEvaluation、変更、Release、運用、観測および障害時責任を置ける",
+          "decision_importance": "high",
+          "evidence_refs": [],
+          "coverage_state": "not_checked",
+          "finding": "unknown",
+          "applicability": "unknown",
+          "residual_uncertainty": "分解に必要な粒度、AI固有Evaluationと通常Testの境界、内部Componentを直接管理できない外部Serviceへの責任の写像、および分解による判断・運用効果を確認していない"
+        }
+      ]
+    },
+    {
+      "key": "HYP-20260811-221401-adaptive-ai-readiness",
+      "id": "HYP-20260811-221401-adaptive-ai-readiness",
+      "type": "hypothesis_episode",
+      "title": "AI導入前にValue Streamを診断して観測網を置くと導入後の混乱へ早く対処しやすい",
+      "path": "02_analysis/hypothesis-episodes/HYP-20260811-221401-adaptive-ai-readiness.md",
+      "content_language": "ja",
+      "created_at": "2026-08-11T22:14:01+09:00",
+      "created_by": "agent:codex",
+      "status": "reviewed",
+      "confidence": "low",
+      "hypothesis_scope": "practice",
+      "hypothesis_level": "solution",
+      "knowledge_basis": [
+        "recorded_statement",
+        "external_research",
+        "reasoned_synthesis"
+      ],
+      "result": "not_tested",
+      "validation_components": [
+        {
+          "id": "U1",
+          "uncertainty": "AI導入前の組織状態によって、導入後の適応期間または混乱の大きさが異なる",
+          "decision_importance": "critical",
+          "evidence_refs": [],
+          "coverage_state": "not_checked",
+          "finding": "unknown",
+          "applicability": "unknown",
+          "residual_uncertainty": "組織状態、混乱、適応期間の操作的定義、比較可能なCaseおよびAI以外の影響を確認していない"
+        },
+        {
+          "id": "U2",
+          "uncertainty": "事前診断によって、AIによるSpeedまたはVolume変化で負荷が現れそうな箇所を特定し、Signal、Trigger、Ownerおよび対処Optionからなる観測網を置ける",
+          "decision_importance": "critical",
+          "evidence_refs": [],
+          "coverage_state": "not_checked",
+          "finding": "unknown",
+          "applicability": "unknown",
+          "residual_uncertainty": "予測可能な制約の範囲、診断入力、観測粒度、TriggerおよびOwnerを確認していない"
+        },
+        {
+          "id": "U3",
+          "uncertainty": "事前に観測網があると、ない場合よりTime to Detect、Time to DecideまたはTime to Adaptが短くなり、混乱の期間または回避可能な下流負荷を減らせる",
+          "decision_importance": "critical",
+          "evidence_refs": [],
+          "coverage_state": "not_checked",
+          "finding": "unknown",
+          "applicability": "unknown",
+          "residual_uncertainty": "比較可能なBaseline、導入記録、実際の対処、時間、総CostおよびOutcomeを確認していない"
+        },
+        {
+          "id": "U4",
+          "uncertainty": "MBPMはActor、Process、Handover、PT、LT、待ち、手戻り、確認負荷および`% Complete & Accurate`を、観測網の設計と更新に使える粒度で表現できる",
+          "decision_importance": "high",
+          "evidence_refs": [],
+          "coverage_state": "not_checked",
+          "finding": "unknown",
+          "applicability": "unknown",
+          "residual_uncertainty": "実Caseでの作成時間、Signal選定、更新可能性、およびMBPM外で補うべきOutcome、品質、Data、Knowledge、Architecture Riskを確認していない"
+        },
+        {
+          "id": "U5",
+          "uncertainty": "事前診断と観測網の作成・維持Costは、対象の規模、可逆性、Error Costおよび反復量に対して比例的であり、早期対処による回避効果を下回る",
+          "decision_importance": "high",
+          "evidence_refs": [],
+          "coverage_state": "not_checked",
+          "finding": "unknown",
+          "applicability": "unknown",
+          "residual_uncertainty": "小さく可逆な利用と高Riskまたは大量反復する利用を比較しておらず、診断Cost、観測維持Costおよび回避効果を確認していない"
         }
       ]
     },
@@ -4068,6 +4192,56 @@
       ]
     },
     {
+      "key": "OBS-20260811-220557-ai-resource-software-component-decomposition",
+      "id": "OBS-20260811-220557-ai-resource-software-component-decomposition",
+      "type": "observation",
+      "title": "AI ResourceはSoftware Systemとして責任単位へ分解して扱う",
+      "path": "02_analysis/observations/OBS-20260811-220557-ai-resource-software-component-decomposition.md",
+      "content_language": "ja",
+      "created_at": "2026-08-11T22:05:57+09:00",
+      "created_by": "agent:codex",
+      "status": "reviewed",
+      "confidence": "low",
+      "knowledge_basis": [
+        "recorded_statement",
+        "external_research",
+        "reasoned_synthesis"
+      ]
+    },
+    {
+      "key": "OBS-20260811-221400-ai-readiness-as-system-adaptation",
+      "id": "OBS-20260811-221400-ai-readiness-as-system-adaptation",
+      "type": "observation",
+      "title": "AI Readinessは組織Systemの制約を観測し適応する能力として扱う",
+      "path": "02_analysis/observations/OBS-20260811-221400-ai-readiness-as-system-adaptation.md",
+      "content_language": "ja",
+      "created_at": "2026-08-11T22:14:00+09:00",
+      "created_by": "agent:codex",
+      "status": "reviewed",
+      "confidence": "low",
+      "knowledge_basis": [
+        "recorded_statement",
+        "external_research",
+        "reasoned_synthesis"
+      ]
+    },
+    {
+      "key": "OBS-20260811-224044-readiness-diagnosis-observation-net",
+      "id": "OBS-20260811-224044-readiness-diagnosis-observation-net",
+      "type": "observation",
+      "title": "AI Readinessの中心は成熟度測定ではなく混乱への事前診断と観測網である",
+      "path": "02_analysis/observations/OBS-20260811-224044-readiness-diagnosis-observation-net.md",
+      "content_language": "ja",
+      "created_at": "2026-08-11T22:40:44+09:00",
+      "created_by": "agent:codex",
+      "status": "reviewed",
+      "confidence": "low",
+      "knowledge_basis": [
+        "recorded_statement",
+        "reasoned_synthesis"
+      ]
+    },
+    {
       "key": "artifact:03_artifacts/attendee-journey.md",
       "type": "artifact",
       "title": "参加者Journey兼Value Stream",
@@ -4167,6 +4341,16 @@
       "path": "10_external-inputs/frameworks/team-topologies/EXT-20260811-140548-team-topologies-key-concepts.md",
       "content_language": "ja",
       "created_at": "2026-08-11T14:05:48+09:00",
+      "created_by": "agent:codex"
+    },
+    {
+      "key": "EXT-20260811-223226-ai-data-knowledge-curation",
+      "id": "EXT-20260811-223226-ai-data-knowledge-curation",
+      "type": "external_input",
+      "title": "Team Topologies AI ROI ReportのDataとKnowledge SystemのCuration",
+      "path": "10_external-inputs/frameworks/team-topologies/EXT-20260811-223226-ai-data-knowledge-curation.md",
+      "content_language": "ja",
+      "created_at": "2026-08-11T22:32:26+09:00",
       "created_by": "agent:codex"
     },
     {
@@ -4783,11 +4967,36 @@
     },
     {
       "source": "HYP-20260811-131148-consumer-governed-ai-capability",
+      "type": "derived_from",
+      "target": "OBS-20260811-220557-ai-resource-software-component-decomposition"
+    },
+    {
+      "source": "HYP-20260811-131148-consumer-governed-ai-capability",
       "type": "supersedes",
       "target": "HYP-20260804-013223-outcome-first-ai-resource-allocation"
     },
     {
       "source": "HYP-20260811-131148-consumer-governed-ai-capability",
+      "type": "tests",
+      "target": "HYP-20260804-183210-ai-slop-downstream-burden-value"
+    },
+    {
+      "source": "HYP-20260811-221401-adaptive-ai-readiness",
+      "type": "derived_from",
+      "target": "OBS-20260811-221400-ai-readiness-as-system-adaptation"
+    },
+    {
+      "source": "HYP-20260811-221401-adaptive-ai-readiness",
+      "type": "derived_from",
+      "target": "OBS-20260811-224044-readiness-diagnosis-observation-net"
+    },
+    {
+      "source": "HYP-20260811-221401-adaptive-ai-readiness",
+      "type": "references",
+      "target": "HYP-20260811-131148-consumer-governed-ai-capability"
+    },
+    {
+      "source": "HYP-20260811-221401-adaptive-ai-readiness",
       "type": "tests",
       "target": "HYP-20260804-183210-ai-slop-downstream-burden-value"
     },
@@ -5285,6 +5494,51 @@
       "source": "OBS-20260811-140549-ai-subsystem-team-terminology-fit",
       "type": "references",
       "target": "OBS-20260811-131147-consumer-concerns-govern-ai-capability"
+    },
+    {
+      "source": "OBS-20260811-220557-ai-resource-software-component-decomposition",
+      "type": "derived_from",
+      "target": "EXT-20260811-140548-team-topologies-key-concepts"
+    },
+    {
+      "source": "OBS-20260811-220557-ai-resource-software-component-decomposition",
+      "type": "derived_from",
+      "target": "RN-20260811-204844-ai-flow-team-topologies-reading-dialogue"
+    },
+    {
+      "source": "OBS-20260811-220557-ai-resource-software-component-decomposition",
+      "type": "references",
+      "target": "OBS-20260811-140549-ai-subsystem-team-terminology-fit"
+    },
+    {
+      "source": "OBS-20260811-221400-ai-readiness-as-system-adaptation",
+      "type": "derived_from",
+      "target": "EXT-20260811-223226-ai-data-knowledge-curation"
+    },
+    {
+      "source": "OBS-20260811-221400-ai-readiness-as-system-adaptation",
+      "type": "derived_from",
+      "target": "RN-20260811-204844-ai-flow-team-topologies-reading-dialogue"
+    },
+    {
+      "source": "OBS-20260811-221400-ai-readiness-as-system-adaptation",
+      "type": "references",
+      "target": "OBS-20260811-220557-ai-resource-software-component-decomposition"
+    },
+    {
+      "source": "OBS-20260811-224044-readiness-diagnosis-observation-net",
+      "type": "derived_from",
+      "target": "OBS-20260811-221400-ai-readiness-as-system-adaptation"
+    },
+    {
+      "source": "OBS-20260811-224044-readiness-diagnosis-observation-net",
+      "type": "derived_from",
+      "target": "RN-20260811-224043-readiness-diagnosis-observation-net"
+    },
+    {
+      "source": "OBS-20260811-224044-readiness-diagnosis-observation-net",
+      "type": "references",
+      "target": "OBS-20260731-120412-value-and-slop-experience-decision-flow"
     },
     {
       "source": "artifact:03_artifacts/attendee-journey.md",

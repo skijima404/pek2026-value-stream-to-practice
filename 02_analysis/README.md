@@ -10,15 +10,15 @@
 
 | Node type | Count |
 | --- | ---: |
-| Raw Note | 95 |
-| External Input | 14 |
-| Observation | 46 |
-| Hypothesis Episode | 23 |
+| Raw Note | 97 |
+| External Input | 15 |
+| Observation | 49 |
+| Hypothesis Episode | 24 |
 | Pattern | 0 |
 | Risk Decision | 0 |
 | Accepted Artifact | 2 |
 
-Source digest: `9cc1c28afae294ea2d7f77c904d1dbaaae522cc760c31c060f3a9a93c063447f`
+Source digest: `42b4b44ef3978d97f5561350246fd2d2dc2f33d2a7aeb6739a93d75763ac10cf`
 
 ## 採用済みArtifact
 
