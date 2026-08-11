@@ -13,7 +13,7 @@
 | [共有前のService Contract明確化は下流への理解と判断Costの転移を抑える](../hypothesis-episodes/HYP-20260801-004823-service-contract-reduces-downstream-cost.md) | `practice` | `not_tested` | 0 | なし | 0 |
 | [Solution-firstでもReasoning Chainを再構成すれば検証可能な仮説を作りやすい](../hypothesis-episodes/HYP-20260802-230423-solution-first-reconstruction-testability.md) | `practice` | `not_tested` | 4 | `not_checked` 4 | 0 |
 | [Platform利用者の一部は選択肢より安全な標準Pathによる選択負荷軽減を重視する](../hypothesis-episodes/HYP-20260802-230425-platform-choice-burden-value.md) | `practice` | `not_tested` | 0 | なし | 0 |
-| [Value Streamの課題とOutcomeからAI Capabilityを配置すると局所最適を避けやすい](../hypothesis-episodes/HYP-20260804-013223-outcome-first-ai-resource-allocation.md) | `practice` | `not_tested` | 4 | `not_checked` 4 | 0 |
+| [Value Streamの課題とOutcomeからAI Capabilityを配置すると局所最適を避けやすい](../hypothesis-episodes/HYP-20260804-013223-outcome-first-ai-resource-allocation.md) | `practice` | `inconclusive` | 4 | `checked_for_current_scope` 2、`partially_checked` 1、`not_checked` 1 | 0 |
 | [異常検知と原因診断を分ける運用はMetric過剰取得を抑え改善Loopを両立する](../hypothesis-episodes/HYP-20260804-013226-two-stage-metrics-analysis.md) | `practice` | `not_tested` | 0 | なし | 0 |
 | [AI高速化による下流負荷の制御はPlatform Teamの価値であり利用者の受入条件である](../hypothesis-episodes/HYP-20260804-183210-ai-slop-downstream-burden-value.md) | `practice` | `inconclusive` | 7 | `checked_for_current_scope` 2、`partially_checked` 5 | 0 |
 | [Platform選定に関与する利用者は探索と判断準備の負荷軽減に価値を感じる](../hypothesis-episodes/HYP-20260807-211651-platform-selection-preparation-value.md) | `practice` | `not_tested` | 4 | `not_checked` 4 | 0 |
@@ -23,7 +23,8 @@
 | [DVSの仮説検証と学習品質はOVS品質の継続的改善に必要である](../hypothesis-episodes/HYP-20260807-232639-dvs-learning-sustains-ovs-quality.md) | `practice` | `inconclusive` | 4 | `partially_checked` 4 | 0 |
 | [個人による学習機能の代行または好条件があれば制度化されたCapabilityなしでも一回の成功は起こり得る](../hypothesis-episodes/HYP-20260809-013741-individual-learning-substitution-one-shot-success.md) | `practice` | `inconclusive` | 3 | `partially_checked` 1、`not_checked` 2 | 0 |
 | [Valueから意思決定・Data・利用・OutcomeへのTraceabilityはDVSの継続的学習を成立させる](../hypothesis-episodes/HYP-20260809-013742-value-traceability-enables-dvs-learning.md) | `practice` | `inconclusive` | 4 | `partially_checked` 3、`not_checked` 1 | 0 |
-| [対象箇所・必要品質・AI Outcome・Capability・観測の順で設計すると局所速度偏重を避けやすい](../hypothesis-episodes/HYP-20260809-203135-quality-first-ai-allocation-workflow.md) | `practice` | `not_tested` | 4 | `not_checked` 4 | 0 |
+| [対象箇所・必要品質・AI Outcome・Capability・観測の順で設計すると局所速度偏重を避けやすい](../hypothesis-episodes/HYP-20260809-203135-quality-first-ai-allocation-workflow.md) | `practice` | `inconclusive` | 4 | `checked_for_current_scope` 2、`not_checked` 2 | 0 |
+| [消費側Value StreamのConcernからAI Capabilityの利用条件を決めると局所最適を避けやすい](../hypothesis-episodes/HYP-20260811-131148-consumer-governed-ai-capability.md) | `practice` | `not_tested` | 5 | `not_checked` 5 | 0 |
 | [開催側の採択を方向性継続の十分なシグナルとして扱う](../hypothesis-episodes/HYP-20260730-015717-organizer-selection-is-sufficient-signal.md) | `session` | `supports` | 0 | なし | 0 |
 | [リレーを中心にしたセッション構成ならAI SlopからVSMまでを一本道で伝えられる](../hypothesis-episodes/HYP-20260731-004119-relay-centered-session-story.md) | `session` | `not_tested` | 0 | なし | 0 |
 | [AudienceはAI Slopを制御するActionを持ち帰ることに価値を感じる](../hypothesis-episodes/HYP-20260804-183208-audience-actionable-ai-slop-value.md) | `session` | `inconclusive` | 5 | `partially_checked` 2、`not_checked` 3 | 0 |
