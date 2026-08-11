@@ -20,11 +20,16 @@ interpreting or creating repository content.
 5. Classify each candidate:
    - Observation: extract only bounded source statements, cite precise locations,
      and keep ambiguity visible.
-   - Hypothesis Episode: state a falsifiable or assessable causal claim, expected
-     and challenging signals, planned validation, actual result, and limitations.
-     When the claim contains multiple decision-relevant uncertainties, add stable
-     Validation Components and keep Coverage, Finding, Applicability, and residual
-     uncertainty distinct.
+   - Hypothesis Episode: state a falsifiable or assessable causal claim and use
+     the lightweight format by default. Select one current approach from
+     `experiment`, `research`, or `interview`; record the learning question,
+     forward signal, actual scope, result, main limitation, and canonical
+     disposition. For `research`, record source selection, the claim and context
+     the source can support, applicability, and the bounded counterevidence
+     search. Source reputation is not an Evidence grade.
+     Use `not_selected` when no approach has been chosen. Add stable Validation
+     Components only when multiple decision-relevant uncertainties need separate
+     Evidence or a material Risk Decision needs a stable target.
    - Pattern: require at least two distinct Episodes by default and record the
      counterexample search. Do not create a Pattern merely to fill the index.
 6. Assign every applicable `knowledge_basis` value from the cited sources and
@@ -46,6 +51,11 @@ interpreting or creating repository content.
     Component Evidence refs normally cite Observation nodes so their
     `knowledge_basis` and source relations remain traceable. Never calculate a
     truth percentage from component Coverage.
+    Close or route each new lightweight Episode with `proceed`, `revise`,
+    `validate_further`, `stop_for_current_scope`, or `not_decided`. Do not treat
+    `proceed` as proof, Risk acceptance, or Artifact adoption. An `inconclusive`
+    result is completed learning; only `validate_further` declares another
+    validation step.
 11. Add only canonical typed relations. A derived claim must cite its source node
     IDs, and a child result must not transitively validate a parent.
 12. When source nodes were created or changed, run
@@ -63,8 +73,9 @@ interpreting or creating repository content.
 - Never use `status: accepted` for analysis.
 - Never create or update an Artifact without an explicit adoption decision.
 - Never create a Risk Decision while synthesizing candidates. Use
-  `$record-risk-decision` only after an explicit human response to documented
-  residual risk.
+  `$record-risk-decision` only after an explicit human response to a documented,
+  material residual risk that affects an Artifact adoption or another declared
+  current action. Routine uncertainty and the next learning step stay in the HYP.
 - Do not treat GenAI synthesis, source polish, repeated wording, or plausibility as
   validation evidence.
 - Do not fabricate Episodes or external support for an experienced practice.

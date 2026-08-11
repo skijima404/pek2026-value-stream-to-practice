@@ -30,36 +30,27 @@ relations:
 Value、Solution、Feature Hypothesisのどれとして検討したかを説明する。
 タスクの進行状況は記述しない。
 
-## 期待する兆候
+## 検証
 
-## 検証対象の分解
+- アプローチ: `not_selected`
+- 学習したい問い:
+- 前へ進むSignal:
+- 実施内容と範囲:
+- 実際に確認した資料・人・記録:
+- GenAIの利用: `none`
 
-| ID | Uncertainty | Decision importance | Evidence refs | Coverage state | Finding | Applicability | Residual uncertainty |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| U1 | 確認したい不確実性 | high | none | not_checked | unknown | unknown | 現時点で残っている不確実性 |
+`research`の場合だけ、次も記録する。
 
-`Evidence refs`には、このリポジトリで実際に確認したEvidenceを表す`OBS-*`を
-カンマ区切りで記載する。Raw NoteやExternal Inputを直接Evidenceとして使わず、
-その内容・成立根拠・限界をObservationへ昇格してから参照する。
+- 資料を選んだ理由:
+- 資料が支えられる主張・資料文脈・今回への適用範囲:
+- 反証・代替資料を確認した範囲:
 
-`Coverage state`は確認した範囲であり、正しさの割合ではない。
-`not_checked`の場合は`Evidence refs: none`、`Finding: unknown`、
-`Applicability: unknown`とする。Evidenceを確認したが判断できない場合は
-`Finding: inconclusive`を使う。
+アプローチは`experiment`、`research`、`interview`から一つ選ぶ。
+まだ選んでいない場合だけ`not_selected`を使う。
 
-## 検証方法
-
-### 方法と対象範囲
-
-- 方法:
-- 対象・資料:
-- 選定方法:
-- 実施規模:
-
-### GenAIの利用
-
-- 利用内容: `none`
-- 実際に確認した資料・記録:
+複数の重要な不確実性を別々に追跡する場合、または正式なRisk Decisionの
+安定した対象が必要な場合だけ、`00_meta/promotion-policy.md`に従って
+`## 検証対象の分解`を追加する。
 
 ## 結果
 
@@ -67,15 +58,24 @@ Value、Solution、Feature Hypothesisのどれとして検討したかを説明�
 
 実施後は `supports`、`challenges`、`inconclusive` のいずれかに置き換える。
 
-### 実際に観測したこと
+## 学び
 
 ## 解釈
 
 観測対象の範囲を越えて一般化しない。
 
-## 限界
+## 限界と残存不確実性
 
 - 選定上の偏り:
 - 未確認の証拠:
 - 一般化できない範囲:
-- 残存リスクと影響を受ける判断:
+
+## 次の判断
+
+- 判断: `not_decided`
+- 判断の対象範囲:
+- 次に進めること:
+
+判断は`proceed`、`revise`、`validate_further`、`stop_for_current_scope`から
+一つ選ぶ。まだ決めていない場合だけ`not_decided`を使う。`inconclusive`でも
+現在Scopeで追加検証しないなら`stop_for_current_scope`としてEpisodeを閉じられる。

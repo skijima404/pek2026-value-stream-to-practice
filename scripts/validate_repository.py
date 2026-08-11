@@ -146,6 +146,14 @@ DECISION_IMPORTANCE = {"critical", "high", "medium", "low"}
 COVERAGE_STATES = {"not_checked", "partially_checked", "checked_for_current_scope"}
 COMPONENT_FINDINGS = {"unknown", "supports", "challenges", "mixed", "inconclusive"}
 APPLICABILITY = {"direct", "analogous", "contextual", "unknown"}
+VALIDATION_APPROACHES = {"experiment", "research", "interview", "not_selected"}
+VALIDATION_DISPOSITIONS = {
+    "proceed",
+    "revise",
+    "validate_further",
+    "stop_for_current_scope",
+    "not_decided",
+}
 HYPOTHESIS_LEVEL_ORDER = {"value": 0, "solution": 1, "feature": 2}
 GENERATED_VIEW_SCRIPT = ROOT / "scripts/generate_analysis_views.py"
 
@@ -226,6 +234,58 @@ def parse_hypothesis_result(path: Path) -> str:
         re.MULTILINE,
     )
     return match.group(1) if match else ""
+
+
+def parse_validation_approach(path: Path) -> tuple[str, list[str]]:
+    """Parse the optional lightweight validation approach from a HYP body."""
+    lines = path.read_text(encoding="utf-8").splitlines()
+    try:
+        heading = lines.index("## 検証")
+    except ValueError:
+        return "", []
+    block: list[str] = []
+    for line in lines[heading + 1 :]:
+        if line.startswith("## "):
+            break
+        block.append(line)
+    matches = [
+        re.fullmatch(r"- アプローチ:\s*`([^`]+)`\s*", line)
+        for line in block
+    ]
+    values = [match.group(1) for match in matches if match]
+    if len(values) != 1:
+        return "", ["lightweight validation requires exactly one approach"]
+    approach = values[0]
+    if approach not in VALIDATION_APPROACHES:
+        return approach, [f"non-canonical validation approach: {approach}"]
+    return approach, []
+
+
+def parse_validation_disposition(path: Path) -> tuple[str, list[str]]:
+    """Parse the optional lightweight validation disposition from a HYP body."""
+    lines = path.read_text(encoding="utf-8").splitlines()
+    try:
+        heading = lines.index("## 次の判断")
+    except ValueError:
+        return "", []
+    block: list[str] = []
+    for line in lines[heading + 1 :]:
+        if line.startswith("## "):
+            break
+        block.append(line)
+    matches = [
+        re.fullmatch(r"- 判断:\s*`([^`]+)`\s*", line)
+        for line in block
+    ]
+    values = [match.group(1) for match in matches if match]
+    if len(values) != 1:
+        return "", ["lightweight validation requires exactly one disposition"]
+    disposition = values[0]
+    if disposition not in VALIDATION_DISPOSITIONS:
+        return disposition, [
+            f"non-canonical validation disposition: {disposition}"
+        ]
+    return disposition, []
 
 
 def parse_validation_components(path: Path) -> tuple[dict[str, dict[str, str]], list[str]]:
@@ -460,6 +520,24 @@ def validate_node(
                 errors.append(
                     "completed hypothesis result requires explicit_validation"
                 )
+            approach, approach_errors = parse_validation_approach(path)
+            errors.extend(approach_errors)
+            disposition, disposition_errors = parse_validation_disposition(path)
+            errors.extend(disposition_errors)
+            if approach and not disposition:
+                errors.append(
+                    "lightweight validation requires a next-decision disposition"
+                )
+            if approach == "not_selected" and result != "not_tested":
+                errors.append(
+                    "completed lightweight validation requires a selected approach"
+                )
+            if result in {"supports", "challenges", "inconclusive"} and (
+                disposition == "not_decided"
+            ):
+                errors.append(
+                    "completed lightweight validation requires a decided disposition"
+                )
             components, component_errors = parse_validation_components(path)
             errors.extend(component_errors)
             errors.extend(validate_validation_components(components, node_ids))
@@ -659,6 +737,20 @@ def main() -> int:
                         (path, f"template knowledge_basis has non-canonical value: {basis}")
                     )
         if expected_type == "hypothesis_episode":
+            approach, approach_errors = parse_validation_approach(path)
+            for error in approach_errors:
+                failures.append((path, error))
+            if approach != "not_selected":
+                failures.append(
+                    (path, "hypothesis template must start with not_selected approach")
+                )
+            disposition, disposition_errors = parse_validation_disposition(path)
+            for error in disposition_errors:
+                failures.append((path, error))
+            if disposition != "not_decided":
+                failures.append(
+                    (path, "hypothesis template must start with not_decided disposition")
+                )
             components, component_errors = parse_validation_components(path)
             for error in component_errors:
                 failures.append((path, error))

@@ -19,6 +19,12 @@ relations:
     target: OBS-YYYYMMDD-HHMMSS-evidence-slug
 ---
 
+<!--
+このTemplateは、Artifact採用または宣言済みの現在Actionに影響する重要な残存リスクを、
+人間が明示的に判断した場合だけ使用する。通常の未検証事項や次の学習Stepには使用しない。
+対象HYPには、人間Review済みのExtended Validation Componentが必要である。
+-->
+
 # 残存リスクへの対応判断
 
 ## 判断対象

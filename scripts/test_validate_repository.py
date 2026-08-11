@@ -73,6 +73,140 @@ class ValidationComponentTests(unittest.TestCase):
             self.assertTrue(any("must reference an Observation" in error for error in errors))
 
 
+class LightweightValidationTests(unittest.TestCase):
+    def write_hypothesis(
+        self, directory: Path, approach: str, disposition: str = "not_decided"
+    ) -> Path:
+        path = directory / "HYP-20260811-120000-lightweight.md"
+        path.write_text(
+            "# 仮説\n\n"
+            "## 検証\n\n"
+            f"- アプローチ: `{approach}`\n"
+            "- 学習したい問い: 小さく確認できるか\n\n"
+            "## 結果\n\n"
+            "`not_tested`\n\n"
+            "## 次の判断\n\n"
+            f"- 判断: `{disposition}`\n",
+            encoding="utf-8",
+        )
+        return path
+
+    def write_governed_hypothesis(
+        self, directory: Path, result: str, disposition: str
+    ) -> Path:
+        path = directory / "HYP-20260811-120000-lightweight.md"
+        path.write_text(
+            f"""---
+id: HYP-20260811-120000-lightweight
+type: hypothesis_episode
+title: "軽量な検証"
+content_language: ja
+created_at: 2026-08-11T12:00:00+09:00
+created_by: agent:codex
+hypothesis_scope: session
+hypothesis_level: value
+status: proposed
+confidence: low
+knowledge_basis:
+  - explicit_validation
+relations:
+  - type: derived_from
+    target: OBS-20260811-115959-source
+---
+
+# 仮説
+
+## 検証
+
+- アプローチ: `research`
+
+## 結果
+
+`{result}`
+
+## 次の判断
+
+- 判断: `{disposition}`
+""",
+            encoding="utf-8",
+        )
+        return path
+
+    def test_accepts_outcome_delivery_approaches(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            for approach in ("experiment", "research", "interview", "not_selected"):
+                path = self.write_hypothesis(Path(temp_dir), approach)
+                self.assertEqual(
+                    (approach, []), VALIDATOR.parse_validation_approach(path)
+                )
+
+    def test_rejects_noncanonical_approach(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            path = self.write_hypothesis(Path(temp_dir), "expert_review")
+            approach, errors = VALIDATOR.parse_validation_approach(path)
+            self.assertEqual("expert_review", approach)
+            self.assertIn(
+                "non-canonical validation approach: expert_review", errors
+            )
+
+    def test_accepts_canonical_dispositions(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            for disposition in (
+                "proceed",
+                "revise",
+                "validate_further",
+                "stop_for_current_scope",
+                "not_decided",
+            ):
+                path = self.write_hypothesis(
+                    Path(temp_dir), "research", disposition
+                )
+                self.assertEqual(
+                    (disposition, []),
+                    VALIDATOR.parse_validation_disposition(path),
+                )
+
+    def test_rejects_noncanonical_disposition(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            path = self.write_hypothesis(
+                Path(temp_dir), "research", "accept"
+            )
+            disposition, errors = VALIDATOR.parse_validation_disposition(path)
+            self.assertEqual("accept", disposition)
+            self.assertIn(
+                "non-canonical validation disposition: accept", errors
+            )
+
+    def test_completed_result_requires_decided_disposition(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            path = self.write_governed_hypothesis(
+                Path(temp_dir), "supports", "not_decided"
+            )
+            errors = VALIDATOR.validate_node(
+                path,
+                "hypothesis_episode",
+                r"HYP-\d{8}-\d{6}-[a-z0-9]+(?:-[a-z0-9]+)*",
+                {path.stem, "OBS-20260811-115959-source"},
+            )
+            self.assertIn(
+                "completed lightweight validation requires a decided disposition",
+                errors,
+            )
+
+    def test_inconclusive_can_close_for_current_scope(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            path = self.write_governed_hypothesis(
+                Path(temp_dir), "inconclusive", "stop_for_current_scope"
+            )
+            errors = VALIDATOR.validate_node(
+                path,
+                "hypothesis_episode",
+                r"HYP-\d{8}-\d{6}-[a-z0-9]+(?:-[a-z0-9]+)*",
+                {path.stem, "OBS-20260811-115959-source"},
+            )
+            self.assertEqual([], errors)
+
+
 class RiskDecisionTests(unittest.TestCase):
     def test_proceed_with_risk_targets_existing_component(self) -> None:
         hypothesis_id = "HYP-20260804-120000-example"

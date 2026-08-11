@@ -22,3 +22,4 @@
 ## Records
 
 - [ADR-0001: Markdownを正本としてGraph Projectionを生成する](./decisions/ADR-0001-markdown-source-with-generated-graph-projection.md)
+- [ADR-0002: Lightweight Hypothesis Validationを標準にする](./decisions/ADR-0002-lightweight-hypothesis-validation-default.md)

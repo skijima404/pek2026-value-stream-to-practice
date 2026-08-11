@@ -29,11 +29,12 @@ editing. This skill does not finalize Raw Notes; use `$finalize-raw-note` for th
 1. Inspect Git status and history without printing sensitive values.
 2. Read each target and every source node needed to assess its composed meaning.
 3. Confirm that relations use canonical types and point to existing node IDs.
-4. Preserve `knowledge_basis`, `confidence`, `hypothesis_level`, validation
-   method, result, Validation Component Coverage, Finding, Applicability, and
-   residual uncertainty. Human intent review does not change `not_tested` or
-   establish factual validity. Confirm that `knowledge_basis` reflects the cited
-   sources without inferring experience scope, case counts, or validation.
+4. Preserve `knowledge_basis`, `confidence`, `hypothesis_level`, the lightweight
+   validation approach, disposition, and result, and any Extended Validation
+   Component Coverage, Finding, Applicability, and residual uncertainty. Human
+   intent review does not change `not_tested` or establish factual validity.
+   Confirm that `knowledge_basis` reflects the cited sources without inferring
+   experience scope, case counts, or validation.
 5. Review the complete node for customer, project, personal, commercial,
    internal-system, credential, and combined re-identification information.
 6. If sensitive content exists in a committed revision, stop and report that Git
