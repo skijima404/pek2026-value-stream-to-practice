@@ -4,7 +4,7 @@
     "authority": "none",
     "description": "Disposable navigation projection generated from repository Markdown; source nodes and adopted artifacts remain authoritative.",
     "generator": "scripts/generate_analysis_views.py",
-    "source_digest": "5420be1191dfa907f0c08d0ad6c2842dfd03e8e06c902be084485bc8c68cdafa",
+    "source_digest": "2e5678d073dfbf160a7145e991535740343cd87d732ea30c79e55720a5d5c3d9",
     "excluded_sources": {},
     "excluded_edges": {}
   },
@@ -2268,7 +2268,9 @@
       "hypothesis_scope": "practice",
       "hypothesis_level": "solution",
       "knowledge_basis": [
+        "recorded_statement",
         "practitioner_experience",
+        "case_recollection",
         "reasoned_synthesis"
       ],
       "result": "not_tested",
@@ -3449,6 +3451,30 @@
       ]
     },
     {
+      "key": "HYP-20260812-010725-progressive-automation-contracts",
+      "id": "HYP-20260812-010725-progressive-automation-contracts",
+      "type": "hypothesis_episode",
+      "title": "Building Blockを個別検証してから接続すると未解決の誤りと曖昧さの伝播を抑えられる",
+      "path": "02_analysis/hypothesis-episodes/HYP-20260812-010725-progressive-automation-contracts.md",
+      "content_language": "ja",
+      "created_at": "2026-08-12T01:07:25+09:00",
+      "created_by": "agent:codex",
+      "status": "reviewed",
+      "confidence": "low",
+      "hypothesis_scope": "practice",
+      "hypothesis_level": "feature",
+      "knowledge_basis": [
+        "recorded_statement",
+        "practitioner_experience",
+        "case_recollection",
+        "reasoned_synthesis"
+      ],
+      "result": "not_tested",
+      "validation_approach": "experiment",
+      "validation_disposition": "not_decided",
+      "validation_components": []
+    },
+    {
       "key": "OBS-20260730-015714-session-goal-and-journey",
       "id": "OBS-20260730-015714-session-goal-and-journey",
       "type": "observation",
@@ -3754,7 +3780,8 @@
       "confidence": "medium",
       "knowledge_basis": [
         "case_recollection",
-        "explicit_validation"
+        "explicit_validation",
+        "reasoned_synthesis"
       ]
     },
     {
@@ -4177,6 +4204,7 @@
       "confidence": "medium",
       "knowledge_basis": [
         "recorded_statement",
+        "external_research",
         "reasoned_synthesis"
       ]
     },
@@ -4244,6 +4272,61 @@
       "confidence": "low",
       "knowledge_basis": [
         "recorded_statement",
+        "reasoned_synthesis"
+      ]
+    },
+    {
+      "key": "OBS-20260812-010722-ai-output-closure-boundary",
+      "id": "OBS-20260812-010722-ai-output-closure-boundary",
+      "type": "observation",
+      "title": "AI Outputの下流負荷は媒体より委譲範囲とClosure条件によって分岐した",
+      "path": "02_analysis/observations/OBS-20260812-010722-ai-output-closure-boundary.md",
+      "content_language": "ja",
+      "created_at": "2026-08-12T01:07:22+09:00",
+      "created_by": "agent:codex",
+      "status": "reviewed",
+      "confidence": "medium",
+      "knowledge_basis": [
+        "recorded_statement",
+        "practitioner_experience",
+        "case_recollection",
+        "explicit_validation",
+        "reasoned_synthesis"
+      ]
+    },
+    {
+      "key": "OBS-20260812-010723-domain-synthesis-answer-quality",
+      "id": "OBS-20260812-010723-domain-synthesis-answer-quality",
+      "type": "observation",
+      "title": "領域別Synthesis導入後にEA Repositoryの回答品質と盲点候補の提示が改善したと認識された",
+      "path": "02_analysis/observations/OBS-20260812-010723-domain-synthesis-answer-quality.md",
+      "content_language": "ja",
+      "created_at": "2026-08-12T01:07:23+09:00",
+      "created_by": "agent:codex",
+      "status": "reviewed",
+      "confidence": "low",
+      "knowledge_basis": [
+        "recorded_statement",
+        "practitioner_experience",
+        "case_recollection",
+        "reasoned_synthesis"
+      ]
+    },
+    {
+      "key": "OBS-20260812-010724-contract-first-progressive-automation-practice",
+      "id": "OBS-20260812-010724-contract-first-progressive-automation-practice",
+      "type": "observation",
+      "title": "Contract Firstと段階的自動化を用いた環境構築とDemoが複数回反復された",
+      "path": "02_analysis/observations/OBS-20260812-010724-contract-first-progressive-automation-practice.md",
+      "content_language": "ja",
+      "created_at": "2026-08-12T01:07:24+09:00",
+      "created_by": "agent:codex",
+      "status": "reviewed",
+      "confidence": "low",
+      "knowledge_basis": [
+        "recorded_statement",
+        "practitioner_experience",
+        "case_recollection",
         "reasoned_synthesis"
       ]
     },
@@ -4555,6 +4638,16 @@
       "source": "HYP-20260801-004823-service-contract-reduces-downstream-cost",
       "type": "derived_from",
       "target": "OBS-20260801-004821-contract-accountability-cost-transfer"
+    },
+    {
+      "source": "HYP-20260801-004823-service-contract-reduces-downstream-cost",
+      "type": "derived_from",
+      "target": "OBS-20260812-010722-ai-output-closure-boundary"
+    },
+    {
+      "source": "HYP-20260801-004823-service-contract-reduces-downstream-cost",
+      "type": "references",
+      "target": "OBS-20260812-010724-contract-first-progressive-automation-practice"
     },
     {
       "source": "HYP-20260801-004823-service-contract-reduces-downstream-cost",
@@ -5007,6 +5100,26 @@
       "target": "HYP-20260804-183210-ai-slop-downstream-burden-value"
     },
     {
+      "source": "HYP-20260812-010725-progressive-automation-contracts",
+      "type": "derived_from",
+      "target": "OBS-20260812-010724-contract-first-progressive-automation-practice"
+    },
+    {
+      "source": "HYP-20260812-010725-progressive-automation-contracts",
+      "type": "derived_from",
+      "target": "RN-20260805-094034-ai-building-block-automation-maturity"
+    },
+    {
+      "source": "HYP-20260812-010725-progressive-automation-contracts",
+      "type": "references",
+      "target": "HYP-20260811-131148-consumer-governed-ai-capability"
+    },
+    {
+      "source": "HYP-20260812-010725-progressive-automation-contracts",
+      "type": "tests",
+      "target": "HYP-20260801-004823-service-contract-reduces-downstream-cost"
+    },
+    {
       "source": "OBS-20260730-015714-session-goal-and-journey",
       "type": "derived_from",
       "target": "RN-20260729-205144-session-goal-and-value-stream"
@@ -5262,6 +5375,16 @@
       "target": "RN-20260804-195507-ai-proposal-review-burden-case"
     },
     {
+      "source": "OBS-20260804-195508-ai-proposal-generation-shifted-review-burden",
+      "type": "derived_from",
+      "target": "RN-20260804-235840-ai-proposal-stakeholder-concerns-handoff-contract"
+    },
+    {
+      "source": "OBS-20260804-195508-ai-proposal-generation-shifted-review-burden",
+      "type": "references",
+      "target": "RN-20260805-002030-ai-output-reviewer-feedback-withdrawal-case"
+    },
+    {
       "source": "OBS-20260805-001807-workslop-recipient-burden",
       "type": "derived_from",
       "target": "EXT-20260804-144101-betterup-workslop-recipient-experience"
@@ -5479,6 +5602,16 @@
     {
       "source": "OBS-20260811-131147-consumer-concerns-govern-ai-capability",
       "type": "derived_from",
+      "target": "OBS-20260811-140549-ai-subsystem-team-terminology-fit"
+    },
+    {
+      "source": "OBS-20260811-131147-consumer-concerns-govern-ai-capability",
+      "type": "derived_from",
+      "target": "RN-20260804-230526-platform-engineering-as-service-engineering"
+    },
+    {
+      "source": "OBS-20260811-131147-consumer-concerns-govern-ai-capability",
+      "type": "derived_from",
       "target": "RN-20260811-131146-ai-capability-consumer-value-stream-boundary"
     },
     {
@@ -5545,6 +5678,31 @@
       "source": "OBS-20260811-224044-readiness-diagnosis-observation-net",
       "type": "references",
       "target": "OBS-20260731-120412-value-and-slop-experience-decision-flow"
+    },
+    {
+      "source": "OBS-20260812-010722-ai-output-closure-boundary",
+      "type": "derived_from",
+      "target": "RN-20260804-220602-ai-outcome-closure-practitioner-interview"
+    },
+    {
+      "source": "OBS-20260812-010722-ai-output-closure-boundary",
+      "type": "references",
+      "target": "OBS-20260804-195508-ai-proposal-generation-shifted-review-burden"
+    },
+    {
+      "source": "OBS-20260812-010722-ai-output-closure-boundary",
+      "type": "references",
+      "target": "OBS-20260805-005540-downstream-control-priority-reversibility"
+    },
+    {
+      "source": "OBS-20260812-010723-domain-synthesis-answer-quality",
+      "type": "derived_from",
+      "target": "RN-20260804-211806-domain-synthesis-answer-quality-change"
+    },
+    {
+      "source": "OBS-20260812-010724-contract-first-progressive-automation-practice",
+      "type": "derived_from",
+      "target": "RN-20260804-204359-ai-low-downstream-burden-conditions"
     },
     {
       "source": "artifact:03_artifacts/attendee-journey.md",
