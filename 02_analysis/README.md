@@ -12,13 +12,13 @@
 | --- | ---: |
 | Raw Note | 102 |
 | External Input | 19 |
-| Observation | 52 |
-| Hypothesis Episode | 25 |
+| Observation | 56 |
+| Hypothesis Episode | 26 |
 | Pattern | 0 |
 | Risk Decision | 0 |
 | Accepted Artifact | 2 |
 
-Source digest: `cb82fe000b236a8eb89ff1d3baafb68d3b9520ad4695ee4db78c4f5b168bed20`
+Source digest: `d52419da3bd13e291ea4042a969cd8de43d636f3d6b3c39639f1e3f8ea8e0170`
 
 ## 採用済みArtifact
 

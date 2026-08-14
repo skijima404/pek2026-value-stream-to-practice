@@ -4,7 +4,7 @@
     "authority": "none",
     "description": "Disposable navigation projection generated from repository Markdown; source nodes and adopted artifacts remain authoritative.",
     "generator": "scripts/generate_analysis_views.py",
-    "source_digest": "cb82fe000b236a8eb89ff1d3baafb68d3b9520ad4695ee4db78c4f5b168bed20",
+    "source_digest": "d52419da3bd13e291ea4042a969cd8de43d636f3d6b3c39639f1e3f8ea8e0170",
     "excluded_sources": {},
     "excluded_edges": {}
   },
@@ -3586,6 +3586,30 @@
       "validation_components": []
     },
     {
+      "key": "HYP-20260815-000414-shared-outcome-validation-capability",
+      "id": "HYP-20260815-000414-shared-outcome-validation-capability",
+      "type": "hypothesis_episode",
+      "title": "Outcomeの意味をProduct側に残した共通検証Capabilityは検証CostとLead Timeを下げる",
+      "path": "02_analysis/hypothesis-episodes/HYP-20260815-000414-shared-outcome-validation-capability.md",
+      "content_language": "ja",
+      "created_at": "2026-08-15T00:04:14+09:00",
+      "created_by": "agent:codex",
+      "status": "reviewed",
+      "confidence": "low",
+      "hypothesis_scope": "practice",
+      "hypothesis_level": "solution",
+      "knowledge_basis": [
+        "recorded_statement",
+        "external_research",
+        "explicit_validation",
+        "reasoned_synthesis"
+      ],
+      "result": "inconclusive",
+      "validation_approach": "research",
+      "validation_disposition": "validate_further",
+      "validation_components": []
+    },
+    {
       "key": "OBS-20260730-015714-session-goal-and-journey",
       "id": "OBS-20260730-015714-session-goal-and-journey",
       "type": "observation",
@@ -4442,6 +4466,75 @@
       ]
     },
     {
+      "key": "OBS-20260815-000410-ai-project-system-failure-structure",
+      "id": "OBS-20260815-000410-ai-project-system-failure-structure",
+      "type": "observation",
+      "title": "AI Projectの失敗はModel単体ではなく目的・Context・Data・基盤を接続できない構造として報告された",
+      "path": "02_analysis/observations/OBS-20260815-000410-ai-project-system-failure-structure.md",
+      "content_language": "ja",
+      "created_at": "2026-08-15T00:04:10+09:00",
+      "created_by": "agent:codex",
+      "status": "reviewed",
+      "confidence": "medium",
+      "knowledge_basis": [
+        "recorded_statement",
+        "external_research",
+        "reasoned_synthesis"
+      ]
+    },
+    {
+      "key": "OBS-20260815-000411-outcome-semantics-validation-platform-boundary",
+      "id": "OBS-20260815-000411-outcome-semantics-validation-platform-boundary",
+      "type": "observation",
+      "title": "Outcomeの意味をProduct側に残し検証実装の共通性をPlatform側が引き取る責任境界が整理された",
+      "path": "02_analysis/observations/OBS-20260815-000411-outcome-semantics-validation-platform-boundary.md",
+      "content_language": "ja",
+      "created_at": "2026-08-15T00:04:11+09:00",
+      "created_by": "agent:codex",
+      "status": "reviewed",
+      "confidence": "low",
+      "knowledge_basis": [
+        "recorded_statement",
+        "external_research",
+        "reasoned_synthesis"
+      ]
+    },
+    {
+      "key": "OBS-20260815-000412-ai-native-workflow-evidence-control-plane",
+      "id": "OBS-20260815-000412-ai-native-workflow-evidence-control-plane",
+      "type": "observation",
+      "title": "EvidenceとInsightを分離し判断Contextを運ぶAI-Native WorkflowのControl Plane構造が整理された",
+      "path": "02_analysis/observations/OBS-20260815-000412-ai-native-workflow-evidence-control-plane.md",
+      "content_language": "ja",
+      "created_at": "2026-08-15T00:04:12+09:00",
+      "created_by": "agent:codex",
+      "status": "reviewed",
+      "confidence": "medium",
+      "knowledge_basis": [
+        "recorded_statement",
+        "external_research",
+        "direct_observation",
+        "reasoned_synthesis"
+      ]
+    },
+    {
+      "key": "OBS-20260815-000413-ai-value-architecture-organizational-capability",
+      "id": "OBS-20260815-000413-ai-value-architecture-organizational-capability",
+      "type": "observation",
+      "title": "AI Value Architectの広い責務を個人Roleではなく分担・移管可能な組織Capabilityとして扱う案が記録された",
+      "path": "02_analysis/observations/OBS-20260815-000413-ai-value-architecture-organizational-capability.md",
+      "content_language": "ja",
+      "created_at": "2026-08-15T00:04:13+09:00",
+      "created_by": "agent:codex",
+      "status": "reviewed",
+      "confidence": "low",
+      "knowledge_basis": [
+        "recorded_statement",
+        "external_research",
+        "reasoned_synthesis"
+      ]
+    },
+    {
       "key": "artifact:03_artifacts/attendee-journey.md",
       "type": "artifact",
       "title": "参加者Journey兼Value Stream",
@@ -5291,6 +5384,21 @@
       "target": "HYP-20260801-004823-service-contract-reduces-downstream-cost"
     },
     {
+      "source": "HYP-20260815-000414-shared-outcome-validation-capability",
+      "type": "derived_from",
+      "target": "OBS-20260807-211649-effect-measurement-layers"
+    },
+    {
+      "source": "HYP-20260815-000414-shared-outcome-validation-capability",
+      "type": "derived_from",
+      "target": "OBS-20260815-000411-outcome-semantics-validation-platform-boundary"
+    },
+    {
+      "source": "HYP-20260815-000414-shared-outcome-validation-capability",
+      "type": "tests",
+      "target": "HYP-20260804-183210-ai-slop-downstream-burden-value"
+    },
+    {
       "source": "OBS-20260730-015714-session-goal-and-journey",
       "type": "derived_from",
       "target": "RN-20260729-205144-session-goal-and-value-stream"
@@ -5874,6 +5982,61 @@
       "source": "OBS-20260812-010724-contract-first-progressive-automation-practice",
       "type": "derived_from",
       "target": "RN-20260804-204359-ai-low-downstream-burden-conditions"
+    },
+    {
+      "source": "OBS-20260815-000410-ai-project-system-failure-structure",
+      "type": "derived_from",
+      "target": "EXT-20260813-225740-rand-ai-project-failure-anti-patterns"
+    },
+    {
+      "source": "OBS-20260815-000410-ai-project-system-failure-structure",
+      "type": "derived_from",
+      "target": "RN-20260814-004140-rand-ai-failure-patterns-llm-reading"
+    },
+    {
+      "source": "OBS-20260815-000410-ai-project-system-failure-structure",
+      "type": "references",
+      "target": "OBS-20260811-221400-ai-readiness-as-system-adaptation"
+    },
+    {
+      "source": "OBS-20260815-000411-outcome-semantics-validation-platform-boundary",
+      "type": "derived_from",
+      "target": "EXT-20260813-224201-safe-outcome-driven-product-development"
+    },
+    {
+      "source": "OBS-20260815-000411-outcome-semantics-validation-platform-boundary",
+      "type": "derived_from",
+      "target": "RN-20260814-213038-outcome-driven-product-development-reading"
+    },
+    {
+      "source": "OBS-20260815-000411-outcome-semantics-validation-platform-boundary",
+      "type": "references",
+      "target": "OBS-20260807-211649-effect-measurement-layers"
+    },
+    {
+      "source": "OBS-20260815-000412-ai-native-workflow-evidence-control-plane",
+      "type": "derived_from",
+      "target": "EXT-20260813-223151-safe-ai-innovation-pipeline"
+    },
+    {
+      "source": "OBS-20260815-000412-ai-native-workflow-evidence-control-plane",
+      "type": "derived_from",
+      "target": "RN-20260813-223536-ai-innovation-pipeline-evidence-repository"
+    },
+    {
+      "source": "OBS-20260815-000412-ai-native-workflow-evidence-control-plane",
+      "type": "derived_from",
+      "target": "RN-20260814-020149-ai-innovation-pipeline-reading"
+    },
+    {
+      "source": "OBS-20260815-000413-ai-value-architecture-organizational-capability",
+      "type": "derived_from",
+      "target": "EXT-20260813-224814-safe-ai-value-architect"
+    },
+    {
+      "source": "OBS-20260815-000413-ai-value-architecture-organizational-capability",
+      "type": "derived_from",
+      "target": "RN-20260814-234307-ai-value-architect-reading"
     },
     {
       "source": "RN-20260814-004140-rand-ai-failure-patterns-llm-reading",
