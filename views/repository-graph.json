@@ -4,7 +4,7 @@
     "authority": "none",
     "description": "Disposable navigation projection generated from repository Markdown; source nodes and adopted artifacts remain authoritative.",
     "generator": "scripts/generate_analysis_views.py",
-    "source_digest": "2e5678d073dfbf160a7145e991535740343cd87d732ea30c79e55720a5d5c3d9",
+    "source_digest": "cb82fe000b236a8eb89ff1d3baafb68d3b9520ad4695ee4db78c4f5b168bed20",
     "excluded_sources": {},
     "excluded_edges": {}
   },
@@ -2024,6 +2024,117 @@
         "mbpm",
         "organizational-adaptation",
         "value-flow"
+      ]
+    },
+    {
+      "key": "RN-20260813-223536-ai-innovation-pipeline-evidence-repository",
+      "id": "RN-20260813-223536-ai-innovation-pipeline-evidence-repository",
+      "type": "raw_note",
+      "title": "AI Innovation PipelineとEvidence-preserving Repositoryの構造的対応",
+      "path": "01_working/raw-notes/RN-20260813-223536-ai-innovation-pipeline-evidence-repository.md",
+      "content_language": "ja",
+      "created_at": "2026-08-13T22:35:36+09:00",
+      "created_by": "agent:codex",
+      "review_status": "reviewed",
+      "sanitization_status": "not_needed",
+      "tags": [
+        "ai-native-workflow",
+        "control-plane",
+        "embedded-policy",
+        "evidence-infrastructure",
+        "handover",
+        "human-ai-collaboration",
+        "provenance",
+        "repository-design",
+        "safe"
+      ]
+    },
+    {
+      "key": "RN-20260814-004140-rand-ai-failure-patterns-llm-reading",
+      "id": "RN-20260814-004140-rand-ai-failure-patterns-llm-reading",
+      "type": "raw_note",
+      "title": "RANDのAI Project失敗PatternをLLM／Agent文脈で読む",
+      "path": "01_working/raw-notes/RN-20260814-004140-rand-ai-failure-patterns-llm-reading.md",
+      "content_language": "ja",
+      "created_at": "2026-08-14T00:41:40+09:00",
+      "created_by": "agent:codex",
+      "review_status": "reviewed",
+      "sanitization_status": "not_needed",
+      "tags": [
+        "ai-project",
+        "failure-pattern",
+        "genai",
+        "knowledge-context",
+        "llm",
+        "ml",
+        "platform-engineering",
+        "technology-first"
+      ]
+    },
+    {
+      "key": "RN-20260814-020149-ai-innovation-pipeline-reading",
+      "id": "RN-20260814-020149-ai-innovation-pipeline-reading",
+      "type": "raw_note",
+      "title": "AI Innovation PipelineをAI-Native Capability Platformとして読む",
+      "path": "01_working/raw-notes/RN-20260814-020149-ai-innovation-pipeline-reading.md",
+      "content_language": "ja",
+      "created_at": "2026-08-14T02:01:49+09:00",
+      "created_by": "agent:codex",
+      "review_status": "reviewed",
+      "sanitization_status": "not_needed",
+      "tags": [
+        "ai-native-platform",
+        "evidence",
+        "human-ai-collaboration",
+        "platform-engineering",
+        "policy",
+        "shared-platform",
+        "tacit-knowledge",
+        "workflow"
+      ]
+    },
+    {
+      "key": "RN-20260814-213038-outcome-driven-product-development-reading",
+      "id": "RN-20260814-213038-outcome-driven-product-development-reading",
+      "type": "raw_note",
+      "title": "Outcome-Driven Product Developmentを検証可能なPlatformとして読む",
+      "path": "01_working/raw-notes/RN-20260814-213038-outcome-driven-product-development-reading.md",
+      "content_language": "ja",
+      "created_at": "2026-08-14T21:30:38+09:00",
+      "created_by": "agent:codex",
+      "review_status": "reviewed",
+      "sanitization_status": "sanitized",
+      "tags": [
+        "ai-native-safe",
+        "feedback-loop",
+        "metrics",
+        "outcome-tree",
+        "outcome-validation",
+        "platform-engineering",
+        "product-management",
+        "value-realization"
+      ]
+    },
+    {
+      "key": "RN-20260814-234307-ai-value-architect-reading",
+      "id": "RN-20260814-234307-ai-value-architect-reading",
+      "type": "raw_note",
+      "title": "AI Value Architectを個人Roleではなく組織Capabilityとして読む",
+      "path": "01_working/raw-notes/RN-20260814-234307-ai-value-architect-reading.md",
+      "content_language": "ja",
+      "created_at": "2026-08-14T23:43:07+09:00",
+      "created_by": "agent:codex",
+      "review_status": "reviewed",
+      "sanitization_status": "sanitized",
+      "tags": [
+        "ai-adoption",
+        "ai-fluency",
+        "ai-value-architect",
+        "enterprise-architecture",
+        "methodology",
+        "organizational-capability",
+        "platform-engineering",
+        "value-realization"
       ]
     },
     {
@@ -4423,6 +4534,36 @@
       "created_by": "human:kijima"
     },
     {
+      "key": "EXT-20260813-223151-safe-ai-innovation-pipeline",
+      "id": "EXT-20260813-223151-safe-ai-innovation-pipeline",
+      "type": "external_input",
+      "title": "Scaled Agile Framework「AI Innovation Pipeline」",
+      "path": "10_external-inputs/frameworks/safe/EXT-20260813-223151-safe-ai-innovation-pipeline.md",
+      "content_language": "ja",
+      "created_at": "2026-08-13T22:31:51+09:00",
+      "created_by": "agent:codex"
+    },
+    {
+      "key": "EXT-20260813-224201-safe-outcome-driven-product-development",
+      "id": "EXT-20260813-224201-safe-outcome-driven-product-development",
+      "type": "external_input",
+      "title": "Scaled Agile Framework「Outcome-Driven Product Development in AI-Native SAFe」",
+      "path": "10_external-inputs/frameworks/safe/EXT-20260813-224201-safe-outcome-driven-product-development.md",
+      "content_language": "ja",
+      "created_at": "2026-08-13T22:42:01+09:00",
+      "created_by": "agent:codex"
+    },
+    {
+      "key": "EXT-20260813-224814-safe-ai-value-architect",
+      "id": "EXT-20260813-224814-safe-ai-value-architect",
+      "type": "external_input",
+      "title": "Scaled Agile Framework「AI Value Architect」",
+      "path": "10_external-inputs/frameworks/safe/EXT-20260813-224814-safe-ai-value-architect.md",
+      "content_language": "ja",
+      "created_at": "2026-08-13T22:48:14+09:00",
+      "created_by": "agent:codex"
+    },
+    {
       "key": "EXT-20260811-140548-team-topologies-key-concepts",
       "id": "EXT-20260811-140548-team-topologies-key-concepts",
       "type": "external_input",
@@ -4493,6 +4634,16 @@
       "created_by": "agent:codex"
     },
     {
+      "key": "EXT-20260813-225740-rand-ai-project-failure-anti-patterns",
+      "id": "EXT-20260813-225740-rand-ai-project-failure-anti-patterns",
+      "type": "external_input",
+      "title": "RAND「The Root Causes of Failure for Artificial Intelligence Projects and How They Can Succeed」",
+      "path": "10_external-inputs/research/rand/EXT-20260813-225740-rand-ai-project-failure-anti-patterns.md",
+      "content_language": "ja",
+      "created_at": "2026-08-13T22:57:40+09:00",
+      "created_by": "agent:codex"
+    },
+    {
       "key": "EXT-20260803-002840-previous-platform-engineering-talk",
       "id": "EXT-20260803-002840-previous-platform-engineering-talk",
       "type": "external_input",
@@ -4523,6 +4674,26 @@
       "source": "EXT-20260730-210820-bcg-leaders-guide-ai-transformation",
       "type": "references",
       "target": "EXT-20260730-210821-bcg-wheres-value-ai-report"
+    },
+    {
+      "source": "EXT-20260813-224201-safe-outcome-driven-product-development",
+      "type": "references",
+      "target": "EXT-20260813-223151-safe-ai-innovation-pipeline"
+    },
+    {
+      "source": "EXT-20260813-224814-safe-ai-value-architect",
+      "type": "references",
+      "target": "EXT-20260813-223151-safe-ai-innovation-pipeline"
+    },
+    {
+      "source": "EXT-20260813-224814-safe-ai-value-architect",
+      "type": "references",
+      "target": "EXT-20260813-224201-safe-outcome-driven-product-development"
+    },
+    {
+      "source": "EXT-20260813-225740-rand-ai-project-failure-anti-patterns",
+      "type": "references",
+      "target": "EXT-20260813-224814-safe-ai-value-architect"
     },
     {
       "source": "HYP-20260730-015717-organizer-selection-is-sufficient-signal",
@@ -5703,6 +5874,26 @@
       "source": "OBS-20260812-010724-contract-first-progressive-automation-practice",
       "type": "derived_from",
       "target": "RN-20260804-204359-ai-low-downstream-burden-conditions"
+    },
+    {
+      "source": "RN-20260814-004140-rand-ai-failure-patterns-llm-reading",
+      "type": "derived_from",
+      "target": "EXT-20260813-225740-rand-ai-project-failure-anti-patterns"
+    },
+    {
+      "source": "RN-20260814-020149-ai-innovation-pipeline-reading",
+      "type": "derived_from",
+      "target": "EXT-20260813-223151-safe-ai-innovation-pipeline"
+    },
+    {
+      "source": "RN-20260814-213038-outcome-driven-product-development-reading",
+      "type": "derived_from",
+      "target": "EXT-20260813-224201-safe-outcome-driven-product-development"
+    },
+    {
+      "source": "RN-20260814-234307-ai-value-architect-reading",
+      "type": "derived_from",
+      "target": "EXT-20260813-224814-safe-ai-value-architect"
     },
     {
       "source": "artifact:03_artifacts/attendee-journey.md",
