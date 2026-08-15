@@ -27,7 +27,8 @@
 | [消費側Value StreamのConcernからAI Capabilityの利用条件を決めると局所最適を避けやすい](../hypothesis-episodes/HYP-20260811-131148-consumer-governed-ai-capability.md) | `practice` | — | `not_tested` | — | 6 | `not_checked` 6 | 0 |
 | [AI導入前にValue Streamを診断して観測網を置くと導入後の混乱へ早く対処しやすい](../hypothesis-episodes/HYP-20260811-221401-adaptive-ai-readiness.md) | `practice` | — | `not_tested` | — | 5 | `not_checked` 5 | 0 |
 | [Building Blockを個別検証してから接続すると未解決の誤りと曖昧さの伝播を抑えられる](../hypothesis-episodes/HYP-20260812-010725-progressive-automation-contracts.md) | `practice` | `experiment` | `not_tested` | `not_decided` | 0 | なし | 0 |
-| [Outcomeの意味をProduct側に残した共通検証Capabilityは検証CostとLead Timeを下げる](../hypothesis-episodes/HYP-20260815-000414-shared-outcome-validation-capability.md) | `practice` | `research` | `inconclusive` | `validate_further` | 0 | なし | 0 |
+| [Outcomeの意味をProduct側に残した共通検証Capabilityは検証CostとLead Timeを下げる](../hypothesis-episodes/HYP-20260815-000414-shared-outcome-validation-capability.md) | `practice` | `research` | `inconclusive` | `revise` | 0 | なし | 0 |
+| [Outcomeの意味をProduct側に残した検証Enablementは検証実装Costと検証開始Lead Timeを下げる](../hypothesis-episodes/HYP-20260815-150018-validation-enablement-target-state.md) | `practice` | `not_selected` | `not_tested` | `stop_for_current_scope` | 0 | なし | 0 |
 | [開催側の採択を方向性継続の十分なシグナルとして扱う](../hypothesis-episodes/HYP-20260730-015717-organizer-selection-is-sufficient-signal.md) | `session` | `research` | `supports` | `proceed` | 0 | なし | 0 |
 | [リレーを中心にしたセッション構成ならAI SlopからVSMまでを一本道で伝えられる](../hypothesis-episodes/HYP-20260731-004119-relay-centered-session-story.md) | `session` | — | `not_tested` | — | 0 | なし | 0 |
 | [AudienceはAI Slopを制御するActionを持ち帰ることに価値を感じる](../hypothesis-episodes/HYP-20260804-183208-audience-actionable-ai-slop-value.md) | `session` | `interview` | `inconclusive` | `validate_further` | 5 | `partially_checked` 2、`not_checked` 3 | 0 |

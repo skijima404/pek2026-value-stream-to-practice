@@ -4,7 +4,7 @@
     "authority": "none",
     "description": "Disposable navigation projection generated from repository Markdown; source nodes and adopted artifacts remain authoritative.",
     "generator": "scripts/generate_analysis_views.py",
-    "source_digest": "d52419da3bd13e291ea4042a969cd8de43d636f3d6b3c39639f1e3f8ea8e0170",
+    "source_digest": "4156f1fb10547c92749022d42c75fdb51a735531536550c009d91a11c5bc406b",
     "excluded_sources": {},
     "excluded_edges": {}
   },
@@ -2138,6 +2138,26 @@
       ]
     },
     {
+      "key": "RN-20260815-144452-validation-enablement-target-state",
+      "id": "RN-20260815-144452-validation-enablement-target-state",
+      "type": "raw_note",
+      "title": "仮説検証Enablement Platformを長期Target Stateとして扱う",
+      "path": "01_working/raw-notes/RN-20260815-144452-validation-enablement-target-state.md",
+      "content_language": "ja",
+      "created_at": "2026-08-15T14:44:52+09:00",
+      "created_by": "agent:codex",
+      "review_status": "reviewed",
+      "sanitization_status": "sanitized",
+      "tags": [
+        "education",
+        "enablement",
+        "hypothesis-validation",
+        "platform-engineering",
+        "process",
+        "target-state"
+      ]
+    },
+    {
       "key": "HYP-20260730-015717-organizer-selection-is-sufficient-signal",
       "id": "HYP-20260730-015717-organizer-selection-is-sufficient-signal",
       "type": "hypothesis_episode",
@@ -3606,7 +3626,30 @@
       ],
       "result": "inconclusive",
       "validation_approach": "research",
-      "validation_disposition": "validate_further",
+      "validation_disposition": "revise",
+      "validation_components": []
+    },
+    {
+      "key": "HYP-20260815-150018-validation-enablement-target-state",
+      "id": "HYP-20260815-150018-validation-enablement-target-state",
+      "type": "hypothesis_episode",
+      "title": "Outcomeの意味をProduct側に残した検証Enablementは検証実装Costと検証開始Lead Timeを下げる",
+      "path": "02_analysis/hypothesis-episodes/HYP-20260815-150018-validation-enablement-target-state.md",
+      "content_language": "ja",
+      "created_at": "2026-08-15T15:00:18+09:00",
+      "created_by": "agent:codex",
+      "status": "reviewed",
+      "confidence": "low",
+      "hypothesis_scope": "practice",
+      "hypothesis_level": "solution",
+      "knowledge_basis": [
+        "recorded_statement",
+        "external_research",
+        "reasoned_synthesis"
+      ],
+      "result": "not_tested",
+      "validation_approach": "not_selected",
+      "validation_disposition": "stop_for_current_scope",
       "validation_components": []
     },
     {
@@ -5395,6 +5438,41 @@
     },
     {
       "source": "HYP-20260815-000414-shared-outcome-validation-capability",
+      "type": "derived_from",
+      "target": "RN-20260815-144452-validation-enablement-target-state"
+    },
+    {
+      "source": "HYP-20260815-000414-shared-outcome-validation-capability",
+      "type": "tests",
+      "target": "HYP-20260804-183210-ai-slop-downstream-burden-value"
+    },
+    {
+      "source": "HYP-20260815-150018-validation-enablement-target-state",
+      "type": "derived_from",
+      "target": "HYP-20260815-000414-shared-outcome-validation-capability"
+    },
+    {
+      "source": "HYP-20260815-150018-validation-enablement-target-state",
+      "type": "derived_from",
+      "target": "OBS-20260815-000411-outcome-semantics-validation-platform-boundary"
+    },
+    {
+      "source": "HYP-20260815-150018-validation-enablement-target-state",
+      "type": "derived_from",
+      "target": "OBS-20260815-000412-ai-native-workflow-evidence-control-plane"
+    },
+    {
+      "source": "HYP-20260815-150018-validation-enablement-target-state",
+      "type": "derived_from",
+      "target": "OBS-20260815-000413-ai-value-architecture-organizational-capability"
+    },
+    {
+      "source": "HYP-20260815-150018-validation-enablement-target-state",
+      "type": "derived_from",
+      "target": "RN-20260815-144452-validation-enablement-target-state"
+    },
+    {
+      "source": "HYP-20260815-150018-validation-enablement-target-state",
       "type": "tests",
       "target": "HYP-20260804-183210-ai-slop-downstream-burden-value"
     },
