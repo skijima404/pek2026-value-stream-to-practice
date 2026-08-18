@@ -4,7 +4,7 @@
     "authority": "none",
     "description": "Disposable navigation projection generated from repository Markdown; source nodes and adopted artifacts remain authoritative.",
     "generator": "scripts/generate_analysis_views.py",
-    "source_digest": "4156f1fb10547c92749022d42c75fdb51a735531536550c009d91a11c5bc406b",
+    "source_digest": "6813f3f86ab2428f433a3572da2cba83ab83eaf6737d6fa1077989fe3d146011",
     "excluded_sources": {},
     "excluded_edges": {}
   },
@@ -2155,6 +2155,54 @@
         "platform-engineering",
         "process",
         "target-state"
+      ]
+    },
+    {
+      "key": "RN-20260818-203016-strategy-to-delivery-repetition-model",
+      "id": "RN-20260818-203016-strategy-to-delivery-repetition-model",
+      "type": "raw_note",
+      "title": "戦略判断からDelivery実行までの反復量モデル",
+      "path": "01_working/raw-notes/RN-20260818-203016-strategy-to-delivery-repetition-model.md",
+      "content_language": "ja",
+      "created_at": "2026-08-18T20:30:16+09:00",
+      "created_by": "agent:codex",
+      "review_status": "reviewed",
+      "sanitization_status": "not_needed",
+      "tags": [
+        "strategy",
+        "delivery",
+        "repetition-volume",
+        "transaction-cost",
+        "holding-cost",
+        "automation",
+        "platform-engineering",
+        "ai",
+        "conceptual-model",
+        "presentation-planning"
+      ]
+    },
+    {
+      "key": "RN-20260818-204555-lead-time-waiting-time-flow-efficiency",
+      "id": "RN-20260818-204555-lead-time-waiting-time-flow-efficiency",
+      "type": "raw_note",
+      "title": "Process Time短縮より待ち時間へ着目するLead Time改善",
+      "path": "01_working/raw-notes/RN-20260818-204555-lead-time-waiting-time-flow-efficiency.md",
+      "content_language": "ja",
+      "created_at": "2026-08-18T20:45:55+09:00",
+      "created_by": "agent:codex",
+      "review_status": "reviewed",
+      "sanitization_status": "not_needed",
+      "tags": [
+        "lead-time",
+        "waiting-time",
+        "process-time",
+        "flow-efficiency",
+        "value-stream-mapping",
+        "mbpm",
+        "resource-efficiency",
+        "platform-engineering",
+        "ai",
+        "presentation-planning"
       ]
     },
     {
