@@ -6,7 +6,7 @@ content_language: ja
 created_at: 2026-08-09T20:31:33+09:00
 created_by: agent:codex
 status: reviewed
-reviewed_at: 2026-08-09T20:42:37+09:00
+reviewed_at: 2026-08-18T21:55:39+09:00
 reviewed_by: human:kijima
 review_scope: intent_alignment
 confidence: high
@@ -20,6 +20,8 @@ relations:
     target: RN-20260730-140133-ai-outcomes-and-mbpm
   - type: derived_from
     target: RN-20260806-224717-vsm-mbpm-process-analysis-explanation
+  - type: derived_from
+    target: RN-20260818-203016-strategy-to-delivery-repetition-model
 ---
 
 # 観察
@@ -39,8 +41,12 @@ Outcome、実装する機能またはAutomation、観測方法の順に設計す
 時間、待ち、手戻りおよびHandoverから改善機会を探す一方、時間だけでは
 属人性、違和感またはBusiness Outcomeを十分に判定できないという説明がある。
 
-三つの記録を、対象箇所、必要品質、AI Outcome、機能、観測という一つの順序として
-接続する部分は`reasoned_synthesis`である。
+`RN-20260818-203016-strategy-to-delivery-repetition-model`には、上流の判断影響と
+下流の反復量から、判断品質とTransaction Costの改善Priorityを分ける説明用モデルが
+記録されている。
+
+四つの記録を、対象箇所、必要品質、AI Outcome、機能、観測という一つの順序と、
+その順序を説明する経済性の候補へ接続する部分は`reasoned_synthesis`である。
 
 ## 根拠箇所
 
@@ -50,6 +56,8 @@ Outcome、実装する機能またはAutomation、観測方法の順に設計す
   「MBPMとの関係についての個人的な整理」および「利用する順番の案」
 - `RN-20260806-224717-vsm-mbpm-process-analysis-explanation`の
   「なぜVSMやMBPMを使うのか」および「VSMやMBPMの効果が限定的と思われる点」
+- `RN-20260818-203016-strategy-to-delivery-repetition-model`の
+  「このモデルで表現したかった改善の経済性」および「図だけでは確定できない点」
 
 ## 根拠から直接言えること
 
@@ -73,6 +81,24 @@ Reproducibility、Efficiency、Transaction Costおよびエラー率が品質候
 Error Cost、Deliverでは反復される作業のTransaction Costが重要になる可能性があると
 記録されている。
 
+## 反復量モデルによる補助説明
+
+`RN-20260818-203016-strategy-to-delivery-repetition-model`には、上流の戦略判断から
+下流のDeliveryへ進むほど判断または実行の反復回数が増える様子を、仮の個数と頻度で
+表した説明用モデルが記録されている。
+
+同モデルでは、上流は実施回数が少ない一方、一度の判断が多数の作戦、Projectおよび
+PBIへ展開されるため、判断時間の短縮よりも問題設定、選択肢および判断の「打率」を
+改善する経済性があると説明されている。下流は同種作業の反復回数が多いため、
+一回あたりのTransaction Cost、再現性およびError率の小さな改善でも、反復量を通じて
+累積効果が大きくなり得ると説明されている。
+
+この説明は、既存の「DVS上の対象箇所と必要品質からAI Outcomeを選ぶ」という整理を、
+上流の判断影響と下流の反復量から説明し直す候補である。二つは併用できる可能性が
+あるが、どちらを主説明として採用するか、統合して一つの説明にするかは決定していない。
+仮定上の個数と頻度から効果を検証したものではなく、既存HypothesisのEvidenceまたは
+Validation Resultにはしない。
+
 ## 曖昧さと限界
 
 - Discover、Decide、DeliverはDVS内の知的作業を振り返る補助区分であり、確立済みの
@@ -81,13 +107,17 @@ Error Cost、Deliverでは反復される作業のTransaction Costが重要に�
   整理であり、実地比較または`explicit_validation`ではない。
 - DiscoverまたはDecideで速度が常に副次的、Deliverで常に主要とは限らない。頻度、
   時間制約、Error Costおよび影響範囲によって変わる。
+- 戦略からDeliveryまでの個数、頻度およびSprint数は説明用の仮定であり、実測された
+  組織構造、作業量またはCostではない。
+- 上流の判断品質による影響と下流の反復量による経済性は、同じ単位で比較できる状態に
+  定義されていない。
 - 五つのAI Outcomeは網羅的・排他的なCapability分類ではなく、一つの作業で複数を
   組み合わせる可能性がある。
 - このObservationは、設計順序、AI Outcome分類または登壇内容の採用を意味しない。
 
 ## 公開安全性確認
 
-- checked_at: 2026-08-09T20:42:37+09:00
+- checked_at: 2026-08-18T21:55:39+09:00
 - checked_by: agent:codex
 - result: `not_needed`
 - scope:
