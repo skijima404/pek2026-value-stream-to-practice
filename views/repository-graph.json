@@ -4,7 +4,7 @@
     "authority": "none",
     "description": "Disposable navigation projection generated from repository Markdown; source nodes and adopted artifacts remain authoritative.",
     "generator": "scripts/generate_analysis_views.py",
-    "source_digest": "21d647b50a879c2862de21f4439c68cde6fe0470a720e47fc5ba3a5f1f90ed8f",
+    "source_digest": "1882c8bc2a953d2230748c375cf2c6e52d84a9961fce17cd7e9030e381e06fe6",
     "excluded_sources": {},
     "excluded_edges": {}
   },
@@ -2203,6 +2203,32 @@
         "platform-engineering",
         "ai",
         "presentation-planning"
+      ]
+    },
+    {
+      "key": "RN-20260820-215730-ai-delegation-quality-assurance-scope",
+      "id": "RN-20260820-215730-ai-delegation-quality-assurance-scope",
+      "type": "raw_note",
+      "title": "AI AgentをDelegationとして捉える品質保証範囲の拡張",
+      "path": "01_working/raw-notes/RN-20260820-215730-ai-delegation-quality-assurance-scope.md",
+      "content_language": "ja",
+      "created_at": "2026-08-20T21:57:30+09:00",
+      "created_by": "agent:codex",
+      "review_status": "reviewed",
+      "sanitization_status": "not_needed",
+      "tags": [
+        "ai",
+        "delegation",
+        "automation",
+        "quality-assurance",
+        "evaluator",
+        "human-in-the-loop",
+        "workflow",
+        "loop",
+        "graph",
+        "itsm",
+        "ai-slop",
+        "maturity-model"
       ]
     },
     {
