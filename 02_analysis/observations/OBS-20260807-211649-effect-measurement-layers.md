@@ -20,6 +20,8 @@ relations:
     target: RN-20260806-212832-platform-advisor-vsm-effect-hypothesis
   - type: derived_from
     target: RN-20260806-213822-platform-advisor-downstream-ai-slop-signals
+  - type: references
+    target: OBS-20260924-124329-capacity-reallocation-measurement-scope
 ---
 
 # 観察
