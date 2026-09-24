@@ -30,6 +30,7 @@
 | [Outcomeの意味をProduct側に残した共通検証Capabilityは検証CostとLead Timeを下げる](../hypothesis-episodes/HYP-20260815-000414-shared-outcome-validation-capability.md) | `practice` | `research` | `inconclusive` | `revise` | 0 | なし | 0 |
 | [Outcomeの意味をProduct側に残した検証Enablementは検証実装Costと検証開始Lead Timeを下げる](../hypothesis-episodes/HYP-20260815-150018-validation-enablement-target-state.md) | `practice` | `not_selected` | `not_tested` | `stop_for_current_scope` | 0 | なし | 0 |
 | [AI作業をOutcome別のCognitive Stepへ分けるとReview範囲とAccountabilityを限定しやすい](../hypothesis-episodes/HYP-20260827-010637-outcome-separated-cognitive-steps.md) | `practice` | `experiment` | `not_tested` | `not_decided` | 0 | なし | 0 |
+| [Solution-first再構成後に未表現の仮定を探索するとProblem・Valueの固定を抑えやすい](../hypothesis-episodes/HYP-20260924-101432-unrepresented-assumption-search.md) | `practice` | `experiment` | `not_tested` | `not_decided` | 0 | なし | 0 |
 | [開催側の採択を方向性継続の十分なシグナルとして扱う](../hypothesis-episodes/HYP-20260730-015717-organizer-selection-is-sufficient-signal.md) | `session` | `research` | `supports` | `proceed` | 0 | なし | 0 |
 | [リレーを中心にしたセッション構成ならAI SlopからVSMまでを一本道で伝えられる](../hypothesis-episodes/HYP-20260731-004119-relay-centered-session-story.md) | `session` | — | `not_tested` | — | 0 | なし | 0 |
 | [AudienceはAI Slopを制御するActionを持ち帰ることに価値を感じる](../hypothesis-episodes/HYP-20260804-183208-audience-actionable-ai-slop-value.md) | `session` | `interview` | `inconclusive` | `validate_further` | 5 | `partially_checked` 2、`not_checked` 3 | 0 |

@@ -4,7 +4,7 @@
     "authority": "none",
     "description": "Disposable navigation projection generated from repository Markdown; source nodes and adopted artifacts remain authoritative.",
     "generator": "scripts/generate_analysis_views.py",
-    "source_digest": "74c84773c30d0496dd5bcd1087e41096969184097dc83d6a5ddd9589c620638f",
+    "source_digest": "5240142b50f539c8e7b8a83804c7dcd2de8b6d0c9eed45084785154c10387149",
     "excluded_sources": {},
     "excluded_edges": {}
   },
@@ -2317,6 +2317,198 @@
       ]
     },
     {
+      "key": "RN-20260914-215211-story-a-time-adjustment-options",
+      "id": "RN-20260914-215211-story-a-time-adjustment-options",
+      "type": "raw_note",
+      "title": "ストーリー案Aの時間調整用ちょい足しネタ",
+      "path": "01_working/raw-notes/RN-20260914-215211-story-a-time-adjustment-options.md",
+      "content_language": "ja",
+      "created_at": "2026-09-14T21:52:11+09:00",
+      "created_by": "agent:codex",
+      "review_status": "reviewed",
+      "sanitization_status": "not_needed",
+      "tags": [
+        "presentation-planning",
+        "hypothesis-validation",
+        "ai-slop",
+        "workslop",
+        "platform-advisor"
+      ]
+    },
+    {
+      "key": "RN-20260914-231556-story-b-lean-vsm-hypothesis-validation",
+      "id": "RN-20260914-231556-story-b-lean-vsm-hypothesis-validation",
+      "type": "raw_note",
+      "title": "暫定ストーリーB：Leanを土台に、VSMと仮説検証で利用者と自分たちの仕事を改善する",
+      "path": "01_working/raw-notes/RN-20260914-231556-story-b-lean-vsm-hypothesis-validation.md",
+      "content_language": "ja",
+      "created_at": "2026-09-14T23:15:56+09:00",
+      "created_by": "agent:codex",
+      "review_status": "reviewed",
+      "sanitization_status": "not_needed",
+      "tags": [
+        "presentation-planning",
+        "lean",
+        "vsm",
+        "mbpm",
+        "hypothesis-validation",
+        "platform-advisor",
+        "ai-slop",
+        "cognitive-load",
+        "development-value-stream",
+        "operational-value-stream"
+      ]
+    },
+    {
+      "key": "RN-20260914-232002-story-b-time-adjustment-options",
+      "id": "RN-20260914-232002-story-b-time-adjustment-options",
+      "type": "raw_note",
+      "title": "ストーリーBの時間調整用ちょい足しネタ",
+      "path": "01_working/raw-notes/RN-20260914-232002-story-b-time-adjustment-options.md",
+      "content_language": "ja",
+      "created_at": "2026-09-14T23:20:02+09:00",
+      "created_by": "agent:codex",
+      "review_status": "reviewed",
+      "sanitization_status": "not_needed",
+      "tags": [
+        "presentation-planning",
+        "lean",
+        "vsm",
+        "hypothesis-validation",
+        "cognitive-load",
+        "development-value-stream"
+      ]
+    },
+    {
+      "key": "RN-20260915-002218-story-c-ai-delegation-outcome-traceability",
+      "id": "RN-20260915-002218-story-c-ai-delegation-outcome-traceability",
+      "type": "raw_note",
+      "title": "暫定ストーリーC：AIを魔法の箱から、仕事を任せて確かめられる対象へ",
+      "path": "01_working/raw-notes/RN-20260915-002218-story-c-ai-delegation-outcome-traceability.md",
+      "content_language": "ja",
+      "created_at": "2026-09-15T00:22:18+09:00",
+      "created_by": "agent:codex",
+      "review_status": "reviewed",
+      "sanitization_status": "not_needed",
+      "tags": [
+        "presentation-planning",
+        "ai-slop",
+        "vsm",
+        "mbpm",
+        "ai-outcome",
+        "delegation",
+        "automation",
+        "hypothesis-validation",
+        "demand-pipeline",
+        "traceability"
+      ]
+    },
+    {
+      "key": "RN-20260915-011405-story-d-handover-contract-measurement",
+      "id": "RN-20260915-011405-story-d-handover-contract-measurement",
+      "type": "raw_note",
+      "title": "暫定ストーリーD：引き渡しのContractと測定設計で、AI Slopに対処する",
+      "path": "01_working/raw-notes/RN-20260915-011405-story-d-handover-contract-measurement.md",
+      "content_language": "ja",
+      "created_at": "2026-09-15T01:14:05+09:00",
+      "created_by": "agent:codex",
+      "review_status": "reviewed",
+      "sanitization_status": "not_needed",
+      "tags": [
+        "presentation-planning",
+        "ai-slop",
+        "vsm",
+        "mbpm",
+        "contract",
+        "handoff",
+        "delegation",
+        "ai-outcome",
+        "hypothesis-validation",
+        "demand-pipeline",
+        "traceability"
+      ]
+    },
+    {
+      "key": "RN-20260915-013351-story-e-recipient-experience-measurement",
+      "id": "RN-20260915-013351-story-e-recipient-experience-measurement",
+      "type": "raw_note",
+      "title": "暫定ストーリーE：作り手だけでは分からない受け手の体験を、共に確かめる",
+      "path": "01_working/raw-notes/RN-20260915-013351-story-e-recipient-experience-measurement.md",
+      "content_language": "ja",
+      "created_at": "2026-09-15T01:33:51+09:00",
+      "created_by": "agent:codex",
+      "review_status": "unreviewed",
+      "sanitization_status": "not_needed",
+      "tags": [
+        "presentation-planning",
+        "ai-slop",
+        "recipient-experience",
+        "vsm",
+        "mbpm",
+        "hypothesis-validation",
+        "contract",
+        "ai-outcome"
+      ]
+    },
+    {
+      "key": "RN-20260915-093636-story-ad-recipient-experience-to-metric-design",
+      "id": "RN-20260915-093636-story-ad-recipient-experience-to-metric-design",
+      "type": "raw_note",
+      "title": "A＋D構成：受け手の体験から、VSM・MBPMによるメトリック設計へ",
+      "path": "01_working/raw-notes/RN-20260915-093636-story-ad-recipient-experience-to-metric-design.md",
+      "content_language": "ja",
+      "created_at": "2026-09-15T09:36:36+09:00",
+      "created_by": "agent:codex",
+      "review_status": "reviewed",
+      "sanitization_status": "not_needed",
+      "tags": [
+        "presentation-planning",
+        "ai-slop",
+        "recipient-experience",
+        "vsm",
+        "mbpm",
+        "effect-measurement",
+        "ai-outcome",
+        "contract",
+        "hypothesis-validation"
+      ]
+    },
+    {
+      "key": "RN-20260915-190657-story-ad-validation-scope",
+      "id": "RN-20260915-190657-story-ad-validation-scope",
+      "type": "raw_note",
+      "title": "A＋Dの検討範囲：伝え方・習熟の検証を外し、実践は本人の方法として紹介する",
+      "path": "01_working/raw-notes/RN-20260915-190657-story-ad-validation-scope.md",
+      "content_language": "ja",
+      "created_at": "2026-09-15T19:06:57+09:00",
+      "created_by": "agent:codex",
+      "review_status": "unreviewed",
+      "sanitization_status": "not_needed",
+      "tags": [
+        "presentation-planning",
+        "hypothesis-validation",
+        "practitioner-experience"
+      ]
+    },
+    {
+      "key": "RN-20260915-211511-educational-ai-slop-reading-backlog",
+      "id": "RN-20260915-211511-educational-ai-slop-reading-backlog",
+      "type": "raw_note",
+      "title": "読むバックログ：教育動画のAI Slopと人間の配慮・責任",
+      "path": "01_working/raw-notes/RN-20260915-211511-educational-ai-slop-reading-backlog.md",
+      "content_language": "ja",
+      "created_at": "2026-09-15T21:15:11+09:00",
+      "created_by": "agent:codex",
+      "review_status": "unreviewed",
+      "sanitization_status": "not_needed",
+      "tags": [
+        "research-reading",
+        "ai-slop",
+        "accountability",
+        "presentation-planning"
+      ]
+    },
+    {
       "key": "RN-20260923-122955-platform-advisor-unrepresented-blind-spots",
       "id": "RN-20260923-122955-platform-advisor-unrepresented-blind-spots",
       "type": "raw_note",
@@ -4171,6 +4363,29 @@
       "validation_components": []
     },
     {
+      "key": "HYP-20260924-101432-unrepresented-assumption-search",
+      "id": "HYP-20260924-101432-unrepresented-assumption-search",
+      "type": "hypothesis_episode",
+      "title": "Solution-first再構成後に未表現の仮定を探索するとProblem・Valueの固定を抑えやすい",
+      "path": "02_analysis/hypothesis-episodes/HYP-20260924-101432-unrepresented-assumption-search.md",
+      "content_language": "ja",
+      "created_at": "2026-09-24T10:14:32+09:00",
+      "created_by": "agent:codex",
+      "status": "reviewed",
+      "confidence": "low",
+      "hypothesis_scope": "practice",
+      "hypothesis_level": "feature",
+      "knowledge_basis": [
+        "recorded_statement",
+        "case_recollection",
+        "reasoned_synthesis"
+      ],
+      "result": "not_tested",
+      "validation_approach": "experiment",
+      "validation_disposition": "not_decided",
+      "validation_components": []
+    },
+    {
       "key": "OBS-20260730-015714-session-goal-and-journey",
       "id": "OBS-20260730-015714-session-goal-and-journey",
       "type": "observation",
@@ -5145,6 +5360,104 @@
       ]
     },
     {
+      "key": "OBS-20260924-101431-card-input-reveals-assumption-mismatch",
+      "id": "OBS-20260924-101431-card-input-reveals-assumption-mismatch",
+      "type": "observation",
+      "title": "VSM後に複数者のカード入力を集め当初の想定違いに気づいた一事例が記録された",
+      "path": "02_analysis/observations/OBS-20260924-101431-card-input-reveals-assumption-mismatch.md",
+      "content_language": "ja",
+      "created_at": "2026-09-24T10:14:31+09:00",
+      "created_by": "agent:codex",
+      "status": "reviewed",
+      "confidence": "medium",
+      "knowledge_basis": [
+        "recorded_statement",
+        "case_recollection"
+      ]
+    },
+    {
+      "key": "OBS-20260924-101433-reviewer-feedback-withdrawal",
+      "id": "OBS-20260924-101433-reviewer-feedback-withdrawal",
+      "type": "observation",
+      "title": "未成熟なAI生成資料を受けたReviewerがFeedback簡略化を検討した一事例が記録された",
+      "path": "02_analysis/observations/OBS-20260924-101433-reviewer-feedback-withdrawal.md",
+      "content_language": "ja",
+      "created_at": "2026-09-24T10:14:33+09:00",
+      "created_by": "agent:codex",
+      "status": "reviewed",
+      "confidence": "medium",
+      "knowledge_basis": [
+        "recorded_statement",
+        "case_recollection"
+      ]
+    },
+    {
+      "key": "OBS-20260924-101434-conversational-repository-decision-support",
+      "id": "OBS-20260924-101434-conversational-repository-decision-support",
+      "type": "observation",
+      "title": "Contract-firstな対話型Repositoryを複数の意思決定支援で運用した経験が記録された",
+      "path": "02_analysis/observations/OBS-20260924-101434-conversational-repository-decision-support.md",
+      "content_language": "ja",
+      "created_at": "2026-09-24T10:14:34+09:00",
+      "created_by": "agent:codex",
+      "status": "reviewed",
+      "confidence": "medium",
+      "knowledge_basis": [
+        "recorded_statement",
+        "practitioner_experience",
+        "case_recollection"
+      ]
+    },
+    {
+      "key": "OBS-20260924-101435-ai-slop-design-layers",
+      "id": "OBS-20260924-101435-ai-slop-design-layers",
+      "type": "observation",
+      "title": "AI Slopの原因候補をBuilding Block・Automation・Feature・Serviceへ分ける設計整理が記録された",
+      "path": "02_analysis/observations/OBS-20260924-101435-ai-slop-design-layers.md",
+      "content_language": "ja",
+      "created_at": "2026-09-24T10:14:35+09:00",
+      "created_by": "agent:codex",
+      "status": "reviewed",
+      "confidence": "medium",
+      "knowledge_basis": [
+        "recorded_statement",
+        "reasoned_synthesis"
+      ]
+    },
+    {
+      "key": "OBS-20260924-101436-waterfall-vsm-local-speed",
+      "id": "OBS-20260924-101436-waterfall-vsm-local-speed",
+      "type": "observation",
+      "title": "Waterfall組織のVSMで開発工程の高速化と全体効果を分けて問うた一事例が記録された",
+      "path": "02_analysis/observations/OBS-20260924-101436-waterfall-vsm-local-speed.md",
+      "content_language": "ja",
+      "created_at": "2026-09-24T10:14:36+09:00",
+      "created_by": "agent:codex",
+      "status": "reviewed",
+      "confidence": "low",
+      "knowledge_basis": [
+        "recorded_statement",
+        "case_recollection"
+      ]
+    },
+    {
+      "key": "OBS-20260924-101437-ai-platform-prerequisite-gap",
+      "id": "OBS-20260924-101437-ai-platform-prerequisite-gap",
+      "type": "observation",
+      "title": "AI開発基盤の理解でAutomation・Platformとの接続が共有されていない経験が記録された",
+      "path": "02_analysis/observations/OBS-20260924-101437-ai-platform-prerequisite-gap.md",
+      "content_language": "ja",
+      "created_at": "2026-09-24T10:14:37+09:00",
+      "created_by": "agent:codex",
+      "status": "reviewed",
+      "confidence": "medium",
+      "knowledge_basis": [
+        "recorded_statement",
+        "practitioner_experience",
+        "case_recollection"
+      ]
+    },
+    {
       "key": "OBS-20260924-124329-capacity-reallocation-measurement-scope",
       "id": "OBS-20260924-124329-capacity-reallocation-measurement-scope",
       "type": "observation",
@@ -5161,6 +5474,57 @@
       ]
     },
     {
+      "key": "OBS-20260924-223228-slide-authoring-revisited-explanation-assumptions",
+      "id": "OBS-20260924-223228-slide-authoring-revisited-explanation-assumptions",
+      "type": "observation",
+      "title": "スライド具体化中に目的・測定・説明順を見直した一事例が記録された",
+      "path": "02_analysis/observations/OBS-20260924-223228-slide-authoring-revisited-explanation-assumptions.md",
+      "content_language": "ja",
+      "created_at": "2026-09-24T22:32:28+09:00",
+      "created_by": "agent:codex",
+      "status": "reviewed",
+      "confidence": "medium",
+      "knowledge_basis": [
+        "recorded_statement",
+        "direct_observation",
+        "reasoned_synthesis"
+      ]
+    },
+    {
+      "key": "OBS-20260924-223229-rehearsal-exposed-delivery-constraints",
+      "id": "OBS-20260924-223229-rehearsal-exposed-delivery-constraints",
+      "type": "observation",
+      "title": "通し説明で時間超過と接続上の詰まりが見つかり、スライド削減へ進んだ一事例が記録された",
+      "path": "02_analysis/observations/OBS-20260924-223229-rehearsal-exposed-delivery-constraints.md",
+      "content_language": "ja",
+      "created_at": "2026-09-24T22:32:29+09:00",
+      "created_by": "agent:codex",
+      "status": "reviewed",
+      "confidence": "medium",
+      "knowledge_basis": [
+        "recorded_statement",
+        "direct_observation",
+        "explicit_validation"
+      ]
+    },
+    {
+      "key": "OBS-20260924-223230-human-ai-slide-authoring-role-boundary",
+      "id": "OBS-20260924-223230-human-ai-slide-authoring-role-boundary",
+      "type": "observation",
+      "title": "登壇資料制作でAIを探索・壁打ち・Review・記録へ使い、人間が選択と発話検証を担った一事例が記録された",
+      "path": "02_analysis/observations/OBS-20260924-223230-human-ai-slide-authoring-role-boundary.md",
+      "content_language": "ja",
+      "created_at": "2026-09-24T22:32:30+09:00",
+      "created_by": "agent:codex",
+      "status": "reviewed",
+      "confidence": "medium",
+      "knowledge_basis": [
+        "recorded_statement",
+        "direct_observation",
+        "reasoned_synthesis"
+      ]
+    },
+    {
       "key": "artifact:03_artifacts/attendee-journey.md",
       "type": "artifact",
       "title": "参加者Journey兼Value Stream",
@@ -5170,6 +5534,17 @@
       "adopted_at": "2026-07-30T01:57:19+09:00",
       "adopted_by": "human:kijima",
       "scope": "pek2026-session"
+    },
+    {
+      "key": "artifact:03_artifacts/story/storyline.md",
+      "type": "artifact",
+      "title": "採用済みストーリーライン：受け手の体験から、VSM・MBPMによるメトリック設計へ",
+      "path": "03_artifacts/story/storyline.md",
+      "content_language": "ja",
+      "status": "accepted",
+      "adopted_at": "2026-09-15T19:11:25+09:00",
+      "adopted_by": "human:kijima",
+      "scope": "pek2026-session-storyline"
     },
     {
       "key": "artifact:03_artifacts/value-stream.md",
@@ -6071,6 +6446,11 @@
     },
     {
       "source": "HYP-20260827-010637-outcome-separated-cognitive-steps",
+      "type": "derived_from",
+      "target": "RN-20260826-124353-outcome-driven-cognitive-step-decomposition"
+    },
+    {
+      "source": "HYP-20260827-010637-outcome-separated-cognitive-steps",
       "type": "references",
       "target": "HYP-20260812-010725-progressive-automation-contracts"
     },
@@ -6078,6 +6458,26 @@
       "source": "HYP-20260827-010637-outcome-separated-cognitive-steps",
       "type": "tests",
       "target": "HYP-20260801-004823-service-contract-reduces-downstream-cost"
+    },
+    {
+      "source": "HYP-20260924-101432-unrepresented-assumption-search",
+      "type": "derived_from",
+      "target": "OBS-20260807-211650-vsm-problem-causal-ambiguity"
+    },
+    {
+      "source": "HYP-20260924-101432-unrepresented-assumption-search",
+      "type": "derived_from",
+      "target": "OBS-20260807-223144-iterative-problem-understanding"
+    },
+    {
+      "source": "HYP-20260924-101432-unrepresented-assumption-search",
+      "type": "derived_from",
+      "target": "OBS-20260924-101431-card-input-reveals-assumption-mismatch"
+    },
+    {
+      "source": "HYP-20260924-101432-unrepresented-assumption-search",
+      "type": "tests",
+      "target": "HYP-20260802-230423-solution-first-reconstruction-testability"
     },
     {
       "source": "OBS-20260730-015714-session-goal-and-journey",
@@ -6198,6 +6598,11 @@
       "source": "OBS-20260802-230422-solution-first-hypothesis-reconstruction",
       "type": "derived_from",
       "target": "RN-20260802-211319-textbook-hypothesis-flow-and-solution-first-reconstruction"
+    },
+    {
+      "source": "OBS-20260802-230422-solution-first-hypothesis-reconstruction",
+      "type": "derived_from",
+      "target": "RN-20260924-091859-hypothesis-workflow-revisiting-assumptions"
     },
     {
       "source": "OBS-20260802-230424-platform-choice-hidden-assumption",
@@ -6448,6 +6853,11 @@
       "source": "OBS-20260807-223144-iterative-problem-understanding",
       "type": "derived_from",
       "target": "RN-20260807-194919-platform-advisor-retrospective-iterative-problem-learning"
+    },
+    {
+      "source": "OBS-20260807-223144-iterative-problem-understanding",
+      "type": "derived_from",
+      "target": "RN-20260924-091859-hypothesis-workflow-revisiting-assumptions"
     },
     {
       "source": "OBS-20260808-204750-dvs-system-learning-decision-sufficiency",
@@ -6785,6 +7195,111 @@
       "target": "OBS-20260812-010722-ai-output-closure-boundary"
     },
     {
+      "source": "OBS-20260924-101431-card-input-reveals-assumption-mismatch",
+      "type": "derived_from",
+      "target": "RN-20260924-094402-magica-cards-revealing-unrepresented-assumptions"
+    },
+    {
+      "source": "OBS-20260924-101431-card-input-reveals-assumption-mismatch",
+      "type": "references",
+      "target": "OBS-20260807-211650-vsm-problem-causal-ambiguity"
+    },
+    {
+      "source": "OBS-20260924-101431-card-input-reveals-assumption-mismatch",
+      "type": "references",
+      "target": "OBS-20260807-223144-iterative-problem-understanding"
+    },
+    {
+      "source": "OBS-20260924-101431-card-input-reveals-assumption-mismatch",
+      "type": "references",
+      "target": "RN-20260923-122955-platform-advisor-unrepresented-blind-spots"
+    },
+    {
+      "source": "OBS-20260924-101433-reviewer-feedback-withdrawal",
+      "type": "derived_from",
+      "target": "RN-20260805-002030-ai-output-reviewer-feedback-withdrawal-case"
+    },
+    {
+      "source": "OBS-20260924-101433-reviewer-feedback-withdrawal",
+      "type": "references",
+      "target": "HYP-20260807-232639-dvs-learning-sustains-ovs-quality"
+    },
+    {
+      "source": "OBS-20260924-101433-reviewer-feedback-withdrawal",
+      "type": "references",
+      "target": "OBS-20260805-001807-workslop-recipient-burden"
+    },
+    {
+      "source": "OBS-20260924-101434-conversational-repository-decision-support",
+      "type": "derived_from",
+      "target": "RN-20260804-204359-conversational-repository-decision-support"
+    },
+    {
+      "source": "OBS-20260924-101434-conversational-repository-decision-support",
+      "type": "references",
+      "target": "HYP-20260801-004823-service-contract-reduces-downstream-cost"
+    },
+    {
+      "source": "OBS-20260924-101434-conversational-repository-decision-support",
+      "type": "references",
+      "target": "HYP-20260809-013742-value-traceability-enables-dvs-learning"
+    },
+    {
+      "source": "OBS-20260924-101434-conversational-repository-decision-support",
+      "type": "references",
+      "target": "OBS-20260827-010635-ai-outcome-review-boundary"
+    },
+    {
+      "source": "OBS-20260924-101435-ai-slop-design-layers",
+      "type": "derived_from",
+      "target": "RN-20260805-211320-ai-slop-design-layers"
+    },
+    {
+      "source": "OBS-20260924-101435-ai-slop-design-layers",
+      "type": "references",
+      "target": "HYP-20260812-010725-progressive-automation-contracts"
+    },
+    {
+      "source": "OBS-20260924-101435-ai-slop-design-layers",
+      "type": "references",
+      "target": "OBS-20260802-230427-process-flow-and-outcome-quality"
+    },
+    {
+      "source": "OBS-20260924-101435-ai-slop-design-layers",
+      "type": "references",
+      "target": "OBS-20260827-010636-delegation-quality-assurance-scope"
+    },
+    {
+      "source": "OBS-20260924-101436-waterfall-vsm-local-speed",
+      "type": "derived_from",
+      "target": "RN-20260914-204312-waterfall-vsm-lead-time-and-cost"
+    },
+    {
+      "source": "OBS-20260924-101436-waterfall-vsm-local-speed",
+      "type": "references",
+      "target": "HYP-20260809-203135-quality-first-ai-allocation-workflow"
+    },
+    {
+      "source": "OBS-20260924-101436-waterfall-vsm-local-speed",
+      "type": "references",
+      "target": "OBS-20260818-214727-lead-time-waiting-time-priority"
+    },
+    {
+      "source": "OBS-20260924-101437-ai-platform-prerequisite-gap",
+      "type": "derived_from",
+      "target": "RN-20260805-211321-ai-platform-prerequisite-knowledge-gap"
+    },
+    {
+      "source": "OBS-20260924-101437-ai-platform-prerequisite-gap",
+      "type": "references",
+      "target": "HYP-20260812-010725-progressive-automation-contracts"
+    },
+    {
+      "source": "OBS-20260924-101437-ai-platform-prerequisite-gap",
+      "type": "references",
+      "target": "OBS-20260827-010636-delegation-quality-assurance-scope"
+    },
+    {
       "source": "OBS-20260924-124329-capacity-reallocation-measurement-scope",
       "type": "derived_from",
       "target": "RN-20260806-014446-platform-advisor-business-goal-and-blind-spot"
@@ -6820,6 +7335,81 @@
       "target": "OBS-20260807-211649-effect-measurement-layers"
     },
     {
+      "source": "OBS-20260924-223228-slide-authoring-revisited-explanation-assumptions",
+      "type": "derived_from",
+      "target": "RN-20260924-152553-slide-authoring-revisits-purpose-and-measurement"
+    },
+    {
+      "source": "OBS-20260924-223228-slide-authoring-revisited-explanation-assumptions",
+      "type": "derived_from",
+      "target": "RN-20260924-213546-ai-assisted-slide-authoring-interim-retrospective"
+    },
+    {
+      "source": "OBS-20260924-223228-slide-authoring-revisited-explanation-assumptions",
+      "type": "derived_from",
+      "target": "RN-20260924-213546-effect-measurement-value-chain-and-takeaway"
+    },
+    {
+      "source": "OBS-20260924-223228-slide-authoring-revisited-explanation-assumptions",
+      "type": "derived_from",
+      "target": "RN-20260924-220725-personal-retrospective-slide-authoring-and-generation"
+    },
+    {
+      "source": "OBS-20260924-223228-slide-authoring-revisited-explanation-assumptions",
+      "type": "references",
+      "target": "HYP-20260731-004119-relay-centered-session-story"
+    },
+    {
+      "source": "OBS-20260924-223228-slide-authoring-revisited-explanation-assumptions",
+      "type": "references",
+      "target": "HYP-20260804-183209-ai-slop-learning-path-solution"
+    },
+    {
+      "source": "OBS-20260924-223229-rehearsal-exposed-delivery-constraints",
+      "type": "derived_from",
+      "target": "RN-20260924-164814-rehearsal-handover-transition-and-slide-reduction"
+    },
+    {
+      "source": "OBS-20260924-223229-rehearsal-exposed-delivery-constraints",
+      "type": "derived_from",
+      "target": "RN-20260924-192826-divider-timing-and-measurement-boundary-restructure"
+    },
+    {
+      "source": "OBS-20260924-223229-rehearsal-exposed-delivery-constraints",
+      "type": "derived_from",
+      "target": "RN-20260924-213546-ai-assisted-slide-authoring-interim-retrospective"
+    },
+    {
+      "source": "OBS-20260924-223229-rehearsal-exposed-delivery-constraints",
+      "type": "references",
+      "target": "HYP-20260731-004119-relay-centered-session-story"
+    },
+    {
+      "source": "OBS-20260924-223230-human-ai-slide-authoring-role-boundary",
+      "type": "derived_from",
+      "target": "RN-20260924-213546-ai-assisted-slide-authoring-interim-retrospective"
+    },
+    {
+      "source": "OBS-20260924-223230-human-ai-slide-authoring-role-boundary",
+      "type": "derived_from",
+      "target": "RN-20260924-213546-closing-scope-enablement-and-repository-disclosure"
+    },
+    {
+      "source": "OBS-20260924-223230-human-ai-slide-authoring-role-boundary",
+      "type": "derived_from",
+      "target": "RN-20260924-220725-personal-retrospective-slide-authoring-and-generation"
+    },
+    {
+      "source": "OBS-20260924-223230-human-ai-slide-authoring-role-boundary",
+      "type": "references",
+      "target": "HYP-20260805-001809-repository-handoff-preserves-focus"
+    },
+    {
+      "source": "OBS-20260924-223230-human-ai-slide-authoring-role-boundary",
+      "type": "references",
+      "target": "OBS-20260827-010635-ai-outcome-review-boundary"
+    },
+    {
       "source": "RN-20260814-004140-rand-ai-failure-patterns-llm-reading",
       "type": "derived_from",
       "target": "EXT-20260813-225740-rand-ai-project-failure-anti-patterns"
@@ -6838,6 +7428,296 @@
       "source": "RN-20260814-234307-ai-value-architect-reading",
       "type": "derived_from",
       "target": "EXT-20260813-224814-safe-ai-value-architect"
+    },
+    {
+      "source": "RN-20260914-231556-story-b-lean-vsm-hypothesis-validation",
+      "type": "references",
+      "target": "HYP-20260807-232639-dvs-learning-sustains-ovs-quality"
+    },
+    {
+      "source": "RN-20260914-231556-story-b-lean-vsm-hypothesis-validation",
+      "type": "references",
+      "target": "OBS-20260807-223144-iterative-problem-understanding"
+    },
+    {
+      "source": "RN-20260914-231556-story-b-lean-vsm-hypothesis-validation",
+      "type": "references",
+      "target": "RN-20260730-140133-ai-outcomes-and-mbpm"
+    },
+    {
+      "source": "RN-20260914-231556-story-b-lean-vsm-hypothesis-validation",
+      "type": "references",
+      "target": "RN-20260804-195507-ai-proposal-review-burden-case"
+    },
+    {
+      "source": "RN-20260914-231556-story-b-lean-vsm-hypothesis-validation",
+      "type": "references",
+      "target": "RN-20260804-235840-ai-proposal-stakeholder-concerns-handoff-contract"
+    },
+    {
+      "source": "RN-20260914-231556-story-b-lean-vsm-hypothesis-validation",
+      "type": "references",
+      "target": "RN-20260807-140147-platform-advisor-story-solution-first-mobius"
+    },
+    {
+      "source": "RN-20260914-231556-story-b-lean-vsm-hypothesis-validation",
+      "type": "references",
+      "target": "RN-20260914-204312-waterfall-vsm-lead-time-and-cost"
+    },
+    {
+      "source": "RN-20260914-231556-story-b-lean-vsm-hypothesis-validation",
+      "type": "references",
+      "target": "RN-20260914-213334-provisional-session-storyline"
+    },
+    {
+      "source": "RN-20260914-232002-story-b-time-adjustment-options",
+      "type": "references",
+      "target": "OBS-20260804-013222-necessary-friction-boundary"
+    },
+    {
+      "source": "RN-20260914-232002-story-b-time-adjustment-options",
+      "type": "references",
+      "target": "OBS-20260804-013225-itsm-metrics-analysis-practice"
+    },
+    {
+      "source": "RN-20260914-232002-story-b-time-adjustment-options",
+      "type": "references",
+      "target": "OBS-20260808-222203-individual-substitution-and-value-data-contract"
+    },
+    {
+      "source": "RN-20260914-232002-story-b-time-adjustment-options",
+      "type": "references",
+      "target": "OBS-20260809-200727-platform-onboarding-validation-cost"
+    },
+    {
+      "source": "RN-20260914-232002-story-b-time-adjustment-options",
+      "type": "references",
+      "target": "RN-20260818-203016-strategy-to-delivery-repetition-model"
+    },
+    {
+      "source": "RN-20260914-232002-story-b-time-adjustment-options",
+      "type": "references",
+      "target": "RN-20260914-231556-story-b-lean-vsm-hypothesis-validation"
+    },
+    {
+      "source": "RN-20260915-002218-story-c-ai-delegation-outcome-traceability",
+      "type": "references",
+      "target": "HYP-20260812-010725-progressive-automation-contracts"
+    },
+    {
+      "source": "RN-20260915-002218-story-c-ai-delegation-outcome-traceability",
+      "type": "references",
+      "target": "OBS-20260801-004820-coupled-platform-value-streams"
+    },
+    {
+      "source": "RN-20260915-002218-story-c-ai-delegation-outcome-traceability",
+      "type": "references",
+      "target": "OBS-20260807-211648-structural-coverage-empirical-checks"
+    },
+    {
+      "source": "RN-20260915-002218-story-c-ai-delegation-outcome-traceability",
+      "type": "references",
+      "target": "OBS-20260812-010722-ai-output-closure-boundary"
+    },
+    {
+      "source": "RN-20260915-002218-story-c-ai-delegation-outcome-traceability",
+      "type": "references",
+      "target": "OBS-20260827-010635-ai-outcome-review-boundary"
+    },
+    {
+      "source": "RN-20260915-002218-story-c-ai-delegation-outcome-traceability",
+      "type": "references",
+      "target": "RN-20260730-093311-presentation-idea-inventory"
+    },
+    {
+      "source": "RN-20260915-002218-story-c-ai-delegation-outcome-traceability",
+      "type": "references",
+      "target": "RN-20260730-095321-work-mode-idea-supplement"
+    },
+    {
+      "source": "RN-20260915-002218-story-c-ai-delegation-outcome-traceability",
+      "type": "references",
+      "target": "RN-20260730-140133-ai-outcomes-and-mbpm"
+    },
+    {
+      "source": "RN-20260915-002218-story-c-ai-delegation-outcome-traceability",
+      "type": "references",
+      "target": "RN-20260820-215730-ai-delegation-quality-assurance-scope"
+    },
+    {
+      "source": "RN-20260915-002218-story-c-ai-delegation-outcome-traceability",
+      "type": "references",
+      "target": "RN-20260914-213334-provisional-session-storyline"
+    },
+    {
+      "source": "RN-20260915-002218-story-c-ai-delegation-outcome-traceability",
+      "type": "references",
+      "target": "RN-20260914-231556-story-b-lean-vsm-hypothesis-validation"
+    },
+    {
+      "source": "RN-20260915-011405-story-d-handover-contract-measurement",
+      "type": "references",
+      "target": "OBS-20260801-004820-coupled-platform-value-streams"
+    },
+    {
+      "source": "RN-20260915-011405-story-d-handover-contract-measurement",
+      "type": "references",
+      "target": "OBS-20260807-211648-structural-coverage-empirical-checks"
+    },
+    {
+      "source": "RN-20260915-011405-story-d-handover-contract-measurement",
+      "type": "references",
+      "target": "OBS-20260827-010635-ai-outcome-review-boundary"
+    },
+    {
+      "source": "RN-20260915-011405-story-d-handover-contract-measurement",
+      "type": "references",
+      "target": "RN-20260730-093311-presentation-idea-inventory"
+    },
+    {
+      "source": "RN-20260915-011405-story-d-handover-contract-measurement",
+      "type": "references",
+      "target": "RN-20260730-140133-ai-outcomes-and-mbpm"
+    },
+    {
+      "source": "RN-20260915-011405-story-d-handover-contract-measurement",
+      "type": "references",
+      "target": "RN-20260804-235840-ai-proposal-stakeholder-concerns-handoff-contract"
+    },
+    {
+      "source": "RN-20260915-011405-story-d-handover-contract-measurement",
+      "type": "references",
+      "target": "RN-20260820-215730-ai-delegation-quality-assurance-scope"
+    },
+    {
+      "source": "RN-20260915-011405-story-d-handover-contract-measurement",
+      "type": "references",
+      "target": "RN-20260914-213334-provisional-session-storyline"
+    },
+    {
+      "source": "RN-20260915-011405-story-d-handover-contract-measurement",
+      "type": "references",
+      "target": "RN-20260915-002218-story-c-ai-delegation-outcome-traceability"
+    },
+    {
+      "source": "RN-20260915-013351-story-e-recipient-experience-measurement",
+      "type": "references",
+      "target": "OBS-20260827-010635-ai-outcome-review-boundary"
+    },
+    {
+      "source": "RN-20260915-013351-story-e-recipient-experience-measurement",
+      "type": "references",
+      "target": "RN-20260730-140133-ai-outcomes-and-mbpm"
+    },
+    {
+      "source": "RN-20260915-013351-story-e-recipient-experience-measurement",
+      "type": "references",
+      "target": "RN-20260804-195507-ai-proposal-review-burden-case"
+    },
+    {
+      "source": "RN-20260915-013351-story-e-recipient-experience-measurement",
+      "type": "references",
+      "target": "RN-20260914-213334-provisional-session-storyline"
+    },
+    {
+      "source": "RN-20260915-013351-story-e-recipient-experience-measurement",
+      "type": "references",
+      "target": "RN-20260915-011405-story-d-handover-contract-measurement"
+    },
+    {
+      "source": "RN-20260915-093636-story-ad-recipient-experience-to-metric-design",
+      "type": "references",
+      "target": "EXT-20260730-015112-accepted-session-proposal"
+    },
+    {
+      "source": "RN-20260915-093636-story-ad-recipient-experience-to-metric-design",
+      "type": "references",
+      "target": "EXT-20260731-113601-mbpm-open-practice-library"
+    },
+    {
+      "source": "RN-20260915-093636-story-ad-recipient-experience-to-metric-design",
+      "type": "references",
+      "target": "OBS-20260805-001807-workslop-recipient-burden"
+    },
+    {
+      "source": "RN-20260915-093636-story-ad-recipient-experience-to-metric-design",
+      "type": "references",
+      "target": "OBS-20260827-010635-ai-outcome-review-boundary"
+    },
+    {
+      "source": "RN-20260915-093636-story-ad-recipient-experience-to-metric-design",
+      "type": "references",
+      "target": "RN-20260730-140133-ai-outcomes-and-mbpm"
+    },
+    {
+      "source": "RN-20260915-093636-story-ad-recipient-experience-to-metric-design",
+      "type": "references",
+      "target": "RN-20260804-195507-ai-proposal-review-burden-case"
+    },
+    {
+      "source": "RN-20260915-093636-story-ad-recipient-experience-to-metric-design",
+      "type": "references",
+      "target": "RN-20260807-123008-platform-advisor-effect-measurement-observation-rationale"
+    },
+    {
+      "source": "RN-20260915-093636-story-ad-recipient-experience-to-metric-design",
+      "type": "references",
+      "target": "RN-20260914-213334-provisional-session-storyline"
+    },
+    {
+      "source": "RN-20260915-093636-story-ad-recipient-experience-to-metric-design",
+      "type": "references",
+      "target": "RN-20260914-215211-story-a-time-adjustment-options"
+    },
+    {
+      "source": "RN-20260915-093636-story-ad-recipient-experience-to-metric-design",
+      "type": "references",
+      "target": "RN-20260914-231556-story-b-lean-vsm-hypothesis-validation"
+    },
+    {
+      "source": "RN-20260915-093636-story-ad-recipient-experience-to-metric-design",
+      "type": "references",
+      "target": "RN-20260915-002218-story-c-ai-delegation-outcome-traceability"
+    },
+    {
+      "source": "RN-20260915-093636-story-ad-recipient-experience-to-metric-design",
+      "type": "references",
+      "target": "RN-20260915-011405-story-d-handover-contract-measurement"
+    },
+    {
+      "source": "RN-20260915-093636-story-ad-recipient-experience-to-metric-design",
+      "type": "references",
+      "target": "RN-20260915-013351-story-e-recipient-experience-measurement"
+    },
+    {
+      "source": "RN-20260915-190657-story-ad-validation-scope",
+      "type": "references",
+      "target": "HYP-20260801-004822-coupled-observability-detects-cost-transfer"
+    },
+    {
+      "source": "RN-20260915-190657-story-ad-validation-scope",
+      "type": "references",
+      "target": "HYP-20260801-004823-service-contract-reduces-downstream-cost"
+    },
+    {
+      "source": "RN-20260915-190657-story-ad-validation-scope",
+      "type": "references",
+      "target": "HYP-20260804-183209-ai-slop-learning-path-solution"
+    },
+    {
+      "source": "RN-20260915-190657-story-ad-validation-scope",
+      "type": "references",
+      "target": "HYP-20260809-203135-quality-first-ai-allocation-workflow"
+    },
+    {
+      "source": "RN-20260915-190657-story-ad-validation-scope",
+      "type": "references",
+      "target": "RN-20260915-093636-story-ad-recipient-experience-to-metric-design"
+    },
+    {
+      "source": "RN-20260915-211511-educational-ai-slop-reading-backlog",
+      "type": "references",
+      "target": "RN-20260915-093636-story-ad-recipient-experience-to-metric-design"
     },
     {
       "source": "RN-20260924-094402-ai-slop-quality-to-work-handover-explanation",
@@ -7123,6 +8003,41 @@
       "source": "artifact:03_artifacts/attendee-journey.md",
       "type": "references",
       "target": "HYP-20260730-015717-organizer-selection-is-sufficient-signal"
+    },
+    {
+      "source": "artifact:03_artifacts/story/storyline.md",
+      "type": "adopted_from",
+      "target": "OBS-20260730-015715-accepted-direction-and-delivery-scope"
+    },
+    {
+      "source": "artifact:03_artifacts/story/storyline.md",
+      "type": "adopted_from",
+      "target": "OBS-20260801-004821-contract-accountability-cost-transfer"
+    },
+    {
+      "source": "artifact:03_artifacts/story/storyline.md",
+      "type": "adopted_from",
+      "target": "OBS-20260807-211649-effect-measurement-layers"
+    },
+    {
+      "source": "artifact:03_artifacts/story/storyline.md",
+      "type": "adopted_from",
+      "target": "OBS-20260827-010635-ai-outcome-review-boundary"
+    },
+    {
+      "source": "artifact:03_artifacts/story/storyline.md",
+      "type": "references",
+      "target": "EXT-20260730-015112-accepted-session-proposal"
+    },
+    {
+      "source": "artifact:03_artifacts/story/storyline.md",
+      "type": "references",
+      "target": "RN-20260915-093636-story-ad-recipient-experience-to-metric-design"
+    },
+    {
+      "source": "artifact:03_artifacts/story/storyline.md",
+      "type": "references",
+      "target": "RN-20260915-190657-story-ad-validation-scope"
     },
     {
       "source": "artifact:03_artifacts/value-stream.md",

@@ -22,6 +22,8 @@ relations:
     target: OBS-20260827-010635-ai-outcome-review-boundary
   - type: derived_from
     target: OBS-20260827-010636-delegation-quality-assurance-scope
+  - type: derived_from
+    target: RN-20260826-124353-outcome-driven-cognitive-step-decomposition
   - type: tests
     target: HYP-20260801-004823-service-contract-reduces-downstream-cost
   - type: references

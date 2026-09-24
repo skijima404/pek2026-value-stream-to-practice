@@ -19,6 +19,8 @@ relations:
     target: RN-20260801-122154-platform-advisor-hidden-hypothesis-and-dvs-learning
   - type: derived_from
     target: RN-20260807-194919-platform-advisor-retrospective-iterative-problem-learning
+  - type: derived_from
+    target: RN-20260924-091859-hypothesis-workflow-revisiting-assumptions
 ---
 
 # 観察
