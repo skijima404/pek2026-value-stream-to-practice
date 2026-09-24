@@ -4,7 +4,7 @@
     "authority": "none",
     "description": "Disposable navigation projection generated from repository Markdown; source nodes and adopted artifacts remain authoritative.",
     "generator": "scripts/generate_analysis_views.py",
-    "source_digest": "4e3cfbe41cd02d7df1d49d96b647cf01dcac6c35c03588318bd1c37e16840275",
+    "source_digest": "74c84773c30d0496dd5bcd1087e41096969184097dc83d6a5ddd9589c620638f",
     "excluded_sources": {},
     "excluded_edges": {}
   },
@@ -2444,6 +2444,210 @@
         "metaphor",
         "handover",
         "effect-measurement",
+        "outcome-delivery"
+      ]
+    },
+    {
+      "key": "RN-20260924-123831-kpi-business-test-cases-and-v-model",
+      "id": "RN-20260924-123831-kpi-business-test-cases-and-v-model",
+      "type": "raw_note",
+      "title": "KPIをビジネスのテストケースとして捉え、V字モデルで仮説と検証を対応させる説明案",
+      "path": "01_working/raw-notes/RN-20260924-123831-kpi-business-test-cases-and-v-model.md",
+      "content_language": "ja",
+      "created_at": "2026-09-24T12:38:31+09:00",
+      "created_by": "agent:codex",
+      "review_status": "reviewed",
+      "sanitization_status": "not_needed",
+      "tags": [
+        "kpi",
+        "effect-measurement",
+        "hypothesis-validation",
+        "v-model",
+        "presentation-design",
+        "platform-advisor"
+      ]
+    },
+    {
+      "key": "RN-20260924-123831-platform-advisor-human-capacity-reallocation",
+      "id": "RN-20260924-123831-platform-advisor-human-capacity-reallocation",
+      "type": "raw_note",
+      "title": "Platform Advisorの組織目的を人的資源の再配置として説明する",
+      "path": "01_working/raw-notes/RN-20260924-123831-platform-advisor-human-capacity-reallocation.md",
+      "content_language": "ja",
+      "created_at": "2026-09-24T12:38:31+09:00",
+      "created_by": "agent:codex",
+      "review_status": "reviewed",
+      "sanitization_status": "not_needed",
+      "tags": [
+        "platform-advisor",
+        "business-goal",
+        "human-capacity",
+        "presentation-design",
+        "kubernetes"
+      ]
+    },
+    {
+      "key": "RN-20260924-152553-kpi-normal-and-adverse-effect-test-metaphor",
+      "id": "RN-20260924-152553-kpi-normal-and-adverse-effect-test-metaphor",
+      "type": "raw_note",
+      "title": "KPIを正常系・異常系のテストとして説明し、効果と副作用を同じ図で確かめる",
+      "path": "01_working/raw-notes/RN-20260924-152553-kpi-normal-and-adverse-effect-test-metaphor.md",
+      "content_language": "ja",
+      "created_at": "2026-09-24T15:25:53+09:00",
+      "created_by": "agent:codex",
+      "review_status": "reviewed",
+      "sanitization_status": "not_needed",
+      "tags": [
+        "kpi",
+        "effect-measurement",
+        "ai-slop",
+        "presentation-design",
+        "platform-advisor"
+      ]
+    },
+    {
+      "key": "RN-20260924-152553-slide-authoring-revisits-purpose-and-measurement",
+      "id": "RN-20260924-152553-slide-authoring-revisits-purpose-and-measurement",
+      "type": "raw_note",
+      "title": "スライドを作る段階で目的・論理・測定を見直した過程を後で総括する",
+      "path": "01_working/raw-notes/RN-20260924-152553-slide-authoring-revisits-purpose-and-measurement.md",
+      "content_language": "ja",
+      "created_at": "2026-09-24T15:25:53+09:00",
+      "created_by": "agent:codex",
+      "review_status": "reviewed",
+      "sanitization_status": "not_needed",
+      "tags": [
+        "presentation-design",
+        "outcome-delivery",
+        "retrospective",
+        "hypothesis-validation"
+      ]
+    },
+    {
+      "key": "RN-20260924-164032-rehearsal-duration-and-reduction-target",
+      "id": "RN-20260924-164032-rehearsal-duration-and-reduction-target",
+      "type": "raw_note",
+      "title": "通し説明はまとめ前まで30分、まとめとバッファのため約7分削減したい",
+      "path": "01_working/raw-notes/RN-20260924-164032-rehearsal-duration-and-reduction-target.md",
+      "content_language": "ja",
+      "created_at": "2026-09-24T16:40:32+09:00",
+      "created_by": "agent:codex",
+      "review_status": "unreviewed",
+      "sanitization_status": "not_needed",
+      "tags": [
+        "presentation-design",
+        "rehearsal",
+        "time-budget",
+        "outcome-delivery"
+      ]
+    },
+    {
+      "key": "RN-20260924-164814-rehearsal-handover-transition-and-slide-reduction",
+      "id": "RN-20260924-164814-rehearsal-handover-transition-and-slide-reduction",
+      "type": "raw_note",
+      "title": "通し説明で調査から引き継ぎへの接続に迷い、順序変更とスライド削減を検討した",
+      "path": "01_working/raw-notes/RN-20260924-164814-rehearsal-handover-transition-and-slide-reduction.md",
+      "content_language": "ja",
+      "created_at": "2026-09-24T16:48:14+09:00",
+      "created_by": "agent:codex",
+      "review_status": "reviewed",
+      "sanitization_status": "not_needed",
+      "tags": [
+        "presentation-design",
+        "rehearsal",
+        "time-budget",
+        "handover",
+        "ai-slop"
+      ]
+    },
+    {
+      "key": "RN-20260924-192826-divider-timing-and-measurement-boundary-restructure",
+      "id": "RN-20260924-192826-divider-timing-and-measurement-boundary-restructure",
+      "type": "raw_note",
+      "title": "区切りごとの時間を記録し、Value Streamの境界問題をKPI設計の下へ移した",
+      "path": "01_working/raw-notes/RN-20260924-192826-divider-timing-and-measurement-boundary-restructure.md",
+      "content_language": "ja",
+      "created_at": "2026-09-24T19:28:26+09:00",
+      "created_by": "agent:codex",
+      "review_status": "reviewed",
+      "sanitization_status": "not_needed",
+      "tags": [
+        "presentation-design",
+        "rehearsal",
+        "time-budget",
+        "effect-measurement",
+        "value-stream"
+      ]
+    },
+    {
+      "key": "RN-20260924-213546-ai-assisted-slide-authoring-interim-retrospective",
+      "id": "RN-20260924-213546-ai-assisted-slide-authoring-interim-retrospective",
+      "type": "raw_note",
+      "title": "登壇資料作成におけるAI利用と人間の判断の途中総括",
+      "path": "01_working/raw-notes/RN-20260924-213546-ai-assisted-slide-authoring-interim-retrospective.md",
+      "content_language": "ja",
+      "created_at": "2026-09-24T21:35:46+09:00",
+      "created_by": "agent:codex",
+      "review_status": "reviewed",
+      "sanitization_status": "not_needed",
+      "tags": [
+        "retrospective",
+        "ai-collaboration",
+        "presentation-design",
+        "outcome-delivery"
+      ]
+    },
+    {
+      "key": "RN-20260924-213546-closing-scope-enablement-and-repository-disclosure",
+      "id": "RN-20260924-213546-closing-scope-enablement-and-repository-disclosure",
+      "type": "raw_note",
+      "title": "締めの範囲、Enablingチームへの期待、RepoとAI利用の紹介を検討した",
+      "path": "01_working/raw-notes/RN-20260924-213546-closing-scope-enablement-and-repository-disclosure.md",
+      "content_language": "ja",
+      "created_at": "2026-09-24T21:35:46+09:00",
+      "created_by": "agent:codex",
+      "review_status": "reviewed",
+      "sanitization_status": "not_needed",
+      "tags": [
+        "presentation-design",
+        "enablement",
+        "ai-collaboration",
+        "scope-control"
+      ]
+    },
+    {
+      "key": "RN-20260924-213546-effect-measurement-value-chain-and-takeaway",
+      "id": "RN-20260924-213546-effect-measurement-value-chain-and-takeaway",
+      "type": "raw_note",
+      "title": "効果測定へ用語を統一し、価値仮説を説明とまとめへ戻した",
+      "path": "01_working/raw-notes/RN-20260924-213546-effect-measurement-value-chain-and-takeaway.md",
+      "content_language": "ja",
+      "created_at": "2026-09-24T21:35:46+09:00",
+      "created_by": "agent:codex",
+      "review_status": "reviewed",
+      "sanitization_status": "not_needed",
+      "tags": [
+        "presentation-design",
+        "effect-measurement",
+        "hypothesis-validation",
+        "value-stream"
+      ]
+    },
+    {
+      "key": "RN-20260924-220725-personal-retrospective-slide-authoring-and-generation",
+      "id": "RN-20260924-220725-personal-retrospective-slide-authoring-and-generation",
+      "type": "raw_note",
+      "title": "個人総括：スライドを作りながら説明を選び直す過程と、生成への関心",
+      "path": "01_working/raw-notes/RN-20260924-220725-personal-retrospective-slide-authoring-and-generation.md",
+      "content_language": "ja",
+      "created_at": "2026-09-24T22:07:25+09:00",
+      "created_by": "agent:codex",
+      "review_status": "reviewed",
+      "sanitization_status": "not_needed",
+      "tags": [
+        "retrospective",
+        "ai-collaboration",
+        "presentation-design",
         "outcome-delivery"
       ]
     },
@@ -4941,6 +5145,22 @@
       ]
     },
     {
+      "key": "OBS-20260924-124329-capacity-reallocation-measurement-scope",
+      "id": "OBS-20260924-124329-capacity-reallocation-measurement-scope",
+      "type": "observation",
+      "title": "人的資源の再配置を組織目的とし、採用・LT・負荷を分けて観測する説明が記録された",
+      "path": "02_analysis/observations/OBS-20260924-124329-capacity-reallocation-measurement-scope.md",
+      "content_language": "ja",
+      "created_at": "2026-09-24T12:43:29+09:00",
+      "created_by": "agent:codex",
+      "status": "reviewed",
+      "confidence": "medium",
+      "knowledge_basis": [
+        "recorded_statement",
+        "reasoned_synthesis"
+      ]
+    },
+    {
       "key": "artifact:03_artifacts/attendee-journey.md",
       "type": "artifact",
       "title": "参加者Journey兼Value Stream",
@@ -6200,6 +6420,11 @@
       "target": "RN-20260807-123008-platform-advisor-effect-measurement-observation-rationale"
     },
     {
+      "source": "OBS-20260807-211649-effect-measurement-layers",
+      "type": "references",
+      "target": "OBS-20260924-124329-capacity-reallocation-measurement-scope"
+    },
+    {
       "source": "OBS-20260807-211650-vsm-problem-causal-ambiguity",
       "type": "derived_from",
       "target": "RN-20260806-194532-platform-advisor-selection-vsm-and-mbpm"
@@ -6560,6 +6785,41 @@
       "target": "OBS-20260812-010722-ai-output-closure-boundary"
     },
     {
+      "source": "OBS-20260924-124329-capacity-reallocation-measurement-scope",
+      "type": "derived_from",
+      "target": "RN-20260806-014446-platform-advisor-business-goal-and-blind-spot"
+    },
+    {
+      "source": "OBS-20260924-124329-capacity-reallocation-measurement-scope",
+      "type": "derived_from",
+      "target": "RN-20260924-123831-kpi-business-test-cases-and-v-model"
+    },
+    {
+      "source": "OBS-20260924-124329-capacity-reallocation-measurement-scope",
+      "type": "derived_from",
+      "target": "RN-20260924-123831-platform-advisor-human-capacity-reallocation"
+    },
+    {
+      "source": "OBS-20260924-124329-capacity-reallocation-measurement-scope",
+      "type": "references",
+      "target": "HYP-20260807-211651-platform-selection-preparation-value"
+    },
+    {
+      "source": "OBS-20260924-124329-capacity-reallocation-measurement-scope",
+      "type": "references",
+      "target": "HYP-20260807-211652-contextual-platform-advisor-solution"
+    },
+    {
+      "source": "OBS-20260924-124329-capacity-reallocation-measurement-scope",
+      "type": "references",
+      "target": "HYP-20260807-211653-platform-advisor-chat-feature"
+    },
+    {
+      "source": "OBS-20260924-124329-capacity-reallocation-measurement-scope",
+      "type": "references",
+      "target": "OBS-20260807-211649-effect-measurement-layers"
+    },
+    {
       "source": "RN-20260814-004140-rand-ai-failure-patterns-llm-reading",
       "type": "derived_from",
       "target": "EXT-20260813-225740-rand-ai-project-failure-anti-patterns"
@@ -6623,6 +6883,231 @@
       "source": "RN-20260924-094402-relay-metaphor-observation-and-expectation-design",
       "type": "references",
       "target": "RN-20260924-091859-platform-advisor-story-then-explanation"
+    },
+    {
+      "source": "RN-20260924-123831-kpi-business-test-cases-and-v-model",
+      "type": "references",
+      "target": "RN-20260807-123008-platform-advisor-effect-measurement-observation-rationale"
+    },
+    {
+      "source": "RN-20260924-123831-kpi-business-test-cases-and-v-model",
+      "type": "references",
+      "target": "RN-20260924-091859-platform-advisor-story-then-explanation"
+    },
+    {
+      "source": "RN-20260924-123831-kpi-business-test-cases-and-v-model",
+      "type": "references",
+      "target": "RN-20260924-094402-relay-metaphor-observation-and-expectation-design"
+    },
+    {
+      "source": "RN-20260924-123831-kpi-business-test-cases-and-v-model",
+      "type": "references",
+      "target": "RN-20260924-123831-platform-advisor-human-capacity-reallocation"
+    },
+    {
+      "source": "RN-20260924-123831-platform-advisor-human-capacity-reallocation",
+      "type": "references",
+      "target": "RN-20260806-014446-platform-advisor-business-goal-and-blind-spot"
+    },
+    {
+      "source": "RN-20260924-123831-platform-advisor-human-capacity-reallocation",
+      "type": "references",
+      "target": "RN-20260807-123008-platform-advisor-effect-measurement-observation-rationale"
+    },
+    {
+      "source": "RN-20260924-152553-kpi-normal-and-adverse-effect-test-metaphor",
+      "type": "references",
+      "target": "RN-20260924-094402-relay-metaphor-observation-and-expectation-design"
+    },
+    {
+      "source": "RN-20260924-152553-kpi-normal-and-adverse-effect-test-metaphor",
+      "type": "references",
+      "target": "RN-20260924-123831-kpi-business-test-cases-and-v-model"
+    },
+    {
+      "source": "RN-20260924-152553-kpi-normal-and-adverse-effect-test-metaphor",
+      "type": "references",
+      "target": "RN-20260924-123831-platform-advisor-human-capacity-reallocation"
+    },
+    {
+      "source": "RN-20260924-152553-slide-authoring-revisits-purpose-and-measurement",
+      "type": "references",
+      "target": "RN-20260924-091859-hypothesis-workflow-revisiting-assumptions"
+    },
+    {
+      "source": "RN-20260924-152553-slide-authoring-revisits-purpose-and-measurement",
+      "type": "references",
+      "target": "RN-20260924-091859-platform-advisor-story-then-explanation"
+    },
+    {
+      "source": "RN-20260924-152553-slide-authoring-revisits-purpose-and-measurement",
+      "type": "references",
+      "target": "RN-20260924-123831-kpi-business-test-cases-and-v-model"
+    },
+    {
+      "source": "RN-20260924-152553-slide-authoring-revisits-purpose-and-measurement",
+      "type": "references",
+      "target": "RN-20260924-123831-platform-advisor-human-capacity-reallocation"
+    },
+    {
+      "source": "RN-20260924-152553-slide-authoring-revisits-purpose-and-measurement",
+      "type": "references",
+      "target": "RN-20260924-152553-kpi-normal-and-adverse-effect-test-metaphor"
+    },
+    {
+      "source": "RN-20260924-164032-rehearsal-duration-and-reduction-target",
+      "type": "references",
+      "target": "RN-20260924-152553-slide-authoring-revisits-purpose-and-measurement"
+    },
+    {
+      "source": "RN-20260924-164814-rehearsal-handover-transition-and-slide-reduction",
+      "type": "references",
+      "target": "RN-20260924-094402-ai-slop-quality-to-work-handover-explanation"
+    },
+    {
+      "source": "RN-20260924-164814-rehearsal-handover-transition-and-slide-reduction",
+      "type": "references",
+      "target": "RN-20260924-094402-relay-metaphor-observation-and-expectation-design"
+    },
+    {
+      "source": "RN-20260924-164814-rehearsal-handover-transition-and-slide-reduction",
+      "type": "references",
+      "target": "RN-20260924-164032-rehearsal-duration-and-reduction-target"
+    },
+    {
+      "source": "RN-20260924-192826-divider-timing-and-measurement-boundary-restructure",
+      "type": "references",
+      "target": "RN-20260924-091859-platform-advisor-story-then-explanation"
+    },
+    {
+      "source": "RN-20260924-192826-divider-timing-and-measurement-boundary-restructure",
+      "type": "references",
+      "target": "RN-20260924-152553-kpi-normal-and-adverse-effect-test-metaphor"
+    },
+    {
+      "source": "RN-20260924-192826-divider-timing-and-measurement-boundary-restructure",
+      "type": "references",
+      "target": "RN-20260924-164032-rehearsal-duration-and-reduction-target"
+    },
+    {
+      "source": "RN-20260924-192826-divider-timing-and-measurement-boundary-restructure",
+      "type": "references",
+      "target": "RN-20260924-164814-rehearsal-handover-transition-and-slide-reduction"
+    },
+    {
+      "source": "RN-20260924-213546-ai-assisted-slide-authoring-interim-retrospective",
+      "type": "references",
+      "target": "HYP-20260731-004119-relay-centered-session-story"
+    },
+    {
+      "source": "RN-20260924-213546-ai-assisted-slide-authoring-interim-retrospective",
+      "type": "references",
+      "target": "HYP-20260804-183208-audience-actionable-ai-slop-value"
+    },
+    {
+      "source": "RN-20260924-213546-ai-assisted-slide-authoring-interim-retrospective",
+      "type": "references",
+      "target": "HYP-20260804-183209-ai-slop-learning-path-solution"
+    },
+    {
+      "source": "RN-20260924-213546-ai-assisted-slide-authoring-interim-retrospective",
+      "type": "references",
+      "target": "RN-20260923-122955-platform-advisor-unrepresented-blind-spots"
+    },
+    {
+      "source": "RN-20260924-213546-ai-assisted-slide-authoring-interim-retrospective",
+      "type": "references",
+      "target": "RN-20260924-094402-ai-slop-quality-to-work-handover-explanation"
+    },
+    {
+      "source": "RN-20260924-213546-ai-assisted-slide-authoring-interim-retrospective",
+      "type": "references",
+      "target": "RN-20260924-094402-relay-metaphor-observation-and-expectation-design"
+    },
+    {
+      "source": "RN-20260924-213546-ai-assisted-slide-authoring-interim-retrospective",
+      "type": "references",
+      "target": "RN-20260924-123831-kpi-business-test-cases-and-v-model"
+    },
+    {
+      "source": "RN-20260924-213546-ai-assisted-slide-authoring-interim-retrospective",
+      "type": "references",
+      "target": "RN-20260924-123831-platform-advisor-human-capacity-reallocation"
+    },
+    {
+      "source": "RN-20260924-213546-ai-assisted-slide-authoring-interim-retrospective",
+      "type": "references",
+      "target": "RN-20260924-152553-slide-authoring-revisits-purpose-and-measurement"
+    },
+    {
+      "source": "RN-20260924-213546-ai-assisted-slide-authoring-interim-retrospective",
+      "type": "references",
+      "target": "RN-20260924-164032-rehearsal-duration-and-reduction-target"
+    },
+    {
+      "source": "RN-20260924-213546-ai-assisted-slide-authoring-interim-retrospective",
+      "type": "references",
+      "target": "RN-20260924-164814-rehearsal-handover-transition-and-slide-reduction"
+    },
+    {
+      "source": "RN-20260924-213546-ai-assisted-slide-authoring-interim-retrospective",
+      "type": "references",
+      "target": "RN-20260924-192826-divider-timing-and-measurement-boundary-restructure"
+    },
+    {
+      "source": "RN-20260924-213546-ai-assisted-slide-authoring-interim-retrospective",
+      "type": "references",
+      "target": "RN-20260924-213546-closing-scope-enablement-and-repository-disclosure"
+    },
+    {
+      "source": "RN-20260924-213546-ai-assisted-slide-authoring-interim-retrospective",
+      "type": "references",
+      "target": "RN-20260924-213546-effect-measurement-value-chain-and-takeaway"
+    },
+    {
+      "source": "RN-20260924-213546-closing-scope-enablement-and-repository-disclosure",
+      "type": "references",
+      "target": "HYP-20260805-001809-repository-handoff-preserves-focus"
+    },
+    {
+      "source": "RN-20260924-213546-closing-scope-enablement-and-repository-disclosure",
+      "type": "references",
+      "target": "RN-20260924-094402-high-performing-enablement-for-ai-change-speed"
+    },
+    {
+      "source": "RN-20260924-213546-closing-scope-enablement-and-repository-disclosure",
+      "type": "references",
+      "target": "RN-20260924-152553-slide-authoring-revisits-purpose-and-measurement"
+    },
+    {
+      "source": "RN-20260924-213546-effect-measurement-value-chain-and-takeaway",
+      "type": "references",
+      "target": "RN-20260924-091859-platform-advisor-story-then-explanation"
+    },
+    {
+      "source": "RN-20260924-213546-effect-measurement-value-chain-and-takeaway",
+      "type": "references",
+      "target": "RN-20260924-123831-platform-advisor-human-capacity-reallocation"
+    },
+    {
+      "source": "RN-20260924-213546-effect-measurement-value-chain-and-takeaway",
+      "type": "references",
+      "target": "RN-20260924-152553-kpi-normal-and-adverse-effect-test-metaphor"
+    },
+    {
+      "source": "RN-20260924-213546-effect-measurement-value-chain-and-takeaway",
+      "type": "references",
+      "target": "RN-20260924-192826-divider-timing-and-measurement-boundary-restructure"
+    },
+    {
+      "source": "RN-20260924-220725-personal-retrospective-slide-authoring-and-generation",
+      "type": "references",
+      "target": "RN-20260924-152553-slide-authoring-revisits-purpose-and-measurement"
+    },
+    {
+      "source": "RN-20260924-220725-personal-retrospective-slide-authoring-and-generation",
+      "type": "references",
+      "target": "RN-20260924-213546-ai-assisted-slide-authoring-interim-retrospective"
     },
     {
       "source": "artifact:03_artifacts/attendee-journey.md",
