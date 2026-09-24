@@ -10,19 +10,20 @@
 
 | Node type | Count |
 | --- | ---: |
-| Raw Note | 128 |
+| Raw Note | 137 |
 | External Input | 19 |
-| Observation | 60 |
-| Hypothesis Episode | 28 |
+| Observation | 69 |
+| Hypothesis Episode | 29 |
 | Pattern | 0 |
 | Risk Decision | 0 |
-| Accepted Artifact | 2 |
+| Accepted Artifact | 3 |
 
-Source digest: `74c84773c30d0496dd5bcd1087e41096969184097dc83d6a5ddd9589c620638f`
+Source digest: `5240142b50f539c8e7b8a83804c7dcd2de8b6d0c9eed45084785154c10387149`
 
 ## 採用済みArtifact
 
 - [参加者Journey兼Value Stream](../03_artifacts/attendee-journey.md)
+- [採用済みストーリーライン：受け手の体験から、VSM・MBPMによるメトリック設計へ](../03_artifacts/story/storyline.md)
 - [バリューストリーム](../03_artifacts/value-stream.md)
 
 ## 詳細Navigation Views

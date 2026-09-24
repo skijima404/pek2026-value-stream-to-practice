@@ -17,6 +17,8 @@ relations:
     target: RN-20260802-204018-derive-value-hypothesis-from-decide-backlog
   - type: derived_from
     target: RN-20260802-211319-textbook-hypothesis-flow-and-solution-first-reconstruction
+  - type: derived_from
+    target: RN-20260924-091859-hypothesis-workflow-revisiting-assumptions
 ---
 
 # 観察

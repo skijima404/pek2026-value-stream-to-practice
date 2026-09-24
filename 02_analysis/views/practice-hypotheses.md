@@ -30,6 +30,7 @@ Evidence、解釈、検証結果または採用判断の正本ではありませ
 | Delivery / Feature | [対象箇所・必要品質・AI Outcome・Capability・観測の順で設計すると局所速度偏重を避けやすい](../hypothesis-episodes/HYP-20260809-203135-quality-first-ai-allocation-workflow.md) | `reviewed` | `inconclusive` | [Value Streamの課題とOutcomeからAI Capabilityを配置すると局所最適を避けやすい](../hypothesis-episodes/HYP-20260804-013223-outcome-first-ai-resource-allocation.md) |
 | Delivery / Feature | [Building Blockを個別検証してから接続すると未解決の誤りと曖昧さの伝播を抑えられる](../hypothesis-episodes/HYP-20260812-010725-progressive-automation-contracts.md) | `reviewed` | `not_tested` | [共有前のService Contract明確化は下流への理解と判断Costの転移を抑える](../hypothesis-episodes/HYP-20260801-004823-service-contract-reduces-downstream-cost.md) |
 | Delivery / Feature | [AI作業をOutcome別のCognitive Stepへ分けるとReview範囲とAccountabilityを限定しやすい](../hypothesis-episodes/HYP-20260827-010637-outcome-separated-cognitive-steps.md) | `reviewed` | `not_tested` | [共有前のService Contract明確化は下流への理解と判断Costの転移を抑える](../hypothesis-episodes/HYP-20260801-004823-service-contract-reduces-downstream-cost.md) |
+| Delivery / Feature | [Solution-first再構成後に未表現の仮定を探索するとProblem・Valueの固定を抑えやすい](../hypothesis-episodes/HYP-20260924-101432-unrepresented-assumption-search.md) | `reviewed` | `not_tested` | [Solution-firstでもReasoning Chainを再構成すれば検証可能な仮説を作りやすい](../hypothesis-episodes/HYP-20260802-230423-solution-first-reconstruction-testability.md) |
 
 `tests`は同じscope内の直上Hierarchy Parentだけを表します。
 子Nodeの結果は親Nodeへ推移しません。
