@@ -4,7 +4,7 @@
     "authority": "none",
     "description": "Disposable navigation projection generated from repository Markdown; source nodes and adopted artifacts remain authoritative.",
     "generator": "scripts/generate_analysis_views.py",
-    "source_digest": "5c366109be640a04da33ba64c5a27b8d4039dfadcf03eacca71af0b594c77ac7",
+    "source_digest": "4e3cfbe41cd02d7df1d49d96b647cf01dcac6c35c03588318bd1c37e16840275",
     "excluded_sources": {},
     "excluded_edges": {}
   },
@@ -2271,6 +2271,180 @@
         "accountability",
         "review-boundary",
         "presentation-planning"
+      ]
+    },
+    {
+      "key": "RN-20260914-204312-waterfall-vsm-lead-time-and-cost",
+      "id": "RN-20260914-204312-waterfall-vsm-lead-time-and-cost",
+      "type": "raw_note",
+      "title": "Waterfall組織のVSM事例とLead Time削減・コスト削減を分ける説明候補",
+      "path": "01_working/raw-notes/RN-20260914-204312-waterfall-vsm-lead-time-and-cost.md",
+      "content_language": "ja",
+      "created_at": "2026-09-14T20:43:12+09:00",
+      "created_by": "agent:codex",
+      "review_status": "reviewed",
+      "sanitization_status": "sanitized",
+      "tags": [
+        "lead-time",
+        "process-time",
+        "value-stream-mapping",
+        "mbpm",
+        "practitioner-experience",
+        "presentation-planning"
+      ]
+    },
+    {
+      "key": "RN-20260914-213334-provisional-session-storyline",
+      "id": "RN-20260914-213334-provisional-session-storyline",
+      "type": "raw_note",
+      "title": "仮ストーリー：受け手の体験からPlatform Serviceの仮説検証へ",
+      "path": "01_working/raw-notes/RN-20260914-213334-provisional-session-storyline.md",
+      "content_language": "ja",
+      "created_at": "2026-09-14T21:33:34+09:00",
+      "created_by": "agent:codex",
+      "review_status": "unreviewed",
+      "sanitization_status": "not_needed",
+      "tags": [
+        "presentation-planning",
+        "ai-slop",
+        "workslop",
+        "hypothesis-validation",
+        "vsm",
+        "mbpm",
+        "platform-advisor",
+        "ai-outcome",
+        "facilitation-technique"
+      ]
+    },
+    {
+      "key": "RN-20260923-122955-platform-advisor-unrepresented-blind-spots",
+      "id": "RN-20260923-122955-platform-advisor-unrepresented-blind-spots",
+      "type": "raw_note",
+      "title": "Platform Advisorの落とし穴は説明に留め、表現されていないものを疑う",
+      "path": "01_working/raw-notes/RN-20260923-122955-platform-advisor-unrepresented-blind-spots.md",
+      "content_language": "ja",
+      "created_at": "2026-09-23T12:29:55+09:00",
+      "created_by": "human:kijima",
+      "review_status": "reviewed",
+      "sanitization_status": "not_needed",
+      "tags": [
+        "platform-advisor",
+        "blind-spot",
+        "presentation-design",
+        "hypothesis-validation"
+      ]
+    },
+    {
+      "key": "RN-20260924-091859-hypothesis-workflow-revisiting-assumptions",
+      "id": "RN-20260924-091859-hypothesis-workflow-revisiting-assumptions",
+      "type": "raw_note",
+      "title": "課題・価値・ソリューションの仮説は順番を固定せず見直す",
+      "path": "01_working/raw-notes/RN-20260924-091859-hypothesis-workflow-revisiting-assumptions.md",
+      "content_language": "ja",
+      "created_at": "2026-09-24T09:18:59+09:00",
+      "created_by": "agent:codex",
+      "review_status": "reviewed",
+      "sanitization_status": "not_needed",
+      "tags": [
+        "presentation-design",
+        "hypothesis-validation",
+        "platform-advisor",
+        "outcome-delivery"
+      ]
+    },
+    {
+      "key": "RN-20260924-091859-platform-advisor-story-then-explanation",
+      "id": "RN-20260924-091859-platform-advisor-story-then-explanation",
+      "type": "raw_note",
+      "title": "Platform Advisorのあるある事例を先に示し、解説で見直す構成",
+      "path": "01_working/raw-notes/RN-20260924-091859-platform-advisor-story-then-explanation.md",
+      "content_language": "ja",
+      "created_at": "2026-09-24T09:18:59+09:00",
+      "created_by": "agent:codex",
+      "review_status": "reviewed",
+      "sanitization_status": "not_needed",
+      "tags": [
+        "platform-advisor",
+        "presentation-design",
+        "effect-measurement",
+        "ai-slop",
+        "outcome-delivery"
+      ]
+    },
+    {
+      "key": "RN-20260924-094402-ai-slop-quality-to-work-handover-explanation",
+      "id": "RN-20260924-094402-ai-slop-quality-to-work-handover-explanation",
+      "type": "raw_note",
+      "title": "AI Slopの説明を品質批判から仕事の受け渡しへ接続した経緯",
+      "path": "01_working/raw-notes/RN-20260924-094402-ai-slop-quality-to-work-handover-explanation.md",
+      "content_language": "ja",
+      "created_at": "2026-09-24T09:44:02+09:00",
+      "created_by": "agent:codex",
+      "review_status": "reviewed",
+      "sanitization_status": "not_needed",
+      "tags": [
+        "ai-slop",
+        "recipient-experience",
+        "handover",
+        "accountability",
+        "presentation-design"
+      ]
+    },
+    {
+      "key": "RN-20260924-094402-high-performing-enablement-for-ai-change-speed",
+      "id": "RN-20260924-094402-high-performing-enablement-for-ai-change-speed",
+      "type": "raw_note",
+      "title": "AIの速度に対応するためEnablementにHigh Performing Teamを配置したい",
+      "path": "01_working/raw-notes/RN-20260924-094402-high-performing-enablement-for-ai-change-speed.md",
+      "content_language": "ja",
+      "created_at": "2026-09-24T09:44:02+09:00",
+      "created_by": "agent:codex",
+      "review_status": "reviewed",
+      "sanitization_status": "not_needed",
+      "tags": [
+        "enablement",
+        "ai-slop",
+        "organization-design",
+        "platform-engineering",
+        "presentation-scope"
+      ]
+    },
+    {
+      "key": "RN-20260924-094402-magica-cards-revealing-unrepresented-assumptions",
+      "id": "RN-20260924-094402-magica-cards-revealing-unrepresented-assumptions",
+      "type": "raw_note",
+      "title": "マジカのカードから想定違いに気づいた経験と、登壇の最後に紹介する意図",
+      "path": "01_working/raw-notes/RN-20260924-094402-magica-cards-revealing-unrepresented-assumptions.md",
+      "content_language": "ja",
+      "created_at": "2026-09-24T09:44:02+09:00",
+      "created_by": "agent:codex",
+      "review_status": "reviewed",
+      "sanitization_status": "not_needed",
+      "tags": [
+        "magica",
+        "vsm",
+        "case-recollection",
+        "blind-spot",
+        "presentation-design"
+      ]
+    },
+    {
+      "key": "RN-20260924-094402-relay-metaphor-observation-and-expectation-design",
+      "id": "RN-20260924-094402-relay-metaphor-observation-and-expectation-design",
+      "type": "raw_note",
+      "title": "バトンパスの三つの観測点と期待のズレを使う説明設計",
+      "path": "01_working/raw-notes/RN-20260924-094402-relay-metaphor-observation-and-expectation-design.md",
+      "content_language": "ja",
+      "created_at": "2026-09-24T09:44:02+09:00",
+      "created_by": "agent:codex",
+      "review_status": "reviewed",
+      "sanitization_status": "not_needed",
+      "tags": [
+        "presentation-design",
+        "metaphor",
+        "handover",
+        "effect-measurement",
+        "outcome-delivery"
       ]
     },
     {
@@ -6404,6 +6578,51 @@
       "source": "RN-20260814-234307-ai-value-architect-reading",
       "type": "derived_from",
       "target": "EXT-20260813-224814-safe-ai-value-architect"
+    },
+    {
+      "source": "RN-20260924-094402-ai-slop-quality-to-work-handover-explanation",
+      "type": "references",
+      "target": "RN-20260731-200122-handover-contract-accountability-transfer"
+    },
+    {
+      "source": "RN-20260924-094402-ai-slop-quality-to-work-handover-explanation",
+      "type": "references",
+      "target": "RN-20260803-011229-ai-slop-experience-and-organizational-effect-matrix"
+    },
+    {
+      "source": "RN-20260924-094402-ai-slop-quality-to-work-handover-explanation",
+      "type": "references",
+      "target": "RN-20260804-144101-betterup-workslop-recipient-experience-reading"
+    },
+    {
+      "source": "RN-20260924-094402-high-performing-enablement-for-ai-change-speed",
+      "type": "references",
+      "target": "RN-20260731-115056-managed-ai-slop-transformation"
+    },
+    {
+      "source": "RN-20260924-094402-high-performing-enablement-for-ai-change-speed",
+      "type": "references",
+      "target": "RN-20260731-204459-enablement-bridge-boundaries"
+    },
+    {
+      "source": "RN-20260924-094402-magica-cards-revealing-unrepresented-assumptions",
+      "type": "references",
+      "target": "RN-20260914-213334-provisional-session-storyline"
+    },
+    {
+      "source": "RN-20260924-094402-magica-cards-revealing-unrepresented-assumptions",
+      "type": "references",
+      "target": "RN-20260923-122955-platform-advisor-unrepresented-blind-spots"
+    },
+    {
+      "source": "RN-20260924-094402-relay-metaphor-observation-and-expectation-design",
+      "type": "references",
+      "target": "RN-20260730-225227-relay-baton-handover-metaphor"
+    },
+    {
+      "source": "RN-20260924-094402-relay-metaphor-observation-and-expectation-design",
+      "type": "references",
+      "target": "RN-20260924-091859-platform-advisor-story-then-explanation"
     },
     {
       "source": "artifact:03_artifacts/attendee-journey.md",
