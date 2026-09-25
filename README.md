@@ -7,16 +7,25 @@ Service設計：価値仮説と効果測定ってどうやるの？」
 このリポジトリは、完成した方法論だけでなく、短い気づきがどのように観察、
 仮説、パターン、登壇成果物へ昇格したかを追跡可能にします。
 
+## はじめに読むもの
+
+- [今回のストーリーライン](03_artifacts/story/storyline.md)：登壇内容の流れと、採用した版を確認できます。
+- [分析・出典をたどる](02_analysis/README.md)：観察、仮説、検証状況と、それぞれの原資料への入口です。
+- [AIと資料を作った過程を読む](01_working/raw-notes/RN-20260924-220725-personal-retrospective-slide-authoring-and-generation.md)：登壇者による制作の振り返りです。AIの役割と人間の判断をたどれます。
+
+[登壇スライド](03_artifacts/slides/README.md)は後日Speaker Deckで公開予定です。
+このRepoの記録は検討過程をたどるためのもので、資料の正しさやAI Slopがないことを保証しません。
+
 ## ストーリーの検討
 
 [読むバックログ](01_working/reading-backlog.md)に、後で読む資料と優先度を保存しています。
 
 [ストーリー候補一覧](01_working/storylines/README.md)から、保存済みの構成案を参照できます。
-現在の採用版は[A＋Dのストーリーライン](03_artifacts/story/storyline.md)です。
-2026年9月15日に採用し、スライド具体化の正本としています。
-自己紹介とAの導入で10分、Dを主軸としたVSM・MBPMの見方とメトリック設計で15分です。
-Aの8-2（困りごとに応じたAI Outcome）とDの6（図から測定点を選ぶ思考過程）を必ず説明します。
-実践は「私はこうやっています」と紹介します。元のA〜E、A＋Dの原資料、時間調整ネタは一覧から参照できます。
+現在の採用版は[PDF準拠のストーリーライン：価値仮説と効果測定](03_artifacts/story/storyline.md)です。
+2026年9月25日、翌日に話すPDF版に合わせて正本を更新しました。
+受け渡しとバトンパス、貢献度と負荷、Platform Advisorの事例、価値仮説と効果測定、原因の深掘りへ進みます。
+26分は登壇者による所要時間の報告です。Speaker Deckの公開URLは後日受領予定です。
+実践は「私はこうやっています」と紹介します。[9月15日の旧採用版](01_working/storylines/storyline-ad-adopted-20260915.md)、元のA〜E、A＋Dの原資料、時間調整ネタも保持しています。
 
 ## Raw Noteの位置づけ
 
@@ -125,3 +134,9 @@ python3 scripts/generate_analysis_views.py --check
 > Meta defines how truth is promoted; it does not define the truth itself.
 
 セッション情報: [Platform Engineering Kaigi 2026 CfP](https://www.cnia.io/pek2026/sessions/c8d1236b-8a03-454c-80e3-063f57d858ba/)
+
+## 利用条件
+
+このリポジトリの独自コンテンツには[MIT License](LICENSE)を適用します。
+外部資料・引用・第三者の図版には、それぞれの出典に記載された利用条件が適用されます。
+同梱PDFを含む外部資料の扱いは[外部入力の利用条件](10_external-inputs/README.md#利用条件)を確認してください。

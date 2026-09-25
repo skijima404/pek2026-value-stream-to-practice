@@ -1,44 +1,73 @@
-# ストーリーA＋D：受け手の体験から、VSM・MBPMによるメトリック設計へ
+---
+status: superseded
+content_language: ja
+adopted_at: 2026-09-15T19:11:25+09:00
+adopted_by: human:kijima
+scope: pek2026-session-storyline
+relations:
+  - type: adopted_from
+    target: OBS-20260730-015715-accepted-direction-and-delivery-scope
+  - type: adopted_from
+    target: OBS-20260827-010635-ai-outcome-review-boundary
+  - type: adopted_from
+    target: OBS-20260807-211649-effect-measurement-layers
+  - type: adopted_from
+    target: OBS-20260801-004821-contract-accountability-cost-transfer
+  - type: references
+    target: RN-20260915-093636-story-ad-recipient-experience-to-metric-design
+  - type: references
+    target: RN-20260915-190657-story-ad-validation-scope
+  - type: references
+    target: EXT-20260730-015112-accepted-session-proposal
+superseded_at: 2026-09-25T18:46:10+09:00
+---
 
-識別子：`STORY-AD`。2026年9月15日に選び、採用した組み合わせです。
+# 旧採用版の保存：2026年9月15日
 
-**現在の正本は[採用済みストーリーライン](../../03_artifacts/story/storyline.md)です。**
-このファイルは採用前の検討記録の再掲として保持します。
-9月15日に採用された全文は[旧採用版の保存](storyline-ad-adopted-20260915.md)にあります。現行の正本は2026年9月25日にPDF準拠版へ切り替わりました。
+2026年9月25日にPDF準拠版へ切り替える直前の本文を保存しています。
+以下の採用決定・正本・時間配分の記述は当時のものです。
+現在の正本は[PDF準拠のストーリーライン](../../03_artifacts/story/storyline.md)です。
 
-このファイルは閲覧用の再掲で、本文とレビュー状態の正本は
-[元の記録：RN-20260915-093636-story-ad-recipient-experience-to-metric-design](../raw-notes/RN-20260915-093636-story-ad-recipient-experience-to-metric-design.md)です。
-本編の元の記録は2026年9月15日に人間がレビュー済みと確認しました。後続の検討範囲の補足は別の未レビュー記録です。
-最終採用のArtifactではなく、自動同期されない閲覧用ファイルです。
-元の記録へ補足・訂正が加わった場合は再確認します。
+# 採用済みストーリーライン：受け手の体験から、VSM・MBPMによるメトリック設計へ
 
-[ストーリー候補一覧](README.md)から元のA〜Eも参照できます。
+## 採用決定と範囲
 
-## 後続の指定：今回追う仮説の範囲
+2026年9月15日、`human:kijima`はA＋Dの保存済み本文をレビューした後、
+「ではこれを採用済みのストーリーラインとしましょう！」と明示した。
+この決定に基づき、`STORY-AD`を本セッションのストーリーラインとして採用する。
+現在の正本はこのファイルとし、スライド具体化の基準にする。
 
-9月15日の[検討範囲の指定](../raw-notes/RN-20260915-190657-story-ad-validation-scope.md)により、伝わるか・実践できるかは伝え方や習熟の問題として、今回の仮説検討では扱いません。
-AI Outcomeの選択、Contract、提供側と利用側の観測についても、効果や計測コストの独立検証は追わず、
-「私はこうやっています」という実践紹介として扱います。
-以下は当初の構成の再掲です。末尾のリハーサル案を、今回必要な仮説検証として扱わない点は、この後続指定を参照してください。
+- 導入10分：自己紹介とAの1〜3、4は本編への橋渡し。
+- 本編15分：Dを中心に、VSM・MBPMの見方とメトリック設計を説明する。
+- Aの8-2とDの6を説明し、「Slopだからといって低品質とは限らない」を含める。
+- そのほかは話のつながりに応じ、A〜Eから選んだ補強を用いる。
 
+採用対象はストーリーの流れ、必須要素、10分＋15分の配分、および本文の具体化方針。
+細かな配分・発話・図・スライド枚数は本文に示した範囲で調整する。
+[元のA＋D記録](../../01_working/raw-notes/RN-20260915-093636-story-ad-recipient-experience-to-metric-design.md)はレビュー済みの原資料として保持する。
+[A〜Eの検討履歴](../../01_working/storylines/README.md)も残し、今後は本ファイルを優先して参照する。
+将来構成を変更するときは本Artifactの採用範囲と変更理由を明示し、原資料を遡って書き換えない。
 
-## 今回の構成判断
+## 実践紹介としての位置づけ
 
-2026年9月15日朝、実践者は一晩置いて検討した後、「AとDを混ぜましょう」と指定した。
-固定の呼び名を`STORY-AD`とし、以後のスライド具体化の基準として、今回の判断と編集案を保存する。
-元のA〜Eは当時の案として保持する。
+本人の後続指定に従い、AI Outcomeの選択、Contract、提供側と利用側をつないだ観測は
+「私はこうやっています」という実践紹介として扱う。独立した効果比較や分析・計測コストの
+検証を、今回の登壇準備の追加課題にはしない。伝え方や習熟の検証も今回の検討対象外とする。
+指定の記録は[検討範囲の補足](../../01_working/raw-notes/RN-20260915-190657-story-ad-validation-scope.md)。
+補足Raw Note自身のレビュー状態は変更せず、人間の明示した範囲指定をここへ反映する。
 
-実践者が指定した条件は次のとおり。
+実践者の経験に基づく方法を採用することと、一般的な因果効果が検証済みであることは区別する。
+既存Hypothesisの結果・Evidence・レビュー状態はこの採用によって変更しない。
+Platform Advisorは架空の説明例であり、測定設計や例示の分岐を実際の成果として扱わない。
 
-- Aの1〜3、または4あたりまでを導入にする。自己紹介を含めて10分。
-- Dを中心とする後半15分が本編。MBPM・VSMの見方とメトリックを中心に説明する。
-- Dの6「VSM・業務プロセス図から測定点を設計する」と、Aの8-2「困りごとに応じたAI OutcomeとSolutionの選択」は説明する。
-- そのほかは、話の流れに応じてA〜Eからつながりやすい要素を選ぶ。
-- この組み合わせがSession情報から期待される内容に最も近いのではないか、という本人の判断。
+採用する内容と分析上の参照先：
 
-以下の細かな時間配分、発話、具体例の配置はCodexの編集案を含む。
-保存時点では未レビューであり、構成の選択と、この新しい本文の意図確認を区別する。
-これは進行中の対話・構成検討の記録で、検証済みの一般理論や完成した登壇Artifactではない。
+| 内容 | 参照する分析 |
+| --- | --- |
+| Sessionで約束した範囲 | [採択済み方向性とDeliveryの検討範囲](../../02_analysis/observations/OBS-20260730-015715-accepted-direction-and-delivery-scope.md) |
+| 有用な追加提案と受け手のレビュー負担 | [AI Outcomeとレビュー範囲の事例](../../02_analysis/observations/OBS-20260827-010635-ai-outcome-review-boundary.md) |
+| 直接効果・後続負荷・最終成果を分ける測定設計 | [Platform Advisorの測定設計](../../02_analysis/observations/OBS-20260807-211649-effect-measurement-layers.md) |
+| 引き渡し条件と負担を分ける考え方 | [Handover・Contract・Cost Transferの整理](../../02_analysis/observations/OBS-20260801-004821-contract-accountability-cost-transfer.md) |
 
 ## 一本の流れ
 
@@ -235,4 +264,13 @@ AI活用と、AIを含むPlatform Serviceの両方について、Value Stream上
 
 次のスライド具体化では、全体VSMと一箇所を拡大したMBPM、所感カード、引き渡し条件、測定点を
 同じ例の上へ順に重ねる。図・カードの具体物、調査で示す指標、測定の閾値、スライド枚数は未確定。
-メトリック候補の羅列で終わらず、どこを見てその候補を選んだかを説明できるか、リハーサルで確認する。
+メトリック候補の羅列で終わらず、どこを見てその候補を選んだかを説明する。伝わるか・習熟できるかの検証は、今回の追加課題にはしない。
+
+## 採用時の公開安全性確認
+
+- checked_at: 2026-09-15T19:11:25+09:00
+- checked_by: agent:codex
+- result: `not_needed`
+- scope: 本Artifactの本文、採用決定、frontmatter、参照関係の組み合わせ。
+- finding: 非公開の顧客・案件・個人・内部System・商用条件・認証情報や、再識別につながる組み合わせは確認されなかった。
+- limitation: 公開安全性確認と人間による採用は、説明の効果や紹介する方法の独立検証を意味しない。
