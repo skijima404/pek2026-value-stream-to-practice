@@ -4,7 +4,7 @@
     "authority": "none",
     "description": "Disposable navigation projection generated from repository Markdown; source nodes and adopted artifacts remain authoritative.",
     "generator": "scripts/generate_analysis_views.py",
-    "source_digest": "5240142b50f539c8e7b8a83804c7dcd2de8b6d0c9eed45084785154c10387149",
+    "source_digest": "87a87b5521b512eb2551e6d87837c57f704c92241c8bcf27b492f2d84e4776a2",
     "excluded_sources": {},
     "excluded_edges": {}
   },
@@ -2844,6 +2844,24 @@
       ]
     },
     {
+      "key": "RN-20260925-182432-storyline-reconstructed-from-slide-deck",
+      "id": "RN-20260925-182432-storyline-reconstructed-from-slide-deck",
+      "type": "raw_note",
+      "title": "最新版スライドからストーリーラインを書き起こす：価値仮説と効果測定",
+      "path": "01_working/raw-notes/RN-20260925-182432-storyline-reconstructed-from-slide-deck.md",
+      "content_language": "ja",
+      "created_at": "2026-09-25T18:24:32+09:00",
+      "created_by": "agent:codex",
+      "review_status": "corrected",
+      "sanitization_status": "not_needed",
+      "tags": [
+        "presentation-design",
+        "storyline",
+        "value-hypothesis",
+        "effect-measurement"
+      ]
+    },
+    {
       "key": "HYP-20260730-015717-organizer-selection-is-sufficient-signal",
       "id": "HYP-20260730-015717-organizer-selection-is-sufficient-signal",
       "type": "hypothesis_episode",
@@ -5538,11 +5556,11 @@
     {
       "key": "artifact:03_artifacts/story/storyline.md",
       "type": "artifact",
-      "title": "採用済みストーリーライン：受け手の体験から、VSM・MBPMによるメトリック設計へ",
+      "title": "採用済みストーリーライン：価値仮説と効果測定",
       "path": "03_artifacts/story/storyline.md",
       "content_language": "ja",
       "status": "accepted",
-      "adopted_at": "2026-09-15T19:11:25+09:00",
+      "adopted_at": "2026-09-25T18:46:10+09:00",
       "adopted_by": "human:kijima",
       "scope": "pek2026-session-storyline"
     },
@@ -7990,6 +8008,31 @@
       "target": "RN-20260924-213546-ai-assisted-slide-authoring-interim-retrospective"
     },
     {
+      "source": "RN-20260925-182432-storyline-reconstructed-from-slide-deck",
+      "type": "references",
+      "target": "RN-20260915-093636-story-ad-recipient-experience-to-metric-design"
+    },
+    {
+      "source": "RN-20260925-182432-storyline-reconstructed-from-slide-deck",
+      "type": "references",
+      "target": "RN-20260924-123831-platform-advisor-human-capacity-reallocation"
+    },
+    {
+      "source": "RN-20260925-182432-storyline-reconstructed-from-slide-deck",
+      "type": "references",
+      "target": "RN-20260924-213546-closing-scope-enablement-and-repository-disclosure"
+    },
+    {
+      "source": "RN-20260925-182432-storyline-reconstructed-from-slide-deck",
+      "type": "references",
+      "target": "RN-20260924-213546-effect-measurement-value-chain-and-takeaway"
+    },
+    {
+      "source": "RN-20260925-182432-storyline-reconstructed-from-slide-deck",
+      "type": "references",
+      "target": "RN-20260924-220725-personal-retrospective-slide-authoring-and-generation"
+    },
+    {
       "source": "artifact:03_artifacts/attendee-journey.md",
       "type": "adopted_from",
       "target": "OBS-20260730-015714-session-goal-and-journey"
@@ -8007,27 +8050,17 @@
     {
       "source": "artifact:03_artifacts/story/storyline.md",
       "type": "adopted_from",
-      "target": "OBS-20260730-015715-accepted-direction-and-delivery-scope"
-    },
-    {
-      "source": "artifact:03_artifacts/story/storyline.md",
-      "type": "adopted_from",
-      "target": "OBS-20260801-004821-contract-accountability-cost-transfer"
-    },
-    {
-      "source": "artifact:03_artifacts/story/storyline.md",
-      "type": "adopted_from",
       "target": "OBS-20260807-211649-effect-measurement-layers"
     },
     {
       "source": "artifact:03_artifacts/story/storyline.md",
       "type": "adopted_from",
-      "target": "OBS-20260827-010635-ai-outcome-review-boundary"
+      "target": "OBS-20260924-124329-capacity-reallocation-measurement-scope"
     },
     {
       "source": "artifact:03_artifacts/story/storyline.md",
-      "type": "references",
-      "target": "EXT-20260730-015112-accepted-session-proposal"
+      "type": "derived_from",
+      "target": "RN-20260925-182432-storyline-reconstructed-from-slide-deck"
     },
     {
       "source": "artifact:03_artifacts/story/storyline.md",
