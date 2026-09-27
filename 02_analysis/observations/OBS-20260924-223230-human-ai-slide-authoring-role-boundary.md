@@ -6,7 +6,7 @@ content_language: ja
 created_at: 2026-09-24T22:32:30+09:00
 created_by: agent:codex
 status: reviewed
-reviewed_at: 2026-09-24T22:35:46+09:00
+reviewed_at: 2026-09-28T01:31:16+09:00
 reviewed_by: human:kijima
 review_scope: intent_alignment
 confidence: medium
@@ -21,6 +21,10 @@ relations:
     target: RN-20260924-213546-closing-scope-enablement-and-repository-disclosure
   - type: derived_from
     target: RN-20260924-220725-personal-retrospective-slide-authoring-and-generation
+  - type: derived_from
+    target: RN-20260928-011537-slide-authoring-genai-retrospective
+  - type: references
+    target: OBS-20260928-012748-full-deck-generation-presentation-boundary
   - type: references
     target: OBS-20260827-010635-ai-outcome-review-boundary
   - type: references
@@ -49,6 +53,9 @@ PEK2026の登壇資料制作における人間とAIの対話、Repositoryへの�
 - `RN-20260924-220725-personal-retrospective-slide-authoring-and-generation`の
   「Repoに徹底的に蓄積してみたかった理由」、
   「生成で難しいと感じること」および「それでも、面白いから試してみたい」。
+- `RN-20260928-011537-slide-authoring-genai-retrospective`の
+  「実際に役立ったGenAI活用」および
+  「制作を速くすることと、考えが進むことは同じではない」。
 
 ## 根拠から直接言えること
 
@@ -59,6 +66,12 @@ PEK2026の登壇資料制作における人間とAIの対話、Repositoryへの�
 - PDFまたは画像を対象とした、誤読、飛躍、測定対象のずれおよび配置のReview。
 - 会話のRaw Note化、relation、Review状態、公開安全性およびRepository構造の確認。
 - 別の画像生成対話を含む、バトンパス等の画像候補の作成支援。
+- 最初のStorylineを作るための叩き台。最終的な経路は大きく変わったが、
+  制作者は迷わず初稿を持てたことを役立った点として挙げた。
+- Google Slides上での、一枚ごとの表現・Layout候補。制作者は候補から必要情報を
+  絞り、文字を減らしたうえで手作業により更新した。
+- 表の作成と、横道にそれるかを実物で判断するためのPrototype作成。
+  Prototypeには、不採用とするために役立ったものも含まれた。
 
 人間は、持ち帰ってもらう核、組織目的、説明したい比喩、残す案と外す案、実際のスライド編集、
 最終表現および通し説明を担った。AIの提案は全件採用されず、検索結果、構造検証または画像生成の
@@ -68,6 +81,10 @@ PEK2026の登壇資料制作における人間とAIの対話、Repositoryへの�
 AI側の精度も落ちると感じたと述べた。一方で、今回の過程を外部から眺め、将来のスライド生成に
 つなげることへ関心を示している。これは使用感と今後の関心であり、精度低下または改善方法を
 比較した結果ではない。
+
+登壇後には、採用済みStorylineから全編を一括生成する比較も行われた。この比較は
+`OBS-20260928-012748-full-deck-generation-presentation-boundary`で別に扱う。実際の登壇資料に
+取り入れた一枚単位の生成支援と、登壇後の一括生成を同一の採用事例として数えない。
 
 ## 既存Analysisとの関係
 
@@ -84,13 +101,15 @@ Repositoryへの導線で深掘りを提供できるかを扱う。本Observatio
 
 - 全Prompt、AI Output、編集操作、採否理由および画像生成の試行回数を収集していない。
 - 制作時間、AI利用時間、Review Cost、比較対象、費用および品質差を測定していない。
+- 不採用案は採用枚数の約3倍という本人の概算があるが、実数、改訂の計数単位、
+  各案の生成元および採否理由を記録していない。
 - 人間の着想とAI提案が相互に影響した箇所を、すべて独立に帰属できない。
 - 作成者本人と制作を支援したAIによる記録で、第三者によるProcess監査ではない。
 - この一件から、同じ役割分担が他の作成者、資料またはAI Systemでも有効とは一般化できない。
 
 ## 公開安全性確認
 
-- checked_at: 2026-09-24T22:35:46+09:00
+- checked_at: 2026-09-28T01:31:16+09:00
 - checked_by: agent:codex
 - result: `not_needed`
 - scope:
