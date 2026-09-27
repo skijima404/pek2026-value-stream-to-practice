@@ -4,7 +4,7 @@
     "authority": "none",
     "description": "Disposable navigation projection generated from repository Markdown; source nodes and adopted artifacts remain authoritative.",
     "generator": "scripts/generate_analysis_views.py",
-    "source_digest": "87a87b5521b512eb2551e6d87837c57f704c92241c8bcf27b492f2d84e4776a2",
+    "source_digest": "c490103a305438714751a6c1bb25ef3105be28b0294e5aabe6063f3329c77478",
     "excluded_sources": {},
     "excluded_edges": {}
   },
@@ -2862,6 +2862,42 @@
       ]
     },
     {
+      "key": "RN-20260927-000353-published-slides-and-keynote-connection",
+      "id": "RN-20260927-000353-published-slides-and-keynote-connection",
+      "type": "raw_note",
+      "title": "公開37枚版の変更と、Keynote視聴の挙手を受けた説明の切り替え",
+      "path": "01_working/raw-notes/RN-20260927-000353-published-slides-and-keynote-connection.md",
+      "content_language": "ja",
+      "created_at": "2026-09-27T00:03:53+09:00",
+      "created_by": "agent:codex",
+      "review_status": "reviewed",
+      "sanitization_status": "not_needed",
+      "tags": [
+        "presentation-design",
+        "storyline",
+        "effect-measurement",
+        "hypothesis-validation"
+      ]
+    },
+    {
+      "key": "RN-20260928-011537-slide-authoring-genai-retrospective",
+      "id": "RN-20260928-011537-slide-authoring-genai-retrospective",
+      "type": "raw_note",
+      "title": "登壇後の振り返り：スライドとトークの往復、GenAIの使いどころ、Repoによる思考の支援",
+      "path": "01_working/raw-notes/RN-20260928-011537-slide-authoring-genai-retrospective.md",
+      "content_language": "ja",
+      "created_at": "2026-09-28T01:15:37+09:00",
+      "created_by": "agent:codex",
+      "review_status": "reviewed",
+      "sanitization_status": "not_needed",
+      "tags": [
+        "retrospective",
+        "ai-collaboration",
+        "presentation-design",
+        "outcome-delivery"
+      ]
+    },
+    {
       "key": "HYP-20260730-015717-organizer-selection-is-sufficient-signal",
       "id": "HYP-20260730-015717-organizer-selection-is-sufficient-signal",
       "type": "hypothesis_episode",
@@ -5543,6 +5579,57 @@
       ]
     },
     {
+      "key": "OBS-20260928-012748-full-deck-generation-presentation-boundary",
+      "id": "OBS-20260928-012748-full-deck-generation-presentation-boundary",
+      "type": "observation",
+      "title": "完成Storylineからの一括生成比較で視線誘導とトーク・スライド境界の差が認識された",
+      "path": "02_analysis/observations/OBS-20260928-012748-full-deck-generation-presentation-boundary.md",
+      "content_language": "ja",
+      "created_at": "2026-09-28T01:27:48+09:00",
+      "created_by": "agent:codex",
+      "status": "reviewed",
+      "confidence": "medium",
+      "knowledge_basis": [
+        "recorded_statement",
+        "direct_observation",
+        "explicit_validation",
+        "reasoned_synthesis"
+      ]
+    },
+    {
+      "key": "OBS-20260928-012749-repository-externalizes-research-memory",
+      "id": "OBS-20260928-012749-repository-externalizes-research-memory",
+      "type": "observation",
+      "title": "制作Repositoryが再調査とつながり監視の負荷を減らしたという本人評価が記録された",
+      "path": "02_analysis/observations/OBS-20260928-012749-repository-externalizes-research-memory.md",
+      "content_language": "ja",
+      "created_at": "2026-09-28T01:27:49+09:00",
+      "created_by": "agent:codex",
+      "status": "reviewed",
+      "confidence": "medium",
+      "knowledge_basis": [
+        "recorded_statement",
+        "case_recollection",
+        "reasoned_synthesis"
+      ]
+    },
+    {
+      "key": "OBS-20260928-012750-session-value-separates-authoring-efficiency",
+      "id": "OBS-20260928-012750-session-value-separates-authoring-efficiency",
+      "type": "observation",
+      "title": "登壇制作の成功を準備時間ではなく参加者の持ち帰りで評価する方針が記録された",
+      "path": "02_analysis/observations/OBS-20260928-012750-session-value-separates-authoring-efficiency.md",
+      "content_language": "ja",
+      "created_at": "2026-09-28T01:27:50+09:00",
+      "created_by": "agent:codex",
+      "status": "reviewed",
+      "confidence": "medium",
+      "knowledge_basis": [
+        "recorded_statement",
+        "reasoned_synthesis"
+      ]
+    },
+    {
       "key": "artifact:03_artifacts/attendee-journey.md",
       "type": "artifact",
       "title": "参加者Journey兼Value Stream",
@@ -5560,7 +5647,7 @@
       "path": "03_artifacts/story/storyline.md",
       "content_language": "ja",
       "status": "accepted",
-      "adopted_at": "2026-09-25T18:46:10+09:00",
+      "adopted_at": "2026-09-27T00:03:53+09:00",
       "adopted_by": "human:kijima",
       "scope": "pek2026-session-storyline"
     },
@@ -7419,6 +7506,11 @@
     },
     {
       "source": "OBS-20260924-223230-human-ai-slide-authoring-role-boundary",
+      "type": "derived_from",
+      "target": "RN-20260928-011537-slide-authoring-genai-retrospective"
+    },
+    {
+      "source": "OBS-20260924-223230-human-ai-slide-authoring-role-boundary",
       "type": "references",
       "target": "HYP-20260805-001809-repository-handoff-preserves-focus"
     },
@@ -7426,6 +7518,56 @@
       "source": "OBS-20260924-223230-human-ai-slide-authoring-role-boundary",
       "type": "references",
       "target": "OBS-20260827-010635-ai-outcome-review-boundary"
+    },
+    {
+      "source": "OBS-20260924-223230-human-ai-slide-authoring-role-boundary",
+      "type": "references",
+      "target": "OBS-20260928-012748-full-deck-generation-presentation-boundary"
+    },
+    {
+      "source": "OBS-20260928-012748-full-deck-generation-presentation-boundary",
+      "type": "derived_from",
+      "target": "RN-20260928-011537-slide-authoring-genai-retrospective"
+    },
+    {
+      "source": "OBS-20260928-012748-full-deck-generation-presentation-boundary",
+      "type": "references",
+      "target": "OBS-20260924-223229-rehearsal-exposed-delivery-constraints"
+    },
+    {
+      "source": "OBS-20260928-012748-full-deck-generation-presentation-boundary",
+      "type": "references",
+      "target": "OBS-20260924-223230-human-ai-slide-authoring-role-boundary"
+    },
+    {
+      "source": "OBS-20260928-012749-repository-externalizes-research-memory",
+      "type": "derived_from",
+      "target": "RN-20260928-011537-slide-authoring-genai-retrospective"
+    },
+    {
+      "source": "OBS-20260928-012749-repository-externalizes-research-memory",
+      "type": "references",
+      "target": "HYP-20260809-013742-value-traceability-enables-dvs-learning"
+    },
+    {
+      "source": "OBS-20260928-012749-repository-externalizes-research-memory",
+      "type": "references",
+      "target": "OBS-20260924-101434-conversational-repository-decision-support"
+    },
+    {
+      "source": "OBS-20260928-012750-session-value-separates-authoring-efficiency",
+      "type": "derived_from",
+      "target": "RN-20260928-011537-slide-authoring-genai-retrospective"
+    },
+    {
+      "source": "OBS-20260928-012750-session-value-separates-authoring-efficiency",
+      "type": "references",
+      "target": "HYP-20260804-183208-audience-actionable-ai-slop-value"
+    },
+    {
+      "source": "OBS-20260928-012750-session-value-separates-authoring-efficiency",
+      "type": "references",
+      "target": "OBS-20260924-223229-rehearsal-exposed-delivery-constraints"
     },
     {
       "source": "RN-20260814-004140-rand-ai-failure-patterns-llm-reading",
@@ -8033,6 +8175,21 @@
       "target": "RN-20260924-220725-personal-retrospective-slide-authoring-and-generation"
     },
     {
+      "source": "RN-20260927-000353-published-slides-and-keynote-connection",
+      "type": "references",
+      "target": "RN-20260925-182432-storyline-reconstructed-from-slide-deck"
+    },
+    {
+      "source": "RN-20260928-011537-slide-authoring-genai-retrospective",
+      "type": "references",
+      "target": "RN-20260924-220725-personal-retrospective-slide-authoring-and-generation"
+    },
+    {
+      "source": "RN-20260928-011537-slide-authoring-genai-retrospective",
+      "type": "references",
+      "target": "RN-20260927-000353-published-slides-and-keynote-connection"
+    },
+    {
       "source": "artifact:03_artifacts/attendee-journey.md",
       "type": "adopted_from",
       "target": "OBS-20260730-015714-session-goal-and-journey"
@@ -8061,6 +8218,11 @@
       "source": "artifact:03_artifacts/story/storyline.md",
       "type": "derived_from",
       "target": "RN-20260925-182432-storyline-reconstructed-from-slide-deck"
+    },
+    {
+      "source": "artifact:03_artifacts/story/storyline.md",
+      "type": "derived_from",
+      "target": "RN-20260927-000353-published-slides-and-keynote-connection"
     },
     {
       "source": "artifact:03_artifacts/story/storyline.md",

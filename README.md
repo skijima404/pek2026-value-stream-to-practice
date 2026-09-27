@@ -13,7 +13,7 @@ Service設計：価値仮説と効果測定ってどうやるの？」
 - [分析・出典をたどる](02_analysis/README.md)：観察、仮説、検証状況と、それぞれの原資料への入口です。
 - [AIと資料を作った過程を読む](01_working/raw-notes/RN-20260924-220725-personal-retrospective-slide-authoring-and-generation.md)：登壇者による制作の振り返りです。AIの役割と人間の判断をたどれます。
 
-[登壇スライド](03_artifacts/slides/README.md)は後日Speaker Deckで公開予定です。
+[登壇スライドをSpeaker Deckで公開しています](https://speakerdeck.com/skijima404/ai-slop-o-umanai-platform-service-sekkei)。[資料の案内と版の説明](03_artifacts/slides/README.md)も参照できます。
 このRepoの記録は検討過程をたどるためのもので、資料の正しさやAI Slopがないことを保証しません。
 
 ## ストーリーの検討
@@ -21,10 +21,12 @@ Service設計：価値仮説と効果測定ってどうやるの？」
 [読むバックログ](01_working/reading-backlog.md)に、後で読む資料と優先度を保存しています。
 
 [ストーリー候補一覧](01_working/storylines/README.md)から、保存済みの構成案を参照できます。
-現在の採用版は[PDF準拠のストーリーライン：価値仮説と効果測定](03_artifacts/story/storyline.md)です。
-2026年9月25日、翌日に話すPDF版に合わせて正本を更新しました。
-受け渡しとバトンパス、貢献度と負荷、Platform Advisorの事例、価値仮説と効果測定、原因の深掘りへ進みます。
-26分は登壇者による所要時間の報告です。Speaker Deckの公開URLは後日受領予定です。
+現在の採用版は[公開37枚版準拠のストーリーライン：価値仮説と効果測定](03_artifacts/story/storyline.md)です。
+2026年9月27日、Speaker Deck公開版に合わせて本文とページ対応を更新しました。
+受け渡しとバトンパス、貢献度と負荷、Platform Advisorの事例、価値仮説と効果測定、原因の深掘り、作る前の仮説検証へ進みます。
+Keynoteに合わせてThroughputを加え、挙手を受けて説明を切り替えた当日の経緯は、本編と分けて記録しています。
+26分は前日PDFについての登壇者の報告であり、公開版の登壇実測時間ではありません。
+[9月25日のPDF準拠版](01_working/storylines/storyline-pdf-adopted-20260925.md)も履歴として保持しています。
 実践は「私はこうやっています」と紹介します。[9月15日の旧採用版](01_working/storylines/storyline-ad-adopted-20260915.md)、元のA〜E、A＋Dの原資料、時間調整ネタも保持しています。
 
 ## Raw Noteの位置づけ
